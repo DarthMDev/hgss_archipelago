@@ -9,17 +9,17 @@ from dataclasses import dataclass
 from typing import Dict, TYPE_CHECKING
 
 from .data import items as itemdata, locations as locationdata, regions as regiondata
-from .options import PokemonPlatinumOptions, RandomizeKeyItems, UnownsOption
+from .options import PokemonHGSSOptions, RandomizeKeyItems, UnownsOption
 
 if TYPE_CHECKING:
-    from . import PokemonPlatinumWorld
+    from . import PokemonHGSSWorld
 
 raw_id_to_const_name = { loc.get_raw_id():name for name, loc in locationdata.locations.items() }
 
 @dataclass(frozen=True)
 class LocationType:
-    is_enabled: Callable[[PokemonPlatinumOptions], bool]
-    should_be_added: Callable[[PokemonPlatinumOptions], bool] = lambda _ : True
+    is_enabled: Callable[[PokemonHGSSOptions], bool]
+    should_be_added: Callable[[PokemonHGSSOptions], bool] = lambda _ : True
 
 location_types: Mapping[str, LocationType] = {
     "overworld": LocationType(is_enabled = lambda opts : opts.overworlds.value == 1),
@@ -41,11 +41,11 @@ location_types: Mapping[str, LocationType] = {
     "accessory": LocationType(is_enabled = lambda opts : opts.accessories.value == 1),
 }
 
-def get_parent_region(label: str, world: "PokemonPlatinumWorld") -> str | None:
+def get_parent_region(label: str, world: "PokemonHGSSWorld") -> str | None:
     const_name = raw_id_to_const_name[world.location_name_to_id[label]]
     return locationdata.locations[const_name].parent_region
 
-def is_location_in_world(label: str, world: "PokemonPlatinumWorld"):
+def is_location_in_world(label: str, world: "PokemonHGSSWorld"):
     const_name = raw_id_to_const_name[world.location_name_to_id[label]]
     lt = location_types[locationdata.locations[const_name].type]
     return (lt.is_enabled(world.options) or const_name in world.required_locations or world.options.remote_items) and lt.should_be_added(world.options)
@@ -53,8 +53,8 @@ def is_location_in_world(label: str, world: "PokemonPlatinumWorld"):
 def create_location_label_to_code_map() -> Dict[str, int]:
     return {v.label:v.get_raw_id() for v in locationdata.locations.values()}
 
-class PokemonPlatinumLocation(Location):
-    game: str = "Pokemon Platinum"
+class PokemonHGSSLocation(Location):
+    game: str = "Pokemon HeartGold/SoulSilver"
     type: str
     default_item_id: int | None
     is_enabled: bool
@@ -74,7 +74,7 @@ class PokemonPlatinumLocation(Location):
         self.is_enabled = is_enabled
         self.type = type
 
-def create_locations(world: "PokemonPlatinumWorld", regions: Mapping[str, Region]) -> None:
+def create_locations(world: "PokemonHGSSWorld", regions: Mapping[str, Region]) -> None:
     for region_name, region_data in regiondata.regions.items():
         if region_name not in regions:
             continue
@@ -97,7 +97,7 @@ def create_locations(world: "PokemonPlatinumWorld", regions: Mapping[str, Region
                 address = loc.get_raw_id()
             else:
                 address = None
-            plat_loc = PokemonPlatinumLocation(
+            hgss_loc = PokemonHGSSLocation(
                 world.player,
                 loc.label,
                 loc.type,
@@ -110,6 +110,6 @@ def create_locations(world: "PokemonPlatinumWorld", regions: Mapping[str, Region
                     ap_item = world.create_item(item.label)
                 else:
                     ap_item = world.create_event(item.label)
-                plat_loc.place_locked_item(ap_item)
-                plat_loc.show_in_spoiler = False
-            region.locations.append(plat_loc)
+                hgss_loc.place_locked_item(ap_item)
+                hgss_loc.show_in_spoiler = False
+            region.locations.append(hgss_loc)

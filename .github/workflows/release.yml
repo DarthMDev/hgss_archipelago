@@ -2,8 +2,7 @@ name: Release APWorld
 on:
   push:
     tags:
-      - '**'
-
+      - "**"
 
 jobs:
   apworld:
@@ -13,12 +12,12 @@ jobs:
 
       - name: Make apworld
         shell: bash
-        run: make pokemon_platinum.apworld
+        run: make pokemon_hgss.apworld
 
       - uses: actions/upload-artifact@v4
         with:
           name: apworld
-          path: pokemon_platinum.apworld
+          path: pokemon_hgss.apworld
 
   template:
     runs-on: ubuntu-latest
@@ -31,8 +30,8 @@ jobs:
       - uses: Eijebong/ap-actions/generate-template@main
         id: template
         with:
-          apworld-path: pokemon_platinum.apworld
-          apworld-name: pokemon_platinum
+          apworld-path: pokemon_hgss.apworld
+          apworld-name: pokemon_hgss
           ap-version: "0.6.3"
           python-version: "3.12"
           checkout: false
@@ -58,9 +57,8 @@ jobs:
 
       - uses: ncipollo/release-action@v1
         with:
-          artifacts: '*'
+          artifacts: "*"
           allowUpdates: true
           prerelease: false
           omitBodyDuringUpdate: true
           omitNameDuringUpdate: true
-

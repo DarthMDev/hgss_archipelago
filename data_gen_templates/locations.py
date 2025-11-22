@@ -8,7 +8,7 @@ from dataclasses import dataclass
 from enum import IntEnum
 import operator
 
-from worlds.pokemon_platinum.options import PokemonPlatinumOptions
+from worlds.pokemon_hgss.options import PokemonHGSSOptions
 
 class LocationTable(IntEnum):
     # TEMPLATE: LOCATION_TABLES
@@ -51,10 +51,10 @@ locations: Mapping[str, LocationData] = {
 }
 
 class RequiredLocations:
-    opts: PokemonPlatinumOptions
+    opts: PokemonHGSSOptions
     loc_rules: Set[str]
 
-    def __init__(self, opts: PokemonPlatinumOptions):
+    def __init__(self, opts: PokemonHGSSOptions):
         self.opts = opts
         self.loc_rules = set()
         # TEMPLATE: REQUIRED_LOCATIONS

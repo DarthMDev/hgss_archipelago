@@ -1,10 +1,9 @@
 name: Fuzz APWorld
 on:
   push:
-    branches: [ master, ci ]
+    branches: [master, ci]
   pull_request:
-    branches: [ master ]
-
+    branches: [master]
 
 jobs:
   fuzz:
@@ -14,11 +13,11 @@ jobs:
 
       - name: Make apworld
         shell: bash
-        run: make pokemon_platinum.apworld
+        run: make pokemon_hgss.apworld
 
       - uses: Eijebong/ap-actions/fuzz@main
         with:
-          apworld-path: pokemon_platinum.apworld
-          ap-version: '0.6.3'
-          python-version: '3.12'
+          apworld-path: pokemon_hgss.apworld
+          ap-version: "0.6.3"
+          python-version: "3.12"
           checkout: false

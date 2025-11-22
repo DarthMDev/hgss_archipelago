@@ -91,10 +91,10 @@ class VarsFlags:
             var_id -= 0x4000
             return int.from_bytes(self.vars[2 * var_id:2 * (var_id + 1)], byteorder='little')
 
-class PokemonPlatinumClient(BizHawkClient):
-    game = "Pokemon Platinum"
+class PokemonHGSSClient(BizHawkClient):
+    game = "Pokemon HeartGold/SoulSilver"
     system = "NDS"
-    patch_suffix = ".applatinum"
+    patch_suffix = ".aphgss"
     ap_struct_address: int = 0
     rom_version: int = 0
     goal_flag: FlagCheck | None
@@ -113,7 +113,7 @@ class PokemonPlatinumClient(BizHawkClient):
             rom_name_bytes = (await bizhawk.read(ctx.bizhawk_ctx, [(0, 12, "ROM")]))[0]
             rom_name = bytes([byte for byte in rom_name_bytes if byte != 0]).decode("ascii")
             if rom_name == "POKEMON PL":
-                logger.info("ERROR: You appear to be running an unpatched version of Pokémon Platinum. "
+                logger.info("ERROR: You appear to be running an unpatched version of Pokémon HeartGold/SoulSilver. "
                             "You need to generate a patch file and use it to create a patched ROM.")
                 return False
             elif rom_name.startswith("PLAP "):

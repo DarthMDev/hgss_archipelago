@@ -10,30 +10,30 @@ import settings
 from typing import ClassVar, Any
 from worlds.AutoWorld import WebWorld, World
 
-from .client import PokemonPlatinumClient
+from .client import PokemonHGSSClient
 from .data import items as itemdata
 from .data.locations import RequiredLocations
-from .items import create_item_label_to_code_map, get_item_classification, PokemonPlatinumItem, get_item_groups
-from .locations import PokemonPlatinumLocation, create_location_label_to_code_map, create_locations
-from .options import PokemonPlatinumOptions, UnownsOption
+from .items import create_item_label_to_code_map, get_item_classification, PokemonHGSSItem, get_item_groups
+from .locations import PokemonHGSSLocation, create_location_label_to_code_map, create_locations
+from .options import PokemonHGSSOptions, UnownsOption
 from .regions import create_regions
-from .rom import generate_output, PokemonPlatinumPatch
+from .rom import generate_output, PokemonHGSSPatch
 from .rules import set_rules
 
-class PokemonPlatinumSettings(settings.Group):
+class PokemonHGSSSettings(settings.Group):
     class RomFile(settings.UserFilePath):
-        description = "Pokemon Platinum US (Rev 0 or 1) ROM File"
-        copy_to = "pokeplatinum.nds"
-        md5s = PokemonPlatinumPatch.hashes
+        description = "Pokemon HeartGold / SoulSilver US ROM File"
+        copy_to = "pokehgss.nds"
+        md5s = PokemonHGSSPatch.hashes
 
     rom_file: RomFile = RomFile(RomFile.copy_to)
 
-class PokemonPlatinumWebWorld(WebWorld):
+class PokemonHGSSWebWorld(WebWorld):
     theme = 'ocean'
 
     setup_en = Tutorial(
         'Multiworld Setup Guide',
-        'A guide to playing Pokémon Platinum with Archipelago',
+        'A guide to playing Pokémon HeartGold / SoulSilver with Archipelago',
         'English',
         'setup_en.md',
         'setup/en',
@@ -42,16 +42,16 @@ class PokemonPlatinumWebWorld(WebWorld):
 
     tutorials = [setup_en]
 
-class PokemonPlatinumWorld(World):
-    game = "Pokemon Platinum"
-    web = PokemonPlatinumWebWorld()
+class PokemonHGSSWorld(World):
+    game = "Pokemon HeartGold/SoulSilver"
+    web = PokemonHGSSWebWorld()
     topology_present = True
 
-    settings_key = "pokemon_platinum_settings"
-    settings: ClassVar[PokemonPlatinumSettings] # type: ignore
+    settings_key = "pokemon_hgss_settings"
+    settings: ClassVar[PokemonHGSSSettings] # type: ignore
 
-    options_dataclass = PokemonPlatinumOptions
-    options: PokemonPlatinumOptions # type: ignore
+    options_dataclass = PokemonHGSSOptions
+    options: PokemonHGSSOptions # type: ignore
 
     item_name_to_id = create_item_label_to_code_map()
     location_name_to_id = create_location_label_to_code_map()
@@ -74,7 +74,7 @@ class PokemonPlatinumWorld(World):
         self.multiworld.regions.extend(regions.values())
 
     def create_items(self) -> None:
-        locations: Iterable[PokemonPlatinumLocation] = self.multiworld.get_locations(self.player) # type: ignore
+        locations: Iterable[PokemonHGSSLocation] = self.multiworld.get_locations(self.player) # type: ignore
         item_locations = filter(
             lambda loc : loc.address is not None and loc.is_enabled and not loc.locked,
             locations)
@@ -102,11 +102,11 @@ class PokemonPlatinumWorld(World):
         for item in add_items:
             self.multiworld.push_precollected(self.create_item(itemdata.items[item].label))
 
-    def create_item(self, name: str) -> PokemonPlatinumItem:
+    def create_item(self, name: str) -> PokemonHGSSItem:
         return self.create_item_by_code(self.item_name_to_id[name])
 
     def create_item_by_code(self, item_code: int):
-        return PokemonPlatinumItem(
+        return PokemonHGSSItem(
             self.item_id_to_name[item_code],
             get_item_classification(item_code),
             item_code,
@@ -116,15 +116,15 @@ class PokemonPlatinumWorld(World):
         set_rules(self)
 
     def generate_output(self, output_directory: str) -> None:
-        patch = PokemonPlatinumPatch(player=self.player, player_name=self.player_name)
+        patch = PokemonHGSSPatch(player=self.player, player_name=self.player_name)
         base_patches = ["us_rev0", "us_rev1"]
         for name in base_patches:
             name = "base_patch_" + name
             patch.write_file(f"{name}.bsdiff4", pkgutil.get_data(__name__, f"patches/{name}.bsdiff4")) # type: ignore
         generate_output(self, output_directory, patch)
 
-    def create_event(self, name: str) -> PokemonPlatinumItem:
-        return PokemonPlatinumItem(
+    def create_event(self, name: str) -> PokemonHGSSItem:
+        return PokemonHGSSItem(
             name,
             ItemClassification.progression,
             None,

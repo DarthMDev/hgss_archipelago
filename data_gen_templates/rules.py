@@ -7,7 +7,7 @@ from typing import Tuple
 from BaseClasses import CollectionState
 from collections.abc import Callable, Mapping, MutableMapping
 from . import Hm, items, locations, species
-from ..options import PokemonPlatinumOptions
+from ..options import PokemonHGSSOptions
 
 Rule = Callable[[CollectionState], bool]
 
@@ -30,9 +30,9 @@ class Rules:
     encounter_type_rules: Mapping[str, Rule]
     location_type_rules: Mapping[str, Rule]
     common_rules: MutableMapping[str, Callable]
-    opts: PokemonPlatinumOptions
+    opts: PokemonHGSSOptions
     
-    def __init__(self, player: int, common_rules: MutableMapping[str, Callable], opts: PokemonPlatinumOptions):
+    def __init__(self, player: int, common_rules: MutableMapping[str, Callable], opts: PokemonHGSSOptions):
         self.player = player
         self.opts = opts
         self.common_rules = common_rules

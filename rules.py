@@ -12,18 +12,18 @@ from .locations import is_location_in_world, get_parent_region
 from .regions import is_event_region_enabled, is_region_enabled
 
 if TYPE_CHECKING:
-    from . import PokemonPlatinumWorld
+    from . import PokemonHGSSWorld
 
 def always_true(_: CollectionState) -> bool:
     return True
 
-def is_location_present(label: str, world: "PokemonPlatinumWorld") -> bool:
+def is_location_present(label: str, world: "PokemonHGSSWorld") -> bool:
     if label.startswith("event_") and is_event_region_enabled(label, world.options):
         return True
     parent_region = get_parent_region(label, world)
     return is_region_enabled(parent_region, world.options) and is_location_in_world(label, world)
 
-def set_rules(world: "PokemonPlatinumWorld") -> None:
+def set_rules(world: "PokemonHGSSWorld") -> None:
     common_rules = {}
     for hm in Hm:
         if world.options.requires_badge(hm.name):

@@ -14,7 +14,7 @@ SOURCES := __init__.py \
 	 rules.py \
 	 LICENSE
 DOCS := docs/setup_en.md \
-	 docs/en_Pokemon\ Platinum.md
+        docs/en_Pokemon\ HeartGold_SoulSilver.md
 DATA := data_gen/encounters.toml \
        data_gen/items.toml \
        data_gen/locations.toml \
@@ -43,7 +43,7 @@ DATA_GEN_OUT := data/__init__.py \
 
 PATCHES := $(ROMS:%=patches/base_patch_%.bsdiff4)
 
-default: pokemon_platinum.apworld
+default: pokemon_hgss.apworld
 
 patches/base_patch_%.bsdiff4: roms/%.nds roms/target.nds
 	@echo DIFF $<
@@ -53,14 +53,14 @@ data_gen: $(DATA)
 	@echo DATA GEN
 	$Q./data_gen.py
 
-pokemon_platinum.apworld: data_gen $(SOURCES) $(PATCHES)
-	@echo MAKE APWORLD
-	$Qrm -f $@
-	$Qmkdir -p pokemon_platinum/docs pokemon_platinum/data pokemon_platinum/patches
-	$Qcp $(DATA_GEN_OUT) pokemon_platinum/data
-	$Qcp $(DOCS) pokemon_platinum/docs
-	$Qcp $(PATCHES) pokemon_platinum/patches
-	$Qcp $(SOURCES) pokemon_platinum/
-	$Qzip -r $@ pokemon_platinum
-	$Qrm -r pokemon_platinum
+pokemon_hgss.apworld: data_gen $(SOURCES) $(PATCHES)
+       @echo MAKE APWORLD
+       $Qrm -f $@
+       $Qmkdir -p pokemon_hgss/docs pokemon_hgss/data pokemon_hgss/patches
+       $Qcp $(DATA_GEN_OUT) pokemon_hgss/data
+       $Qcp $(DOCS) pokemon_hgss/docs
+       $Qcp $(PATCHES) pokemon_hgss/patches
+       $Qcp $(SOURCES) pokemon_hgss/
+       $Qzip -r $@ pokemon_hgss
+       $Qrm -r pokemon_hgss
 	

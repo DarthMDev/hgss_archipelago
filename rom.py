@@ -12,21 +12,21 @@ from settings import get_settings
 from worlds.Files import APAutoPatchInterface
 import zipfile
 
-from worlds.pokemon_platinum.options import GameOptions
+from worlds.pokemon_hgss.options import GameOptions
 
 from .data.charmap import charmap
 from .data.locations import locations, LocationTable
 from .data.items import items
 
 if TYPE_CHECKING:
-    from . import PokemonPlatinumWorld
+    from . import PokemonHGSSWorld
 
 PLATINUM_1_0_US_HASH = "d66ad7a2a0068b5d46e0781ca4953ae9"
 PLATINUM_1_1_US_HASH = "ab828b0d13f09469a71460a34d0de51b"
 
-class PokemonPlatinumPatch(APAutoPatchInterface):
-    game = "Pokemon Platinum"
-    patch_file_ending = ".applatinum"
+class PokemonHGSSPatch(APAutoPatchInterface):
+    game = "Pokemon HeartGold/SoulSilver"
+    patch_file_ending = ".aphgss"
     hashes: list[str | bytes] = []
     source_data: bytes
     files: Dict[str, bytes]
@@ -34,19 +34,19 @@ class PokemonPlatinumPatch(APAutoPatchInterface):
 
     @staticmethod
     def get_source_data() -> bytes:
-        with open(get_settings().pokemon_platinum_settings.rom_file, "rb") as infile:
+        with open(get_settings().pokemon_hgss_settings.rom_file, "rb") as infile:
             base_rom_bytes = bytes(infile.read())
         return base_rom_bytes
 
     @staticmethod
     def get_source_data_with_cache() -> bytes:
-        if not hasattr(PokemonPlatinumPatch, "source_data"):
-            PokemonPlatinumPatch.source_data = PokemonPlatinumPatch.get_source_data()
-        return PokemonPlatinumPatch.source_data
+        if not hasattr(PokemonHGSSPatch, "source_data"):
+            PokemonHGSSPatch.source_data = PokemonHGSSPatch.get_source_data()
+        return PokemonHGSSPatch.source_data
 
     def patch(self, target: str) -> None:
         self.read()
-        data = PokemonPlatinumPatch.get_source_data_with_cache()
+        data = PokemonHGSSPatch.get_source_data_with_cache()
         rom_version = data[0x01E]
         if rom_version == 0:
             patch_name = "base_patch_us_rev0.bsdiff4"
@@ -134,7 +134,7 @@ def encode_name(name: str) -> bytes | None:
             return None
     return ret + b'\xFF' * (16 - len(ret))
 
-def process_name(name: str, world: "PokemonPlatinumWorld") -> bytes:
+def process_name(name: str, world: "PokemonHGSSWorld") -> bytes:
     if name == "vanilla":
         return b'\xFF' * 16
     if name == "random":
@@ -155,7 +155,7 @@ def process_name(name: str, world: "PokemonPlatinumWorld") -> bytes:
     else:
         return b'\xFF' * 16
 
-def generate_output(world: "PokemonPlatinumWorld", output_directory: str, patch: PokemonPlatinumPatch) -> None:
+def generate_output(world: "PokemonHGSSWorld", output_directory: str, patch: PokemonHGSSPatch) -> None:
     game_opts = world.options.game_options
     ap_bin = bytes()
     ap_bin += process_name(game_opts.default_player_name, world)

@@ -8,8 +8,8 @@ from typing import Dict, Set
 
 from .data import items as itemdata
 
-class PokemonPlatinumItem(Item):
-    game: str = "Pokemon Platinum"
+class PokemonHGSSItem(Item):
+    game: str = "Pokemon HeartGold/SoulSilver"
 
 raw_id_to_const_name = { item.get_raw_id():name for name, item in itemdata.items.items() }
 

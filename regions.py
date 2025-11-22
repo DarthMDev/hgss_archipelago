@@ -8,25 +8,25 @@ from collections.abc import Callable, Mapping, MutableSet, Sequence
 from dataclasses import dataclass
 from typing import Tuple, TYPE_CHECKING
 
-from worlds.pokemon_platinum.options import PokemonPlatinumOptions
+from worlds.pokemon_hgss.options import PokemonHGSSOptions
 
 from .data import regions as regiondata
 from .data.encounters import encounter_types, encounters
-from .locations import PokemonPlatinumLocation
+from .locations import PokemonHGSSLocation
 
 if TYPE_CHECKING:
-    from . import PokemonPlatinumWorld
+    from . import PokemonHGSSWorld
 
 @dataclass(frozen=True)
 class RegionType:
-    is_enabled: Callable[[PokemonPlatinumOptions], bool]
+    is_enabled: Callable[[PokemonHGSSOptions], bool]
 
 region_groups: Mapping[str, RegionType] = {
     "generic": RegionType(is_enabled = lambda _ : True),
     "fight_area": RegionType(is_enabled = lambda _ : True),
 }
 
-def is_region_enabled(region: str | None, opts: PokemonPlatinumOptions) -> bool:
+def is_region_enabled(region: str | None, opts: PokemonHGSSOptions) -> bool:
     if region is not None:
         if region in regiondata.regions:
             return region_groups[regiondata.regions[region].group].is_enabled(opts)
@@ -35,10 +35,10 @@ def is_region_enabled(region: str | None, opts: PokemonPlatinumOptions) -> bool:
     else:
         return False
 
-def is_event_region_enabled(event: str, opts: PokemonPlatinumOptions) -> bool:
+def is_event_region_enabled(event: str, opts: PokemonHGSSOptions) -> bool:
     return is_region_enabled(regiondata.event_region_map[event], opts)
 
-def create_regions(world: "PokemonPlatinumWorld") -> Mapping[str, Region]:
+def create_regions(world: "PokemonHGSSWorld") -> Mapping[str, Region]:
     regions: Mapping[str, Region] = {}
     connections: Sequence[Tuple[str, str, str]] = []
 
@@ -59,7 +59,7 @@ def create_regions(world: "PokemonPlatinumWorld") -> Mapping[str, Region]:
                 regions[name] = wild_region
 
                 for i, mon in enumerate(e):
-                    location = PokemonPlatinumLocation(
+                    location = PokemonHGSSLocation(
                         world.player,
                         f"{name}_{i + 1}",
                         "mon_event",
@@ -83,7 +83,7 @@ def create_regions(world: "PokemonPlatinumWorld") -> Mapping[str, Region]:
         regions[region_name] = new_region
 
         for event in region_data.events:
-            event_loc = PokemonPlatinumLocation(
+            event_loc = PokemonHGSSLocation(
                 world.player,
                 event,
                 "event",

@@ -324,7 +324,7 @@ class HBSpeed(Range):
     default = 1
 
 @dataclass
-class PokemonPlatinumOptions(PerGameCommonOptions):
+class PokemonHGSSOptions(PerGameCommonOptions):
     hms: RandomizeHms
     badges: RandomizeBadges
     overworlds: RandomizeOverworlds
