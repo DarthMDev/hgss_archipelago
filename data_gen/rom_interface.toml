@@ -18,26 +18,27 @@ item_clas.badge = 6
 item_clas.accessory = 7
 item_clas.special = 0xE
 
+# HM MAPPING (HGSS)
 hm.cut = "hm01"
 hm.fly = "hm02"
 hm.surf = "hm03"
 hm.strength = "hm04"
-hm.defog = "hm05"
+hm.whirlpool = "hm05" 
 hm.rock_smash = "hm06"
 hm.waterfall = "hm07"
-hm.rock_climb = "hm08"
-hm.flash = "tm70"
+hm.rock_climb = "hm08"# Flash is TM70 in both, but a Field Move in HGSS
+hm.flash = "tm70"     
 
-hm_badge.cut = "forest_badge"
-hm_badge.fly = "cobble_badge"
-hm_badge.surf = "fen_badge"
-hm_badge.strength = "mine_badge"
-hm_badge.defog = "relic_badge"
-hm_badge.rock_smash = "coal_badge"
-hm_badge.waterfall = "beacon_badge"
-hm_badge.rock_climb = "icicle_badge"
-
-req_items = ["dowsingmachine", "poketch"]
+# BADGE MAPPING (Johto)
+hm_badge.cut = "hive_badge"       # Cut requires Hive Badge
+hm_badge.fly = "storm_badge"      # Fly requires Storm Badge
+hm_badge.surf = "fog_badge"       # Surf requires Fog Badge
+hm_badge.strength = "plain_badge" # Strength requires Plain Badge
+hm_badge.whirlpool = "glacier_badge" # Whirlpool requires Glacier Badge
+hm_badge.rock_smash = "zephyr_badge" # Rock Smash requires Zephy Badge
+hm_badge.waterfall = "rising_badge"  # Waterfall requires Rising Badge
+hm_badge.rock_climb = "earth_badge"  # Rock Climb requires Earth Badge (Kanto)
+req_items = ["dowsingmachine"]
 
 item_group.items = "Items"
 item_group.key_items = "Key Items"
@@ -48,5 +49,4 @@ item_group.balls = "Balls"
 item_group.tmhms = "TMs and HMs"
 item_group.medicine = "Medicine"
 item_group.mail = "Mail"
-item_group.poketch_apps = "Pokétch and Apps"
 item_group.battle_items = "Battle Items"

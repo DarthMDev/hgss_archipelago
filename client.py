@@ -20,7 +20,10 @@ from worlds._bizhawk.client import BizHawkClient
 if TYPE_CHECKING:
     from worlds._bizhawk.context import BizHawkClientContext
 
-AP_STRUCT_PTR_ADDRESS = 0x023DFFFC
+# HGSS US Version Base Pointer (from my Lua test)
+# Note: In the final ASM patch, we might use a different pointer for the AP Struct,
+# but for now, we map the Save Data pointer.
+AP_STRUCT_PTR_ADDRESS = 0x02111880 
 AP_SUPPORTED_VERSIONS = {0}
 AP_MAGIC = b' AP '
 
@@ -40,17 +43,33 @@ class VersionData:
 
 AP_VERSION_DATA: Mapping[int, VersionData] = {
     0: VersionData(
-        savedata_ptr_offset=16,
-        champion_flag=2404,
-        recv_item_id_offset=20,
-        vars_flags_offset_in_save=0xDC0,
-        vars_offset_in_vars_flags=0,
-        vars_flags_size=0x3E0,
-        flags_offset_in_vars_flags=0x240,
-        ap_save_offset=0xCF60,
+        savedata_ptr_offset=0,  # Pointer at 0x02111880 points directly to save
+        
+        # Calculated ID for S.S. Ticket (0x10F2 Bit 2)
+        # This flag persists forever after the League
+        champion_flag=34706, 
+        
+        # These are used for receiving items via memory (ASM). 
+        # Since we use Lua, we can leave them or set placeholders.
+        recv_item_id_offset=0,
+        ap_save_offset=0,
         recv_item_count_offset_in_ap_save=0,
-        once_loc_flags_offset_in_ap_save=10,
-        once_loc_flags_count=16,
+        
+        # EVENT FLAGS READING
+        # Based on your RA file, flags seem to start around 0x1000
+        # We start reading at 0x0 for simplicity so our IDs match (Offset * 8)
+        vars_flags_offset_in_save=0, 
+        
+        # We need to read enough bytes to cover the highest offset in your file
+        # Highest seen was 0x25EEC (Pokemon behind player)
+        # Reading 0x30000 bytes covers everything safely.
+        vars_flags_size=0x30000, 
+        
+        vars_offset_in_vars_flags=0,
+        flags_offset_in_vars_flags=0,
+        
+        once_loc_flags_offset_in_ap_save=0,
+        once_loc_flags_count=0,
     ),
 }
 
@@ -110,26 +129,22 @@ class PokemonHGSSClient(BizHawkClient):
         from CommonClient import logger
 
         try:
+            # Read ROM Header (0x0 to 0xC)
             rom_name_bytes = (await bizhawk.read(ctx.bizhawk_ctx, [(0, 12, "ROM")]))[0]
+            # Clean up null bytes
             rom_name = bytes([byte for byte in rom_name_bytes if byte != 0]).decode("ascii")
-            if rom_name == "POKEMON PL":
-                logger.info("ERROR: You appear to be running an unpatched version of Pokémon HeartGold/SoulSilver. "
-                            "You need to generate a patch file and use it to create a patched ROM.")
+            
+            # HGSS Game Codes are usually "IPKE" (HG) or "IPGE" (SS)
+            # The internal name at offset 0x0 is usually "POKEMON HG" or "POKEMON SS"
+            if rom_name.startswith("POKEMON_HG") or rom_name.startswith("POKEMON_SS"):
+                # This is a vanilla ROM, warn user they need the AP patch
+                logger.info("ERROR: You are running an unpatched HGSS ROM. Please generate a patched ROM.")
                 return False
-            elif rom_name.startswith("PLAP "):
-                bad = True
-                try:
-                    version = int(rom_name[5:].strip(), 16)
-                    if version in AP_SUPPORTED_VERSIONS:
-                        self.rom_version = version
-                        bad = False
-                except ValueError:
-                    pass
-                if bad:
-                    logger.info("ERROR: The patch file used to create this ROM is not compatible with "
-                                "this client. Double-check your client version against the version being "
-                                "by the generator.")
-                    return False
+            
+            # Check for our custom Patch Header
+            elif rom_name.startswith("HGAP") or rom_name.startswith("SSAP"):
+                # Logic to check version number...
+                return True
             else:
                 return False
         except UnicodeDecodeError:

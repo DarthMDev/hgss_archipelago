@@ -42,9 +42,7 @@ class RandomizeRods(DefaultOnToggle):
     """Adds rods to the pool. Currently, the Super Rod is unavailable, as it is post-game."""
     display_name = "Randomize Rods"
 
-class RandomizePoketchApps(DefaultOnToggle):
-    """Adds Pokétch apps to the pool (and the Pokétch)."""
-    display_name = "Randomize Poketch Apps"
+
 
 class RandomizeRunningShoes(Toggle):
     """Adds the running shoes to the pool."""
@@ -58,9 +56,10 @@ class RandomizePokedex(Toggle):
     """Add the Pokedex to the pool. Note: this also adds the national dex to the pool."""
     display_name = "Randomize Pokedex"
 
-class RandomizeAccessories(Toggle):
-    """Adds fashion accessories to the item pool."""
-    display_name = "Randomize Accessories"
+class RandomizeApricornBox(Toggle):
+    """Adds the Apricorn Box and Apricorns to the pool."""
+    display_name = "Randomize Apricorn Box"
+
 
 class HmBadgeRequirements(DefaultOnToggle):
     """Require the corresponding badge to use an HM outside of battle."""
@@ -73,11 +72,11 @@ class RemoveBadgeRequirement(OptionSet):
     HMs should be provided in the form: "FLY", "WATERFALL", "ROCK_SMASH", etc.
     """
     display_name = "Remove Badge Requirement"
-    valid_keys = ["CUT", "FLY", "SURF", "STRENGTH", "DEFOG", "ROCK_SMASH", "WATERFALL", "ROCK_CLIMB"]
+    valid_keys = ["CUT", "FLY", "SURF", "STRENGTH", "WHIRLPOOL" "ROCK_SMASH", "WATERFALL", "ROCK_CLIMB"]
 
 class VisibilityHmLogic(DefaultOnToggle):
-    """Logically require Flash or Defog for traversing and finding locations in applicable regions."""
-    display_name = "Logically Require Flash or Defog for Applicable Regions"
+    """Logically require Flash for traversing and finding locations in applicable regions."""
+    display_name = "Logically Require Flash for Applicable Regions"
 
 class DowsingMachineLogic(DefaultOnToggle):
     """Logically require the Dowsing Machine to find hidden items."""
@@ -189,18 +188,14 @@ class GameOptions(OptionDict):
         else:
             raise AttributeError(name, self)
 
-class RequireFlyForNorthSinnoh(Toggle):
-    """
-    Require HM02 Fly (and the badge if necessary) to logically access North Sinnoh.
-    """
-    display_name = "North Sinnoh Requires Fly"
 
-class RequireParcelCouponsCheckRoute203(DefaultOnToggle):
+# Replaces RequireParcelCouponsCheckRoute203
+class RequireMysteryEgg(DefaultOnToggle):
     """
-    Whether Looker blocks you from exiting Jubilife city towards Route 203 if you
-    haven't delivered the parcel and exchanged the three coupons.
+    Whether the player must deliver the Mystery Egg to Elm 
+    before leaving Violet City (Route 31).
     """
-    display_name = "Require Parcel and Coupons for Route 203 from Jubilife"
+    display_name = "Require Mystery Egg Delivery"
 
 class ShowUnrandomizedProgressionItems(DefaultOnToggle):
     """
@@ -246,13 +241,6 @@ class NationalDexNumMons(Range):
     range_end = 80
     default = 60
 
-class AddMarshPass(Toggle):
-    """
-    Add the Marsh Pass item to the game. The Marsh pass gives free access to the Great Marsh,
-    but if it is enabled, it is required to enter. (i.e., you cannot pay to enter the Great Marsh
-    if this option is enabled)
-    """
-    display_name = "Add Marsh Pass"
 
 class SunyshoreEarly(Toggle):
     """
@@ -261,27 +249,12 @@ class SunyshoreEarly(Toggle):
     """
     display_name = "Early Sunyshore"
 
-class AddStorageKey(Toggle):
-    """
-    Add the Storage Key item to the item pool. This allows access to the warehouse portion
-    of the Veilstone Galactic HQ without having to clear all three lake events.
-    """
-    display_name = "Add Storage Key"
 
-class UnownsOption(Choice):
+class AddSecretPotion(Toggle):
     """
-    How the Maniac Tunnel is handled.
-
-    Vanilla: 26 Unown forms must be encountered before the Maniac Tunnel is traversable.
-    Item: 28 "Unown Form" items are added to the item pool. 26 of them must be collected
-    before the Maniac Tunnel is traversable.
-    None: The Maniac Tunnel is always traversable.
+    Add the Secret Potion item to the item pool. This allows you heal the sick Ampharos in the Lighthouse in Olivine City.
     """
-    display_name = "Unowns Choice"
-    option_vanilla = 0
-    option_item = 1
-    option_none = 2
-    default = 1
+    display_name = "Add Secret Potion"
 
 class AddBag(Toggle):
     """
@@ -332,18 +305,16 @@ class PokemonHGSSOptions(PerGameCommonOptions):
     npc_gifts: RandomizeNpcGifts
     key_items: RandomizeKeyItems
     rods: RandomizeRods
-    poketch_apps: RandomizePoketchApps
+    apricorns: RandomizeApricornBox
     running_shoes: RandomizeRunningShoes
     bicycle: RandomizeBicycle
     pokedex: RandomizePokedex
-    accessories: RandomizeAccessories
 
     hm_badge_requirement: HmBadgeRequirements
     remove_badge_requirements: RemoveBadgeRequirement
     visibility_hm_logic: VisibilityHmLogic
     dowsing_machine_logic: DowsingMachineLogic
-    north_sinnoh_fly: RequireFlyForNorthSinnoh
-    parcel_coupons_route_203: RequireParcelCouponsCheckRoute203
+    require_mystery_egg: RequireMysteryEgg
     regional_dex_goal: NationalDexNumMons
     early_sunyshore: SunyshoreEarly
     pastoria_barriers: PastoriaBarriers
@@ -357,11 +328,9 @@ class PokemonHGSSOptions(PerGameCommonOptions):
 
     master_repel: AddMasterRepel
     s_s_ticket: AddSSTicket
-    marsh_pass: AddMarshPass
     exp_multiplier: ExpMultiplier
-    storage_key: AddStorageKey
+    secret_potion: AddSecretPotion
     bag: AddBag
-    unown_option: UnownsOption
 
     show_unrandomized_progression_items: ShowUnrandomizedProgressionItems
     remote_items: RemoteItems

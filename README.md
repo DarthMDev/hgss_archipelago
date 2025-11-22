@@ -21,8 +21,13 @@ To make the `.apworld` file, run `make` within the root directory of the reposit
 - Better location labels. In [`data_gen/locations.toml`](data_gen/locations.toml), for each location, simply modify the `label` field.
   No other changes necessary.
 - Correct logic. There are probably some places with incorrect logic. If you find any of these, open up an issue, and I'll get to fixing it promptly.
-- Correct item classifications. Some items may not be classified as `useful`, when they should be. To adjust these, in the `data_gen/items.toml` file,
-  for each item that should be marked as useful, add the line `classification = "useful"` line.
+- Correct item classifications. 
+- Verify we have everything in locations
+- regions info
+- encounters info 
+- Rom patching
+- make sure we have everything in rules
+- more options for events and pokegear support
 
 ## What is Missing
 

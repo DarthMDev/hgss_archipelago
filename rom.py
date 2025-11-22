@@ -21,8 +21,8 @@ from .data.items import items
 if TYPE_CHECKING:
     from . import PokemonHGSSWorld
 
-PLATINUM_1_0_US_HASH = "d66ad7a2a0068b5d46e0781ca4953ae9"
-PLATINUM_1_1_US_HASH = "ab828b0d13f09469a71460a34d0de51b"
+HEATGOLD_HASH = ""
+SOULSILVER_HASH = "ab828b0d13f09469a71460a34d0de51b"
 
 class PokemonHGSSPatch(APAutoPatchInterface):
     game = "Pokemon HeartGold/SoulSilver"
@@ -47,23 +47,19 @@ class PokemonHGSSPatch(APAutoPatchInterface):
     def patch(self, target: str) -> None:
         self.read()
         data = PokemonHGSSPatch.get_source_data_with_cache()
-        rom_version = data[0x01E]
-        if rom_version == 0:
-            patch_name = "base_patch_us_rev0.bsdiff4"
-        else:
-            patch_name = "base_patch_us_rev1.bsdiff4"
-        data = bytearray(bsdiff4.patch(data, self.get_file(patch_name)))
-
-        ap_bin_start = data.find(b'AP BIN FILLER ' * 5)
-        ap_bin_end = data.find(b'\0', ap_bin_start)
-        ap_bin_len = ap_bin_end - ap_bin_start + 1
-        print(f"s: {ap_bin_start}, e: {ap_bin_end}, l: {ap_bin_len}")
-
+        
+        print("SKIPPING BINARY PATCH: No HGSS ASM patch available yet.")
+        print("Generating AP Data File (ap.bin) separately for Lua...")
+        
+        # We will write the randomizer data (ap.bin) to a separate file
+        # so  Lua script can read it, instead of injecting it into the ROM.
         ap_bin = self.get_file("ap.bin")
-        if len(ap_bin) > ap_bin_len:
-            raise IndexError(f"ap.bin length is too long to fit in ROM. ap.bin: {len(ap_bin)}, capacity: {ap_bin_len}")
-        data[ap_bin_start:ap_bin_start + len(ap_bin)] = ap_bin
+        
+        # Save ap.bin next to the ROM for debugging/Lua usage
+        with open(target + ".apdata", 'wb') as f:
+            f.write(ap_bin)
 
+        # Just copy the vanilla ROM as the "output" for now so the generator doesn't crash
         with open(target, 'wb') as f:
             f.write(data)
 
@@ -220,7 +216,7 @@ def generate_output(world: "PokemonHGSSWorld", output_directory: str, patch: Pok
 
     if world.options.hm_badge_requirement.value == 1:
         hm_accum = 0
-        hm_order = ["CUT", "FLY", "SURF", "STRENGTH", "DEFOG", "ROCK_SMASH", "WATERFALL", "ROCK_CLIMB"]
+        hm_order = ["CUT", "FLY", "SURF", "STRENGTH", "WHIRLPOOL", "ROCK_SMASH", "WATERFALL", "ROCK_CLIMB"]
         for i, v in enumerate(hm_order):
             if v in world.options.remove_badge_requirements:
                 hm_accum |= 1 << i

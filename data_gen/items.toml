@@ -2437,7 +2437,7 @@ group = "tmhms"
 classification = "progression"
 
 [hm05]
-label = "HM05 Defog"
+label = "HM05 Whirlpool"
 id = 424
 clas = "bagitem"
 group = "tmhms"
@@ -2464,23 +2464,6 @@ clas = "bagitem"
 group = "tmhms"
 classification = "progression"
 
-[explorer_kit]
-label = "Explorer Kit"
-id = 428
-clas = "bagitem"
-group = "key_items"
-
-[loot_sack]
-label = "Loot Sack"
-id = 429
-clas = "bagitem"
-group = "key_items"
-
-[rule_book]
-label = "Rule Book"
-id = 430
-clas = "bagitem"
-group = "key_items"
 
 [poke_radar]
 label = "Poké Radar"
@@ -2488,11 +2471,7 @@ id = 431
 clas = "bagitem"
 group = "key_items"
 
-[point_card]
-label = "Point Card"
-id = 432
-clas = "bagitem"
-group = "key_items"
+
 
 [journal]
 label = "Journal"
@@ -2500,23 +2479,11 @@ id = 433
 clas = "specialbagitem"
 group = "key_items"
 
-[seal_case]
-label = "Seal Case"
-id = 434
-clas = "bagitem"
-group = "key_items"
 
-[fashion_case]
-label = "Fashion Case"
-id = 435
-clas = "bagitem"
-group = "key_items"
 
-[seal_bag]
-label = "Seal Bag"
-id = 436
-clas = "bagitem"
-group = "key_items"
+
+
+
 
 [pal_pad]
 label = "Pal Pad"
@@ -2524,12 +2491,7 @@ id = 437
 clas = "bagitem"
 group = "key_items"
 
-[works_key]
-label = "Works Key"
-id = 438
-clas = "bagitem"
-group = "key_items"
-classification = "progression"
+
 
 [old_charm]
 label = "Old Charm"
@@ -2538,12 +2500,7 @@ clas = "bagitem"
 group = "key_items"
 classification = "progression"
 
-[galactic_key]
-label = "Galactic Key"
-id = 440
-clas = "specialbagitem"
-group = "key_items"
-classification = "progression"
+
 
 [red_chain]
 label = "Red Chain"
@@ -2557,11 +2514,6 @@ id = 442
 clas = "bagitem"
 group = "key_items"
 
-[vs_seeker]
-label = "Vs. Seeker"
-id = 443
-clas = "specialbagitem"
-group = "key_items"
 
 [coin_case]
 label = "Coin Case"
@@ -2596,11 +2548,7 @@ id = 448
 clas = "bagitem"
 group = "key_items"
 
-[poffin_case]
-label = "Poffin Case"
-id = 449
-clas = "bagitem"
-group = "key_items"
+
 
 [bicycle]
 label = "Bicycle"
@@ -2653,11 +2601,7 @@ id = 457
 clas = "bagitem"
 group = "key_items"
 
-[magma_stone]
-label = "Magma Stone"
-id = 458
-clas = "bagitem"
-group = "key_items"
+
 
 [parcel]
 label = "Parcel"
@@ -2687,12 +2631,6 @@ clas = "bagitem"
 group = "key_items"
 classification = "progression"
 
-[storage_key]
-label = "Storage Key"
-id = 463
-clas = "bagitem"
-group = "key_items"
-classification = "progression"
 
 [secretpotion]
 label = "SecretPotion"
@@ -2707,17 +2645,79 @@ id = 465
 clas = "bagitem"
 group = "key_items"
 
-[gracidea]
-label = "Gracidea"
-id = 466
+[apricorn_box]
+label = "Apricorn Box"
+id = 468
 clas = "bagitem"
 group = "key_items"
 
-[secret_key]
-label = "Secret Key"
-id = 467
+[berry_pots]
+label = "Berry Pots"
+id = 470
 clas = "bagitem"
 group = "key_items"
+
+[squirtbottle]
+label = "Squirt Bottle"
+id = 477
+clas = "bagitem"
+group = "key_items"
+classification = "progression"
+
+[card_key]
+label = "Card Key"
+id = 475
+clas = "bagitem"
+group = "key_items"
+classification = "progression"
+
+[basement_key]
+label = "Basement Key"
+id = 476
+clas = "bagitem"
+group = "key_items"
+classification = "progression"
+
+[machine_part]
+label = "Machine Part"
+id = 481
+clas = "bagitem"
+group = "key_items"
+classification = "progression"
+
+[lost_item]
+label = "Lost Item"
+id = 479
+clas = "bagitem"
+group = "key_items"
+
+[dowsing_mchn]
+label = "Dowsing Machine"
+id = 471
+clas = "bagitem"
+group = "key_items"
+classification = "useful"
+
+[silver_wing]
+label = "Silver Wing"
+id = 482
+clas = "bagitem"
+group = "key_items
+classification = "useful"
+
+[rainbow_wing]
+label = "Rainbow Wing"
+id = 483
+clas = "bagitem"
+group = "key_items"
+classification= "useful"
+
+[tidal_bell]
+label = "Tidal Bell"
+id = 503
+clas = "bagitem"
+group = "key_items
+classification="useful"
 
 [honey_x3]
 label = "Honey x3"
@@ -2726,208 +2726,63 @@ clas = "bagitem"
 group = "items"
 count = 3
 
-[digitalwatch]
-label = "DIGITAL WATCH"
-id = 0
-clas = "poketchapp"
-group = "poketch_apps"
+[rage_candy_bar]
+label = "Rage Candy Bar"
+id = 504
+class = "bagitem"
+group = "key_items"
 
-[calculator]
-label = "CALCULATOR"
-id = 1
-clas = "poketchapp"
-group = "poketch_apps"
-
-[memopad]
-label = "MEMO PAD"
-id = 2
-clas = "poketchapp"
-group = "poketch_apps"
-
-[pedometer]
-label = "PEDOMETER"
-id = 3
-clas = "poketchapp"
-group = "poketch_apps"
-
-[partystatus]
-label = "POKéMON LIST"
-id = 4
-clas = "poketchapp"
-group = "poketch_apps"
-
-[friendshipchecker]
-label = "FRIENDSHIP CHECKER"
-id = 5
-clas = "poketchapp"
-group = "poketch_apps"
-
-[dowsingmachine]
-label = "DOWSING MACHINE"
-id = 6
-clas = "poketchapp"
-group = "poketch_apps"
-classification = "progression"
-
-[berrysearcher]
-label = "BERRY SEARCHER"
-id = 7
-clas = "poketchapp"
-group = "poketch_apps"
-
-[daycarechecker]
-label = "DAY-CARE CHECKER"
-id = 8
-clas = "poketchapp"
-group = "poketch_apps"
-
-[pokemonhistory]
-label = "POKéMON HISTORY"
-id = 9
-clas = "poketchapp"
-group = "poketch_apps"
-
-[counter]
-label = "COUNTER"
-id = 10
-clas = "poketchapp"
-group = "poketch_apps"
-
-[analogwatch]
-label = "ANALOG WATCH"
-id = 11
-clas = "poketchapp"
-group = "poketch_apps"
-
-[markingmap]
-label = "MARKING MAP"
-id = 12
-clas = "poketchapp"
-group = "poketch_apps"
-
-[linksearcher]
-label = "LINK SEARCHER"
-id = 13
-clas = "poketchapp"
-group = "poketch_apps"
-
-[cointoss]
-label = "COIN TOSS"
-id = 14
-clas = "poketchapp"
-group = "poketch_apps"
-
-[movetester]
-label = "MOVE TESTER"
-id = 15
-clas = "poketchapp"
-group = "poketch_apps"
-
-[calendar]
-label = "CALENDAR"
-id = 16
-clas = "poketchapp"
-group = "poketch_apps"
-
-[dotart]
-label = "DOT ARTIST"
-id = 17
-clas = "poketchapp"
-group = "poketch_apps"
-
-[roulette]
-label = "ROULETTE"
-id = 18
-clas = "poketchapp"
-group = "poketch_apps"
-
-[radarchaincounter]
-label = "TRAINER COUNTER"
-id = 19
-clas = "poketchapp"
-group = "poketch_apps"
-
-[kitchentimer]
-label = "KITCHEN TIMER"
-id = 20
-clas = "poketchapp"
-group = "poketch_apps"
-
-[colorchanger]
-label = "COLOR CHANGER"
-id = 21
-clas = "poketchapp"
-group = "poketch_apps"
-
-[matchupchecker]
-label = "MATCHUP CHECKER"
-id = 22
-clas = "poketchapp"
-group = "poketch_apps"
-
-[unused_stopwatch]
-label = "STOPWATCH"
-id = 23
-clas = "poketchapp"
-group = "poketch_apps"
-
-[unused_alarmclock]
-label = "ALARM CLOCK"
-id = 24
-clas = "poketchapp"
-group = "poketch_apps"
-
-[coal_badge]
-label = "Coal Badge"
+[zephyr_badge]
+label = "Zephyr Badge"
 id = 0
 clas = "badge"
 group = "badges"
 classification = "progression"
 
-[forest_badge]
-label = "Forest Badge"
+[hive_badge]
+label = "Hive Badge"
 id = 1
 clas = "badge"
 group = "badges"
 classification = "progression"
 
-[cobble_badge]
-label = "Cobble Badge"
+[plain_badge]
+label = "Plain Badge"
 id = 2
 clas = "badge"
 group = "badges"
 classification = "progression"
 
-[fen_badge]
-label = "Fen Badge"
+[fog_badge]
+label = "Fog Badge"
 id = 3
 clas = "badge"
 group = "badges"
 classification = "progression"
 
-[relic_badge]
-label = "Relic Badge"
+[storm_badge]
+label = "Storm Badge"
 id = 4
 clas = "badge"
 group = "badges"
 classification = "progression"
 
-[mine_badge]
-label = "Mine Badge"
+[mineral_badge]
+label = "Mineral Badge"
 id = 5
 clas = "badge"
 group = "badges"
 classification = "progression"
 
-[icicle_badge]
-label = "Icicle Badge"
+[glacier_badge]
+label = "Glacier Badge"
 id = 6
 clas = "badge"
 group = "badges"
 classification = "progression"
 
-[beacon_badge]
-label = "Beacon Badge"
+[rising_badge]
+label = "Rising Badge"
 id = 7
 clas = "badge"
 group = "badges"
@@ -2954,12 +2809,7 @@ clas = "bagitem"
 group = "balls"
 count = 5
 
-[poketch]
-label = "Pokétch"
-id = 3
-clas = "special"
-group = "poketch_apps"
-classification = "progression"
+
 
 [honey_x10]
 label = "Honey x10"
@@ -2983,19 +2833,8 @@ group = "medicine"
 classification = "useful"
 count = 15
 
-[marsh_pass]
-label = "Marsh Pass"
-id = 469
-clas = "bagitem"
-group = "key_items"
-classification = "progression"
 
-[uunown]
-label = "Unown File"
-id = 470
-clas = "bagitem"
-group = "key_items"
-classification = "progression"
+
 
 [bag]
 label = "Bag"
