@@ -30,7 +30,6 @@ location_types: Mapping[str, LocationType] = {
     "all_key_item": LocationType(is_enabled = lambda opts : opts.key_items.value == RandomizeKeyItems.option_all),
     "npc_gift": LocationType(is_enabled = lambda opts : opts.npc_gifts.value == 1),
     "rod": LocationType(is_enabled = lambda opts : opts.rods.value == 1),
-    "poketchapp": LocationType(is_enabled = lambda opts : opts.poketch_apps.value == 1),
     "running_shoes": LocationType(is_enabled = lambda opts : opts.running_shoes.value == 1),
     "bicycle": LocationType(is_enabled = lambda opts : opts.bicycle.value == 1),
     "pokedex": LocationType(is_enabled = lambda opts : opts.pokedex.value == 1),

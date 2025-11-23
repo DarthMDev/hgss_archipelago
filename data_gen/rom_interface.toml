@@ -13,7 +13,6 @@ item_clas.multibagitem0 = 1
 item_clas.multibagitem1 = 2
 item_clas.multibagitem2 = 3
 item_clas.specialbagitem = 4
-item_clas.poketchapp = 5
 item_clas.badge = 6
 item_clas.accessory = 7
 item_clas.special = 0xE

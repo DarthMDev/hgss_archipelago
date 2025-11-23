@@ -346,8 +346,8 @@ class PokemonHGSSOptions(PerGameCommonOptions):
                 raise OptionError(f"cannot enable Pastoria barriers if Surf requires the Fen Badge and badges are not randomized.")
             if not (self.hms or self.key_items.are_most_randomized()):
                 raise OptionError(f"cannot enable Pastoria barriers if both HMs and Key Items are not randomized.")
-        if not (self.overworlds or self.hiddens or self.npc_gifts or self.key_items.value > 0 or self.poketch_apps):
-            raise OptionError(f"at least one of overworlds, hiddens, npc_gifts, key_items, or poketch apps must be enabled")
+        if not (self.overworlds or self.hiddens or self.npc_gifts or self.key_items.value > 0):
+            raise OptionError(f"at least one of overworlds, hiddens, npc_gifts, or key_items  must be enabled")
         if self.bag and self.dowsing_machine_logic and not (self.overworlds or self.npc_gifts or self.rods or self.running_shoes or self.pokedex or self.key_items.value > 0):
-            raise OptionError(f"if the bag is enabled, then at least one of overworlds, npc_gifts, rods, running_shoes, pokedex, key_items must be enabled")
+            raise OptionError(f"if the bag is enabled, then at least one of overworlds, npc_gifts, rods, running_shoes, pokedex, or key_items must be enabled")
 
