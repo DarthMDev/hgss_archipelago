@@ -23,7 +23,7 @@ class LocationType:
 
 location_types: Mapping[str, LocationType] = {
     "overworld": LocationType(is_enabled = lambda opts : opts.overworlds.value == 1),
-    "hidden": LocationType(is_enabled = lambda opts : opts.hiddens.value == 1),
+    # "hidden": LocationType(is_enabled = lambda opts : opts.hiddens.value == 1),
     "hm": LocationType(is_enabled = lambda opts : opts.hms.value == 1),
     "badge": LocationType(is_enabled = lambda opts : opts.badges.value == 1),
     "key_item": LocationType(is_enabled = lambda opts : opts.key_items.are_most_randomized()),
@@ -33,6 +33,7 @@ location_types: Mapping[str, LocationType] = {
     "running_shoes": LocationType(is_enabled = lambda opts : opts.running_shoes.value == 1),
     "bicycle": LocationType(is_enabled = lambda opts : opts.bicycle.value == 1),
     "pokedex": LocationType(is_enabled = lambda opts : opts.pokedex.value == 1),
+    "pokegear_cards": LocationType(is_enabled = lambda opts : opts.pokegear_cards.value == 1),
     "uunown": LocationType(
         is_enabled = lambda opts : opts.hiddens.value == 1 and opts.unown_option.value == UnownsOption.option_item,
         should_be_added = lambda opts : opts.unown_option == UnownsOption.option_item

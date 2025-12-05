@@ -23,16 +23,15 @@ To make the `.apworld` file, run `make` within the root directory of the reposit
 - Correct logic. There are probably some places with incorrect logic. If you find any of these, open up an issue, and I'll get to fixing it promptly.
 - Correct item classifications. 
 - Verify we have everything in locations
-- regions info
 - encounters info 
 - Rom patching
 - make sure we have everything in rules
-- more options for events and pokegear support
+- more options for events
 
 ## What is Missing
 
 - Encounter randomization and level scaling.
-- More victory conditions (including rules for fight area).
+- More victory conditions (including rules)
 - Trainersanity.
 - Dexsanity.
 - Various QOL things.

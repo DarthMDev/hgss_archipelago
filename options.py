@@ -19,9 +19,9 @@ class RandomizeOverworlds(DefaultOnToggle):
     """Adds overworld items to the pool."""
     display_name = "Randomize Overworlds"
 
-class RandomizeHiddenItems(Toggle):
-    """Adds hidden items to the pool."""
-    display_name = "Randomize Hidden Items"
+# class RandomizeHiddenItems(Toggle):
+#     """Adds hidden items to the pool."""
+#     display_name = "Randomize Hidden Items"
 
 class RandomizeNpcGifts(DefaultOnToggle):
     """Adds NPC gifts to the pool."""
@@ -43,7 +43,6 @@ class RandomizeRods(DefaultOnToggle):
     display_name = "Randomize Rods"
 
 
-
 class RandomizeRunningShoes(Toggle):
     """Adds the running shoes to the pool."""
     display_name = "Randomize Running Shoes"
@@ -56,9 +55,10 @@ class RandomizePokedex(Toggle):
     """Add the Pokedex to the pool. Note: this also adds the national dex to the pool."""
     display_name = "Randomize Pokedex"
 
-class RandomizeApricornBox(Toggle):
-    """Adds the Apricorn Box and Apricorns to the pool."""
-    display_name = "Randomize Apricorn Box"
+class RanodomizePokegearCards(DefaultOnToggle):
+    """Adds Pokegear cards to the pool."""
+    display_name = "Randomize Pokegear Cards"
+    
 
 
 class HmBadgeRequirements(DefaultOnToggle):
@@ -226,8 +226,7 @@ class FPS60(Toggle):
 class AddSSTicket(Toggle):
     """
     Add the S.S. Ticket to the item pool.
-    The S.S. ticket can be used to travel to the fight area before defeating Cynthia.
-    """
+    The S.S. Ticket is required to board the S.S. Aqua."""
     display_name = "Add S.S. Ticket"
 
 class NationalDexNumMons(Range):
@@ -301,14 +300,14 @@ class PokemonHGSSOptions(PerGameCommonOptions):
     hms: RandomizeHms
     badges: RandomizeBadges
     overworlds: RandomizeOverworlds
-    hiddens: RandomizeHiddenItems
+    # hiddens: RandomizeHiddenItems
     npc_gifts: RandomizeNpcGifts
     key_items: RandomizeKeyItems
     rods: RandomizeRods
-    apricorns: RandomizeApricornBox
     running_shoes: RandomizeRunningShoes
     bicycle: RandomizeBicycle
     pokedex: RandomizePokedex
+    pokegear_cards: RanodomizePokegearCards
 
     hm_badge_requirement: HmBadgeRequirements
     remove_badge_requirements: RemoveBadgeRequirement

@@ -698,7 +698,7 @@ id = 112
 
 [ice_path_1f_hm07]
 original_item = "hm07"
-type = "overworld"
+type = "hm"
 table = "overworld"
 check = 1111
 label = "Ice Path 1F - Hm07"
@@ -2124,7 +2124,7 @@ id = 5
 
 [route_36_berry_pots]
 original_item = "berry_pots"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 463
 label = "Route 36 - Berry Pots"
@@ -2156,7 +2156,7 @@ id = 1
 
 [route_36_hm06]
 original_item = "hm06"
-type = "npc_gift"
+type = "hm"
 table = "base"
 check = 450
 label = "Route 36 - Hm06"
@@ -2172,7 +2172,7 @@ id = 1
 
 [route_42_hm04]
 original_item = "hm04"
-type = "npc_gift"
+type = "hm"
 table = "base"
 check = 669
 label = "Route 42 - Hm04"
@@ -2413,7 +2413,7 @@ id = 3
 [cianwood_hm02]
 original_item = "hm02"
 type = "npc_gift"
-table = "base"
+table = "hm"
 check = 187
 label = "Cianwood - Hm02"
 id = 6
@@ -2436,7 +2436,7 @@ id = 1
 
 [ecruteak_dowsing_machine_house_dowsing_mchn]
 original_item = "dowsing_mchn"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 163
 label = "Ecruteak Dowsing Machine House - Dowsing Mchn"
@@ -2444,7 +2444,7 @@ id = 0
 
 [ecruteak_dance_theater_hm03]
 original_item = "hm03"
-type = "npc_gift"
+type = "hm"
 table = "base"
 check = 162
 label = "Ecruteak Dance Theater - Hm03"
@@ -2460,7 +2460,7 @@ id = 12
 
 [ecruteak_dance_theater_clear_bell]
 original_item = "clear_bell"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 259
 label = "Ecruteak Dance Theater - Clear Bell"
@@ -2468,7 +2468,7 @@ id = 16
 
 [ecruteak_dance_theater_tidal_bell]
 original_item = "tidal_bell"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 260
 label = "Ecruteak Dance Theater - Tidal Bell"
@@ -2476,7 +2476,7 @@ id = 16
 
 [mahogany_ragecandybar]
 original_item = "ragecandybar"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 355
 label = "Mahogany - Ragecandybar"
@@ -2500,7 +2500,7 @@ id = 5
 
 [lake_of_rage_red_scale]
 original_item = "red_scale"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 201
 label = "Lake Of Rage - Red Scale"
@@ -2532,7 +2532,7 @@ id = 0
 
 [route_31_violet_gatehouse_vs__recorder]
 original_item = "vs__recorder"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 5028
 label = "Route 31 Violet Gatehouse - Vs  Recorder"
@@ -2548,23 +2548,16 @@ id = 0
 
 [ilex_forest_hm01]
 original_item = "hm01"
-type = "npc_gift"
+type = "hm"
 table = "base"
 check = 128
 label = "Ilex Forest - Hm01"
 id = 11
 
-[ilex_forest_hm01_2]
-original_item = "hm01"
-type = "npc_gift"
-table = "base"
-check = 431
-label = "Ilex Forest - Hm01 (2)"
-id = 11
 
 [goldenrod_tunnel_1f_fashion_case]
 original_item = "fashion_case"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 712
 label = "Goldenrod Tunnel 1F - Fashion Case"
@@ -2581,7 +2574,7 @@ id = 0
 
 [route_30_apricorn_house_apricorn_box]
 original_item = "apricorn_box"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 109
 label = "Route 30 Apricorn House - Apricorn Box"
@@ -2677,7 +2670,7 @@ id = 0
 
 [route_30_mr_pokemon_house_mystery_egg]
 original_item = "mystery_egg"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 108
 label = "Route 30 Mr Pokemon House - Mystery Egg"
@@ -2693,7 +2686,7 @@ id = 0
 
 [sprout_tower_3f_tm70]
 original_item = "tm70"
-type = "npc_gift"
+type = "hm"
 table = "base"
 check = 118
 label = "Sprout Tower 3F - Tm70"
@@ -2701,7 +2694,7 @@ id = 2
 
 [route_32_pokecenter_1f_old_rod]
 original_item = "old_rod"
-type = "npc_gift"
+type = "rod"
 table = "base"
 check = 117
 label = "Route 32 Pokecenter 1F - Old Rod"
@@ -2749,7 +2742,7 @@ id = 0
 
 [goldenrod_bike_shop_bicycle]
 original_item = "bicycle"
-type = "npc_gift"
+type = "bicycle"
 table = "base"
 check = 137
 label = "Goldenrod Bike Shop - Bicycle"
@@ -2757,7 +2750,7 @@ id = 0
 
 [goldenrod_flower_shop_squirtbottle]
 original_item = "squirtbottle"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 181
 label = "Goldenrod Flower Shop - Squirtbottle"
@@ -2765,7 +2758,7 @@ id = 0
 
 [goldenrod_radio_tower_2f_blue_card]
 original_item = "blue_card"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 2742
 label = "Goldenrod Radio Tower 2F - Blue Card"
@@ -2789,7 +2782,7 @@ id = 4
 
 [goldenrod_radio_tower_observation_deck_rainbow_wing]
 original_item = "rainbow_wing"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 147
 label = "Goldenrod Radio Tower Observation Deck - Rainbow Wing"
@@ -2797,7 +2790,7 @@ id = 1
 
 [goldenrod_radio_tower_observation_deck_silver_wing]
 original_item = "silver_wing"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 148
 label = "Goldenrod Radio Tower Observation Deck - Silver Wing"
@@ -2805,7 +2798,7 @@ id = 1
 
 [goldenrod_tunnel_warehouse_card_key]
 original_item = "card_key"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 449
 label = "Goldenrod Tunnel Warehouse - Card Key"
@@ -2829,7 +2822,7 @@ id = 1
 
 [route_39_moomoo_farm_stable_seal_case]
 original_item = "seal_case"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 256
 label = "Route 39 Moomoo Farm Stable - Seal Case"
@@ -2837,7 +2830,7 @@ id = 0
 
 [olivine_northwest_house_good_rod]
 original_item = "good_rod"
-type = "npc_gift"
+type = "rod"
 table = "base"
 check = 189
 label = "Olivine Northwest House - Good Rod"
@@ -2845,7 +2838,7 @@ id = 0
 
 [cianwood_pharmacy_secretpotion]
 original_item = "secretpotion"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 185
 label = "Cianwood Pharmacy - Secretpotion"
@@ -2853,7 +2846,7 @@ id = 0
 
 [team_rocket_headquarters_b2f_hm05]
 original_item = "hm05"
-type = "npc_gift"
+type = "hm"
 table = "base"
 check = 485
 label = "Team Rocket Headquarters B2F - Hm05"
@@ -2909,7 +2902,7 @@ id = 0
 
 [ruins_of_alph_underground_hall_unown_report]
 original_item = "unown_report"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 565
 label = "Ruins Of Alph Underground Hall - Unown Report"
@@ -2941,7 +2934,7 @@ id = 0
 
 [vermilion_pokemon_fan_club_lost_item]
 original_item = "lost_item"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 765
 label = "Vermilion Pokemon Fan Club - Lost Item"
@@ -2965,7 +2958,7 @@ id = 23
 
 [celadon_condominiums_3f_gb_sounds]
 original_item = "gb_sounds"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 5039
 label = "Celadon Condominiums 3F - Gb Sounds"
@@ -3013,7 +3006,7 @@ id = 1
 
 [saffron_copycat_house_2f_pass]
 original_item = "pass"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 135
 label = "Saffron Copycat House 2F - Pass"
@@ -3141,7 +3134,7 @@ id = 0
 
 [pallet_town_oaks_lab_hm08]
 original_item = "hm08"
-type = "npc_gift"
+type = "hm"
 table = "base"
 check = 299
 label = "Pallet Town Oaks Lab - Hm08"
@@ -3149,7 +3142,7 @@ id = 0
 
 [pallet_town_oaks_lab_jade_orb]
 original_item = "jade_orb"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 188
 label = "Pallet Town Oaks Lab - Jade Orb"
@@ -3173,7 +3166,7 @@ id = 0
 
 [route_12_fishing_brother_house_super_rod]
 original_item = "super_rod"
-type = "npc_gift"
+type = "rod"
 table = "base"
 check = 5047
 label = "Route 12 Fishing Brother House - Super Rod"
@@ -3181,7 +3174,7 @@ id = 0
 
 [goldenrod_game_corner_coin_case]
 original_item = "coin_case"
-type = "npc_gift"
+type = "key_item"
 table = "base"
 check = 5048
 label = "Goldenrod Game Corner - Coin Case"

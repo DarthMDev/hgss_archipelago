@@ -2502,17 +2502,7 @@ classification = "progression"
 
 
 
-[red_chain]
-label = "Red Chain"
-id = 441
-clas = "bagitem"
-group = "key_items"
 
-[town_map]
-label = "Town Map"
-id = 442
-clas = "bagitem"
-group = "key_items"
 
 
 [coin_case]
@@ -2542,11 +2532,7 @@ clas = "bagitem"
 group = "key_items"
 classification = "progression"
 
-[sprayduck]
-label = "Sprayduck"
-id = 448
-clas = "bagitem"
-group = "key_items"
+
 
 
 
@@ -2557,79 +2543,14 @@ clas = "bagitem"
 group = "key_items"
 classification = "progression"
 
-[suite_key]
-label = "Suite Key"
-id = 451
-clas = "bagitem"
-group = "key_items"
-classification = "progression"
 
-[oaks_letter]
-label = "Oak’s Letter"
-id = 452
-clas = "bagitem"
-group = "key_items"
-
-[lunar_wing]
-label = "Lunar Wing"
-id = 453
-clas = "bagitem"
-group = "key_items"
-
-[member_card]
-label = "Member Card"
-id = 454
-clas = "bagitem"
-group = "key_items"
-
-[azure_flute]
-label = "Azure Flute"
-id = 455
-clas = "bagitem"
-group = "key_items"
-
-[s_s_ticket]
+[s_s__ticket]
 label = "S.S. Ticket"
 id = 456
 clas = "bagitem"
 group = "key_items"
 classification = "progression"
 
-[contest_pass]
-label = "Contest Pass"
-id = 457
-clas = "bagitem"
-group = "key_items"
-
-
-
-[parcel]
-label = "Parcel"
-id = 459
-clas = "bagitem"
-group = "key_items"
-classification = "progression"
-
-[coupon_1]
-label = "Coupon 1"
-id = 460
-clas = "bagitem"
-group = "key_items"
-classification = "progression"
-
-[coupon_2]
-label = "Coupon 2"
-id = 461
-clas = "bagitem"
-group = "key_items"
-classification = "progression"
-
-[coupon_3]
-label = "Coupon 3"
-id = 462
-clas = "bagitem"
-group = "key_items"
-classification = "progression"
 
 
 [secretpotion]
@@ -2639,7 +2560,7 @@ clas = "bagitem"
 group = "key_items"
 classification = "progression"
 
-[vs_recorder]
+[vs__recorder]
 label = "Vs. Recorder"
 id = 465
 clas = "bagitem"
@@ -2726,7 +2647,7 @@ clas = "bagitem"
 group = "items"
 count = 3
 
-[rage_candy_bar]
+[ragecandybar]
 label = "Rage Candy Bar"
 id = 504
 class = "bagitem"
@@ -2832,8 +2753,6 @@ clas = "bagitem"
 group = "medicine"
 classification = "useful"
 count = 15
-
-
 
 
 [bag]
@@ -3442,33 +3361,3 @@ label = "Comet"
 id = 99
 clas = "accessory"
 group = "accessory"
-
-[sapphire_cartridge]
-label = "Sapphire Cartridge"
-id = 5
-clas = "special"
-group = "gbacart"
-
-[ruby_cartridge]
-label = "Ruby Cartridge"
-id = 6
-clas = "special"
-group = "gbacart"
-
-[emerald_cartridge]
-label = "Emerald Cartridge"
-id = 7
-clas = "special"
-group = "gbacart"
-
-[firered_cartridge]
-label = "Fire Red Cartridge"
-id = 8
-clas = "special"
-group = "gbacart"
-
-[leafgreen_cartridge]
-label = "Leaf Green Cartridge"
-id = 9
-clas = "special"
-group = "gbacart"
