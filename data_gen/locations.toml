@@ -2055,3 +2055,1134 @@ table = "overworld"
 check = 1286
 label = "National Park Bug Catching Contest - Shiny Stone"
 id = 65
+
+
+
+[route_14_lucky_punch]
+original_item = "lucky_punch"
+type = "npc_gift"
+table = "base"
+check = 348
+label = "Route 14 - Lucky Punch"
+id = 5
+
+[route_25_nugget]
+original_item = "nugget"
+type = "npc_gift"
+table = "base"
+check = 290
+label = "Route 25 - Nugget"
+id = 1
+
+[route_29_twistedspoon]
+original_item = "twistedspoon"
+type = "npc_gift"
+table = "base"
+check = 216
+label = "Route 29 - Twistedspoon"
+id = 3
+
+[route_29_poke_ball_x5]
+original_item = "poke_ball"
+type = "npc_gift"
+table = "base"
+check = 420
+label = "Route 29 - Poke Ball x5"
+id = 1
+
+[route_31_tm44]
+original_item = "tm44"
+type = "npc_gift"
+table = "base"
+check = 5001
+label = "Route 31 - Tm44"
+id = 1
+
+[route_32_poison_barb]
+original_item = "poison_barb"
+type = "npc_gift"
+table = "base"
+check = 217
+label = "Route 32 - Poison Barb"
+id = 5
+
+[route_32_tm05]
+original_item = "tm05"
+type = "npc_gift"
+table = "base"
+check = 110
+label = "Route 32 - Tm05"
+id = 0
+
+[route_34_power_herb]
+original_item = "power_herb"
+type = "npc_gift"
+table = "base"
+check = 5002
+label = "Route 34 - Power Herb"
+id = 5
+
+[route_36_berry_pots]
+original_item = "berry_pots"
+type = "npc_gift"
+table = "base"
+check = 463
+label = "Route 36 - Berry Pots"
+id = 0
+
+[route_36_oran_berry_x3]
+original_item = "oran_berry"
+type = "npc_gift"
+table = "base"
+check = 463
+label = "Route 36 - Oran Berry x3"
+id = 0
+
+[route_36_pecha_berry_x3]
+original_item = "pecha_berry"
+type = "npc_gift"
+table = "base"
+check = 463
+label = "Route 36 - Pecha Berry x3"
+id = 0
+
+[route_36_hard_stone]
+original_item = "hard_stone"
+type = "npc_gift"
+table = "base"
+check = 177
+label = "Route 36 - Hard Stone"
+id = 1
+
+[route_36_hm06]
+original_item = "hm06"
+type = "npc_gift"
+table = "base"
+check = 450
+label = "Route 36 - Hm06"
+id = 8
+
+[route_37_magnet]
+original_item = "magnet"
+type = "npc_gift"
+table = "base"
+check = 165
+label = "Route 37 - Magnet"
+id = 1
+
+[route_42_hm04]
+original_item = "hm04"
+type = "npc_gift"
+table = "base"
+check = 669
+label = "Route 42 - Hm04"
+id = 0
+
+[viridian_tm85]
+original_item = "tm85"
+type = "npc_gift"
+table = "base"
+check = 302
+label = "Viridian - Tm85"
+id = 2
+
+[vermilion_pp_max]
+original_item = "pp_max"
+type = "npc_gift"
+table = "base"
+check = 247
+label = "Vermilion - Pp Max"
+id = 0
+
+[fuchsia_persim_berry]
+original_item = "persim_berry"
+type = "npc_gift"
+table = "base"
+check = 5003
+label = "Fuchsia - Persim Berry"
+id = 8
+
+[fuchsia_razz_berry]
+original_item = "razz_berry"
+type = "npc_gift"
+table = "base"
+check = 5004
+label = "Fuchsia - Razz Berry"
+id = 8
+
+[fuchsia_pomeg_berry]
+original_item = "pomeg_berry"
+type = "npc_gift"
+table = "base"
+check = 5005
+label = "Fuchsia - Pomeg Berry"
+id = 8
+
+[fuchsia_bluk_berry]
+original_item = "bluk_berry"
+type = "npc_gift"
+table = "base"
+check = 5006
+label = "Fuchsia - Bluk Berry"
+id = 8
+
+[fuchsia_kelpsy_berry]
+original_item = "kelpsy_berry"
+type = "npc_gift"
+table = "base"
+check = 5007
+label = "Fuchsia - Kelpsy Berry"
+id = 8
+
+[fuchsia_cornn_berry]
+original_item = "cornn_berry"
+type = "npc_gift"
+table = "base"
+check = 5008
+label = "Fuchsia - Cornn Berry"
+id = 8
+
+[fuchsia_pinap_berry]
+original_item = "pinap_berry"
+type = "npc_gift"
+table = "base"
+check = 5009
+label = "Fuchsia - Pinap Berry"
+id = 8
+
+[fuchsia_grepa_berry]
+original_item = "grepa_berry"
+type = "npc_gift"
+table = "base"
+check = 5010
+label = "Fuchsia - Grepa Berry"
+id = 8
+
+[fuchsia_nomel_berry]
+original_item = "nomel_berry"
+type = "npc_gift"
+table = "base"
+check = 5011
+label = "Fuchsia - Nomel Berry"
+id = 8
+
+[fuchsia_wepear_berry]
+original_item = "wepear_berry"
+type = "npc_gift"
+table = "base"
+check = 5012
+label = "Fuchsia - Wepear Berry"
+id = 8
+
+[fuchsia_hondew_berry]
+original_item = "hondew_berry"
+type = "npc_gift"
+table = "base"
+check = 5013
+label = "Fuchsia - Hondew Berry"
+id = 8
+
+[fuchsia_durin_berry]
+original_item = "durin_berry"
+type = "npc_gift"
+table = "base"
+check = 5014
+label = "Fuchsia - Durin Berry"
+id = 8
+
+[new_bark_elms_lab_1f_s_s__ticket]
+original_item = "s_s__ticket"
+type = "npc_gift"
+table = "base"
+check = 242
+label = "New Bark Elms Lab 1F - S S  Ticket"
+id = 0
+
+[new_bark_elms_lab_1f_everstone]
+original_item = "everstone"
+type = "npc_gift"
+table = "base"
+check = 114
+label = "New Bark Elms Lab 1F - Everstone"
+id = 0
+
+[cherrygrove_mystic_water]
+original_item = "mystic_water"
+type = "npc_gift"
+table = "base"
+check = 243
+label = "Cherrygrove - Mystic Water"
+id = 4
+
+[violet_cheri_berry]
+original_item = "cheri_berry"
+type = "npc_gift"
+table = "base"
+check = 5015
+label = "Violet - Cheri Berry"
+id = 3
+
+[violet_pecha_berry]
+original_item = "pecha_berry"
+type = "npc_gift"
+table = "base"
+check = 5016
+label = "Violet - Pecha Berry"
+id = 3
+
+[violet_leppa_berry]
+original_item = "leppa_berry"
+type = "npc_gift"
+table = "base"
+check = 5017
+label = "Violet - Leppa Berry"
+id = 3
+
+[violet_oran_berry]
+original_item = "oran_berry"
+type = "npc_gift"
+table = "base"
+check = 5018
+label = "Violet - Oran Berry"
+id = 3
+
+[violet_chesto_berry]
+original_item = "chesto_berry"
+type = "npc_gift"
+table = "base"
+check = 5019
+label = "Violet - Chesto Berry"
+id = 3
+
+[violet_wiki_berry]
+original_item = "wiki_berry"
+type = "npc_gift"
+table = "base"
+check = 5020
+label = "Violet - Wiki Berry"
+id = 3
+
+[violet_aspear_berry]
+original_item = "aspear_berry"
+type = "npc_gift"
+table = "base"
+check = 5021
+label = "Violet - Aspear Berry"
+id = 3
+
+[violet_sitrus_berry]
+original_item = "sitrus_berry"
+type = "npc_gift"
+table = "base"
+check = 5022
+label = "Violet - Sitrus Berry"
+id = 3
+
+[violet_iapapa_berry]
+original_item = "iapapa_berry"
+type = "npc_gift"
+table = "base"
+check = 5023
+label = "Violet - Iapapa Berry"
+id = 3
+
+[violet_rawst_berry]
+original_item = "rawst_berry"
+type = "npc_gift"
+table = "base"
+check = 5024
+label = "Violet - Rawst Berry"
+id = 3
+
+[violet_lum_berry]
+original_item = "lum_berry"
+type = "npc_gift"
+table = "base"
+check = 5025
+label = "Violet - Lum Berry"
+id = 3
+
+[violet_aguav_berry]
+original_item = "aguav_berry"
+type = "npc_gift"
+table = "base"
+check = 5026
+label = "Violet - Aguav Berry"
+id = 3
+
+[cianwood_hm02]
+original_item = "hm02"
+type = "npc_gift"
+table = "base"
+check = 187
+label = "Cianwood - Hm02"
+id = 6
+
+[ecruteak_gym_fog_badge]
+original_item = "fog_badge"
+type = "badge"
+table = "base"
+check = 5027
+label = "Ecruteak Gym - Fog"
+id = 1
+
+[ecruteak_gym_tm30]
+original_item = "tm30"
+type = "npc_gift"
+table = "base"
+check = 166
+label = "Ecruteak Gym - Tm30"
+id = 1
+
+[ecruteak_dowsing_machine_house_dowsing_mchn]
+original_item = "dowsing_mchn"
+type = "npc_gift"
+table = "base"
+check = 163
+label = "Ecruteak Dowsing Machine House - Dowsing Mchn"
+id = 0
+
+[ecruteak_dance_theater_hm03]
+original_item = "hm03"
+type = "npc_gift"
+table = "base"
+check = 162
+label = "Ecruteak Dance Theater - Hm03"
+id = 11
+
+[ecruteak_dance_theater_hm03_2]
+original_item = "hm03"
+type = "npc_gift"
+table = "base"
+check = 162
+label = "Ecruteak Dance Theater - Hm03 (2)"
+id = 12
+
+[ecruteak_dance_theater_clear_bell]
+original_item = "clear_bell"
+type = "npc_gift"
+table = "base"
+check = 259
+label = "Ecruteak Dance Theater - Clear Bell"
+id = 16
+
+[ecruteak_dance_theater_tidal_bell]
+original_item = "tidal_bell"
+type = "npc_gift"
+table = "base"
+check = 260
+label = "Ecruteak Dance Theater - Tidal Bell"
+id = 16
+
+[mahogany_ragecandybar]
+original_item = "ragecandybar"
+type = "npc_gift"
+table = "base"
+check = 355
+label = "Mahogany - Ragecandybar"
+id = 0
+
+[mahogany_ragecandybar_2]
+original_item = "ragecandybar"
+type = "npc_gift"
+table = "base"
+check = 355
+label = "Mahogany - Ragecandybar (2)"
+id = 1
+
+[lake_of_rage_black_belt]
+original_item = "black_belt"
+type = "npc_gift"
+table = "base"
+check = 213
+label = "Lake Of Rage - Black Belt"
+id = 5
+
+[lake_of_rage_red_scale]
+original_item = "red_scale"
+type = "npc_gift"
+table = "base"
+check = 201
+label = "Lake Of Rage - Red Scale"
+id = 1
+
+[blackthorn_soft_sand]
+original_item = "soft_sand"
+type = "npc_gift"
+table = "base"
+check = 212
+label = "Blackthorn - Soft Sand"
+id = 6
+
+[route_40_sharp_beak]
+original_item = "sharp_beak"
+type = "npc_gift"
+table = "base"
+check = 215
+label = "Route 40 - Sharp Beak"
+id = 1
+
+[national_park_quick_claw]
+original_item = "quick_claw"
+type = "npc_gift"
+table = "base"
+check = 270
+label = "National Park - Quick Claw"
+id = 0
+
+[route_31_violet_gatehouse_vs__recorder]
+original_item = "vs__recorder"
+type = "npc_gift"
+table = "base"
+check = 5028
+label = "Route 31 Violet Gatehouse - Vs  Recorder"
+id = 0
+
+[route_35_goldenrod_gatehouse_hp_up]
+original_item = "hp_up"
+type = "npc_gift"
+table = "base"
+check = 5029
+label = "Route 35 Goldenrod Gatehouse - Hp Up"
+id = 0
+
+[ilex_forest_hm01]
+original_item = "hm01"
+type = "npc_gift"
+table = "base"
+check = 128
+label = "Ilex Forest - Hm01"
+id = 11
+
+[ilex_forest_hm01_2]
+original_item = "hm01"
+type = "npc_gift"
+table = "base"
+check = 431
+label = "Ilex Forest - Hm01 (2)"
+id = 11
+
+[goldenrod_tunnel_1f_fashion_case]
+original_item = "fashion_case"
+type = "npc_gift"
+table = "base"
+check = 712
+label = "Goldenrod Tunnel 1F - Fashion Case"
+id = 2
+
+
+[dark_cave_route_45_side_blackglasses]
+original_item = "blackglasses"
+type = "npc_gift"
+table = "base"
+check = 223
+label = "Dark Cave Route 45 Side - Blackglasses"
+id = 0
+
+[route_30_apricorn_house_apricorn_box]
+original_item = "apricorn_box"
+type = "npc_gift"
+table = "base"
+check = 109
+label = "Route 30 Apricorn House - Apricorn Box"
+id = 0
+
+[violet_gym_zephyr_badge]
+original_item = "zephyr_badge"
+type = "badge"
+table = "base"
+check = 5030
+label = "Violet Gym - Zephyr"
+id = 1
+
+[violet_gym_tm51]
+original_item = "tm51"
+type = "npc_gift"
+table = "base"
+check = 115
+label = "Violet Gym - Tm51"
+id = 1
+
+[goldenrod_gym_plain_badge]
+original_item = "plain_badge"
+type = "badge"
+table = "base"
+check = 5031
+label = "Goldenrod Gym - Plain"
+id = 0
+
+[goldenrod_gym_tm45]
+original_item = "tm45"
+type = "npc_gift"
+table = "base"
+check = 133
+label = "Goldenrod Gym - Tm45"
+id = 0
+
+[olivine_gym_mineral_badge]
+original_item = "mineral_badge"
+type = "badge"
+table = "base"
+check = 5032
+label = "Olivine Gym - Mineral"
+id = 0
+
+[olivine_gym_tm23]
+original_item = "tm23"
+type = "npc_gift"
+table = "base"
+check = 194
+label = "Olivine Gym - Tm23"
+id = 0
+
+[cianwood_gym_storm_badge]
+original_item = "storm_badge"
+type = "badge"
+table = "base"
+check = 5033
+label = "Cianwood Gym - Storm"
+id = 0
+
+[cianwood_gym_tm01]
+original_item = "tm01"
+type = "npc_gift"
+table = "base"
+check = 186
+label = "Cianwood Gym - Tm01"
+id = 0
+
+[mahogany_gym_leader_room_glacier_badge]
+original_item = "glacier_badge"
+type = "badge"
+table = "base"
+check = 5034
+label = "Mahogany Gym Leader Room - Glacier"
+id = 0
+
+[mahogany_gym_leader_room_tm07]
+original_item = "tm07"
+type = "npc_gift"
+table = "base"
+check = 210
+label = "Mahogany Gym Leader Room - Tm07"
+id = 0
+
+[blackthorn_gym_tm59]
+original_item = "tm59"
+type = "npc_gift"
+table = "base"
+check = 218
+label = "Blackthorn Gym - Tm59"
+id = 0
+
+[route_30_mr_pokemon_house_mystery_egg]
+original_item = "mystery_egg"
+type = "npc_gift"
+table = "base"
+check = 108
+label = "Route 30 Mr Pokemon House - Mystery Egg"
+id = 1
+
+[route_30_mr_pokemon_house_exp__share]
+original_item = "exp__share"
+type = "npc_gift"
+table = "base"
+check = 108
+label = "Route 30 Mr Pokemon House - Exp  Share"
+id = 0
+
+[sprout_tower_3f_tm70]
+original_item = "tm70"
+type = "npc_gift"
+table = "base"
+check = 118
+label = "Sprout Tower 3F - Tm70"
+id = 2
+
+[route_32_pokecenter_1f_old_rod]
+original_item = "old_rod"
+type = "npc_gift"
+table = "base"
+check = 117
+label = "Route 32 Pokecenter 1F - Old Rod"
+id = 1
+
+[route_32_pokecenter_1f_lure_ball]
+original_item = "lure_ball"
+type = "npc_gift"
+table = "base"
+check = 372
+label = "Route 32 Pokecenter 1F - Lure Ball"
+id = 2
+
+[route_34_ilex_forest_gatehouse_tm12]
+original_item = "tm12"
+type = "npc_gift"
+table = "base"
+check = 131
+label = "Route 34 Ilex Forest Gatehouse - Tm12"
+id = 0
+
+[azalea_gym_hive_badge]
+original_item = "hive_badge"
+type = "badge"
+table = "base"
+check = 5035
+label = "Azalea Gym - Hive"
+id = 1
+
+[azalea_gym_tm89]
+original_item = "tm89"
+type = "npc_gift"
+table = "base"
+check = 127
+label = "Azalea Gym - Tm89"
+id = 1
+
+[slowpoke_well_b2f_kings_rock]
+original_item = "kings_rock"
+type = "npc_gift"
+table = "base"
+check = 122
+label = "Slowpoke Well B2F - Kings Rock"
+id = 0
+
+[goldenrod_bike_shop_bicycle]
+original_item = "bicycle"
+type = "npc_gift"
+table = "base"
+check = 137
+label = "Goldenrod Bike Shop - Bicycle"
+id = 0
+
+[goldenrod_flower_shop_squirtbottle]
+original_item = "squirtbottle"
+type = "npc_gift"
+table = "base"
+check = 181
+label = "Goldenrod Flower Shop - Squirtbottle"
+id = 0
+
+[goldenrod_radio_tower_2f_blue_card]
+original_item = "blue_card"
+type = "npc_gift"
+table = "base"
+check = 2742
+label = "Goldenrod Radio Tower 2F - Blue Card"
+id = 9
+
+[goldenrod_radio_tower_3f_tm11]
+original_item = "tm11"
+type = "npc_gift"
+table = "base"
+check = 143
+label = "Goldenrod Radio Tower 3F - Tm11"
+id = 5
+
+[goldenrod_radio_tower_4f_brightpowder]
+original_item = "brightpowder"
+type = "npc_gift"
+table = "base"
+check = 145
+label = "Goldenrod Radio Tower 4F - Brightpowder"
+id = 4
+
+[goldenrod_radio_tower_observation_deck_rainbow_wing]
+original_item = "rainbow_wing"
+type = "npc_gift"
+table = "base"
+check = 147
+label = "Goldenrod Radio Tower Observation Deck - Rainbow Wing"
+id = 1
+
+[goldenrod_radio_tower_observation_deck_silver_wing]
+original_item = "silver_wing"
+type = "npc_gift"
+table = "base"
+check = 148
+label = "Goldenrod Radio Tower Observation Deck - Silver Wing"
+id = 1
+
+[goldenrod_tunnel_warehouse_card_key]
+original_item = "card_key"
+type = "npc_gift"
+table = "base"
+check = 449
+label = "Goldenrod Tunnel Warehouse - Card Key"
+id = 1
+
+[route_39_moomoo_farm_house_moomoo_milk]
+original_item = "moomoo_milk"
+type = "npc_gift"
+table = "base"
+check = 5036
+label = "Route 39 Moomoo Farm House - Moomoo Milk"
+id = 0
+
+[route_39_moomoo_farm_house_tm83]
+original_item = "tm83"
+type = "npc_gift"
+table = "base"
+check = 171
+label = "Route 39 Moomoo Farm House - Tm83"
+id = 1
+
+[route_39_moomoo_farm_stable_seal_case]
+original_item = "seal_case"
+type = "npc_gift"
+table = "base"
+check = 256
+label = "Route 39 Moomoo Farm Stable - Seal Case"
+id = 0
+
+[olivine_northwest_house_good_rod]
+original_item = "good_rod"
+type = "npc_gift"
+table = "base"
+check = 189
+label = "Olivine Northwest House - Good Rod"
+id = 0
+
+[cianwood_pharmacy_secretpotion]
+original_item = "secretpotion"
+type = "npc_gift"
+table = "base"
+check = 185
+label = "Cianwood Pharmacy - Secretpotion"
+id = 0
+
+[team_rocket_headquarters_b2f_hm05]
+original_item = "hm05"
+type = "npc_gift"
+table = "base"
+check = 485
+label = "Team Rocket Headquarters B2F - Hm05"
+id = 6
+
+[dragons_den_tm59]
+original_item = "tm59"
+type = "npc_gift"
+table = "base"
+check = 218
+label = "Dragons Den - Tm59"
+id = 0
+
+[pokeathlon_dome_rare_candy]
+original_item = "rare_candy"
+type = "npc_gift"
+table = "base"
+check = 340
+label = "Pokeathlon Dome - Rare Candy"
+id = 3
+
+[pokeathlon_dome_interior_1f_rare_candy]
+original_item = "rare_candy"
+type = "npc_gift"
+table = "base"
+check = 338
+label = "Pokeathlon Dome Interior 1F - Rare Candy"
+id = 21
+
+[pokeathlon_dome_interior_1f_rare_candy_2]
+original_item = "rare_candy"
+type = "npc_gift"
+table = "base"
+check = 339
+label = "Pokeathlon Dome Interior 1F - Rare Candy (2)"
+id = 22
+
+[dragons_den_shrine_rising_badge]
+original_item = "rising_badge"
+type = "badge"
+table = "base"
+check = 5037
+label = "Dragons Den Shrine - Rising"
+id = 3
+
+[lake_of_rage_hidden_power_house_tm10]
+original_item = "tm10"
+type = "npc_gift"
+table = "base"
+check = 199
+label = "Lake Of Rage Hidden Power House - Tm10"
+id = 0
+
+[ruins_of_alph_underground_hall_unown_report]
+original_item = "unown_report"
+type = "npc_gift"
+table = "base"
+check = 565
+label = "Ruins Of Alph Underground Hall - Unown Report"
+id = 0
+
+[route_27_house_tm37]
+original_item = "tm37"
+type = "npc_gift"
+table = "base"
+check = 233
+label = "Route 27 House - Tm37"
+id = 0
+
+[ss_aqua_1f_northwest_rooms_metal_coat]
+original_item = "metal_coat"
+type = "npc_gift"
+table = "base"
+check = 554
+label = "Ss Aqua 1F Northwest Rooms - Metal Coat"
+id = 3
+
+[vermilion_pokemon_fan_club_rare_candy]
+original_item = "rare_candy"
+type = "npc_gift"
+table = "base"
+check = 248
+label = "Vermilion Pokemon Fan Club - Rare Candy"
+id = 0
+
+[vermilion_pokemon_fan_club_lost_item]
+original_item = "lost_item"
+type = "npc_gift"
+table = "base"
+check = 765
+label = "Vermilion Pokemon Fan Club - Lost Item"
+id = 2
+
+[vermilion_gym_thunder_badge]
+original_item = "thunder_badge"
+type = "badge"
+table = "base"
+check = 5038
+label = "Vermilion Gym - Thunder"
+id = 23
+
+[vermilion_gym_tm34]
+original_item = "tm34"
+type = "npc_gift"
+table = "base"
+check = 385
+label = "Vermilion Gym - Tm34"
+id = 23
+
+[celadon_condominiums_3f_gb_sounds]
+original_item = "gb_sounds"
+type = "npc_gift"
+table = "base"
+check = 5039
+label = "Celadon Condominiums 3F - Gb Sounds"
+id = 9
+
+[celadon_condominiums_roof_room_spell_tag]
+original_item = "spell_tag"
+type = "npc_gift"
+table = "base"
+check = 344
+label = "Celadon Condominiums Roof Room - Spell Tag"
+id = 0
+
+[celadon_gym_rainbow_badge]
+original_item = "rainbow_badge"
+type = "badge"
+table = "base"
+check = 5040
+label = "Celadon Gym - Rainbow"
+id = 0
+
+[celadon_gym_tm19]
+original_item = "tm19"
+type = "npc_gift"
+table = "base"
+check = 292
+label = "Celadon Gym - Tm19"
+id = 0
+
+[saffron_mr_psychic_house_tm29]
+original_item = "tm29"
+type = "npc_gift"
+table = "base"
+check = 303
+label = "Saffron Mr Psychic House - Tm29"
+id = 0
+
+[saffron_silph_co_hq_upgrade]
+original_item = "upgrade"
+type = "npc_gift"
+table = "base"
+check = 304
+label = "Saffron Silph Co Hq - Upgrade"
+id = 1
+
+[saffron_copycat_house_2f_pass]
+original_item = "pass"
+type = "npc_gift"
+table = "base"
+check = 135
+label = "Saffron Copycat House 2F - Pass"
+id = 0
+
+[saffron_gym_marsh_badge]
+original_item = "marsh_badge"
+type = "badge"
+table = "base"
+check = 5041
+label = "Saffron Gym - Marsh"
+id = 0
+
+[saffron_gym_tm48]
+original_item = "tm48"
+type = "npc_gift"
+table = "base"
+check = 386
+label = "Saffron Gym - Tm48"
+id = 0
+
+[route_2_house_nugget]
+original_item = "nugget"
+type = "npc_gift"
+table = "base"
+check = 308
+label = "Route 2 House - Nugget"
+id = 0
+
+[route_2_southeast_gatehouse_sacred_ash]
+original_item = "sacred_ash"
+type = "npc_gift"
+table = "base"
+check = 309
+label = "Route 2 Southeast Gatehouse - Sacred Ash"
+id = 0
+
+[cerulean_gym_cascade_badge]
+original_item = "cascade_badge"
+type = "badge"
+table = "base"
+check = 5042
+label = "Cerulean Gym - Cascade"
+id = 0
+
+[cerulean_gym_tm03]
+original_item = "tm03"
+type = "npc_gift"
+table = "base"
+check = 384
+label = "Cerulean Gym - Tm03"
+id = 0
+
+[seafoam_islands_cinnabar_gym_volcano_badge]
+original_item = "volcano_badge"
+type = "badge"
+table = "base"
+check = 5043
+label = "Seafoam Islands Cinnabar Gym - Volcano"
+id = 0
+
+[seafoam_islands_cinnabar_gym_tm50]
+original_item = "tm50"
+type = "npc_gift"
+table = "base"
+check = 381
+label = "Seafoam Islands Cinnabar Gym - Tm50"
+id = 0
+
+[pewter_gym_boulder_badge]
+original_item = "boulder_badge"
+type = "badge"
+table = "base"
+check = 5044
+label = "Pewter Gym - Boulder"
+id = 0
+
+[pewter_gym_tm80]
+original_item = "tm80"
+type = "npc_gift"
+table = "base"
+check = 383
+label = "Pewter Gym - Tm80"
+id = 0
+
+[fuchsia_gym_soul_badge]
+original_item = "soul_badge"
+type = "badge"
+table = "base"
+check = 5045
+label = "Fuchsia Gym - Soul"
+id = 1
+
+[fuchsia_gym_tm84]
+original_item = "tm84"
+type = "npc_gift"
+table = "base"
+check = 301
+label = "Fuchsia Gym - Tm84"
+id = 1
+
+[route_10_power_plant_broken_tm57]
+original_item = "tm57"
+type = "npc_gift"
+table = "base"
+check = 600
+label = "Route 10 Power Plant Broken - Tm57"
+id = 6
+
+[viridian_gym_earth_badge]
+original_item = "earth_badge"
+type = "badge"
+table = "base"
+check = 5046
+label = "Viridian Gym - Earth"
+id = 0
+
+[viridian_gym_tm92]
+original_item = "tm92"
+type = "npc_gift"
+table = "base"
+check = 382
+label = "Viridian Gym - Tm92"
+id = 0
+
+[pallet_town_oaks_lab_hm08]
+original_item = "hm08"
+type = "npc_gift"
+table = "base"
+check = 299
+label = "Pallet Town Oaks Lab - Hm08"
+id = 0
+
+[pallet_town_oaks_lab_jade_orb]
+original_item = "jade_orb"
+type = "npc_gift"
+table = "base"
+check = 188
+label = "Pallet Town Oaks Lab - Jade Orb"
+id = 0
+
+[route_28_house_tm47]
+original_item = "tm47"
+type = "npc_gift"
+table = "base"
+check = 311
+label = "Route 28 House - Tm47"
+id = 0
+
+[route_5_house_cleanse_tag]
+original_item = "cleanse_tag"
+type = "npc_gift"
+table = "base"
+check = 305
+label = "Route 5 House - Cleanse Tag"
+id = 0
+
+[route_12_fishing_brother_house_super_rod]
+original_item = "super_rod"
+type = "npc_gift"
+table = "base"
+check = 5047
+label = "Route 12 Fishing Brother House - Super Rod"
+id = 0
+
+[goldenrod_game_corner_coin_case]
+original_item = "coin_case"
+type = "npc_gift"
+table = "base"
+check = 5048
+label = "Goldenrod Game Corner - Coin Case"
+id = 2
