@@ -586,9 +586,7 @@ exits = [
     "new_bark_town",
     "new_bark_player_house_2f",
 ]
-locs = [
-    "new_bark_player_house_1f_pokegear",
-]
+locs = []
 
 [new_bark_player_house_2f]
 header = "new_bark_player_house_2f"
@@ -623,6 +621,7 @@ exits = [
 ]
 locs = [
     "cherrygrove_mystic_water",
+    "cherrygrove_running_shoes",
 ]
 
 [cherrygrove_pokemart]
@@ -1365,6 +1364,7 @@ exits = [
 locs = [
     "route_30_mr_pokemon_house_mystery_egg",
     "route_30_mr_pokemon_house_exp__share",
+    "route_30_mr_pokemon_house_pokedex",
 ]
 
 [cherrygrove_pokecenter_b1f]
@@ -2140,7 +2140,9 @@ exits = [
     "olivine_city",
     "ss_aqua_olivine_port_exterior",
 ]
-locs = []
+locs = [
+    "ss_aqua_olivine_port_interior_national_pokedex",
+]
 
 [cianwood_pokecenter_b1f]
 header = "cianwood_pokecenter_b1f"

@@ -3180,13 +3180,6 @@ check = 5048
 label = "Goldenrod Game Corner - Coin Case"
 id = 2
 
-[new_bark_player_house_1f_pokegear]
-original_item = "pokegear"
-type = "pokegear_card"
-table = "base"
-check = 156
-label = "New Bark Player House 1F - Pokegear"
-id = 1
 
 [goldenrod_radio_tower_1f_radio_card]
 original_item = "radio_card"
@@ -3203,3 +3196,27 @@ table = "base"
 check = 287
 label = "Lavender Radio Station - EXPN Card"
 id = 3
+
+[cherrygrove_running_shoes]
+original_item = "running_shoes"
+type = "running_shoes"
+table = "base"
+check = 8001
+label = "Cherrygrove - Running Shoes"
+id = 1
+
+[route_30_mr_pokemon_house_pokedex]
+original_item = "pokedex"
+type = "pokedex"
+table = "base"
+check = 107
+label = "Route 30 Mr Pokemon House - Pokedex"
+id = 2
+
+[ss_aqua_olivine_port_interior_national_pokedex]
+original_item = "pokedex"
+type = "pokedex"
+table = "base"
+check = 8005
+label = "Ss Aqua Olivine Port Interior - National Pokedex"
+id = 2

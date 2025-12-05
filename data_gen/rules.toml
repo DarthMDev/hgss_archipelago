@@ -5,12 +5,12 @@ loc_types.hidden = "dowsingmachine_if_opt"
 loc_types.uunown = "dowsingmachine_if_opt"
 
 enc_types.surf = "surf"
-enc_types.good_rod = "good_rod" # HGSS rods don't strictly need a Badge, just the item
-enc_types.super_rod = "super_rod"
-enc_types.old_rod = "old_rod"
+enc_types.good_rod = "good_rod & bag" 
+enc_types.super_rod = "super_rod & bag"
+enc_types.old_rod = "old_rod & bag"
 
 # COMMON MACROS (Shortcuts for complex logic)
-common.national_dex = "pokedex" # Logic for when National Dex is active
+common.national_dex = "pokedex * 2" # Logic for when National Dex is active
 common.dowsingmachine_if_opt = "dowsingmachine if dowsing_machine_logic"
 common.flash_if_opt = "flash if visibility_hm_logic"
 
@@ -26,6 +26,7 @@ common.whirlpool_req = "hm05 & glacier_badge"
 common.rock_smash_req = "hm06 & zephyr_badge"
 common.waterfall_req = "hm07 & waterfall_badge"
 common.rock_climb_req = "hm08 & earth_badge"
+common.flash_req = "tm70 & boulder_badge"
 
 # NEW BARK TOWN
 exits.new_bark_town_players_house_2f.new_bark_town_players_house_1f = "true"
