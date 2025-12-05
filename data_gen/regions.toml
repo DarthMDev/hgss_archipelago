@@ -586,7 +586,9 @@ exits = [
     "new_bark_town",
     "new_bark_player_house_2f",
 ]
-locs = []
+locs = [
+    "new_bark_player_house_1f_pokegear",
+]
 
 [new_bark_player_house_2f]
 header = "new_bark_player_house_2f"
@@ -1074,7 +1076,9 @@ exits = [
     "goldenrod_city",
     "goldenrod_radio_tower_2f",
 ]
-locs = []
+locs = [
+    "goldenrod_radio_tower_1f_radio_card",
+]
 
 [ruins_of_alph]
 header = "ruins_of_alph"
@@ -3497,7 +3501,9 @@ header = "lavender_radio_station"
 exits = [
     "lavender_town",
 ]
-locs = []
+locs = [
+    "lavender_radio_station_expn_card",
+]
 
 [route_25_sea_cottage]
 header = "route_25_sea_cottage"

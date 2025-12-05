@@ -3186,3 +3186,27 @@ table = "base"
 check = 5048
 label = "Goldenrod Game Corner - Coin Case"
 id = 2
+
+[new_bark_player_house_1f_pokegear]
+original_item = "pokegear"
+type = "pokegear_card"
+table = "base"
+check = 156
+label = "New Bark Player House 1F - Pokegear"
+id = 1
+
+[goldenrod_radio_tower_1f_radio_card]
+original_item = "radio_card"
+type = "pokegear_card"
+table = "base"
+check = 138
+label = "Goldenrod Radio Tower 1F - Radio Card"
+id = 2
+
+[lavender_radio_station_expn_card]
+original_item = "expn_card"
+type = "pokegear_card"
+table = "base"
+check = 287
+label = "Lavender Radio Station - EXPN Card"
+id = 3
