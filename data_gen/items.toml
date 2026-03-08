@@ -100,6 +100,48 @@ id = 16
 clas = "bagitem"
 group = "balls"
 
+[fast_ball]
+label = "Fast Ball"
+id = 492
+clas = "bagitem"
+group = "balls"
+
+[level_ball]
+label = "Level Ball"
+id = 493
+clas = "bagitem"
+group = "balls"
+
+[lure_ball]
+label = "Lure Ball"
+id = 494
+clas = "bagitem"
+group = "balls"
+
+[heavy_ball]
+label = "Heavy Ball"
+id = 495
+clas = "bagitem"
+group = "balls"
+
+[love_ball]
+label = "Love Ball"
+id = 496
+clas = "bagitem"
+group = "balls"
+
+[friend_ball]
+label = "Friend Ball"
+id = 497
+clas = "bagitem"
+group = "balls"
+
+[moon_ball]
+label = "Moon Ball"
+id = 498
+clas = "bagitem"
+group = "balls"
+
 [potion]
 label = "Potion"
 id = 17
@@ -2464,14 +2506,11 @@ clas = "bagitem"
 group = "tmhms"
 classification = "progression"
 
-
 [poke_radar]
 label = "Poké Radar"
 id = 431
 clas = "bagitem"
 group = "key_items"
-
-
 
 [journal]
 label = "Journal"
@@ -2479,19 +2518,11 @@ id = 433
 clas = "specialbagitem"
 group = "key_items"
 
-
-
-
-
-
-
 [pal_pad]
 label = "Pal Pad"
 id = 437
 clas = "bagitem"
 group = "key_items"
-
-
 
 [old_charm]
 label = "Old Charm"
@@ -2499,11 +2530,6 @@ id = 439
 clas = "bagitem"
 group = "key_items"
 classification = "progression"
-
-
-
-
-
 
 [coin_case]
 label = "Coin Case"
@@ -2532,10 +2558,6 @@ clas = "bagitem"
 group = "key_items"
 classification = "progression"
 
-
-
-
-
 [bicycle]
 label = "Bicycle"
 id = 450
@@ -2543,15 +2565,12 @@ clas = "bagitem"
 group = "key_items"
 classification = "progression"
 
-
-[s_s__ticket]
+[ss_ticket]
 label = "S.S. Ticket"
 id = 456
 clas = "bagitem"
 group = "key_items"
 classification = "progression"
-
-
 
 [secretpotion]
 label = "SecretPotion"
@@ -2560,7 +2579,7 @@ clas = "bagitem"
 group = "key_items"
 classification = "progression"
 
-[vs__recorder]
+[vs_recorder]
 label = "Vs. Recorder"
 id = 465
 clas = "bagitem"
@@ -2623,7 +2642,7 @@ classification = "useful"
 label = "Silver Wing"
 id = 482
 clas = "bagitem"
-group = "key_items
+group = "key_items"
 classification = "useful"
 
 [rainbow_wing]
@@ -2633,24 +2652,92 @@ clas = "bagitem"
 group = "key_items"
 classification= "useful"
 
+[clear_bell]
+label = "Clear Bell"
+id = 474
+clas = "bagitem"
+group = "key_items"
+classification = "useful"
+
 [tidal_bell]
 label = "Tidal Bell"
 id = 503
 clas = "bagitem"
-group = "key_items
+group = "key_items"
 classification="useful"
-
-[honey_x3]
-label = "Honey x3"
-id = 94
-clas = "bagitem"
-group = "items"
-count = 3
 
 [ragecandybar]
 label = "Rage Candy Bar"
 id = 504
 class = "bagitem"
+group = "key_items"
+
+[red_scale]
+label = "Red Scale"
+id = 478
+clas = "bagitem"
+group = "key_items"
+classification = "progression"
+
+[fashion_case]
+label = "Fashion Case"
+id = 435
+clas = "bagitem"
+group = "key_items"
+
+[mystery_egg]
+label = "Mystery Egg"
+id = 484
+clas = "bagitem"
+group = "key_items"
+classification = "progression"
+
+[blue_card]
+label = "Blue Card"
+id = 472
+clas = "bagitem"
+group = "key_items"
+
+[seal_case]
+label = "Seal Case"
+id = 434
+clas = "bagitem"
+group = "key_items"
+
+[unown_report]
+label = "Unown Report"
+id = 469
+clas = "bagitem"
+group = "key_items"
+
+[gb_sounds]
+label = "GB Sounds"
+id = 502
+clas = "bagitem"
+group = "key_items"
+
+[pass]
+label = "Pass"
+id = 480
+clas = "bagitem"
+group = "key_items"
+
+[red_orb]
+label = "Red Orb"
+id = 534
+clas = "bagitem"
+group = "key_items"
+
+[blue_orb]
+label = "Blue Orb"
+id = 535
+clas = "bagitem"
+group = "key_items"
+
+[jade_orb]
+label = "Jade Orb"
+id = 532
+clas = "bagitem"
 group = "key_items"
 
 [zephyr_badge]
@@ -2709,6 +2796,62 @@ clas = "badge"
 group = "badges"
 classification = "progression"
 
+[boulder_badge]
+label = "Boulder Badge"
+id = 8
+clas = "badge"
+group = "badges"
+classification = "progression"
+
+[cascade_badge]
+label = "Cascade Badge"
+id = 9
+clas = "badge"
+group = "badges"
+classification = "progression"
+
+[thunder_badge]
+label = "Thunder Badge"
+id = 10
+clas = "badge"
+group = "badges"
+classification = "progression"
+
+[rainbow_badge]
+label = "Rainbow Badge"
+id = 11
+clas = "badge"
+group = "badges"
+classification = "progression"
+
+[soul_badge]
+label = "Soul Badge"
+id = 12
+clas = "badge"
+group = "badges"
+classification = "progression"
+
+[marsh_badge]
+label = "Marsh Badge"
+id = 13
+clas = "badge"
+group = "badges"
+classification = "progression"
+
+[volcano_badge]
+label = "Volcano Badge"
+id = 14
+clas = "badge"
+group = "badges"
+classification = "progression"
+
+[earth_badge]
+label = "Earth Badge"
+id = 15
+clas = "badge"
+group = "badges"
+classification = "progression"
+
 [running_shoes]
 label = "Running Shoes"
 id = 1
@@ -2723,6 +2866,24 @@ clas = "special"
 group = "pokedex"
 classification = "progression"
 
+[map_card]
+label = "Map Card"
+id = 0
+clas = "pokegear"
+group = "pokegear"
+
+[radio_card]
+label = "Radio Card"
+id = 0
+clas = "pokegear"
+group = "pokegear"
+
+[expn_card]
+label = "Expansion Card"
+id = 0
+clas = "pokegear"
+group = "pokegear"
+
 [poke_ball_x5]
 label = "Poké Ball x5"
 id = 4
@@ -2730,37 +2891,12 @@ clas = "bagitem"
 group = "balls"
 count = 5
 
-
-
-[honey_x10]
-label = "Honey x10"
-id = 94
-clas = "bagitem"
-group = "items"
-count = 10
-
-[master_repel]
-label = "Master Repel"
-id = 468
-clas = "bagitem"
-group = "key_items"
-classification = "useful"
-
-[rare_candy_x15]
-label = "Rare Candy x15"
-id = 50
+[potion_x5]
+label = "Potion x5"
+id = 17
 clas = "bagitem"
 group = "medicine"
-classification = "useful"
-count = 15
-
-
-[bag]
-label = "Bag"
-id = 4
-clas = "special"
-group = "bag"
-classification = "progression"
+count = 5
 
 [white_fluff]
 label = "White Fluff"
