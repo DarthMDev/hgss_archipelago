@@ -5079,3 +5079,251 @@ table = "hidden"
 check = 858
 label = "Underground Path - Hidden Item on Center East Cone"
 id = 8058
+
+[route_1_apricorn_tree]
+original_item = "blk_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 1 - Apricorn Tree"
+id = 0
+
+[route_2_apricorn_tree]
+original_item = "pnk_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 2 - Apricorn Tree"
+id = 0
+
+[route_8_apricorn_tree]
+original_item = "ylw_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 8 - Apricorn Tree"
+id = 0
+
+[route_11_apricorn_tree]
+original_item = "grn_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 11 - Apricorn Tree"
+id = 0
+
+[route_26_apricorn_tree]
+original_item = "blu_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 26 - Apricorn Tree"
+id = 0
+
+[route_29_apricorn_tree]
+original_item = "grn_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 29 - Apricorn Tree"
+id = 0
+
+[route_30_apricorn_tree_s]
+original_item = "grn_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 30 - Apricorn Tree Near Apricorn House"
+id = 0
+
+[route_30_apricorn_tree_n]
+original_item = "pnk_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 30 - Apricorn Tree Near Mr. Pokemons House"
+id = 0
+
+[route_31_apricorn_tree]
+original_item = "blk_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 31 - Apricorn Tree"
+id = 0
+
+[route_33_apricorn_tree_w]
+original_item = "pnk_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 33 - Apricorn Tree West"
+id = 0
+
+[route_33_apricorn_tree_e]
+original_item = "blk_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 33 - Apricorn Tree East"
+id = 0
+
+[route_35_apricorn_tree]
+original_item = "grn_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 35 - Apricorn Tree"
+id = 0
+
+[route_36_apricorn_tree]
+original_item = "blu_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 36 - Apricorn Tree"
+id = 0
+
+[route_37_apricorn_tree_nw]
+original_item = "red_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 37 - Apricorn Tree Northwest"
+id = 0
+
+[route_37_apricorn_tree_ne]
+original_item = "blu_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 37 - Apricorn Tree Northeast"
+id = 0
+
+[route_37_apricorn_tree_s]
+original_item = "blk_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 37 - Apricorn Tree South"
+id = 0
+
+[route_38_apricorn_tree]
+original_item = "wht_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 38 - Apricorn Tree"
+id = 0
+
+[route_39_apricorn_tree]
+original_item = "grn_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 39 - Apricorn Tree"
+id = 0
+
+[route_42_apricorn_tree_w]
+original_item = "pnk_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 42 - Apricorn Tree West"
+id = 0
+
+[route_42_apricorn_tree_c]
+original_item = "grn_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 42 - Apricorn Tree Center"
+id = 0
+
+[route_42_apricorn_tree_e]
+original_item = "ylw_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 42 - Apricorn Tree East"
+id = 0
+
+[route_43_apricorn_tree]
+original_item = "blk_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 43 - Apricorn Tree"
+id = 0
+
+[route_44_apricorn_tree]
+original_item = "red_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 44 - Apricorn Tree"
+id = 0
+
+[route_45_apricorn_tree]
+original_item = "grn_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 45 - Apricorn Tree"
+id = 0
+
+[route_46_apricorn_tree_ne]
+original_item = "grn_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 46 - Apricorn Tree Northeast"
+id = 0
+
+[route_46_apricorn_tree_sw]
+original_item = "ylw_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Route 46 - Apricorn Tree Southwest"
+id = 0
+
+[pewter_apricorn_tree_w]
+original_item = "blu_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Pewter City - Apricorn Tree West"
+id = 0
+
+[pewter_apricorn_tree_e]
+original_item = "wht_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Pewter City - Apricorn Tree East"
+id = 0
+
+[fuchsia_apricorn_tree]
+original_item = "red_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Fuchsia City - Apricorn Tree"
+id = 0
+
+[violet_apricorn_tree]
+original_item = "ylw_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Violet City - Apricorn Tree"
+id = 0
+
+[azalea_apricorn_tree]
+original_item = "wht_apricorn"
+type = "apricorn_tree"
+table = "apricorn_tree"
+check = 0
+label = "Azalea Town - Apricorn Tree"
+id = 0

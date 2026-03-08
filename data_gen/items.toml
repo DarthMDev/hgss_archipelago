@@ -2590,6 +2590,7 @@ label = "Apricorn Box"
 id = 468
 clas = "bagitem"
 group = "key_items"
+classification = "progression"
 
 [berry_pots]
 label = "Berry Pots"
@@ -2739,6 +2740,48 @@ label = "Jade Orb"
 id = 532
 clas = "bagitem"
 group = "key_items"
+
+[red_apricorn]
+label = "Red Apricorn"
+id = 485
+clas = "apricorn"
+group = "apricorn"
+
+[ylw_apricorn]
+label = "Yellow Apricorn"
+id = 486
+clas = "apricorn"
+group = "apricorn"
+
+[blu_apricorn]
+label = "Blue Apricorn"
+id = 487
+clas = "apricorn"
+group = "apricorn"
+
+[grn_apricorn]
+label = "Green Apricorn"
+id = 488
+clas = "apricorn"
+group = "apricorn"
+
+[pnk_apricorn]
+label = "Pink Apricorn"
+id = 489
+clas = "apricorn"
+group = "apricorn"
+
+[wht_apricorn]
+label = "White Apricorn"
+id = 490
+clas = "apricorn"
+group = "apricorn"
+
+[blk_apricorn]
+label = "Black Apricorn"
+id = 491
+clas = "apricorn"
+group = "apricorn"
 
 [zephyr_badge]
 label = "Zephyr Badge"
