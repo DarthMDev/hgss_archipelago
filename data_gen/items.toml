@@ -2909,22 +2909,28 @@ clas = "special"
 group = "pokedex"
 classification = "progression"
 
+[pokegear]
+label = "Pokégear"
+id = 0
+clas = "special"
+group = "pokegear"
+
 [map_card]
 label = "Map Card"
-id = 0
-clas = "pokegear"
+id = 1
+clas = "special"
 group = "pokegear"
 
 [radio_card]
 label = "Radio Card"
-id = 0
-clas = "pokegear"
+id = 2
+clas = "special"
 group = "pokegear"
 
 [expn_card]
 label = "Expansion Card"
-id = 0
-clas = "pokegear"
+id = 287
+clas = "special"
 group = "pokegear"
 
 [poke_ball_x5]

@@ -200,7 +200,7 @@ check = 1056
 label = "Route 30 - Item North of Apricorn House"
 id = 1
 
-[route_30_potion_1]
+[route_30_potion]
 original_item = "potion"
 type = "overworld"
 table = "overworld"
@@ -232,7 +232,7 @@ check = 1065
 label = "Route 32 - Item in Grass Near Picnicker Liz"
 id = 29
 
-[route_32_great_ball_1]
+[route_32_great_ball]
 original_item = "great_ball"
 type = "overworld"
 table = "overworld"
@@ -496,7 +496,7 @@ check = 327
 label = "Lake Of Rage Drained - Item in Tree Maze West"
 id = 0
 
-[lake_of_rage_full_restore_1]
+[lake_of_rage_full_restore]
 original_item = "full_restore"
 type = "overworld"
 table = "overworld"
@@ -592,7 +592,7 @@ check = 1067
 label = "Union Cave 1F - Item in Northwest Corner"
 id = 33
 
-[union_cave_1f_great_ball_1]
+[union_cave_1f_great_ball]
 original_item = "great_ball"
 type = "overworld"
 table = "overworld"
@@ -688,7 +688,7 @@ check = 1084
 label = "Ilex Forest - Item Northeast of Shrine"
 id = 44
 
-[ilex_forest_antidote_1]
+[ilex_forest_antidote]
 original_item = "antidote"
 type = "overworld"
 table = "overworld"
@@ -696,7 +696,7 @@ check = 1085
 label = "Ilex Forest - Item Near Pond"
 id = 45
 
-[ilex_forest_ether_1]
+[ilex_forest_ether]
 original_item = "ether"
 type = "overworld"
 table = "overworld"
@@ -712,7 +712,7 @@ check = 1173
 label = "Mount Mortar 1F Entrance - Southeast of Northwest Ladder"
 id = 111
 
-[mount_mortar_1f_entrance_revive_1]
+[mount_mortar_1f_entrance_revive]
 original_item = "revive"
 type = "overworld"
 table = "overworld"
@@ -744,7 +744,7 @@ check = 1205
 label = "Ice Path 1F - Item Near South Entrance"
 id = 151
 
-[whirl_islands_1f_ultra_ball_1]
+[whirl_islands_1f_ultra_ball]
 original_item = "ultra_ball"
 type = "overworld"
 table = "overworld"
@@ -752,7 +752,7 @@ check = 1162
 label = "Whirl Islands 1F Southwest - Item Near East Ladder"
 id = 93
 
-[whirl_islands_1f_ultra_ball_2]
+[whirl_islands_1f_ultra_ball_0]
 original_item = "ultra_ball"
 type = "overworld"
 table = "overworld"
@@ -792,7 +792,7 @@ check = 1119
 label = "Victory Road 1F - Northeast Corner Past Strength Boulders"
 id = 178
 
-[victory_road_1f_full_heal_1]
+[victory_road_1f_full_heal]
 original_item = "full_heal"
 type = "overworld"
 table = "overworld"
@@ -880,7 +880,7 @@ check = 1238
 label = "Viridian Forest - Item Southeast Corner"
 id = 217
 
-[route_47_revive_1]
+[route_47_revive]
 original_item = "revive"
 type = "overworld"
 table = "overworld"
@@ -1016,7 +1016,7 @@ check = 1292
 label = "Dark Cave South - Item East of Route 31 Entrance"
 id = 172
 
-[slowpoke_well_b1f_super_potion_1]
+[slowpoke_well_b1f_super_potion]
 original_item = "super_potion"
 type = "overworld"
 table = "overworld"
@@ -1296,7 +1296,7 @@ check = 1168
 label = "Whirl Islands B2F - Item West of Northeast Ladder"
 id = 99
 
-[whirl_islands_b2f_full_restore_1]
+[whirl_islands_b2f_full_restore]
 original_item = "full_restore"
 type = "overworld"
 table = "overworld"
@@ -1392,7 +1392,7 @@ check = 1175
 label = "Mount Mortar 1F Back - Item East Side in Center Area"
 id = 113
 
-[mount_mortar_1f_back_nugget_1]
+[mount_mortar_1f_back_nugget]
 original_item = "nugget"
 type = "overworld"
 table = "overworld"
@@ -1432,7 +1432,7 @@ check = 1180
 label = "Mount Mortar 1F Back - Item West Side"
 id = 118
 
-[mount_mortar_1f_back_ultra_ball_1]
+[mount_mortar_1f_back_ultra_ball]
 original_item = "ultra_ball"
 type = "overworld"
 table = "overworld"
@@ -1560,7 +1560,7 @@ check = 1210
 label = "Dragons Den - Item in Northeast Corner"
 id = 157
 
-[dragons_den_max_elixir_1]
+[dragons_den_max_elixir]
 original_item = "max_elixir"
 type = "overworld"
 table = "overworld"
@@ -1792,7 +1792,7 @@ check = 1159
 label = "Bell Tower 9F - North Item"
 id = 81
 
-[route_10_south_tm69]
+[route_10_tm69]
 original_item = "tm69"
 type = "overworld"
 table = "overworld"
@@ -1800,7 +1800,7 @@ check = 1300
 label = "Route 10 South - Item Past Strength Boulder"
 id = 193
 
-[route_2_north_carbos]
+[route_2_carbos]
 original_item = "carbos"
 type = "overworld"
 table = "overworld"
@@ -1808,7 +1808,7 @@ check = 1232
 label = "Route 2 - Item North of Diglett Cave"
 id = 212
 
-[cerulean_cave_2f_pp_up_1]
+[cerulean_cave_2f_pp_up]
 original_item = "pp_up"
 type = "overworld"
 table = "overworld"
@@ -1824,7 +1824,7 @@ check = 1264
 label = "Cerulean Cave 2F - Item South of Northeast Ladder"
 id = 248
 
-[cerulean_cave_2f_ultra_ball_1]
+[cerulean_cave_2f_ultra_ball]
 original_item = "ultra_ball"
 type = "overworld"
 table = "overworld"
@@ -1840,7 +1840,7 @@ check = 1265
 label = "Cerulean Cave 2F - Item East of South Ladder"
 id = 249
 
-[cerulean_cave_b1f_max_revive_1]
+[cerulean_cave_b1f_max_revive]
 original_item = "max_revive"
 type = "overworld"
 table = "overworld"
@@ -1848,7 +1848,7 @@ check = 1268
 label = "Cerulean Cave B1F - North Item"
 id = 250
 
-[cerulean_cave_b1f_ultra_ball_1]
+[cerulean_cave_b1f_ultra_ball]
 original_item = "ultra_ball"
 type = "overworld"
 table = "overworld"
@@ -1920,7 +1920,7 @@ check = 1256
 label = "Seafoam Islands B1F - North Item"
 id = 223
 
-[seafoam_islands_b1f_ice_heal_1]
+[seafoam_islands_b1f_ice_heal]
 original_item = "ice_heal"
 type = "overworld"
 table = "overworld"
@@ -2880,7 +2880,7 @@ check = 338
 label = "Pokeathlon Dome Interior 1F - Gift from Old Man for Jumping 1000 Times"
 id = 21
 
-[pokeathlon_dome_interior_1f_rare_candy_2]
+[pokeathlon_dome_interior_1f_rare_candy_0]
 original_item = "rare_candy"
 type = "npc_gift"
 table = "base"
@@ -3197,7 +3197,7 @@ original_item = "expn_card"
 type = "pokegear_card"
 table = "base"
 check = 287
-label = "Lavender Radio Station - Gift from Receptionist"
+label = "Lavender Radio Station - Gift from Director for Restoring Power"
 id = 3
 
 [cherrygrove_running_shoes]
@@ -3232,7 +3232,7 @@ check = 8005
 label = "SS Aqua Olivine Port Interior - Gift from Professor Oak"
 id = 2
 
-[bellchime_trail_tinymushroom_1]
+[bellchime_trail_tinymushroom]
 original_item = "tinymushroom"
 type = "hidden"
 table = "hidden"
@@ -3240,7 +3240,7 @@ check = 925
 label = "Bellchime Trail - Hidden Item Near Northwest Corner of Bell Tower"
 id = 8125
 
-[bellchime_trail_big_mushroom_1]
+[bellchime_trail_big_mushroom]
 original_item = "big_mushroom"
 type = "hidden"
 table = "hidden"
@@ -3248,7 +3248,7 @@ check = 926
 label = "Bellchime Trail - Hidden Item South of Bell Tower"
 id = 8126
 
-[bellchime_trail_tinymushroom_2]
+[bellchime_trail_tinymushroom_0]
 original_item = "tinymushroom"
 type = "hidden"
 table = "hidden"
@@ -3256,7 +3256,7 @@ check = 928
 label = "Bellchime Trail - Hidden Item West of the Tree at the Start of the Stone Path"
 id = 8128
 
-[bellchime_trail_big_mushroom_2]
+[bellchime_trail_big_mushroom_0]
 original_item = "big_mushroom"
 type = "hidden"
 table = "hidden"
@@ -3264,7 +3264,7 @@ check = 927
 label = "Bellchime Trail - Hidden Item West of the Tree North of the Curve in the Stone Path"
 id = 8127
 
-[bellchime_trail_tinymushroom_3]
+[bellchime_trail_tinymushroom_1]
 original_item = "tinymushroom"
 type = "hidden"
 table = "hidden"
@@ -3288,7 +3288,7 @@ check = 819
 label = "Burned Tower 1F - Hidden Item Near North Rubble"
 id = 8019
 
-[route_3_star_piece_1]
+[route_3_star_piece]
 original_item = "star_piece"
 type = "hidden"
 table = "hidden"
@@ -3296,12 +3296,12 @@ check = 945
 label = "Route 3 - Hidden Item in Southwest Crater"
 id = 8145
 
-[route_3_star_piece_2]
+[route_3_star_piece_0]
 original_item = "star_piece"
 type = "hidden"
 table = "hidden"
 check = 938
-label = "Route 3 - Hidden Item in Norhteast Crater"
+label = "Route 3 - Hidden Item in Northeast Crater"
 id = 8138
 
 [route_3_hyper_potion]
@@ -3336,7 +3336,7 @@ check = 905
 label = "Route 9 - Hidden Item in Flowers Above Stairs Near River"
 id = 8105
 
-[route_10_north_carbos]
+[route_10_carbos]
 original_item = "carbos"
 type = "hidden"
 table = "hidden"
@@ -3365,7 +3365,7 @@ original_item = "calcium"
 type = "hidden"
 table = "hidden"
 check = 911
-label = "Route 12 - Hidden Item on Fence Next to Center Sign"
+label = "Route 13 - Hidden Item on Fence Next to Center Sign"
 id = 8111
 
 [route_17_max_ether]
@@ -3384,7 +3384,7 @@ check = 910
 label = "Route 17 - Hidden Item West Side Near Second Lamps from the South"
 id = 8110
 
-[route_26_revive]
+[route_25_revive]
 original_item = "revive"
 type = "hidden"
 table = "hidden"
@@ -3397,7 +3397,7 @@ original_item = "tinymushroom"
 type = "hidden"
 table = "hidden"
 check = 984
-label = "Route 17 - Hidden Item on Cliff Northeast Between Rock and Tree"
+label = "Route 26 - Hidden Item on Cliff Northeast Between Rock and Tree"
 id = 8184
 
 [route_27_revive]
@@ -3429,10 +3429,10 @@ original_item = "rare_candy"
 type = "hidden"
 table = "hidden"
 check = 915
-label = "Route 27 - Hidden Item East of House Between Trees"
+label = "Route 28 - Hidden Item East of House Between Trees"
 id = 8115
 
-[route_30_potion_2]
+[route_30_potion_0]
 original_item = "potion"
 type = "hidden"
 table = "hidden"
@@ -3448,7 +3448,7 @@ check = 804
 label = "Route 32 - Hidden Item on Small Rock in the Water"
 id = 8004
 
-[route_32_great_ball_2]
+[route_32_great_ball_0]
 original_item = "great_ball"
 type = "hidden"
 table = "hidden"
@@ -3624,7 +3624,7 @@ check = 962
 label = "Vermillion City - Hidden Item on South Sandbar 1"
 id = 8162
 
-[vermillion_pearl_1]
+[vermillion_pearl]
 original_item = "pearl"
 type = "hidden"
 table = "hidden"
@@ -3632,7 +3632,7 @@ check = 963
 label = "Vermillion City - Hidden Item on South Sandbar 2"
 id = 8163
 
-[vermillion_pearl_2]
+[vermillion_pearl_0]
 original_item = "pearl"
 type = "hidden"
 table = "hidden"
@@ -3696,7 +3696,7 @@ check = 800
 label = "New Bark Town - Hidden Item West of Elms Lab"
 id = 8000
 
-[cherrygrove_nugget_1]
+[cherrygrove_nugget]
 original_item = "nugget"
 type = "hidden"
 table = "hidden"
@@ -3704,7 +3704,7 @@ check = 801
 label = "Cherrygrove City - Hidden Item East of Pokemon Center"
 id = 8001
 
-[cherrygrove_nugget_2]
+[cherrygrove_nugget_0]
 original_item = "nugget"
 type = "hidden"
 table = "hidden"
@@ -3808,7 +3808,7 @@ check = 933
 label = "Ecruteak City - Hidden Item on Lamp Post Near Route 38"
 id = 8133
 
-[lake_of_rage_full_restore_2]
+[lake_of_rage_full_restore_0]
 original_item = "full_restore"
 type = "hidden"
 table = "hidden"
@@ -3848,7 +3848,7 @@ check = 980
 label = "Route 19 - Hidden Item on Island"
 id = 8180
 
-[route_19_pearl_1]
+[route_19_pearl]
 original_item = "pearl"
 type = "hidden"
 table = "hidden"
@@ -3856,7 +3856,7 @@ check = 979
 label = "Route 19 - Hidden Item on Beach"
 id = 8179
 
-[route_19_pearl_2]
+[route_19_pearl_0]
 original_item = "pearl"
 type = "hidden"
 table = "hidden"
@@ -3904,7 +3904,7 @@ check = 838
 label = "Route 20 - Hidden Item in the Water Southeast of Seafoam Islands"
 id = 8038
 
-[route_21_stardust_1]
+[route_21_stardust]
 original_item = "stardust"
 type = "hidden"
 table = "hidden"
@@ -3912,7 +3912,7 @@ check = 975
 label = "Route 21 - Hidden Item on North Island"
 id = 8175
 
-[route_21_stardust_2]
+[route_21_stardust_0]
 original_item = "stardust"
 type = "hidden"
 table = "hidden"
@@ -3920,7 +3920,7 @@ check = 976
 label = "Route 21 - Hidden Item on Northwest Side of Island Northeast of Fisherman Liam"
 id = 8176
 
-[route_21_stardust_3]
+[route_21_stardust_1]
 original_item = "stardust"
 type = "hidden"
 table = "hidden"
@@ -3944,7 +3944,7 @@ check = 899
 label = "Route 41 - Hidden Item on Southeast Whirl Island"
 id = 8099
 
-[route_41_stardust_1]
+[route_41_stardust]
 original_item = "stardust"
 type = "hidden"
 table = "hidden"
@@ -3952,7 +3952,7 @@ check = 970
 label = "Route 41 - Hidden Item on Northwest Whirl Island"
 id = 8170
 
-[route_41_stardust_2]
+[route_41_stardust_0]
 original_item = "stardust"
 type = "hidden"
 table = "hidden"
@@ -3960,7 +3960,7 @@ check = 971
 label = "Route 41 - Hidden Item on Southwest Whirl Island"
 id = 8171
 
-[route_41_stardust_3]
+[route_41_stardust_1]
 original_item = "stardust"
 type = "hidden"
 table = "hidden"
@@ -3968,7 +3968,7 @@ check = 973
 label = "Route 41 - Hidden Item on Northeast Whirl Island Northeast of Entrance"
 id = 8173
 
-[route_41_stardust_4]
+[route_41_stardust_2]
 original_item = "stardust"
 type = "hidden"
 table = "hidden"
@@ -3976,7 +3976,7 @@ check = 972
 label = "Route 41 - Hidden Item on Northeast Whirl Island Southeast of Entrance"
 id = 8172
 
-[national_park_full_heal_1]
+[national_park_full_heal]
 original_item = "full_heal"
 type = "hidden"
 table = "hidden"
@@ -3984,7 +3984,7 @@ check = 834
 label = "National Park - Hidden Item at Southwest End of Path Outside Fence"
 id = 8034
 
-[national_park_full_heal_2]
+[national_park_full_heal_0]
 original_item = "full_heal"
 type = "hidden"
 table = "hidden"
@@ -4000,7 +4000,7 @@ check = 954
 label = "Union Cave 1F - Hidden Item on Stalagmite on Islet"
 id = 8154
 
-[union_cave_1f_great_ball_2]
+[union_cave_1f_great_ball_0]
 original_item = "great_ball"
 type = "hidden"
 table = "hidden"
@@ -4104,7 +4104,7 @@ check = 827
 label = "Slowpoke Well 1F - Hidden Item South of Ladder"
 id = 8027
 
-[ilex_forest_antidote_2]
+[ilex_forest_antidote_0]
 original_item = "antidote"
 type = "hidden"
 table = "hidden"
@@ -4128,7 +4128,7 @@ check = 832
 label = "Ilex Forest - Hidden Item Northeast Corner Near Isolated Trees"
 id = 8032
 
-[ilex_forest_ether_2]
+[ilex_forest_ether_0]
 original_item = "ether"
 type = "hidden"
 table = "hidden"
@@ -4136,7 +4136,7 @@ check = 833
 label = "Ilex Forest - Hidden Item West of North Isolated Tree"
 id = 8033
 
-[ilex_forest_tinymushroom_1]
+[ilex_forest_tinymushroom]
 original_item = "tinymushroom"
 type = "hidden"
 table = "hidden"
@@ -4160,7 +4160,7 @@ check = 1013
 label = "Ilex Forest - Hidden Item West of Pond"
 id = 8213
 
-[ilex_forest_tinymushroom_2]
+[ilex_forest_tinymushroom_0]
 original_item = "tinymushroom"
 type = "hidden"
 table = "hidden"
@@ -4168,7 +4168,7 @@ check = 1014
 label = "Ilex Forest - Hidden Item on Flowers Near Sticks"
 id = 8214
 
-[ilex_forest_tinymushroom_3]
+[ilex_forest_tinymushroom_1]
 original_item = "tinymushroom"
 type = "hidden"
 table = "hidden"
@@ -4184,7 +4184,7 @@ check = 843
 label = "Mount Mortar 1F Entrance - Hidden Item on Stalagmite Northeast of Southwest Entrance"
 id = 8043
 
-[mount_mortar_1f_entrance_revive_2]
+[mount_mortar_1f_entrance_revive_0]
 original_item = "revive"
 type = "hidden"
 table = "hidden"
@@ -4264,7 +4264,7 @@ check = 818
 label = "Dark Cave Route 45 Side - Hidden Item Southwest of North Entrance"
 id = 8018
 
-[victory_road_1f_full_heal_2]
+[victory_road_1f_full_heal_0]
 original_item = "full_heal"
 type = "hidden"
 table = "hidden"
@@ -4328,7 +4328,7 @@ check = 887
 label = "Viridian Forest - Hidden Item Southeast of Stairs South of Bug Catcher Abner"
 id = 8087
 
-[viridian_forest_big_mushroom_1]
+[viridian_forest_big_mushroom]
 original_item = "big_mushroom"
 type = "hidden"
 table = "hidden"
@@ -4336,7 +4336,7 @@ check = 1016
 label = "Viridian Forest - Hidden Item on Flowers on Southwest Looping Path"
 id = 8216
 
-[viridian_forest_big_mushroom_2]
+[viridian_forest_big_mushroom_0]
 original_item = "big_mushroom"
 type = "hidden"
 table = "hidden"
@@ -4344,7 +4344,7 @@ check = 1017
 label = "Viridian Forest - Hidden Item on Flowers Between Bug Catchers Stacey and Dion"
 id = 8217
 
-[viridian_forest_tinymushroom_1]
+[viridian_forest_tinymushroom]
 original_item = "tinymushroom"
 type = "hidden"
 table = "hidden"
@@ -4352,7 +4352,7 @@ check = 1018
 label = "Viridian Forest - Hidden Item on Flowers in Northeast Corner"
 id = 8218
 
-[viridian_forest_tinymushroom_2]
+[viridian_forest_tinymushroom_0]
 original_item = "tinymushroom"
 type = "hidden"
 table = "hidden"
@@ -4360,7 +4360,7 @@ check = 1019
 label = "Viridian Forest - Hidden Item on Cliff North of Lone Tree North of South Entrance"
 id = 8219
 
-[viridian_forest_tinymushroom_3]
+[viridian_forest_tinymushroom_1]
 original_item = "tinymushroom"
 type = "hidden"
 table = "hidden"
@@ -4376,7 +4376,7 @@ check = 839
 label = "Route 47 - Hidden Item on Rock Southwest of Entrance to Embedded Tower"
 id = 8039
 
-[route_47_revive_2]
+[route_47_revive_0]
 original_item = "revive"
 type = "hidden"
 table = "hidden"
@@ -4416,7 +4416,7 @@ check = 957
 label = "Union Cave B2F - Hidden Item Northwest of Ace Trainer Gwen"
 id = 8157
 
-[safari_zone_gate_tinymushroom_1]
+[safari_zone_gate_tinymushroom]
 original_item = "tinymushroom"
 type = "hidden"
 table = "hidden"
@@ -4424,7 +4424,7 @@ check = 841
 label = "Safari Zone Gate - Hidden Item Southwest of Pokemon Center"
 id = 8041
 
-[safari_zone_gate_tinymushroom_2]
+[safari_zone_gate_tinymushroom_0]
 original_item = "tinymushroom"
 type = "hidden"
 table = "hidden"
@@ -4432,7 +4432,7 @@ check = 930
 label = "Safari Zone Gate - Hidden Item East of Pokemon Center"
 id = 8130
 
-[safari_zone_gate_tinymushroom_3]
+[safari_zone_gate_tinymushroom_1]
 original_item = "tinymushroom"
 type = "hidden"
 table = "hidden"
@@ -4456,7 +4456,7 @@ check = 815
 label = "Dark Cave Route 31 Side - Hidden Item on East Wall Between Stalagmite and Rock"
 id = 8015
 
-[slowpoke_well_b1f_super_potion_2]
+[slowpoke_well_b1f_super_potion_0]
 original_item = "super_potion"
 type = "hidden"
 table = "hidden"
@@ -4624,7 +4624,7 @@ check = 993
 label = "Whirl Island B1F - Hidden Item on Stalagmite South of Northeast Ladder"
 id = 8193
 
-[whirl_islands_b2f_full_restore_2]
+[whirl_islands_b2f_full_restore_0]
 original_item = "full_restore"
 type = "hidden"
 table = "hidden"
@@ -4680,7 +4680,7 @@ check = 940
 label = "Mount Mortar 1F Back - Hidden Item on Wall North of Southwest Entrance"
 id = 8140
 
-[mount_mortar_1f_back_ultra_ball_2]
+[mount_mortar_1f_back_ultra_ball_0]
 original_item = "ultra_ball"
 type = "hidden"
 table = "hidden"
@@ -4688,7 +4688,7 @@ check = 941
 label = "Mount Mortar 1F Back - Hidden Item on Rock West of Northeast Rock Climb"
 id = 8141
 
-[mount_mortar_1f_back_nugget_2]
+[mount_mortar_1f_back_nugget_0]
 original_item = "nugget"
 type = "hidden"
 table = "hidden"
@@ -4752,7 +4752,7 @@ check = 881
 label = "Dragons Den - Hidden Item on Lone Rock West of Ace Trainer Kobe"
 id = 8081
 
-[dragons_den_max_elixir_2]
+[dragons_den_max_elixir_0]
 original_item = "max_elixir"
 type = "hidden"
 table = "hidden"
@@ -4864,7 +4864,7 @@ check = 996
 label = "Mount Moon Square - Hidden Item Between East Trees"
 id = 8196
 
-[cerulean_cave_2f_ultra_ball_2]
+[cerulean_cave_2f_ultra_ball_0]
 original_item = "ultra_ball"
 type = "hidden"
 table = "hidden"
@@ -4872,7 +4872,7 @@ check = 896
 label = "Cerulean Cave 2F - Hidden Item Northwest of Southeast Ladder"
 id = 8096
 
-[cerulean_cave_2f_pp_up_2]
+[cerulean_cave_2f_pp_up_0]
 original_item = "pp_up"
 type = "hidden"
 table = "hidden"
@@ -4912,7 +4912,7 @@ check = 1021
 label = "Cerulean Cave 2F - Hidden Item Southwest of Northwest Ladder"
 id = 8221
 
-[cerulean_cave_b1f_max_revive_2]
+[cerulean_cave_b1f_max_revive_0]
 original_item = "max_revive"
 type = "hidden"
 table = "hidden"
@@ -4920,7 +4920,7 @@ check = 921
 label = "Cerulean Cave B1F - Hidden Item Northeast of West Ladder Behind Breakable Rocks"
 id = 8121
 
-[cerulean_cave_b1f_ultra_ball_2]
+[cerulean_cave_b1f_ultra_ball_0]
 original_item = "ultra_ball"
 type = "hidden"
 table = "hidden"
@@ -4952,7 +4952,7 @@ check = 969
 label = "Rock Tunnel B1F - Hidden Item on Rock South of Rock Climbs"
 id = 8169
 
-[seafoam_islands_b1f_ice_heal_2]
+[seafoam_islands_b1f_ice_heal_0]
 original_item = "ice_heal"
 type = "hidden"
 table = "hidden"
@@ -4960,7 +4960,7 @@ check = 889
 label = "Seafoam Islands B1F - Hidden Item in Center of Room"
 id = 8089
 
-[seafoam_islands_b2f_pearl_1]
+[seafoam_islands_b2f_pearl]
 original_item = "pearl"
 type = "hidden"
 table = "hidden"
@@ -4968,7 +4968,7 @@ check = 890
 label = "Seafoam Islands B2F - Hidden Item on Ice Rock in Northwest Corner"
 id = 8090
 
-[seafoam_islands_b2f_pearl_2]
+[seafoam_islands_b2f_pearl_0]
 original_item = "pearl"
 type = "hidden"
 table = "hidden"
