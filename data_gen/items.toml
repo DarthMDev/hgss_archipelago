@@ -2909,12 +2909,6 @@ clas = "special"
 group = "pokedex"
 classification = "progression"
 
-[pokegear]
-label = "Pokégear"
-id = 0
-clas = "special"
-group = "pokegear"
-
 [map_card]
 label = "Map Card"
 id = 1

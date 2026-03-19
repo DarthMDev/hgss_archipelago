@@ -2048,7 +2048,7 @@ check = 1171
 label = "Whirl Islands B3F - Item Near Entrance"
 id = 102
 
-[mt_moon_square_moon_stone]
+[mount_moon_square_moon_stone]
 original_item = "moon_stone"
 type = "overworld"
 table = "overworld"
@@ -2189,7 +2189,7 @@ original_item = "pp_max"
 type = "npc_gift"
 table = "base"
 check = 247
-label = "Vermilion City - Gift from Man East of Mart"
+label = "Vermilion City - Gift from Man South of Construction Site"
 id = 0
 
 [fuchsia_persim_berry]
@@ -3112,7 +3112,7 @@ check = 301
 label = "Fuchsia Gym - Gift from Janine"
 id = 1
 
-[route_10_power_plant_broken_tm57]
+[route_10_power_plant_tm57]
 original_item = "tm57"
 type = "npc_gift"
 table = "base"
@@ -3176,7 +3176,7 @@ check = 5047
 label = "Route 12 House - Gift from Fisherman"
 id = 0
 
-[goldenrod_game_corner_coin_case]
+[game_corner_coin_case]
 original_item = "coin_case"
 type = "key_item"
 table = "base"
@@ -3600,7 +3600,7 @@ check = 906
 label = "Cerulean City - Hidden Item on Cliff Near Cerulean Cave"
 id = 8106
 
-[vermillion_full_heal]
+[vermilion_full_heal]
 original_item = "full_heal"
 type = "hidden"
 table = "hidden"
@@ -3608,7 +3608,7 @@ check = 903
 label = "Vermillion City - Hidden Item in Construction Site Behind Breakable Rock"
 id = 8103
 
-[vermillion_heart_scale]
+[vermilion_heart_scale]
 original_item = "heart_scale"
 type = "hidden"
 table = "hidden"
@@ -3616,7 +3616,7 @@ check = 968
 label = "Vermillion City - Hidden Item on Boat Near Sandbar"
 id = 8168
 
-[vermillion_big_pearl]
+[vermilion_big_pearl]
 original_item = "big_pearl"
 type = "hidden"
 table = "hidden"
@@ -3624,7 +3624,7 @@ check = 962
 label = "Vermillion City - Hidden Item on South Sandbar 1"
 id = 8162
 
-[vermillion_pearl]
+[vermilion_pearl]
 original_item = "pearl"
 type = "hidden"
 table = "hidden"
@@ -3632,7 +3632,7 @@ check = 963
 label = "Vermillion City - Hidden Item on South Sandbar 2"
 id = 8163
 
-[vermillion_pearl_0]
+[vermilion_pearl_0]
 original_item = "pearl"
 type = "hidden"
 table = "hidden"
@@ -4032,7 +4032,7 @@ check = 1024
 label = "Diglett Cave - Hidden Item West of Horizontal Bridges"
 id = 8224
 
-[mount_moon_1f_revive]
+[mount_moon_revive]
 original_item = "revive"
 type = "hidden"
 table = "hidden"
@@ -4096,7 +4096,7 @@ check = 950
 label = "Ruins of Alph - Hidden Item on Rock Southwest of South Entrance to Union Cave"
 id = 8150
 
-[slowpoke_well_1f_great_ball]
+[slowpoke_well_entrance_great_ball]
 original_item = "great_ball"
 type = "hidden"
 table = "hidden"
@@ -4208,7 +4208,7 @@ check = 872
 label = "Ice Path 1F - Hidden Item on Ice Block up Stairs West of Northeast Ladder"
 id = 8072
 
-[whirl_islands_1F_ultra_ball]
+[whirl_islands_1f_ultra_ball_1]
 original_item = "ultra_ball"
 type = "hidden"
 table = "hidden"
@@ -4792,20 +4792,20 @@ check = 960
 label = "Pokeathlon Dome - Hidden Item in Grass South of Aprijuice Stand"
 id = 8160
 
-[olivine_harbor_protein]
+[olivine_port_exterior_protein]
 original_item = "protein"
 type = "hidden"
 table = "hidden"
 check = 886
-label = "Olivine Harbor - Hidden Item Southwest of SS Aqua"
+label = "Olivine Port - Hidden Item Southwest of SS Aqua"
 id = 8086
 
-[olivine_harbor_pearl]
+[olivine_port_exterior_pearl]
 original_item = "pearl"
 type = "hidden"
 table = "hidden"
 check = 958
-label = "Olivine Harbor - Hidden Item in Corner Behind Port Building"
+label = "Olivine Port - Hidden Item in Corner Behind Port Building"
 id = 8158
 
 [bell_tower_3f_max_potion]
@@ -4840,7 +4840,7 @@ check = 1026
 label = "Cliff Cave 3F - Hidden Item on Wall in Southeast Corner"
 id = 8226
 
-[vermillion_port_iron]
+[vermilion_port_exterior_iron]
 original_item = "iron"
 type = "hidden"
 table = "hidden"
@@ -4856,7 +4856,7 @@ check = 961
 label = "Frontier Access - Hidden Item Near Hiker"
 id = 8161
 
-[mt_moon_square_max_revive]
+[mount_moon_square_max_revive]
 original_item = "max_revive"
 type = "hidden"
 table = "hidden"
