@@ -1,11 +1,17 @@
 
-[bellchime_tower]
-header = "bellchime_tower"
+[bellchime_trail]
+header = "bellchime_trail"
 exits = [
     "ecruteak_bell_tower_barrier_station_corridor",
     "bell_tower_1f",
 ]
-locs = []
+locs = [
+    "bellchime_trail_tinymushroom",
+    "bellchime_trail_big_mushroom",
+    "bellchime_trail_tinymushroom_0",
+    "bellchime_trail_big_mushroom_0",
+    "bellchime_trail_tinymushroom_1",
+]
 
 [burned_tower_1f]
 header = "burned_tower_1f"
@@ -16,47 +22,68 @@ exits = [
 locs = [
     "burned_tower_1f_hp_up",
     "burned_tower_1f_antidote",
+    "burned_tower_1f_ultra_ball",
+    "burned_tower_1f_ether",
 ]
 
 [route_1]
 header = "route_1"
 exits = [
     "viridian_route_1_gatehouse",
+    "pallet_town",
+]
+locs = [
+    "route_1_apricorn_tree",
+]
+
+[route_2_south]
+header = "route_2_south"
+exits = [
+    "route_2_east",
+    "route_2_viridian_forest_south_gatehouse",
+    "viridian_city",
 ]
 locs = []
 
-[route_2]
-header = "route_2"
+[route_2_north]
+header = "route_2_north"
 exits = [
-    "route_2_viridian_forest_south_gatehouse",
-    "route_2_southeast_gatehouse",
+    "route_2_east",
+    "pewter_city",
+    "route_2_viridian_forest_north_gatehouse",
 ]
-locs = [
-    "route_2_elixir",
-]
+locs = []
 
 [route_3]
 header = "route_3"
 exits = [
+    "pewter_city",
     "mount_moon",
     "route_3_pokecenter_1f",
 ]
 locs = [
     "route_3_big_root",
+    "route_3_star_piece",
+    "route_3_star_piece_0",
+    "route_3_hyper_potion",
 ]
 
 [route_4]
 header = "route_4"
 exits = [
     "mount_moon",
+    "cerulean_city",
 ]
 locs = [
     "route_4_hp_up",
+    "route_4_ultra_ball",
+    "route_4_big_mushroom",
 ]
 
 [route_5]
 header = "route_5"
 exits = [
+    "cerulean_city",
     "route_5_saffron_gatehouse",
     "route_5_underground_path_gate",
     "route_5_house",
@@ -68,6 +95,7 @@ header = "route_6"
 exits = [
     "route_6_saffron_gatehouse",
     "route_6_underground_path_gate",
+    "vermilion_city",
 ]
 locs = [
     "route_6_tm62",
@@ -77,6 +105,7 @@ locs = [
 header = "route_7"
 exits = [
     "route_7_saffron_gatehouse",
+    "celadon_city",
 ]
 locs = [
     "route_7_mental_herb",
@@ -86,54 +115,90 @@ locs = [
 header = "route_8"
 exits = [
     "route_8_saffron_gatehouse",
+    "lavender_town",
 ]
 locs = [
     "route_8_tm41",
+    "route_8_apricorn_tree",
 ]
 
 [route_9]
 header = "route_9"
-exits = []
+exits = [
+    "cerulean_city",
+    "route_10_north",
+]
 locs = [
     "route_9_tm91",
     "route_9_full_restore",
     "route_9_light_clay",
     "route_9_max_potion",
+    "route_9_ether",
 ]
 
-[route_10]
-header = "route_10"
+[route_10_north]
+header = "route_10_north"
 exits = [
+    "route_9",
     "rock_tunnel_1f",
-    "route_10_power_plant_repaired",
     "route_10_pokecenter_1f",
+    "route_10_center",
 ]
 locs = []
+
+[route_10_center]
+header = "route_10_center"
+exits = [
+    "route_10_north",
+    "route_10_power_plant",
+]
+locs = [
+    "route_10_carbos",
+]
 
 [route_11]
 header = "route_11"
 exits = [
-    "route_19_route_12_gatehouse",
+    "vermilion_city",
+    "route_11_route_12_gatehouse",
     "diglett_cave",
 ]
 locs = [
     "route_11_tm86",
+    "route_11_revive",
+    "route_11_apricorn_tree",
 ]
 
 [route_12]
 header = "route_12"
 exits = [
-    "route_19_route_12_gatehouse",
+    "lavender_town",
+    "route_11_route_12_gatehouse",
     "route_12_fishing_brother_house",
+    "route_13",
 ]
 locs = [
     "route_12_calcium",
     "route_12_yellow_flute",
+    "route_12_elixir",
+]
+
+[route_13]
+header = "route_13"
+exits = [
+    "route_12",
+    "route_14",
+]
+locs = [
+    "route_13_calcium",
 ]
 
 [route_14]
 header = "route_14"
-exits = []
+exits = [
+    "route_13",
+    "route_15",
+]
 locs = [
     "route_14_lucky_punch",
 ]
@@ -141,6 +206,7 @@ locs = [
 [route_15]
 header = "route_15"
 exits = [
+    "route_14",
     "route_15_fuchsia_gatehouse",
 ]
 locs = [
@@ -148,35 +214,51 @@ locs = [
     "route_15_rose_incense",
 ]
 
-[route_16]
-header = "route_16"
+[route_17]
+header = "route_17"
 exits = [
     "route_16_gatehouse",
+    "route_18_gatehouse",
 ]
-locs = []
+locs = [
+    "route_17_max_ether",
+    "route_17_max_elixir",
+]
 
 [route_18]
 header = "route_18"
 exits = [
     "route_18_gatehouse",
+    "fuchsia_city",
 ]
 locs = []
 
 [route_22]
 header = "route_22"
 exits = [
-    "route_22_pokemon_league_reception_gate",
+    "pokemon_league_reception_gate",
+    "viridian_city",
+]
+locs = []
+
+[route_24]
+header = "route_24"
+exits = [
+    "route_25",
+    "cerulean_city",
 ]
 locs = []
 
 [route_25]
 header = "route_25"
 exits = [
+    "route_24",
     "route_25_sea_cottage",
 ]
 locs = [
     "route_25_protein",
     "route_25_nugget",
+    "route_25_revive",
 ]
 
 [route_26]
@@ -184,73 +266,127 @@ header = "route_26"
 exits = [
     "route_26_north_house",
     "route_26_week_siblings_house",
-    "route_22_pokemon_league_reception_gate",
+    "pokemon_league_reception_gate",
+    "route_27_east",
 ]
 locs = [
     "route_26_max_elixir",
+    "route_26_tinymushroom",
+    "route_26_apricorn_tree",
 ]
 
-[route_27]
-header = "route_27"
+[route_27_west]
+header = "route_27_west"
 exits = [
+    "new_bark_town",
     "tohjo_falls",
-    "route_27_house",
 ]
 locs = [
     "route_27_rare_candy",
+]
+
+[route_27_center]
+header = "route_27_center"
+exits = [
+    "route_27_west",
+    "tohjo_falls",
+    "route_27_house",
+    "route_27_east",
+]
+locs = []
+
+[route_27_east]
+header = "route_27_east"
+exits = [
+    "route_27_center",
+    "route_26",
+]
+locs = [
     "route_27_tm02",
     "route_27_destiny_knot",
+    "route_27_revive",
+    "route_27_big_mushroom",
+    "route_27_nugget",
 ]
 
 [route_28]
 header = "route_28"
 exits = [
-    "route_22_pokemon_league_reception_gate",
+    "pokemon_league_reception_gate",
     "route_28_house",
+    "mount_silver",
 ]
 locs = [
     "route_28_tm35",
+    "route_28_rare_candy",
 ]
 
 [route_29]
 header = "route_29"
 exits = [
+    "new_bark_town",
+    "cherrygrove_city",
     "route_29_route_46_gatehouse",
 ]
 locs = [
     "route_29_potion",
     "route_29_twistedspoon",
     "route_29_poke_ball_x5",
+    "route_29_apricorn_tree",
 ]
 
-[route_30]
-header = "route_30"
+[route_30_east]
+header = "route_30_east"
 exits = [
+    "cherrygrove_city",
     "route_30_mr_pokemon_house",
     "route_30_apricorn_house",
+    "route_30_west",
 ]
 locs = [
     "route_30_antidote",
     "route_30_potion",
-    "route_30_apricorn_box",
+    "route_30_apricorn_tree_s",
+    "route_30_apricorn_tree_n",
+]
+
+[route_30_west]
+header = "route_30_west"
+exits = [
+    "route_30_east",
+    "route_31",
+]
+locs = [
+    "route_30_potion_0",
 ]
 
 [route_31]
 header = "route_31"
 exits = [
+    "route_30_west",
     "route_31_violet_gatehouse",
-    "dark_cave_route_31_side",
+    "dark_cave_route_31_side_west",
 ]
 locs = [
     "route_31_potion",
     "route_31_poke_ball",
     "route_31_tm44",
+    "route_31_apricorn_tree",
 ]
 
-[route_32]
-header = "route_32"
+[route_32_north]
+header = "route_32_north"
 exits = [
+    "violet_city",
     "route_32_ruins_of_alph_gatehouse",
+    "route_32_south",
+]
+locs = []
+
+[route_32_south]
+header = "route_32_south"
+exits = [
+    "route_32_north",
     "union_cave_1f",
     "route_32_pokecenter_1f",
 ]
@@ -261,18 +397,26 @@ locs = [
     "route_32_shell_bell",
     "route_32_poison_barb",
     "route_32_tm05",
+    "route_32_heart_scale",
+    "route_32_great_ball_0",
+    "route_32_super_potion",
 ]
 
 [route_33]
 header = "route_33"
 exits = [
     "union_cave_1f",
+    "azalea_town",
 ]
-locs = []
+locs = [
+    "route_33_apricorn_tree_w",
+    "route_33_apricorn_tree_e",
+]
 
 [route_34]
 header = "route_34"
 exits = [
+    "goldenrod_city",
     "route_34_ilex_forest_gatehouse",
     "route_34_daycare",
 ]
@@ -280,6 +424,8 @@ locs = [
     "route_34_nugget",
     "route_34_tm63",
     "route_34_power_herb",
+    "route_34_rare_candy",
+    "route_34_super_potion",
 ]
 
 [route_35]
@@ -287,66 +433,141 @@ header = "route_35"
 exits = [
     "route_35_goldenrod_gatehouse",
     "route_35_national_park_pokeathalon_gatehouse",
+    "route_36_west",
 ]
 locs = [
     "route_35_tm66",
     "route_35_parlyz_heal",
+    "route_35_nugget",
+    "route_35_apricorn_tree",
 ]
 
-[route_36]
-header = "route_36"
+[route_36_east]
+header = "route_36_east"
 exits = [
-    "route_36_national_park_gatehouse",
+    "route_36_west",
+    "route_36_north",
     "route_36_ruins_of_alph_gatehouse",
     "violet_route_36_gatehouse",
 ]
 locs = [
-    "route_36_hyper_potion",
-    "route_36_berry_pots",
-    "route_36_oran_berry_x3",
-    "route_36_pecha_berry_x3",
     "route_36_hard_stone",
     "route_36_hm06",
 ]
 
+[route_36_west]
+header = "route_36_west"
+exits = [
+    "route_35",
+    "route_36_east",
+    "route_36_north",
+    "route_36_national_park_gatehouse",
+]
+locs = [
+    "route_36_berry_pots",
+    "route_36_oran_berry_x3",
+    "route_36_pecha_berry_x3",
+    "route_36_awakening",
+    "route_36_apricorn_tree",
+]
+
+[route_36_north]
+header = "route_36_north"
+exits = [
+    "route_36_east",
+    "route_36_west",
+    "route_37",
+]
+locs = [
+    "route_36_hyper_potion",
+]
+
 [route_37]
 header = "route_37"
-exits = []
+exits = [
+    "route_36_north",
+    "ecruteak_city",
+]
 locs = [
     "route_37_magnet",
+    "route_37_apricorn_tree_nw",
+    "route_37_apricorn_tree_ne",
+    "route_37_apricorn_tree_s",
 ]
 
 [route_38]
 header = "route_38"
 exits = [
     "route_38_ecruteak_gatehouse",
+    "route_39",
 ]
 locs = [
     "route_38_max_potion",
     "route_38_lax_incense",
+    "route_38_hp_up",
+    "route_38_apricorn_tree",
 ]
 
 [route_39]
 header = "route_39"
 exits = [
+    "route_38",
     "route_39_moomoo_farm_house",
     "route_39_moomoo_farm_stable",
+    "olivine_city",
 ]
 locs = [
     "route_39_tm60",
+    "route_39_nugget",
+    "route_39_hp_up",
+    "route_39_x_attack",
+    "route_39_apricorn_tree",
 ]
 
-[route_42]
-header = "route_42"
+[route_42_west]
+header = "route_42_west"
 exits = [
     "route_42_ecruteak_gatehouse",
-    "mount_mortar_1f_entrance",
+    "mount_mortar_1f_entrance_southwest",
+    "route_42_south",
+]
+locs = [
+    "route_42_tm65",
+    "route_42_hm04",
+]
+
+[route_42_south]
+header = "route_42_south"
+exits = [
+    "mount_mortar_1f_entrance_south",
+    "route_42_west",
+    "route_42_east",
 ]
 locs = [
     "route_42_super_potion",
+    "route_42_apricorn_tree_w",
+    "route_42_apricorn_tree_c",
+    "route_42_apricorn_tree_e",
+]
+
+[route_42_east]
+header = "route_42_east"
+exits = [
+    "mount_mortar_1f_entrance_southeast_lower",
+    "mahogany_town",
+    "route_42_south",
+]
+locs = [
+    "route_42_max_potion",
+]
+
+[route_42_north]
+header = "route_42_north"
+exits = [
+    "mount_mortar_1f_entrance_southeast_upper",
+]
+locs = [
     "route_42_dubious_disc",
-    "route_42_tm65",
-    "route_42_hm04",
 ]
 
 [route_43]
@@ -354,26 +575,33 @@ header = "route_43"
 exits = [
     "route_43_mahogany_gatehouse",
     "route_43_gatehouse",
+    "lake_of_rage",
 ]
 locs = [
     "route_43_max_ether",
+    "route_43_apricorn_tree",
 ]
 
 [route_44]
 header = "route_44"
 exits = [
-    "ice_path_1f",
+    "mahogany_town",
+    "ice_path_1f_west",
 ]
 locs = [
     "route_44_max_repel",
     "route_44_max_revive",
-    "route_44_var_modifier",
+    "route_44_ultra_ball",
+    "route_44_elixir",
+    "route_44_apricorn_tree",
 ]
 
 [route_45]
 header = "route_45"
 exits = [
-    "dark_cave_route_45_side",
+    "blackthorn_city",
+    "dark_cave_route_45_side_northeast",
+    "route_46",
 ]
 locs = [
     "route_45_elixir",
@@ -381,21 +609,28 @@ locs = [
     "route_45_full_heal",
     "route_45_nugget",
     "route_45_revive",
+    "route_45_pp_up",
+    "route_45_pp_max",
+    "route_45_apricorn_tree",
 ]
 
 [route_46]
 header = "route_46"
 exits = [
     "route_29_route_46_gatehouse",
-    "dark_cave_route_31_side",
+    "dark_cave_route_31_side_east",
 ]
 locs = [
     "route_46_x_speed",
+    "route_46_apricorn_tree_ne",
+    "route_46_apricorn_tree_sw",
 ]
 
 [pallet_town]
 header = "pallet_town"
 exits = [
+    "route_1",
+    "route_21",
     "pallet_town_reds_house_1f",
     "pallet_town_blues_house_1f",
     "pallet_town_oaks_lab",
@@ -405,6 +640,9 @@ locs = []
 [viridian_city]
 header = "viridian_city"
 exits = [
+    "viridian_route_1_gatehouse",
+    "route_2_south",
+    "route_22",
     "viridian_gym",
     "viridian_northeast_house",
     "viridian_trainer_house_1f",
@@ -414,11 +652,14 @@ exits = [
 ]
 locs = [
     "viridian_tm85",
+    "viridian_nugget",
 ]
 
 [pewter_city]
 header = "pewter_city"
 exits = [
+    "route_2_north",
+    "route_3",
     "pewter_museum_of_science",
     "pewter_northeast_house",
     "pewter_gym",
@@ -428,11 +669,19 @@ exits = [
 ]
 locs = [
     "pewter_wise_glasses",
+    "pewter_pp_up",
+    "pewter_guard_spec",
+    "pewter_max_revive",
+    "pewter_apricorn_tree_w",
+    "pewter_apricorn_tree_e",
 ]
 
 [cerulean_city]
 header = "cerulean_city"
 exits = [
+    "route_5",
+    "route_9",
+    "route_24",
     "cerulean_north_house",
     "cerulean_east_house",
     "cerulean_west_house",
@@ -440,13 +689,18 @@ exits = [
     "cerulean_gym",
     "cerulean_pokemart",
     "cerulean_bike_maniac_house",
-    "cerulean_cave_1f",
+    "cerulean_cave_1f_southeast",
 ]
-locs = []
+locs = [
+    "cerulean_nugget",
+]
 
 [lavender_town]
 header = "lavender_town"
 exits = [
+    "route_8",
+    "route_10_south",
+    "route_12",
     "lavender_pokecenter_1f",
     "lavender_volunteer_pokemon_house",
     "lavender_southwest_house",
@@ -460,6 +714,8 @@ locs = []
 [vermilion_city]
 header = "vermilion_city"
 exits = [
+    "route_6",
+    "route_11",
     "vermilion_fishing_dude_house",
     "vermilion_pokecenter_1f",
     "vermilion_pokemon_fan_club",
@@ -473,11 +729,18 @@ locs = [
     "vermilion_luck_incense",
     "vermilion_sticky_barb",
     "vermilion_pp_max",
+    "vermilion_full_heal",
+    "vermilion_heart_scale",
+    "vermilion_big_pearl",
+    "vermilion_pearl",
+    "vermilion_pearl_0",
 ]
 
 [celadon_city]
 header = "celadon_city"
 exits = [
+    "route_7",
+    "route_16",
     "celadon_department_store_1f",
     "celadon_condominiums_1f",
     "celadon_pokecenter_1f",
@@ -488,12 +751,14 @@ exits = [
 ]
 locs = [
     "celadon_tm67",
+    "celadon_pp_up",
 ]
 
 [fuchsia_city]
 header = "fuchsia_city"
 exits = [
     "route_15_fuchsia_gatehouse",
+    "route_18",
     "route_19_fuchsia_gatehouse",
     "fuchsia_pokemart",
     "fuchsia_pal_park_entrance",
@@ -515,32 +780,42 @@ locs = [
     "fuchsia_wepear_berry",
     "fuchsia_hondew_berry",
     "fuchsia_durin_berry",
+    "fuchsia_nugget",
+    "fuchsia_apricorn_tree",
 ]
 
 [cinnabar_island]
 header = "cinnabar_island"
 exits = [
+    "route_20_west",
+    "route_21",
     "cinnabar_island_pokecenter_1f",
 ]
 locs = [
     "cinnabar_island_magmarizer",
+    "cinnabar_rare_candy",
+    "cinnabar_iron",
+    "cinnabar_star_piece",
 ]
 
 [indigo_plateau]
 header = "indigo_plateau"
 exits = [
-    "victory_road_3f",
+    "victory_road_3f_west",
     "pokemon_league_entrance",
 ]
-locs = []
+locs = [
+    "indigo_plateau_rare_candy",
+]
 
 [saffron_city]
 header = "saffron_city"
 exits = [
-    "route_6_saffron_gatehouse",
-    "route_8_saffron_gatehouse",
     "route_5_saffron_gatehouse",
-    "saffron_magnet_train_station_1f",
+    "route_6_saffron_gatehouse",
+    "route_7_saffron_gatehouse",
+    "route_8_saffron_gatehouse",
+    "saffron_magnet_train_station",
     "saffron_copycat_house_1f",
     "saffron_silph_co_hq",
     "saffron_fighting_dojo",
@@ -548,20 +823,23 @@ exits = [
     "saffron_pokemart",
     "saffron_pokecenter_1f",
     "saffron_mr_psychic_house",
-    "route_7_saffron_gatehouse",
 ]
 locs = []
 
 [new_bark_town]
 header = "new_bark_town"
 exits = [
+    "route_29",
+    "route_27_west",
     "new_bark_elms_lab_1f",
     "new_bark_player_house_1f",
     "new_bark_southwest_house",
     "new_bark_rival_house_1f",
     "new_bark_elms_lab_2f",
 ]
-locs = []
+locs = [
+    "new_bark_potion",
+]
 
 [new_bark_elms_lab_1f]
 header = "new_bark_elms_lab_1f"
@@ -569,7 +847,8 @@ exits = [
     "new_bark_town",
 ]
 locs = [
-    "new_bark_elms_lab_1f_s_s__ticket",
+    "new_bark_elms_lab_1f_potion_x5",
+    "new_bark_elms_lab_1f_ss_ticket",
     "new_bark_elms_lab_1f_everstone",
 ]
 
@@ -613,6 +892,8 @@ locs = []
 [cherrygrove_city]
 header = "cherrygrove_city"
 exits = [
+    "route_29",
+    "route_30_east",
     "cherrygrove_pokecenter_1f",
     "cherrygrove_pokemart",
     "cherrygrove_southwest_house",
@@ -622,6 +903,9 @@ exits = [
 locs = [
     "cherrygrove_mystic_water",
     "cherrygrove_running_shoes",
+    "cherrygrove_map_card",
+    "cherrygrove_nugget",
+    "cherrygrove_nugget_0",
 ]
 
 [cherrygrove_pokemart]
@@ -664,9 +948,10 @@ locs = []
 header = "violet_city"
 exits = [
     "route_31_violet_gatehouse",
-    "violet_gym",
+    "route_32_north",
     "violet_route_36_gatehouse",
     "sprout_tower_1f",
+    "violet_gym",
     "violet_pokemon_school",
     "violet_pokecenter_1f",
     "violet_northwest_house",
@@ -688,40 +973,51 @@ locs = [
     "violet_rawst_berry",
     "violet_lum_berry",
     "violet_aguav_berry",
+    "violet_hyper_potion",
+    "violet_poke_ball",
+    "violet_apricorn_tree",
 ]
 
 [azalea_town]
 header = "azalea_town"
 exits = [
+    "route_33",
+    "slowpoke_well_entrance",
     "azalea_ilex_forest_gatehouse",
     "azalea_gym_entrance",
     "azalea_pokecenter_1f",
     "azalea_charcoal_kiln",
     "azalea_pokemart",
     "azalea_kurt_house",
-    "slowpoke_well_entrance",
 ]
-locs = []
+locs = [
+    "azalea_full_heal",
+    "azalea_apricorn_tree",
+]
 
 [cianwood_city]
 header = "cianwood_city"
 exits = [
+    "route_41",
+    "cliff_edge_gate",
     "cianwood_gym",
     "cianwood_pokecenter_1f",
     "cianwood_pharmacy",
     "cianwood_kirks_house",
     "cianwood_central_house",
     "cianwood_camerons_house",
-    "cliff_edge_gate",
     "cianwood_north_house",
 ]
 locs = [
     "cianwood_hm02",
+    "cianwood_revive",
+    "cianwood_stardust",
 ]
 
 [goldenrod_city]
 header = "goldenrod_city"
 exits = [
+    "route_34",
     "route_35_goldenrod_gatehouse",
     "goldenrod_gym",
     "goldenrod_bike_shop",
@@ -730,7 +1026,7 @@ exits = [
     "goldenrod_game_corner",
     "goldenrod_radio_tower_1f",
     "goldenrod_department_store_1f",
-    "goldenrod_magnet_train_station_1f",
+    "goldenrod_magnet_train_station",
     "goldenrod_tunnel_1f",
     "goldenrod_bills_house",
     "goldenrod_friendship_checker_house",
@@ -738,11 +1034,15 @@ exits = [
     "goldenrod_name_rater_house",
     "goldenrod_global_terminal_1f",
 ]
-locs = []
+locs = [
+    "goldenrod_super_potion",
+]
 
 [olivine_city]
 header = "olivine_city"
 exits = [
+    "route_39",
+    "route_40",
     "olivine_gym",
     "olivine_pokecenter_1f",
     "olivine_pokemart",
@@ -755,11 +1055,16 @@ exits = [
 ]
 locs = [
     "olivine_tm57",
+    "olivine_full_heal",
+    "olivine_rare_candy",
 ]
 
 [ecruteak_city]
 header = "ecruteak_city"
 exits = [
+    "route_37",
+    "route_38_ecruteak_gatehouse",
+    "route_42_ecruteak_gatehouse",
     "burned_tower_1f",
     "ecruteak_southwest_house",
     "ecruteak_bell_tower_barrier_station",
@@ -768,10 +1073,13 @@ exits = [
     "ecruteak_pokecenter_1f",
     "ecruteak_pokemart",
     "ecruteak_gym",
-    "route_38_ecruteak_gatehouse",
-    "route_42_ecruteak_gatehouse",
 ]
-locs = []
+locs = [
+    "ecruteak_hyper_potion",
+    "ecruteak_ether",
+    "ecruteak_rare_candy",
+    "ecruteak_ultra_ball",
+]
 
 [ecruteak_pokemart]
 header = "ecruteak_pokemart"
@@ -829,7 +1137,6 @@ exits = [
 ]
 locs = [
     "ecruteak_dance_theater_hm03",
-    "ecruteak_dance_theater_hm03_2",
     "ecruteak_dance_theater_clear_bell",
     "ecruteak_dance_theater_tidal_bell",
 ]
@@ -837,7 +1144,9 @@ locs = [
 [mahogany_town]
 header = "mahogany_town"
 exits = [
+    "route_42_east",
     "route_43_mahogany_gatehouse",
+    "route_44",
     "mahogany_gym_room_1",
     "mahogany_pokecenter_1f",
     "mahogany_east_house",
@@ -845,27 +1154,34 @@ exits = [
 ]
 locs = [
     "mahogany_ragecandybar",
-    "mahogany_ragecandybar_2",
 ]
 
 [lake_of_rage]
 header = "lake_of_rage"
 exits = [
+    "route_43",
     "lake_of_rage_hidden_power_house",
     "lake_of_rage_fishing_guru_house",
 ]
 locs = [
+    "lake_of_rage_max_revive",
+    "lake_of_rage_full_restore",
+    "lake_of_rage_full_heal",
     "lake_of_rage_tm43",
     "lake_of_rage_red_flute",
     "lake_of_rage_choice_specs",
     "lake_of_rage_black_belt",
     "lake_of_rage_red_scale",
+    "lake_of_rage_full_restore_0",
+    "lake_of_rage_rare_candy",
+    "lake_of_rage_max_potion",
 ]
 
 [blackthorn_city]
 header = "blackthorn_city"
 exits = [
-    "ice_path_1f",
+    "route_45",
+    "ice_path_1f_east",
     "blackthorn_gym",
     "dragons_den_entrance",
     "blackthorn_west_house",
@@ -881,58 +1197,107 @@ locs = [
 [mount_silver]
 header = "mount_silver"
 exits = [
-    "mount_silver_cave_1f",
+    "route_28",
+    "mount_silver_cave_1f_south",
     "mount_silver_pokecenter_1f",
 ]
 locs = [
     "mount_silver_reaper_cloth",
+    "mount_silver_full_restore",
 ]
 
 [route_19]
 header = "route_19"
 exits = [
     "route_19_fuchsia_gatehouse",
+    "route_20_east",
 ]
 locs = [
     "route_19_tm55",
+    "route_19_big_pearl",
+    "route_19_pearl",
+    "route_19_pearl_0",
+    "route_19_revive",
+    "route_19_max_elixir",
 ]
 
-[route_20]
-header = "route_20"
+[route_20_east]
+header = "route_20_east"
 exits = [
-    "seafoam_islands_1f",
+    "route_19",
+    "seafoam_islands_1f_west",
 ]
-locs = []
+locs = [
+    "route_20_deepseascale",
+]
+
+[route_20_west]
+header = "route_20_west"
+exits = [
+    "cinnabar_island",
+    "seafoam_islands_1f_east",
+]
+locs = [
+    "route_20_stardust",
+    "route_20_deepseatooth",
+]
+
+[route_21]
+header = "route_21"
+exits = [
+    "pallet_town",
+    "cinnabar_island",
+]
+locs = [
+    "route_21_stardust",
+    "route_21_stardust_0",
+    "route_21_stardust_1",
+]
 
 [route_40]
 header = "route_40"
 exits = [
     "route_40_battle_frontier_gatehouse",
+    "route_41",
+    "olivine_city",
 ]
 locs = [
     "route_40_tm88",
     "route_40_sharp_beak",
+    "route_40_hyper_potion",
 ]
 
 [route_41]
 header = "route_41"
 exits = [
-    "whirl_islands_1f",
+    "route_40",
+    "whirl_islands_1f_northwest",
+    "whirl_islands_1f_northeast",
+    "whirl_islands_1f_southwest",
+    "whirl_islands_1f_southeast",
+    "cianwood_city",
 ]
-locs = []
+locs = [
+    "route_41_max_ether",
+    "route_41_stardust",
+    "route_41_stardust_0",
+    "route_41_stardust_1",
+    "route_41_stardust_2",
+]
 
 [national_park]
 header = "national_park"
 exits = [
     "route_35_national_park_pokeathalon_gatehouse",
     "route_36_national_park_gatehouse",
-    "national_park_unused_gatehouse",
 ]
 locs = [
     "national_park_tm28",
     "national_park_soothe_bell",
     "national_park_shiny_stone",
     "national_park_quick_claw",
+    "national_park_full_heal",
+    "national_park_full_heal_0",
 ]
 
 [route_31_violet_gatehouse]
@@ -942,38 +1307,40 @@ exits = [
     "route_31",
 ]
 locs = [
-    "route_31_violet_gatehouse_vs__recorder",
+    "route_31_violet_gatehouse_vs_recorder",
 ]
 
 [route_32_ruins_of_alph_gatehouse]
 header = "route_32_ruins_of_alph_gatehouse"
 exits = [
-    "route_32",
-    "ruins_of_alph",
+    "route_32_north",
+    "ruins_of_alph_north",
 ]
 locs = []
 
 [union_cave_1f]
 header = "union_cave_1f"
 exits = [
-    "route_32",
-    "union_cave_b1f",
+    "route_32_south",
     "route_33",
+    "union_cave_b1f",
     "union_cave_b2f",
-    "ruins_of_alph",
 ]
 locs = [
     "union_cave_1f_x_attack",
     "union_cave_1f_great_ball",
     "union_cave_1f_potion",
     "union_cave_1f_awakening",
+    "union_cave_1f_big_pearl",
+    "union_cave_1f_great_ball_0",
+    "union_cave_1f_parlyz_heal",
 ]
 
 [azalea_ilex_forest_gatehouse]
 header = "azalea_ilex_forest_gatehouse"
 exits = [
     "azalea_town",
-    "ilex_forest",
+    "ilex_forest_south",
 ]
 locs = []
 
@@ -999,8 +1366,8 @@ locs = []
 [route_36_ruins_of_alph_gatehouse]
 header = "route_36_ruins_of_alph_gatehouse"
 exits = [
-    "route_36",
-    "ruins_of_alph",
+    "route_36_east",
+    "ruins_of_alph_north",
 ]
 locs = []
 
@@ -1008,7 +1375,7 @@ locs = []
 header = "route_36_national_park_gatehouse"
 exits = [
     "national_park",
-    "route_36",
+    "route_36_west",
 ]
 locs = []
 
@@ -1021,6 +1388,8 @@ exits = [
 locs = [
     "diglett_cave_pp_max",
     "diglett_cave_rock_incense",
+    "diglett_cave_max_revive",
+    "diglett_cave_calcium",
 ]
 
 [mount_moon]
@@ -1028,20 +1397,24 @@ header = "mount_moon"
 exits = [
     "route_3",
     "route_4",
-    "mount_moon_square_entrance",
+    "mount_moon_square",
 ]
-locs = []
+locs = [
+    "mount_moon_revive",
+]
 
 [rock_tunnel_1f]
 header = "rock_tunnel_1f"
 exits = [
+    "route_10_north",
     "route_10_south",
-    "route_10",
     "rock_tunnel_b1f",
 ]
 locs = [
     "rock_tunnel_1f_elixir",
     "rock_tunnel_1f_tm56",
+    "rock_tunnel_1f_x_defense",
+    "rock_tunnel_1f_x_accuracy",
 ]
 
 [pal_park]
@@ -1064,7 +1437,7 @@ locs = [
 [bell_tower_1f]
 header = "bell_tower_1f"
 exits = [
-    "bellchime_tower",
+    "bellchime_trail",
     "bell_tower_2f",
 ]
 locs = []
@@ -1079,24 +1452,51 @@ locs = [
     "goldenrod_radio_tower_1f_radio_card",
 ]
 
-[ruins_of_alph]
-header = "ruins_of_alph"
+[ruins_of_alph_north]
+header = "ruins_of_alph_north"
 exits = [
+    "ruins_of_alph_east",
     "route_36_ruins_of_alph_gatehouse",
     "route_32_ruins_of_alph_gatehouse",
-    "ruins_of_alph_northeast_entrance_first_room",
-    "ruins_of_alph_southeast_entrance_first_room",
-    "ruins_of_alph_southwest_entrance_first_room",
-    "ruins_of_alph_northwest_entrance_first_room",
-    "ruins_of_alph_hall_entrance",
     "ruins_of_alph_research_center",
-    "ruins_of_alph_hall_entrance_sinjoh_event",
-    "union_cave_1f",
+    "ruins_of_alph_hall_entrance",
+    "ruins_of_alph_northeast_entrance_first_room",
 ]
 locs = [
     "ruins_of_alph_potion",
     "ruins_of_alph_hyper_potion",
+    "ruins_of_alph_great_ball",
+    "ruins_of_alph_rare_candy",
+    "ruins_of_alph_tinymushroom",
 ]
+
+[ruins_of_alph_east]
+header = "ruins_of_alph_east"
+exits = [
+    "ruins_of_alph_north",
+    "ruins_of_alph_southeast_entrance_first_room",
+]
+locs = []
+
+[ruins_of_alph_south]
+header = "ruins_of_alph_south"
+exits = [
+    "ruins_of_alph_east",
+    "union_cave_b2f",
+    "ruins_of_alph_southwest_entrance_first_room",
+]
+locs = [
+    "ruins_of_alph_nugget",
+    "ruins_of_alph_big_mushroom",
+]
+
+[ruins_of_alph_west]
+header = "ruins_of_alph_west"
+exits = [
+    "union_cave_b2f",
+    "ruins_of_alph_northwest_entrance_first_room",
+]
+locs = []
 
 [slowpoke_well_entrance]
 header = "slowpoke_well_entrance"
@@ -1104,13 +1504,15 @@ exits = [
     "azalea_town",
     "slowpoke_well_b1f",
 ]
-locs = []
+locs = [
+    "slowpoke_well_entrance_great_ball",
+]
 
 [olivine_lighthouse_1f]
 header = "olivine_lighthouse_1f"
 exits = [
     "olivine_city",
-    "olivine_lighthouse_elevator",
+    "olivine_lighthouse_light_room",
     "olivine_lighthouse_2f",
 ]
 locs = []
@@ -1123,19 +1525,36 @@ exits = [
 ]
 locs = []
 
-[ilex_forest]
-header = "ilex_forest"
+[ilex_forest_south]
+header = "ilex_forest_south"
 exits = [
     "azalea_ilex_forest_gatehouse",
-    "route_34_ilex_forest_gatehouse",
+    "ilex_forest_north",
 ]
 locs = [
     "ilex_forest_revive",
+    "ilex_forest_hm01",
+    "ilex_forest_tinymushroom_0",
+]
+
+[ilex_forest_north]
+header = "ilex_forest_north"
+exits = [
+    "route_34_ilex_forest_gatehouse",
+    "ilex_forest_south",
+]
+locs = [
     "ilex_forest_x_attack",
     "ilex_forest_antidote",
     "ilex_forest_ether",
-    "ilex_forest_hm01",
-    "ilex_forest_hm01_2",
+    "ilex_forest_antidote_0",
+    "ilex_forest_super_potion",
+    "ilex_forest_full_heal",
+    "ilex_forest_ether_0",
+    "ilex_forest_tinymushroom",
+    "ilex_forest_repel",
+    "ilex_forest_big_mushroom",
+    "ilex_forest_tinymushroom_1",
 ]
 
 [goldenrod_tunnel_1f]
@@ -1143,85 +1562,246 @@ header = "goldenrod_tunnel_1f"
 exits = [
     "goldenrod_city",
     "goldenrod_tunnel_b1f",
-    "goldenrod_tunnel_b2f",
 ]
 locs = [
     "goldenrod_tunnel_1f_fashion_case",
-    "goldenrod_tunnel_1f_fashion_case_2",
 ]
 
-[mount_mortar_1f_entrance]
-header = "mount_mortar_1f_entrance"
+[mount_mortar_1f_entrance_south]
+header = "mount_mortar_1f_entrance_south"
 exits = [
-    "route_42",
-    "mount_mortar_1f_back",
-    "mount_mortar_2f",
-    "mount_mortar_b1f",
+    "route_42_south",
+    "mount_mortar_1f_entrance_north",
+    "mount_mortar_b1f_south",
+]
+locs = []
+
+[mount_mortar_1f_entrance_southwest]
+header = "mount_mortar_1f_entrance_southwest"
+exits = [
+    "route_42_west",
+    "mount_mortar_1f_back_south",
+]
+locs = [
+    "mount_mortar_1f_entrance_hyper_potion",
+]
+
+[mount_mortar_1f_entrance_northwest]
+header = "mount_mortar_1f_entrance_northwest"
+exits = [
+    "mount_mortar_1f_back_south",
 ]
 locs = [
     "mount_mortar_1f_entrance_ether",
+]
+
+[mount_mortar_1f_entrance_north]
+header = "mount_mortar_1f_entrance_north"
+exits = [
+    "mount_mortar_1f_entrance_south",
+    "mount_mortar_2f_north",
+]
+locs = []
+
+[mount_mortar_1f_entrance_northeast]
+header = "mount_mortar_1f_entrance_northeast"
+exits = [
+    "mount_mortar_1f_back_south",
+]
+locs = [
     "mount_mortar_1f_entrance_revive",
 ]
 
-[ice_path_1f]
-header = "ice_path_1f"
+[mount_mortar_1f_entrance_southeast_lower]
+header = "mount_mortar_1f_entrance_southeast_lower"
+exits = [
+    "route_42_east",
+    "mount_mortar_1f_entrance_southeast_upper",
+    "mount_mortar_1f_back_south",
+]
+locs = []
+
+[mount_mortar_1f_entrance_southeast_upper]
+header = "mount_mortar_1f_entrance_southeast_upper"
+exits = [
+    "route_42_north",
+    "mount_mortar_1f_entrance_southeast_lower",
+    "mount_mortar_1f_back_southeast",
+]
+locs = [
+    "mount_mortar_1f_entrance_revive_0",
+]
+
+[ice_path_1f_west]
+header = "ice_path_1f_west"
 exits = [
     "route_44",
-    "blackthorn_city",
-    "ice_path_b1f",
+    "ice_path_b1f_north",
 ]
 locs = [
     "ice_path_1f_hm07",
+    "ice_path_1f_max_potion",
+    "ice_path_1f_ice_heal",
+]
+
+[ice_path_1f_east]
+header = "ice_path_1f_east"
+exits = [
+    "blackthorn_city",
+    "ice_path_b1f_south",
+]
+locs = [
     "ice_path_1f_protein",
     "ice_path_1f_pp_up",
 ]
 
-[whirl_islands_1f]
-header = "whirl_islands_1f"
+[whirl_islands_1f_northwest]
+header = "whirl_islands_1f_northwest"
 exits = [
     "route_41",
-    "whirl_islands_b1f",
+    "whirl_islands_b1f_northwest",
+]
+locs = []
+
+[whirl_islands_1f_northeast]
+header = "whirl_islands_1f_northeast"
+exits = [
+    "route_41",
+    "whirl_islands_b1f_northeast",
+    "whirl_islands_b1f_northwest",
 ]
 locs = [
-    "whirl_islands_1f_var_modifier",
-    "whirl_islands_1f_var_modifier_2",
+    "whirl_islands_1f_ultra_ball_0",
 ]
 
-[mount_silver_cave_1f]
-header = "mount_silver_cave_1f"
+[whirl_islands_1f_southwest]
+header = "whirl_islands_1f_southwest"
+exits = [
+    "route_41",
+    "whirl_islands_b1f_southwest",
+    "whirl_islands_b1f_southeast",
+]
+locs = [
+    "whirl_islands_1f_ultra_ball",
+]
+
+[whirl_islands_1f_southeast]
+header = "whirl_islands_1f_southeast"
+exits = [
+    "route_41",
+    "whirl_islands_b1f_southeast",
+]
+locs = [
+    "whirl_islands_1f_ultra_ball_1",
+]
+
+[mount_silver_cave_1f_south]
+header = "mount_silver_cave_1f_south"
 exits = [
     "mount_silver",
-    "mount_silver_cave_moltres_chamber",
     "mount_silver_cave_expert_belt_chamber",
+    "mount_silver_cave_1f_west",
+    "mount_silver_cave_1f_east",
+]
+locs = []
+
+[mount_silver_cave_1f_east]
+header = "mount_silver_cave_1f_east"
+exits = [
+    "mount_silver_cave_1f_south",
     "mount_silver_cave_lower_mountainside",
-    "mount_silver_cave_2f",
+]
+locs = [
+    "mount_silver_cave_1f_dire_hit",
+]
+
+[mount_silver_cave_1f_north]
+header = "mount_silver_cave_1f_north"
+exits = [
+    "mount_silver_cave_lower_mountainside",
 ]
 locs = [
     "mount_silver_cave_1f_full_restore",
 ]
 
-[dark_cave_route_45_side]
-header = "dark_cave_route_45_side"
+[mount_silver_cave_1f_center]
+header = "mount_silver_cave_1f_center"
 exits = [
-    "dark_cave_route_31_side",
+    "mount_silver_cave_lower_mountainside",
+    "mount_silver_cave_2f_west",
+]
+locs = [
+    "mount_silver_cave_1f_revive",
+]
+
+[mount_silver_cave_1f_west]
+header = "mount_silver_cave_1f_west"
+exits = [
+    "mount_silver_cave_1f_south",
+    "mount_silver_cave_expert_belt_chamber",
+    "mount_silver_cave_moltres_chamber",
+]
+locs = [
+    "mount_silver_cave_1f_ultra_ball",
+]
+
+[dark_cave_route_45_side_northeast]
+header = "dark_cave_route_45_side_northeast"
+exits = [
     "route_45",
+    "dark_cave_route_45_side_northwest",
+    "dark_cave_route_45_side_southeast",
+]
+locs = [
+    "dark_cave_route_45_side_elixir",
+]
+
+[dark_cave_route_45_side_northwest]
+header = "dark_cave_route_45_side_northwest"
+exits = [
+    "dark_cave_route_45_side_northeast",
+    "dark_cave_route_45_side_southwest",
+    "dark_cave_route_45_side_southeast",
+]
+locs = [
+    "dark_cave_route_45_side_blackglasses",
+    "dark_cave_route_45_side_max_revive",
+]
+
+[dark_cave_route_45_side_southeast]
+header = "dark_cave_route_45_side_southeast"
+exits = [
+    "dark_cave_route_45_side_northeast",
+    "dark_cave_route_45_side_northeast",
+    "dark_cave_route_45_side_southwest",
 ]
 locs = [
     "dark_cave_route_45_side_tm54",
     "dark_cave_route_45_side_revive",
-    "dark_cave_route_45_side_blackglasses",
+]
+
+[dark_cave_route_45_side_southwest]
+header = "dark_cave_route_45_side_southwest"
+exits = [
+    "dark_cave_route_31_side_west",
+    "dark_cave_route_31_side_east",
+]
+locs = [
+    "dark_cave_route_45_side_hyper_potion",
 ]
 
 [victory_road_1f]
 header = "victory_road_1f"
 exits = [
-    "route_22_pokemon_league_reception_gate",
-    "victory_road_2f",
+    "pokemon_league_reception_gate",
+    "victory_road_2f_west",
 ]
 locs = [
     "victory_road_1f_max_revive",
     "victory_road_1f_full_heal",
     "victory_road_1f_potion",
+    "victory_road_1f_full_heal_0",
+    "victory_road_1f_max_potion",
 ]
 
 [dragons_den_entrance]
@@ -1235,8 +1815,8 @@ locs = []
 [tohjo_falls]
 header = "tohjo_falls"
 exits = [
-    "route_27",
-    "tohjo_falls_hidden_room",
+    "route_27_west",
+    "route_27_center",
 ]
 locs = [
     "tohjo_falls_moon_stone",
@@ -1245,7 +1825,7 @@ locs = [
 [route_30_apricorn_house]
 header = "route_30_apricorn_house"
 exits = [
-    "route_30",
+    "route_30_east",
 ]
 locs = [
     "route_30_apricorn_house_apricorn_box",
@@ -1262,7 +1842,7 @@ locs = []
 header = "route_42_ecruteak_gatehouse"
 exits = [
     "ecruteak_city",
-    "route_42",
+    "route_42_west",
 ]
 locs = []
 
@@ -1359,12 +1939,14 @@ locs = []
 [route_30_mr_pokemon_house]
 header = "route_30_mr_pokemon_house"
 exits = [
-    "route_30",
+    "route_30_east",
 ]
 locs = [
     "route_30_mr_pokemon_house_mystery_egg",
-    "route_30_mr_pokemon_house_exp__share",
+    "route_30_mr_pokemon_house_exp_share",
     "route_30_mr_pokemon_house_pokedex",
+    "route_30_mr_pokemon_house_red_orb",
+    "route_30_mr_pokemon_house_blue_orb",
 ]
 
 [cherrygrove_pokecenter_b1f]
@@ -1374,26 +1956,51 @@ exits = [
 ]
 locs = []
 
-[cerulean_cave_1f]
-header = "cerulean_cave_1f"
+[cerulean_cave_1f_southeast]
+header = "cerulean_cave_1f_southeast"
 exits = [
     "cerulean_city",
-    "cerulean_cave_2f",
-    "cerulean_cave_b1f",
+    "cerulean_cave_2f_northeast",
+    "cerulean_cave_1f_center",
+]
+locs = []
+
+[cerulean_cave_1f_center]
+header = "cerulean_cave_1f_center"
+exits = [
+    "cerulean_cave_1f_southeast",
+    "cerulean_cave_2f_northeast",
+    "cerulean_cave_2f_west",
+    "cerulean_cave_2f_southeast",
+    "cerulean_cave_2f_center",
 ]
 locs = [
     "cerulean_cave_1f_max_elixir",
     "cerulean_cave_1f_nugget",
     "cerulean_cave_1f_full_restore",
     "cerulean_cave_1f_sea_incense",
+    "cerulean_cave_1f_hyper_potion",
+    "cerulean_cave_1f_rare_candy",
+    "cerulean_cave_1f_revive",
 ]
 
-[seafoam_islands_1f]
-header = "seafoam_islands_1f"
+[seafoam_islands_1f_east]
+header = "seafoam_islands_1f_east"
 exits = [
-    "route_20",
-    "seafoam_islands_b1f",
+    "route_20_west",
     "seafoam_islands_cinnabar_gym",
+    "seafoam_islands_b1f_north",
+    "seafoam_islands_b1f_south",
+]
+locs = [
+    "seafoam_islands_1f_escape_rope",
+]
+
+[seafoam_islands_1f_west]
+header = "seafoam_islands_1f_west"
+exits = [
+    "route_20_east",
+    "seafoam_islands_b1f_south",
 ]
 locs = []
 
@@ -1408,26 +2015,27 @@ locs = [
     "viridian_forest_blue_flute",
     "viridian_forest_leaf_stone",
     "viridian_forest_tm77",
+    "viridian_forest_max_ether",
+    "viridian_forest_full_restore",
+    "viridian_forest_big_mushroom",
+    "viridian_forest_big_mushroom_0",
+    "viridian_forest_tinymushroom",
+    "viridian_forest_tinymushroom_0",
+    "viridian_forest_tinymushroom_1",
 ]
 
 [violet_route_36_gatehouse]
 header = "violet_route_36_gatehouse"
 exits = [
     "violet_city",
-    "route_36",
-]
-locs = []
-
-[national_park_unused_gatehouse]
-header = "national_park_unused_gatehouse"
-exits = [
-    "national_park",
+    "route_36_east",
 ]
 locs = []
 
 [route_47]
 header = "route_47"
 exits = [
+    "route_48",
     "cliff_edge_gate",
     "cliff_cave",
     "embedded_tower_groudon_room",
@@ -1439,11 +2047,16 @@ locs = [
     "route_47_lagging_tail",
     "route_47_wave_incense",
     "route_47_white_flute",
+    "route_47_stardust",
+    "route_47_revive_0",
 ]
 
 [route_48]
 header = "route_48"
-exits = []
+exits = [
+    "route_47",
+    "safari_zone_gate",
+]
 locs = [
     "route_48_nugget",
 ]
@@ -1452,22 +2065,26 @@ locs = [
 header = "union_cave_b1f"
 exits = [
     "union_cave_1f",
-    "union_cave_b2f",
+    "ruins_of_alph_west",
+    "ruins_of_alph_south",
 ]
 locs = [
     "union_cave_b1f_tm39",
     "union_cave_b1f_x_defense",
+    "union_cave_b1f_x_speed",
+    "union_cave_b1f_revive",
 ]
 
 [union_cave_b2f]
 header = "union_cave_b2f"
 exits = [
-    "union_cave_b1f",
     "union_cave_1f",
 ]
 locs = [
     "union_cave_b2f_elixir",
     "union_cave_b2f_hyper_potion",
+    "union_cave_b2f_ultra_ball",
+    "union_cave_b2f_calcium",
 ]
 
 [sprout_tower_2f]
@@ -1573,7 +2190,7 @@ locs = []
 [route_32_pokecenter_1f]
 header = "route_32_pokecenter_1f"
 exits = [
-    "route_32",
+    "route_32_south",
     "route_32_pokecenter_b1f",
 ]
 locs = [
@@ -1592,7 +2209,7 @@ locs = []
 header = "route_34_ilex_forest_gatehouse"
 exits = [
     "route_34",
-    "ilex_forest",
+    "ilex_forest_north",
 ]
 locs = [
     "route_34_ilex_forest_gatehouse_tm12",
@@ -1606,35 +2223,43 @@ exits = [
 ]
 locs = []
 
-[safari_zone_entrance_interior]
-header = "safari_zone_entrance_interior"
-exits = [
-    "safari_zone_gate",
-    "safari_zone_entrance_exterior",
-]
-locs = []
-
 [safari_zone_gate]
 header = "safari_zone_gate"
 exits = [
-    "safari_zone_entrance_interior",
+    "route_48",
     "safari_zone_gate_pokecenter_1f",
 ]
-locs = []
+locs = [
+    "safari_zone_gate_tinymushroom",
+    "safari_zone_gate_tinymushroom_0",
+    "safari_zone_gate_tinymushroom_1",
+]
 
-[dark_cave_route_31_side]
-header = "dark_cave_route_31_side"
+[dark_cave_route_31_side_west]
+header = "dark_cave_route_31_side_west"
 exits = [
     "route_31",
-    "dark_cave_route_45_side",
-    "route_46",
+    "dark_cave_route_31_side_east",
+    "dark_cave_route_45_side_southwest",
 ]
 locs = [
     "dark_cave_route_31_side_potion",
+    "dark_cave_route_31_side_black_flute",
+    "dark_cave_route_31_side_poke_ball",
+]
+
+[dark_cave_route_31_side_east]
+header = "dark_cave_route_31_side_east"
+exits = [
+    "route_46",
+    "dark_cave_route_31_side_west",
+    "dark_cave_route_45_side_southwest",
+]
+locs = [
     "dark_cave_route_31_side_hyper_potion",
     "dark_cave_route_31_side_full_heal",
     "dark_cave_route_31_side_dire_hit",
-    "dark_cave_route_31_side_black_flute",
+    "dark_cave_route_31_side_max_ether",
 ]
 
 [slowpoke_well_b1f]
@@ -1645,28 +2270,89 @@ exits = [
 ]
 locs = [
     "slowpoke_well_b1f_super_potion",
+    "slowpoke_well_b1f_super_potion_0",
+    "slowpoke_well_b1f_full_heal",
 ]
 
-[victory_road_2f]
-header = "victory_road_2f"
+[victory_road_2f_west]
+header = "victory_road_2f_west"
 exits = [
     "victory_road_1f",
-    "victory_road_3f",
+    "victory_road_3f_south",
+]
+locs = [
+    "victory_road_2f_max_revive",
+]
+
+[victory_road_2f_north]
+header = "victory_road_2f_north"
+exits = [
+    "victory_road_3f_west",
+    "victory_road_2f_west",
 ]
 locs = [
     "victory_road_2f_tm26",
-    "victory_road_2f_hp_up",
+]
+
+[victory_road_2f_southeast]
+header = "victory_road_2f_southeast"
+exits = [
+    "victory_road_2f_west",
+    "victory_road_2f_northeast",
+]
+locs = [
+    "victory_road_2f_ultra_ball",
+]
+
+[victory_road_2f_northeast]
+header = "victory_road_2f_northeast"
+exits = [
+    "victory_road_2f_southeast",
+    "victory_road_3f_east",
+]
+locs = [
     "victory_road_2f_full_restore",
 ]
 
-[victory_road_3f]
-header = "victory_road_3f"
+[victory_road_2f_south]
+header = "victory_road_2f_south"
 exits = [
-    "indigo_plateau",
-    "victory_road_2f",
+    "victory_road_3f_west",
 ]
 locs = [
-    "victory_road_3f_var_modifier",
+    "victory_road_2f_hp_up",
+    "victory_road_2f_pp_up",
+]
+
+[victory_road_3f_south]
+header = "victory_road_3f_south"
+exits = [
+    "victory_road_2f_west",
+    "victory_road_2f_southeast",
+]
+locs = [
+    "victory_road_3f_hyper_potion",
+]
+
+[victory_road_3f_east]
+header = "victory_road_3f_east"
+exits = [
+    "victory_road_2f_northeast",
+    "victory_road_2f_south",
+    "victory_road_3f_west",
+]
+locs = [
+    "victory_road_3f_ultra_ball",
+    "victory_road_3f_zinc",
+]
+
+[victory_road_3f_west]
+header = "victory_road_3f_west"
+exits = [
+    "victory_road_2f_north",
+    "indigo_plateau",
+]
+locs = [
     "victory_road_3f_tm79",
     "victory_road_3f_rare_candy",
 ]
@@ -1698,15 +2384,6 @@ exits = [
 ]
 locs = [
     "goldenrod_bike_shop_bicycle",
-]
-
-[goldenrod_game_corner_jp]
-header = "goldenrod_game_corner_jp"
-exits = [
-    "goldenrod_city",
-]
-locs = [
-    "goldenrod_game_corner_jp_tm78",
 ]
 
 [goldenrod_flower_shop]
@@ -1753,7 +2430,7 @@ exits = [
     "goldenrod_radio_tower_5f",
 ]
 locs = [
-    "goldenrod_radio_tower_4f_var_modifier",
+    "goldenrod_radio_tower_4f_ultra_ball",
     "goldenrod_radio_tower_4f_brightpowder",
 ]
 
@@ -1761,14 +2438,14 @@ locs = [
 header = "goldenrod_radio_tower_5f"
 exits = [
     "goldenrod_radio_tower_4f",
-    "goldenrod_radio_tower_elevator",
+    "goldenrod_radio_tower_observation_deck",
 ]
 locs = []
 
 [goldenrod_radio_tower_observation_deck]
 header = "goldenrod_radio_tower_observation_deck"
 exits = [
-    "goldenrod_radio_tower_elevator",
+    "goldenrod_radio_tower_5f",
 ]
 locs = [
     "goldenrod_radio_tower_observation_deck_rainbow_wing",
@@ -1828,11 +2505,24 @@ exits = [
 ]
 locs = []
 
-[goldenrod_magnet_train_station_1f]
-header = "goldenrod_magnet_train_station_1f"
+[goldenrod_department_store_elevator]
+header = "goldenrod_department_store_elevator"
+exits = [
+    "goldenrod_department_store_1f",
+    "goldenrod_department_store_2f",
+    "goldenrod_department_store_3f",
+    "goldenrod_department_store_4f",
+    "goldenrod_department_store_5f",
+    "goldenrod_department_store_6f",
+    "goldenrod_department_store_basement",
+]
+locs = []
+
+[goldenrod_magnet_train_station]
+header = "goldenrod_magnet_train_station"
 exits = [
     "goldenrod_city",
-    "goldenrod_magnet_train_station_2f_empty",
+    "saffron_magnet_train_station",
 ]
 locs = []
 
@@ -1840,6 +2530,7 @@ locs = []
 header = "goldenrod_tunnel_b1f"
 exits = [
     "goldenrod_tunnel_1f",
+    "goldenrod_tunnel_b2f",
 ]
 locs = []
 
@@ -1853,7 +2544,10 @@ locs = [
     "goldenrod_department_store_basement_amulet_coin",
     "goldenrod_department_store_basement_burn_heal",
     "goldenrod_department_store_basement_ether",
-    "goldenrod_department_store_basement_var_modifier",
+    "goldenrod_department_store_basement_ultra_ball",
+    "goldenrod_department_store_basement_parlyz_heal",
+    "goldenrod_department_store_basement_super_potion",
+    "goldenrod_department_store_basement_antidote",
 ]
 
 [goldenrod_tunnel_b2f]
@@ -1876,8 +2570,10 @@ exits = [
 locs = [
     "goldenrod_tunnel_warehouse_tm82",
     "goldenrod_tunnel_warehouse_max_ether",
-    "goldenrod_tunnel_warehouse_var_modifier",
+    "goldenrod_tunnel_warehouse_ultra_ball",
     "goldenrod_tunnel_warehouse_card_key",
+    "goldenrod_tunnel_warehouse_max_potion",
+    "goldenrod_tunnel_warehouse_revive",
 ]
 
 [goldenrod_bills_house]
@@ -1942,7 +2638,7 @@ locs = [
 header = "ecruteak_bell_tower_barrier_station_corridor"
 exits = [
     "ecruteak_bell_tower_barrier_station",
-    "bellchime_tower",
+    "bellchime_trail",
 ]
 locs = []
 
@@ -1953,6 +2649,8 @@ exits = [
 ]
 locs = [
     "burned_tower_b1f_tm12",
+    "burned_tower_b1f_revive",
+    "burned_tower_b1f_antidote",
 ]
 
 [goldenrod_pokecenter_b1f]
@@ -1966,44 +2664,60 @@ locs = []
 header = "olivine_lighthouse_2f"
 exits = [
     "olivine_lighthouse_1f",
-    "olivine_lighthouse_3f",
+    "olivine_lighthouse_3f_east",
 ]
 locs = []
 
 [olivine_lighthouse_exterior]
 header = "olivine_lighthouse_exterior"
 exits = [
-    "olivine_lighthouse_3f",
+    "olivine_lighthouse_3f_west",
 ]
 locs = [
     "olivine_lighthouse_exterior_rare_candy",
 ]
 
-[olivine_lighthouse_3f]
-header = "olivine_lighthouse_3f"
+[olivine_lighthouse_3f_east]
+header = "olivine_lighthouse_3f_east"
 exits = [
     "olivine_lighthouse_2f",
-    "olivine_lighthouse_4f",
+    "olivine_lighthouse_4f_east",
+]
+locs = []
+
+[olivine_lighthouse_3f_west]
+header = "olivine_lighthouse_3f_west"
+exits = [
+    "olivine_lighthouse_4f_west",
     "olivine_lighthouse_exterior",
 ]
 locs = [
     "olivine_lighthouse_3f_ether",
+    "olivine_lighthouse_3f_hyper_potion",
 ]
 
-[olivine_lighthouse_4f]
-header = "olivine_lighthouse_4f"
+[olivine_lighthouse_4f_east]
+header = "olivine_lighthouse_4f_east"
 exits = [
-    "olivine_lighthouse_3f",
-    "olivine_lighthouse_5f",
+    "olivine_lighthouse_3f_east",
+    "olivine_lighthouse_exterior",
 ]
 locs = [
     "olivine_lighthouse_4f_tm87",
 ]
 
+[olivine_lighthouse_4f_west]
+header = "olivine_lighthouse_4f_west"
+exits = [
+    "olivine_lighthouse_3f_west",
+    "olivine_lighthouse_5f",
+]
+locs = []
+
 [olivine_lighthouse_5f]
 header = "olivine_lighthouse_5f"
 exits = [
-    "olivine_lighthouse_4f",
+    "olivine_lighthouse_4f_west",
     "olivine_lighthouse_light_room",
 ]
 locs = [
@@ -2014,7 +2728,7 @@ locs = [
 header = "olivine_lighthouse_light_room"
 exits = [
     "olivine_lighthouse_5f",
-    "olivine_lighthouse_elevator",
+    "olivine_lighthouse_1f",
 ]
 locs = [
     "olivine_lighthouse_light_room_super_potion",
@@ -2103,32 +2817,62 @@ exits = [
 ]
 locs = []
 
-[ice_path_b1f]
-header = "ice_path_b1f"
+[ice_path_b1f_north]
+header = "ice_path_b1f_north"
 exits = [
-    "ice_path_1f",
-    "ice_path_b2f",
+    "ice_path_1f_west",
+    "ice_path_b2f_west",
+]
+locs = []
+
+[ice_path_b1f_south]
+header = "ice_path_b1f_south"
+exits = [
+    "ice_path_1f_east",
+    "ice_path_b2f_east",
 ]
 locs = [
     "ice_path_b1f_iron",
+    "ice_path_b1f_revive",
 ]
 
-[ice_path_b2f]
-header = "ice_path_b2f"
+[ice_path_b2f_west]
+header = "ice_path_b2f_west"
 exits = [
-    "ice_path_b1f",
+    "ice_path_b1f_north",
+    "ice_path_b2f_west_center",
+]
+locs = [
+    "ice_path_b2f_max_potion",
+    "ice_path_b2f_carbos",
+]
+
+[ice_path_b2f_west_center]
+header = "ice_path_b2f_west_center"
+exits = [
+    "ice_path_b2f_west_center",
+    "ice_path_b3f",
+]
+locs = [
+    "ice_path_b2f_full_heal",
+]
+
+[ice_path_b2f_east]
+header = "ice_path_b2f_east"
+exits = [
+    "ice_path_b1f_south",
     "ice_path_b3f",
 ]
 locs = [
     "ice_path_b2f_tm72",
-    "ice_path_b2f_full_heal",
-    "ice_path_b2f_max_potion",
 ]
 
 [ice_path_b3f]
 header = "ice_path_b3f"
 exits = [
-    "ice_path_b2f",
+    "ice_path_b2f_west",
+    "ice_path_b2f_west_center",
+    "ice_path_b2f_east",
 ]
 locs = [
     "ice_path_b3f_nevermeltice",
@@ -2151,24 +2895,57 @@ exits = [
 ]
 locs = []
 
-[whirl_islands_b1f]
-header = "whirl_islands_b1f"
+[whirl_islands_b1f_northwest]
+header = "whirl_islands_b1f_northwest"
 exits = [
-    "whirl_islands_1f",
+    "whirl_islands_b1f_southwest",
+    "whirl_islands_1f_northwest",
     "whirl_islands_b2f",
 ]
 locs = [
-    "whirl_islands_b1f_escape_rope",
     "whirl_islands_b1f_carbos",
     "whirl_islands_b1f_full_restore",
     "whirl_islands_b1f_nugget",
+    "whirl_islands_b1f_super_repel",
+    "whirl_islands_b1f_pearl",
+]
+
+[whirl_islands_b1f_northeast]
+header = "whirl_islands_b1f_northeast"
+exits = [
+    "whirl_islands_b1f_southwest",
+    "whirl_islands_b2f",
+]
+locs = [
+    "whirl_islands_b1f_revive",
+]
+
+[whirl_islands_b1f_southwest]
+header = "whirl_islands_b1f_southwest"
+exits = [
+    "whirl_islands_1f_southwest",
+]
+locs = [
+    "whirl_islands_b1f_escape_rope",
+]
+
+[whirl_islands_b1f_southeast]
+header = "whirl_islands_b1f_southeast"
+exits = [
+    "whirl_islands_b1f_southwest",
+    "whirl_islands_1f_southeast",
+    "whirl_islands_1f_southwest",
+]
+locs = [
     "whirl_islands_b1f_calcium",
+    "whirl_islands_b1f_ultra_ball",
 ]
 
 [whirl_islands_b2f]
 header = "whirl_islands_b2f"
 exits = [
-    "whirl_islands_b1f",
+    "whirl_islands_b1f_northwest",
+    "whirl_islands_b1f_northeast",
     "whirl_islands_b3f",
     "whirl_islands_b3f_lugia_cave",
 ]
@@ -2176,6 +2953,7 @@ locs = [
     "whirl_islands_b2f_max_revive",
     "whirl_islands_b2f_full_restore",
     "whirl_islands_b2f_max_elixir",
+    "whirl_islands_b2f_full_restore_0",
 ]
 
 [whirl_islands_b3f_lugia_cave]
@@ -2204,77 +2982,201 @@ locs = []
 header = "team_rocket_headquarters_b1f"
 exits = [
     "mahogany_souvenir_shop",
-    "team_rocket_headquarters_b2f",
+    "team_rocket_headquarters_b2f_south",
 ]
 locs = [
     "team_rocket_headquarters_b1f_hyper_potion",
-    "team_rocket_headquarters_b1f_guard_spec_",
+    "team_rocket_headquarters_b1f_guard_spec",
     "team_rocket_headquarters_b1f_nugget",
+    "team_rocket_headquarters_b1f_revive",
 ]
 
-[team_rocket_headquarters_b2f]
-header = "team_rocket_headquarters_b2f"
+[team_rocket_headquarters_b2f_south]
+header = "team_rocket_headquarters_b2f_south"
 exits = [
     "team_rocket_headquarters_b1f",
-    "team_rocket_headquarters_b3f",
+    "team_rocket_headquarters_b3f_east",
+]
+locs = [
+    "team_rocket_headquarters_b2f_hm05",
+    "team_rocket_headquarters_b2f_full_heal",
+]
+
+[team_rocket_headquarters_b2f_north]
+header = "team_rocket_headquarters_b2f_north"
+exits = [
+    "team_rocket_headquarters_b3f_east",
+    "team_rocket_headquarters_b3f_west",
+]
+locs = [
+    "team_rocket_headquarters_b2f_x_sp_def",
+]
+
+[team_rocket_headquarters_b2f_west]
+header = "team_rocket_headquarters_b2f_west"
+exits = [
+    "team_rocket_headquarters_b3f_west",
 ]
 locs = [
     "team_rocket_headquarters_b2f_tm46",
-    "team_rocket_headquarters_b2f_hm05",
 ]
 
-[team_rocket_headquarters_b3f]
-header = "team_rocket_headquarters_b3f"
+[team_rocket_headquarters_b3f_east]
+header = "team_rocket_headquarters_b3f_east"
 exits = [
-    "team_rocket_headquarters_b2f",
+    "team_rocket_headquarters_b2f_south",
+    "team_rocket_headquarters_b2f_north",
 ]
 locs = [
     "team_rocket_headquarters_b3f_protein",
     "team_rocket_headquarters_b3f_x_special",
     "team_rocket_headquarters_b3f_tm49",
     "team_rocket_headquarters_b3f_full_heal",
-    "team_rocket_headquarters_b3f_var_modifier",
 ]
 
-[mount_mortar_1f_back]
-header = "mount_mortar_1f_back"
+[team_rocket_headquarters_b3f_west]
+header = "team_rocket_headquarters_b3f_west"
 exits = [
-    "mount_mortar_1f_entrance",
-    "mount_mortar_b1f",
-    "mount_mortar_2f",
+    "team_rocket_headquarters_b2f_north",
+    "team_rocket_headquarters_b2f_west",
+]
+locs = [
+    "team_rocket_headquarters_b3f_ultra_ball",
+]
+
+[mount_mortar_1f_back_south]
+header = "mount_mortar_1f_back_south"
+exits = [
+    "mount_mortar_1f_back_center",
+    "mount_mortar_1f_entrance_southwest",
+    "mount_mortar_1f_entrance_southeast_lower",
+    "mount_mortar_1f_entrance_northwest",
+    "mount_mortar_1f_entrance_northeast",
+]
+locs = []
+
+[mount_mortar_1f_back_southeast]
+header = "mount_mortar_1f_back_southeast"
+exits = [
+    "mount_mortar_1f_back_center",
+    "mount_mortar_1f_entrance_southeast_upper",
+]
+locs = [
+    "mount_mortar_1f_back_full_incense",
+    "mount_mortar_1f_back_nugget_0",
+]
+
+[mount_mortar_1f_back_north]
+header = "mount_mortar_1f_back_north"
+exits = [
+    "mount_mortar_1f_back_center",
+    "mount_mortar_2f_north",
+    "mount_mortar_b1f_north",
+]
+locs = [
+    "mount_mortar_1f_back_iron_ball",
+    "mount_mortar_1f_back_iron",
+    "mount_mortar_1f_back_max_revive",
+    "mount_mortar_1f_back_ether",
+]
+
+[mount_mortar_1f_back_center]
+header = "mount_mortar_1f_back_center"
+exits = [
+    "mount_mortar_1f_back_south",
+    "mount_mortar_1f_back_southeast",
 ]
 locs = [
     "mount_mortar_1f_back_escape_rope",
     "mount_mortar_1f_back_nugget",
-    "mount_mortar_1f_back_iron_ball",
     "mount_mortar_1f_back_max_potion",
-    "mount_mortar_1f_back_iron",
-    "mount_mortar_1f_back_max_revive",
-    "mount_mortar_1f_back_var_modifier",
-    "mount_mortar_1f_back_full_incense",
+    "mount_mortar_1f_back_ultra_ball",
     "mount_mortar_1f_back_protector",
+    "mount_mortar_1f_back_max_repel",
+    "mount_mortar_1f_back_rare_candy",
+    "mount_mortar_1f_back_ultra_ball_0",
 ]
 
-[mount_mortar_2f]
-header = "mount_mortar_2f"
+[mount_mortar_2f_south]
+header = "mount_mortar_2f_south"
 exits = [
-    "mount_mortar_1f_entrance",
-    "mount_mortar_1f_back",
+    "mount_mortar_2f_southeast",
+    "mount_mortar_2f_east",
+    "mount_mortar_2f_northeast",
+    "mount_mortar_1f_entrance_north",
 ]
 locs = [
     "mount_mortar_2f_rare_candy",
+]
+
+[mount_mortar_2f_southeast]
+header = "mount_mortar_2f_southeast"
+exits = [
+    "mount_mortar_2f_south",
+    "mount_mortar_2f_east",
+]
+locs = [
     "mount_mortar_2f_max_potion",
-    "mount_mortar_2f_tm40",
-    "mount_mortar_2f_elixir",
-    "mount_mortar_2f_dragon_scale",
+    "mount_mortar_2f_hyper_potion",
+]
+
+[mount_mortar_2f_east]
+header = "mount_mortar_2f_east"
+exits = [
+    "mount_mortar_2f_south",
+    "mount_mortar_2f_southeast",
+    "mount_mortar_2f_northeast",
+]
+locs = [
+    "mount_mortar_2f_hp_up",
+    "mount_mortar_2f_full_restore",
+]
+
+[mount_mortar_2f_northeast]
+header = "mount_mortar_2f_northeast"
+exits = [
+    "mount_mortar_2f_north",
+    "mount_mortar_2f_east",
+    "mount_mortar_2f_center",
+    "mount_mortar_2f_south",
+]
+locs = [
     "mount_mortar_2f_escape_rope",
 ]
 
-[mount_mortar_b1f]
-header = "mount_mortar_b1f"
+[mount_mortar_2f_north]
+header = "mount_mortar_2f_north"
 exits = [
-    "mount_mortar_1f_entrance",
-    "mount_mortar_1f_back",
+    "mount_mortar_2f_south",
+    "mount_mortar_2f_northeast",
+    "mount_mortar_2f_east",
+    "mount_mortar_2f_southeast",
+    "mount_mortar_2f_center",
+    "mount_mortar_1f_back_north",
+]
+locs = [
+    "mount_mortar_2f_elixir",
+    "mount_mortar_2f_dragon_scale",
+    "mount_mortar_2f_full_heal",
+]
+
+[mount_mortar_2f_center]
+header = "mount_mortar_2f_center"
+exits = [
+    "mount_mortar_2f_south",
+    "mount_mortar_2f_southeast",
+    "mount_mortar_2f_northeast",
+    "mount_mortar_2f_east",
+]
+locs = [
+    "mount_mortar_2f_tm40",
+]
+
+[mount_mortar_b1f_south]
+header = "mount_mortar_b1f_south"
+exits = [
+    "mount_mortar_b1f_north",
+    "mount_mortar_1f_entrance_south",
 ]
 locs = [
     "mount_mortar_b1f_carbos",
@@ -2282,6 +3184,17 @@ locs = [
     "mount_mortar_b1f_full_restore",
     "mount_mortar_b1f_max_ether",
     "mount_mortar_b1f_hyper_potion",
+    "mount_mortar_b1f_ultra_ball",
+]
+
+[mount_mortar_b1f_north]
+header = "mount_mortar_b1f_north"
+exits = [
+    "mount_mortar_b1f_south",
+    "mount_mortar_1f_back_north",
+]
+locs = [
+    "mount_mortar_b1f_max_revive",
 ]
 
 [dragons_den]
@@ -2295,6 +3208,9 @@ locs = [
     "dragons_den_calcium",
     "dragons_den_max_elixir",
     "dragons_den_tm59",
+    "dragons_den_revive",
+    "dragons_den_max_elixir_0",
+    "dragons_den_max_potion",
 ]
 
 [battle_tower]
@@ -2358,7 +3274,9 @@ exits = [
     "cianwood_city",
     "route_47",
 ]
-locs = []
+locs = [
+    "cliff_edge_gate_big_pearl",
+]
 
 [pokeathlon_dome]
 header = "pokeathlon_dome"
@@ -2368,6 +3286,8 @@ exits = [
 ]
 locs = [
     "pokeathlon_dome_rare_candy",
+    "pokeathlon_dome_pp_up",
+    "pokeathlon_dome_protein",
 ]
 
 [pokeathlon_dome_interior_1f]
@@ -2379,7 +3299,7 @@ exits = [
 ]
 locs = [
     "pokeathlon_dome_interior_1f_rare_candy",
-    "pokeathlon_dome_interior_1f_rare_candy_2",
+    "pokeathlon_dome_interior_1f_rare_candy_0",
 ]
 
 [pokeathlon_dome_interior_2f]
@@ -2503,15 +3423,8 @@ exits = [
 ]
 locs = []
 
-[tohjo_falls_hidden_room]
-header = "tohjo_falls_hidden_room"
-exits = [
-    "tohjo_falls",
-]
-locs = []
-
-[route_22_pokemon_league_reception_gate]
-header = "route_22_pokemon_league_reception_gate"
+[pokemon_league_reception_gate]
+header = "pokemon_league_reception_gate"
 exits = [
     "route_26",
     "victory_road_1f",
@@ -2532,7 +3445,6 @@ locs = []
 [pokemon_league_will_room]
 header = "pokemon_league_will_room"
 exits = [
-    "pokemon_league_entrance",
     "pokemon_league_koga_room",
 ]
 locs = []
@@ -2540,7 +3452,6 @@ locs = []
 [pokemon_league_koga_room]
 header = "pokemon_league_koga_room"
 exits = [
-    "pokemon_league_entrance",
     "pokemon_league_bruno_room",
 ]
 locs = []
@@ -2548,7 +3459,6 @@ locs = []
 [pokemon_league_bruno_room]
 header = "pokemon_league_bruno_room"
 exits = [
-    "pokemon_league_entrance",
     "pokemon_league_karen_room",
 ]
 locs = []
@@ -2556,7 +3466,6 @@ locs = []
 [pokemon_league_karen_room]
 header = "pokemon_league_karen_room"
 exits = [
-    "pokemon_league_entrance",
     "pokemon_league_lance_room",
 ]
 locs = []
@@ -2564,36 +3473,32 @@ locs = []
 [pokemon_league_lance_room]
 header = "pokemon_league_lance_room"
 exits = [
-    "pokemon_league_karen_room",
     "pokemon_league_hall_of_fame",
 ]
 locs = []
 
 [pokemon_league_hall_of_fame]
 header = "pokemon_league_hall_of_fame"
-exits = [
-    "pokemon_league_lance_room",
-]
+exits = []
 locs = []
 
 [ss_aqua_1f]
 header = "ss_aqua_1f"
 exits = [
     "ss_aqua_olivine_port_exterior",
+    "ss_aqua_vermilion_port_exterior",
     "ss_aqua_1f_southwest_rooms",
     "ss_aqua_1f_southeast_rooms",
     "ss_aqua_1f_northwest_rooms",
     "ss_aqua_1f_northeast_rooms",
     "ss_aqua_b1f",
-    "ss_aqua_captain_room",
-    "ss_aqua_vermilion_port_exterior",
 ]
 locs = []
 
 [ss_aqua_captain_room]
 header = "ss_aqua_captain_room"
 exits = [
-    "ss_aqua_1f",
+    "ss_aqua_b1f",
 ]
 locs = []
 
@@ -2621,7 +3526,7 @@ locs = []
 [ruins_of_alph_northeast_entrance_first_room]
 header = "ruins_of_alph_northeast_entrance_first_room"
 exits = [
-    "ruins_of_alph",
+    "ruins_of_alph_north",
     "ruins_of_alph_northeast_entrance_second_room",
 ]
 locs = []
@@ -2629,7 +3534,7 @@ locs = []
 [ruins_of_alph_southeast_entrance_first_room]
 header = "ruins_of_alph_southeast_entrance_first_room"
 exits = [
-    "ruins_of_alph",
+    "ruins_of_alph_east",
     "ruins_of_alph_southeast_entrance_second_room",
 ]
 locs = []
@@ -2646,7 +3551,7 @@ locs = [
 [ruins_of_alph_southwest_entrance_first_room]
 header = "ruins_of_alph_southwest_entrance_first_room"
 exits = [
-    "ruins_of_alph",
+    "ruins_of_alph_south",
     "ruins_of_alph_southwest_entrance_second_room",
 ]
 locs = []
@@ -2654,7 +3559,7 @@ locs = []
 [ruins_of_alph_northwest_entrance_first_room]
 header = "ruins_of_alph_northwest_entrance_first_room"
 exits = [
-    "ruins_of_alph",
+    "ruins_of_alph_west",
     "ruins_of_alph_northwest_entrance_second_room",
 ]
 locs = []
@@ -2662,14 +3567,14 @@ locs = []
 [ruins_of_alph_research_center]
 header = "ruins_of_alph_research_center"
 exits = [
-    "ruins_of_alph",
+    "ruins_of_alph_north",
 ]
 locs = []
 
 [route_27_house]
 header = "route_27_house"
 exits = [
-    "route_27",
+    "route_27_center",
 ]
 locs = [
     "route_27_house_tm37",
@@ -2678,9 +3583,8 @@ locs = [
 [ruins_of_alph_hall_entrance]
 header = "ruins_of_alph_hall_entrance"
 exits = [
-    "ruins_of_alph",
+    "ruins_of_alph_north",
     "ruins_of_alph_underground_hall",
-    "ruins_of_alph_underground_hall_sinjoh_event",
 ]
 locs = []
 
@@ -2744,7 +3648,7 @@ locs = [
 [ss_aqua_b1f]
 header = "ss_aqua_b1f"
 exits = [
-    "ss_aqua_1f",
+    "ss_aqua_captain_room",
 ]
 locs = []
 
@@ -2754,7 +3658,10 @@ exits = [
     "ss_aqua_olivine_port_interior",
     "ss_aqua_1f",
 ]
-locs = []
+locs = [
+    "olivine_port_exterior_protein",
+    "olivine_port_exterior_pearl",
+]
 
 [route_34_daycare]
 header = "route_34_daycare"
@@ -2779,6 +3686,7 @@ exits = [
 ]
 locs = [
     "bell_tower_3f_full_heal",
+    "bell_tower_3f_max_potion",
 ]
 
 [bell_tower_4f]
@@ -2789,7 +3697,7 @@ exits = [
 ]
 locs = [
     "bell_tower_4f_escape_rope",
-    "bell_tower_4f_var_modifier",
+    "bell_tower_4f_ultra_ball",
     "bell_tower_4f_pp_up",
 ]
 
@@ -2801,6 +3709,7 @@ exits = [
 ]
 locs = [
     "bell_tower_5f_rare_candy",
+    "bell_tower_5f_carbos",
 ]
 
 [bell_tower_6f]
@@ -2835,6 +3744,7 @@ locs = [
     "bell_tower_8f_full_restore",
     "bell_tower_8f_max_elixir",
     "bell_tower_8f_nugget",
+    "bell_tower_8f_carbos",
 ]
 
 [bell_tower_9f]
@@ -2868,7 +3778,9 @@ header = "cliff_cave"
 exits = [
     "route_47",
 ]
-locs = []
+locs = [
+    "cliff_cave_ultra_ball",
+]
 
 [vermilion_pokecenter_1f]
 header = "vermilion_pokecenter_1f"
@@ -3015,6 +3927,18 @@ exits = [
 ]
 locs = []
 
+[celadon_department_store_elevator]
+header = "celadon_department_store_elevator"
+exits = [
+    "celadon_department_store_1f",
+    "celadon_department_store_2f",
+    "celadon_department_store_3f",
+    "celadon_department_store_4f",
+    "celadon_department_store_5f",
+    "celadon_department_store_roof",
+]
+locs = []
+
 [celadon_condominiums_1f]
 header = "celadon_condominiums_1f"
 exits = [
@@ -3050,6 +3974,23 @@ exits = [
 ]
 locs = []
 
+[celadon_condominiums_left_elevator]
+header = "celadon_condominiums_left_elevator"
+exits = [
+    "celadon_condominiums_1f",
+    "celadon_condominiums_3f",
+    "celadon_condominiums_roof",
+]
+locs = []
+
+[celadon_condominiums_right_elevator]
+header = "celadon_condominiums_right_elevator"
+exits = [
+    "celadon_condominiums_2f",
+    "celadon_condominiums_roof",
+]
+locs = []
+
 [celadon_condominiums_roof_room]
 header = "celadon_condominiums_roof_room"
 exits = [
@@ -3058,13 +3999,6 @@ exits = [
 locs = [
     "celadon_condominiums_roof_room_spell_tag",
 ]
-
-[celadon_game_corner_jp]
-header = "celadon_game_corner_jp"
-exits = [
-    "celadon_city",
-]
-locs = []
 
 [celadon_prize_corner]
 header = "celadon_prize_corner"
@@ -3108,15 +4042,18 @@ exits = [
     "ss_aqua_vermilion_port_interior",
     "ss_aqua_1f",
 ]
-locs = []
+locs = [
+    "vermilion_port_exterior_iron",
+]
 
 [route_10_south]
 header = "route_10_south"
 exits = [
     "rock_tunnel_1f",
+    "lavender_town",
 ]
 locs = [
-    "route_10_south_tm69",
+    "route_10_tm69",
 ]
 
 [route_6_saffron_gatehouse]
@@ -3208,11 +4145,11 @@ locs = [
     "saffron_mr_psychic_house_tm29",
 ]
 
-[saffron_magnet_train_station_1f]
-header = "saffron_magnet_train_station_1f"
+[saffron_magnet_train_station]
+header = "saffron_magnet_train_station"
 exits = [
     "saffron_city",
-    "saffron_magnet_train_station_2f_empty",
+    "goldenrod_magnet_train_station",
 ]
 locs = []
 
@@ -3220,7 +4157,7 @@ locs = []
 header = "saffron_silph_co_hq"
 exits = [
     "saffron_city",
-    "saffron_silph_co_elevator",
+    "saffron_silph_co_rotom_room",
 ]
 locs = [
     "saffron_silph_co_hq_upgrade",
@@ -3229,7 +4166,7 @@ locs = [
 [saffron_silph_co_rotom_room]
 header = "saffron_silph_co_rotom_room"
 exits = [
-    "saffron_silph_co_elevator",
+    "saffron_silph_co_hq",
 ]
 locs = []
 
@@ -3291,7 +4228,9 @@ exits = [
     "frontier_access_pokemart",
     "frontier_access_move_tutor_house",
 ]
-locs = []
+locs = [
+    "frontier_access_rare_candy",
+]
 
 [goldenrod_global_terminal_2f]
 header = "goldenrod_global_terminal_2f"
@@ -3312,19 +4251,22 @@ locs = []
 [route_2_east]
 header = "route_2_east"
 exits = [
-    "route_2_viridian_forest_north_gatehouse",
+    "route_2_south",
+    "route_2_north",
     "route_2_southeast_gatehouse",
-    "diglett_cave",
     "route_2_house",
+    "diglett_cave",
 ]
 locs = [
-    "route_2_east_carbos",
+    "route_2_elixir",
+    "route_2_carbos",
+    "route_2_apricorn_tree",
 ]
 
 [route_16_house]
 header = "route_16_house"
 exits = [
-    "route_16_east",
+    "route_16",
 ]
 locs = []
 
@@ -3341,7 +4283,6 @@ locs = [
 header = "route_2_southeast_gatehouse"
 exits = [
     "route_2_east",
-    "route_2",
 ]
 locs = [
     "route_2_southeast_gatehouse_sacred_ash",
@@ -3350,7 +4291,7 @@ locs = [
 [route_2_viridian_forest_south_gatehouse]
 header = "route_2_viridian_forest_south_gatehouse"
 exits = [
-    "route_2",
+    "route_2_south",
     "viridian_forest",
 ]
 locs = []
@@ -3359,20 +4300,20 @@ locs = []
 header = "route_2_viridian_forest_north_gatehouse"
 exits = [
     "viridian_forest",
-    "route_2_east",
+    "route_2_north",
 ]
 locs = []
 
 [route_16_gatehouse]
 header = "route_16_gatehouse"
 exits = [
-    "route_16_east",
     "route_16",
+    "route_17",
 ]
 locs = []
 
-[route_16_east]
-header = "route_16_east"
+[route_16]
+header = "route_16"
 exits = [
     "route_16_gatehouse",
     "route_16_house",
@@ -3394,8 +4335,8 @@ exits = [
 ]
 locs = []
 
-[route_19_route_12_gatehouse]
-header = "route_19_route_12_gatehouse"
+[route_11_route_12_gatehouse]
+header = "route_11_route_12_gatehouse"
 exits = [
     "route_11",
     "route_12",
@@ -3514,45 +4455,104 @@ exits = [
 ]
 locs = []
 
-[mount_moon_square_entrance]
-header = "mount_moon_square_entrance"
-exits = [
-    "mount_moon",
-    "mount_moon_square",
-    "mount_moon_square_clefairy_event",
-]
-locs = []
-
 [mount_moon_square]
 header = "mount_moon_square"
 exits = [
-    "mount_moon_square_entrance",
+    "mount_moon",
     "mount_moon_square_shop",
 ]
-locs = []
+locs = [
+    "mount_moon_square_moon_stone",
+    "mount_moon_square_max_revive",
+]
 
-[cerulean_cave_2f]
-header = "cerulean_cave_2f"
+[cerulean_cave_2f_northeast]
+header = "cerulean_cave_2f_northeast"
 exits = [
-    "cerulean_cave_1f",
+    "cerulean_cave_1f_southeast",
+    "cerulean_cave_1f_center",
+]
+locs = [
+    "cerulean_cave_2f_tm24",
+]
+
+[cerulean_cave_2f_west]
+header = "cerulean_cave_2f_west"
+exits = [
+    "cerulean_cave_1f_center",
 ]
 locs = [
     "cerulean_cave_2f_pp_up",
-    "cerulean_cave_2f_tm24",
-    "cerulean_cave_2f_var_modifier",
-    "cerulean_cave_2f_odd_incense",
 ]
 
-[cerulean_cave_b1f]
-header = "cerulean_cave_b1f"
+[cerulean_cave_2f_southeast]
+header = "cerulean_cave_2f_southeast"
 exits = [
-    "cerulean_cave_1f",
+    "cerulean_cave_1f_center",
+]
+locs = [
+    "cerulean_cave_2f_ultra_ball_0",
+    "cerulean_cave_2f_pp_up_0",
+    "cerulean_cave_2f_big_pearl",
+    "cerulean_cave_2f_zinc",
+    "cerulean_cave_2f_full_heal",
+]
+
+[cerulean_cave_2f_center]
+header = "cerulean_cave_2f_center"
+exits = [
+    "cerulean_cave_1f_center",
+    "cerulean_cave_b1f_west",
+]
+locs = [
+    "cerulean_cave_2f_ultra_ball",
+    "cerulean_cave_2f_odd_incense",
+    "cerulean_cave_2f_protein",
+]
+
+[cerulean_cave_b1f_west]
+header = "cerulean_cave_b1f_west"
+exits = [
+    "cerulean_cave_2f_center",
+    "cerulean_cave_b1f_northeast",
 ]
 locs = [
     "cerulean_cave_b1f_max_revive",
-    "cerulean_cave_b1f_var_modifier",
+    "cerulean_cave_b1f_ultra_ball",
     "cerulean_cave_b1f_dusk_stone",
+    "cerulean_cave_b1f_max_revive_0",
+]
+
+[cerulean_cave_b1f_northeast]
+header = "cerulean_cave_b1f_northeast"
+exits = [
+    "cerulean_cave_b1f_west",
+    "cerulean_cave_b1f_east",
+    "cerulean_cave_b1f_southeast",
+]
+locs = [
     "cerulean_cave_b1f_electirizer",
+    "cerulean_cave_b1f_ultra_ball_0",
+    "cerulean_cave_b1f_nugget",
+]
+
+[cerulean_cave_b1f_east]
+header = "cerulean_cave_b1f_east"
+exits = [
+    "cerulean_cave_b1f_northeast",
+    "cerulean_cave_b1f_southeast",
+    "cerulean_cave_1f_southeast",
+    "cerulean_cave_1f_center",
+]
+locs = []
+
+[cerulean_cave_b1f_southeast]
+header = "cerulean_cave_b1f_southeast"
+exits = [
+    "cerulean_cave_b1f_northeast",
+    "cerulean_cave_b1f_east",
+]
+locs = [
     "cerulean_cave_b1f_black_sludge",
 ]
 
@@ -3566,75 +4566,166 @@ locs = [
     "rock_tunnel_b1f_pp_up",
     "rock_tunnel_b1f_revive",
     "rock_tunnel_b1f_oval_stone",
+    "rock_tunnel_b1f_max_potion",
+    "rock_tunnel_b1f_hp_up",
 ]
 
-[seafoam_islands_b1f]
-header = "seafoam_islands_b1f"
+[seafoam_islands_b1f_north]
+header = "seafoam_islands_b1f_north"
 exits = [
-    "seafoam_islands_1f",
-    "seafoam_islands_b2f",
+    "seafoam_islands_1f_east",
+    "seafoam_islands_b1f_south",
 ]
 locs = [
     "seafoam_islands_b1f_grip_claw",
-    "seafoam_islands_b1f_ice_heal",
 ]
 
-[seafoam_islands_b2f]
-header = "seafoam_islands_b2f"
+[seafoam_islands_b1f_south]
+header = "seafoam_islands_b1f_south"
 exits = [
-    "seafoam_islands_b1f",
-    "seafoam_islands_b3f",
+    "seafoam_islands_1f_east",
+    "seafoam_islands_1f_west",
+    "seafoam_islands_b1f_north",
+    "seafoam_islands_b2f_north",
+    "seafoam_islands_b2f_south",
+]
+locs = [
+    "seafoam_islands_b1f_ice_heal",
+    "seafoam_islands_b1f_ice_heal_0",
+]
+
+[seafoam_islands_b2f_north]
+header = "seafoam_islands_b2f_north"
+exits = [
+    "seafoam_islands_b1f_south",
+    "seafoam_islands_b3f_east",
+]
+locs = [
+    "seafoam_islands_b2f_pearl",
+]
+
+[seafoam_islands_b2f_south]
+header = "seafoam_islands_b2f_south"
+exits = [
+    "seafoam_islands_b1f_south",
 ]
 locs = [
     "seafoam_islands_b2f_water_stone",
 ]
 
-[seafoam_islands_b3f]
-header = "seafoam_islands_b3f"
+[seafoam_islands_b2f_east]
+header = "seafoam_islands_b2f_east"
 exits = [
-    "seafoam_islands_b2f",
-    "seafoam_islands_b4f",
+    "seafoam_islands_b3f_east",
+    "seafoam_islands_b3f_west",
+    "seafoam_islands_b4f_south",
 ]
 locs = [
-    "seafoam_islands_b3f_revive",
+    "seafoam_islands_b2f_pearl_0",
+]
+
+[seafoam_islands_b3f_east]
+header = "seafoam_islands_b3f_east"
+exits = [
+    "seafoam_islands_b2f_north",
+    "seafoam_islands_b2f_east",
+    "seafoam_islands_b4f_east",
+    "seafoam_islands_b4f_north",
+]
+locs = [
+    "seafoam_islands_b3f_max_revive",
     "seafoam_islands_b3f_big_pearl",
 ]
 
-[seafoam_islands_b4f]
-header = "seafoam_islands_b4f"
+[seafoam_islands_b3f_west]
+header = "seafoam_islands_b3f_west"
 exits = [
-    "seafoam_islands_b3f",
+    "seafoam_islands_1f_west",
+    "seafoam_islands_b1f_south",
+    "seafoam_islands_b2f_east",
+    "seafoam_islands_b4f_south",
 ]
 locs = [
-    "seafoam_islands_b4f_var_modifier",
+    "seafoam_islands_b3f_revive",
+    "seafoam_islands_b3f_rare_candy",
+]
+
+[seafoam_islands_b4f_north]
+header = "seafoam_islands_b4f_north"
+exits = [
+    "seafoam_islands_b3f_east",
+]
+locs = [
+    "seafoam_islands_b4f_ultra_ball",
+]
+
+[seafoam_islands_b4f_east]
+header = "seafoam_islands_b4f_east"
+exits = [
+    "seafoam_islands_b3f_east",
+]
+locs = [
     "seafoam_islands_b4f_tm13",
+]
+
+[seafoam_islands_b4f_south]
+header = "seafoam_islands_b4f_south"
+exits = [
+    "seafoam_islands_b2f_east",
+    "seafoam_islands_b3f_west",
+]
+locs = [
+    "seafoam_islands_b4f_zinc",
 ]
 
 [seafoam_islands_cinnabar_gym]
 header = "seafoam_islands_cinnabar_gym"
 exits = [
-    "seafoam_islands_1f",
+    "seafoam_islands_1f_east",
 ]
 locs = [
     "seafoam_islands_cinnabar_gym_volcano_badge",
     "seafoam_islands_cinnabar_gym_tm50",
 ]
 
-[mount_silver_cave_upper_mountainside]
-header = "mount_silver_cave_upper_mountainside"
+[mount_silver_cave_upper_mountainside_north]
+header = "mount_silver_cave_upper_mountainside_north"
 exits = [
-    "mount_silver_cave_2f",
-    "mount_silver_cave_3f",
+    "mount_silver_cave_2f_west",
+    "mount_silver_cave_2f_east",
+]
+locs = [
+    "mount_silver_cave_upper_mountainside_max_ether",
+]
+
+[mount_silver_cave_upper_mountainside_east]
+header = "mount_silver_cave_upper_mountainside_east"
+exits = [
+    "mount_silver_cave_upper_mountainside_north",
+    "mount_silver_cave_upper_mountainside_south",
 ]
 locs = [
     "mount_silver_cave_upper_mountainside_pure_incense",
+    "mount_silver_cave_upper_mountainside_rare_candy",
+]
+
+[mount_silver_cave_upper_mountainside_south]
+header = "mount_silver_cave_upper_mountainside_south"
+exits = [
+    "mount_silver_cave_upper_mountainside_east",
+    "mount_silver_cave_3f",
+]
+locs = [
     "mount_silver_cave_upper_mountainside_dawn_stone",
+    "mount_silver_cave_upper_mountainside_hyper_potion",
 ]
 
 [mount_silver_cave_lower_mountainside]
 header = "mount_silver_cave_lower_mountainside"
 exits = [
-    "mount_silver_cave_1f",
+    "mount_silver_cave_1f_east",
+    "mount_silver_cave_1f_north",
+    "mount_silver_cave_1f_center",
 ]
 locs = [
     "mount_silver_cave_lower_mountainside_escape_rope",
@@ -3644,7 +4735,8 @@ locs = [
 [mount_silver_cave_expert_belt_chamber]
 header = "mount_silver_cave_expert_belt_chamber"
 exits = [
-    "mount_silver_cave_1f",
+    "mount_silver_cave_1f_south",
+    "mount_silver_cave_1f_west",
 ]
 locs = [
     "mount_silver_cave_expert_belt_chamber_expert_belt",
@@ -3653,30 +4745,45 @@ locs = [
 [mount_silver_cave_moltres_chamber]
 header = "mount_silver_cave_moltres_chamber"
 exits = [
-    "mount_silver_cave_1f",
+    "mount_silver_cave_1f_west",
 ]
-locs = []
+locs = [
+    "mount_silver_cave_moltres_chamber_ultra_ball",
+    "mount_silver_cave_moltres_chamber_hyper_potion",
+]
 
-[mount_silver_cave_2f]
-header = "mount_silver_cave_2f"
+[mount_silver_cave_2f_west]
+header = "mount_silver_cave_2f_west"
 exits = [
-    "mount_silver_cave_1f",
-    "mount_silver_cave_upper_mountainside",
+    "mount_silver_cave_1f_center",
+    "mount_silver_cave_upper_mountainside_north",
 ]
 locs = [
     "mount_silver_cave_2f_max_elixir",
     "mount_silver_cave_2f_calcium",
-    "mount_silver_cave_2f_protein",
     "mount_silver_cave_2f_max_revive",
+    "mount_silver_cave_2f_max_potion",
+]
+
+[mount_silver_cave_2f_east]
+header = "mount_silver_cave_2f_east"
+exits = [
+    "mount_silver_cave_upper_mountainside_north",
+]
+locs = [
+    "mount_silver_cave_2f_protein",
+    "mount_silver_cave_2f_iron",
 ]
 
 [mount_silver_cave_3f]
 header = "mount_silver_cave_3f"
 exits = [
-    "mount_silver_cave_upper_mountainside",
+    "mount_silver_cave_upper_mountainside_south",
     "mount_silver_cave_summit",
 ]
-locs = []
+locs = [
+    "mount_silver_cave_3f_max_revive",
+]
 
 [mount_silver_cave_summit]
 header = "mount_silver_cave_summit"
@@ -3688,15 +4795,8 @@ locs = []
 [route_10_pokecenter_1f]
 header = "route_10_pokecenter_1f"
 exits = [
-    "route_10",
+    "route_10_north",
     "route_10_pokecenter_b1f",
-]
-locs = []
-
-[route_10_power_plant_repaired]
-header = "route_10_power_plant_repaired"
-exits = [
-    "route_10",
 ]
 locs = []
 
@@ -3704,7 +4804,7 @@ locs = []
 header = "route_5_underground_path_gate"
 exits = [
     "route_5",
-    "route_5_underground_path",
+    "underground_path",
 ]
 locs = []
 
@@ -3712,7 +4812,7 @@ locs = []
 header = "route_6_underground_path_gate"
 exits = [
     "route_6",
-    "route_5_underground_path",
+    "underground_path",
 ]
 locs = []
 
@@ -3780,6 +4880,7 @@ locs = []
 header = "fuchsia_pal_park_entrance"
 exits = [
     "fuchsia_city",
+    "pal_park",
 ]
 locs = []
 
@@ -3838,49 +4939,14 @@ locs = [
     "whirl_islands_b3f_rare_candy",
 ]
 
-[national_park_bug_catching_contest]
-header = "national_park_bug_catching_contest"
+[route_10_power_plant]
+header = "route_10_power_plant"
 exits = [
-    "route_35_national_park_pokeathalon_gatehouse",
-    "route_36_national_park_gatehouse",
-    "national_park_unused_gatehouse",
+    "route_10_north",
 ]
 locs = [
-    "national_park_bug_catching_contest_tm28",
-    "national_park_bug_catching_contest_soothe_bell",
-    "national_park_bug_catching_contest_shiny_stone",
+    "route_10_power_plant_tm57",
 ]
-
-[route_10_power_plant_broken]
-header = "route_10_power_plant_broken"
-exits = [
-    "route_10",
-]
-locs = [
-    "route_10_power_plant_broken_tm57",
-]
-
-[ruins_of_alph_underground_hall_sinjoh_event]
-header = "ruins_of_alph_underground_hall_sinjoh_event"
-exits = [
-    "ruins_of_alph_hall_entrance",
-]
-locs = []
-
-[ruins_of_alph_hall_entrance_sinjoh_event]
-header = "ruins_of_alph_hall_entrance_sinjoh_event"
-exits = [
-    "ruins_of_alph",
-    "ruins_of_alph_underground_hall_sinjoh_event_2",
-]
-locs = []
-
-[ruins_of_alph_underground_hall_sinjoh_event_2]
-header = "ruins_of_alph_underground_hall_sinjoh_event_2"
-exits = [
-    "ruins_of_alph_hall_entrance_sinjoh_event",
-]
-locs = []
 
 [route_7_saffron_gatehouse]
 header = "route_7_saffron_gatehouse"
@@ -4037,13 +5103,6 @@ exits = [
 ]
 locs = []
 
-[mount_moon_square_clefairy_event]
-header = "mount_moon_square_clefairy_event"
-exits = [
-    "mount_moon_square_entrance",
-]
-locs = []
-
 [mount_silver_pokecenter_1f]
 header = "mount_silver_pokecenter_1f"
 exits = [
@@ -4072,20 +5131,6 @@ locs = [
 header = "mount_moon_square_shop"
 exits = [
     "mount_moon_square",
-]
-locs = []
-
-[goldenrod_magnet_train_station_2f_empty]
-header = "goldenrod_magnet_train_station_2f_empty"
-exits = [
-    "goldenrod_magnet_train_station_1f",
-]
-locs = []
-
-[saffron_magnet_train_station_2f_empty]
-header = "saffron_magnet_train_station_2f_empty"
-exits = [
-    "saffron_magnet_train_station_1f",
 ]
 locs = []
 
@@ -4169,13 +5214,16 @@ exits = [
 ]
 locs = []
 
-[route_5_underground_path]
-header = "route_5_underground_path"
+[underground_path]
+header = "underground_path"
 exits = [
     "route_5_underground_path_gate",
     "route_6_underground_path_gate",
 ]
-locs = []
+locs = [
+    "underground_path_full_restore",
+    "underground_path_x_special",
+]
 
 [route_12_fishing_brother_house]
 header = "route_12_fishing_brother_house"
@@ -4207,7 +5255,7 @@ exits = [
     "goldenrod_city",
 ]
 locs = [
-    "goldenrod_game_corner_coin_case",
+    "game_corner_coin_case",
 ]
 
 [celadon_game_corner]
@@ -4216,7 +5264,7 @@ exits = [
     "celadon_city",
 ]
 locs = [
-    "celadon_game_corner_coin_case",
+    "game_corner_coin_case",
 ]
 
 [pokemon_league_entrance_wifi_room]
