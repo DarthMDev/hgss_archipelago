@@ -17,15 +17,19 @@ class RandomizeBadges(DefaultOnToggle):
 
 class RandomizeOverworlds(DefaultOnToggle):
     """Adds overworld items to the pool."""
-    display_name = "Randomize Overworlds"
+    display_name = "Randomize Overworld Items"
 
-# class RandomizeHiddenItems(Toggle):
-#     """Adds hidden items to the pool."""
-#     display_name = "Randomize Hidden Items"
+class RandomizeHiddenItems(Toggle):
+    """Adds hidden items to the pool."""
+    display_name = "Randomize Hidden Items"
 
 class RandomizeNpcGifts(DefaultOnToggle):
     """Adds NPC gifts to the pool."""
     display_name = "Randomize NPC Gifts"
+
+#class RandomizeApricornTrees(Toggle):
+#    """Adds apricorn trees to the pool."""
+#    display_name = "Randomize Apricorn Trees"
 
 class RandomizeKeyItems(Choice):
     """Adds key items to the pool."""
@@ -42,7 +46,6 @@ class RandomizeRods(DefaultOnToggle):
     """Adds rods to the pool. Currently, the Super Rod is unavailable, as it is post-game."""
     display_name = "Randomize Rods"
 
-
 class RandomizeRunningShoes(Toggle):
     """Adds the running shoes to the pool."""
     display_name = "Randomize Running Shoes"
@@ -56,23 +59,21 @@ class RandomizePokedex(Toggle):
     display_name = "Randomize Pokedex"
 
 class RanodomizePokegearCards(DefaultOnToggle):
-    """Adds Pokegear cards to the pool."""
+    """Adds the Pokégear Map card and Radio cards to the pool."""
     display_name = "Randomize Pokegear Cards"
-    
 
+#class HmBadgeRequirements(DefaultOnToggle):
+#    """Require the corresponding badge to use an HM outside of battle."""
+#    display_name = "Require Badges for HMs"
 
-class HmBadgeRequirements(DefaultOnToggle):
-    """Require the corresponding badge to use an HM outside of battle."""
-    display_name = "Require Badges for HMs"
-
-class RemoveBadgeRequirement(OptionSet):
-    """
-    Specify which HMs do not require a badge to use outside of battle. This overrides the HM Badge Requirements setting.
-
-    HMs should be provided in the form: "FLY", "WATERFALL", "ROCK_SMASH", etc.
-    """
-    display_name = "Remove Badge Requirement"
-    valid_keys = ["CUT", "FLY", "SURF", "STRENGTH", "WHIRLPOOL" "ROCK_SMASH", "WATERFALL", "ROCK_CLIMB"]
+#class RemoveBadgeRequirement(OptionSet):
+#    """
+#    Specify which HMs do not require a badge to use outside of battle. This overrides the HM Badge Requirements setting.
+#
+#    HMs should be provided in the form: "FLY", "WATERFALL", "ROCK_SMASH", etc.
+#    """
+#    display_name = "Remove Badge Requirement"
+#    valid_keys = ["CUT", "FLY", "SURF", "STRENGTH", "WHIRLPOOL" "ROCK_SMASH", "WATERFALL", "ROCK_CLIMB"]
 
 class VisibilityHmLogic(DefaultOnToggle):
     """Logically require Flash for traversing and finding locations in applicable regions."""
@@ -88,251 +89,244 @@ class Goal(Choice):
     default = 0
     option_champion = 0
 
-class AddMasterRepel(Toggle):
-    """
-    Add a master repel item to the item pool. The master repel is a key item.
-    It is a repel that blocks all encounters, and never runs out.
-    """
-    display_name = "Add Master Repel"
+#class AddMasterRepel(Toggle):
+#    """
+#    Add a master repel item to the item pool. The master repel is a key item.
+#    It is a repel that blocks all encounters, and never runs out.
+#    """
+#    display_name = "Add Master Repel"
 
 class ExpMultiplier(Range):
-    """Set an experience multiplier for all gained experience."""
+    """
+    Set an experience multiplier for all gained experience.
+
+    If you set this to 0 you will still recieve 1 exp per opponent defeated.
+    """
     display_name = "Exp. Multiplier"
-    range_start = 1
-    range_end = 16
+    range_start = 0
+    range_end = 255
     default = 1
 
-class BlindTrainers(Toggle):
+#class BlindTrainers(Toggle):
+#    """Set whether trainers will be blind."""
+#    display_name = "Blind Trainers"
+
+#class GameOptions(OptionDict):
+#    """
+#    Presets in-game options.
+#
+#    Allowed options and values, with default first:
+#
+#    text_speed: mid/slow/fast - Sets the text speed
+#    sound: stereo/mono - Sets the shound mode
+#    battle_scene: on/off - Sets whether the battle animations are shown
+#    battle_style: shift/set - Sets whether pokemon can be changed when the opponent's pokemon faints
+#    button_mode: normal/start=x/l=a - Sets the button mode
+#    text_frame: 1-20 - Sets the textbox frame. "random" will pick a random frame.
+#    received_items_notification: jingle/nothing/message - Sets the received_items_notification.
+#    default_player_name: player_name/custom/random/vanilla - Sets the default player name. with player_name, tries to use the AP player name.
+#    default_rival_name: random/custom/player_name/vanilla - Sets the default rival name. with random, picks from one of the players in the AP.
+#    default_gender: vanilla/male/female/random - Sets the default gender.
+#
+#    The text_speed, sound, battle_scene, battle_style, button_mode, text_frame, and received_items_notification
+#    options can additionally be modifier in the in-game options menu.
+#
+#    for the player and rival names, the maximum length is 7 characters, and
+#    the following characters are accepted:
+#    all alphanumeric characters (A-Z, a-z, 0-9),
+#    and the following symbols: , . ' - : ; ! ? " ( ) ~ @ # % + * / =,
+#    and as spaces.
+#    as well, there are some special sequences.
+#      {"} is an opening double-quotation mark
+#      {'} is an opening single-quotation mark
+#      {.} is a centred dot (centred vertically)
+#      {Z} are two superimposed Zs (as in sleep)
+#      ^ is an upwards arrow
+#      {v} is a downwards arrow
+#      {MALE} is the male sign
+#      {FEMALE} is the female sign
+#      {...} are ellipsis
+#      {O.} is a circle with a dot inside it. {.O} also works
+#      {CIRCLE} is a circle
+#      {SQUARE} is a square
+#      {TRIANGLE} is a triangle
+#      {DIAMOND} is a diamond (hollow)
+#      {SPADE} is a spade
+#      {CLUB} is a club
+#      {HEART} is a heart
+#      {SUIT DIAMOND} is a diamond (filled)
+#      {STAR} is a star
+#      {NOTE} is a music note (1/8)
+#      {SUN} is a sun
+#      {CLOUD} is a cloud
+#      {UMBRELLA} is an umbrella
+#      {SILHOUETTE} is a really bad looking silhouette
+#      {SMILE} is a smiling face
+#      {LAUGH} is a laughing face
+#      {UPSET} is an upset face
+#      {FROWN} is a frowning face
+#
+#    If the player or rival names do not satisfy these constraints, the game will use its original
+#    behaviour, where the player or rival names are entered during the starting cutscene.
+#    """
+#    display_name = "Game Options"
+#    default = {
+#        "text_speed": "mid",
+#        "sound": "stereo",
+#        "battle_scene": "on",
+#        "battle_style": "shift",
+#        "button_mode": "normal",
+#        "text_frame": 1,
+#        "received_items_notification": "jingle",
+#        "default_player_name": "player_name",
+#        "default_rival_name": "random",
+#        "default_gender": "vanilla",
+#    }
+#
+#    def __getattr__(self, name: str) -> Any:
+#        if name in GameOptions.default:
+#            return self.get(name, GameOptions.default[name])
+#        else:
+#            raise AttributeError(name, self)
+
+#class RequireMysteryEgg(DefaultOnToggle):
+#    """
+#    Whether the player must deliver the Mystery Egg to Elm
+#    before leaving Violet City (Route 31).
+#    """
+#    display_name = "Require Mystery Egg Delivery"
+
+#class SkipTutorial(Toggle):
+#    """
+#    Skips retrieving the Mystery Egg from Mr. Pokémon.
+#
+#    This also removes the Mystery Egg from the pool.
+#    """
+#    display_name = "Skip Tutorial"
+
+#class ShowUnrandomizedProgressionItems(Toggle):
+#    """
+#    Whether unrandomized progression items should be sent to the server and
+#    displayed in the chat. This also means that trackers will consider it a location
+#    to be checked. If this is off, some trackers may assume that it is obtained when
+#    accessible.
+#    """
+#    display_name = "Show Unrandomized Progression Items"
+
+#class RemoteItems(Toggle):
+#    """
+#    Whether local items should be given in-game, or sent by the server.
+#    This overrides the show randomized progression items option: all items are shown.
+#    It is highly recommended to use nothing for received items notification, otherwise
+#    you will be notified twice for each item.
+#    """
+#    display_name = "Remote Items"
+
+#class FPS60(Toggle):
+#    """
+#    Whether the 60 FPS patch should be applied.
+#
+#    This option can also be modified in the in-game options menu.
+#    """
+#    display_name = "60 FPS"
+
+class AddPass(Toggle):
     """
-    Set whether trainers will be blind.
-
-    This option can also be modified in the in-game options menu.
+    Add the Pass to the item pool.
+    The Pass can be used to travel between Goldenrod City (Johto) and Saffron City (Kanto).
     """
-    display_name = "Blind Trainers"
-
-class GameOptions(OptionDict):
-    """
-    Presets in-game options.
-
-    Allowed options and values, with default first:
-
-    text_speed: mid/slow/fast - Sets the text speed
-    sound: stereo/mono - Sets the shound mode
-    battle_scene: on/off - Sets whether the battle animations are shown
-    battle_style: shift/set - Sets whether pokemon can be changed when the opponent's pokemon faints
-    button_mode: normal/start=x/l=a - Sets the button mode
-    text_frame: 1-20 - Sets the textbox frame. "random" will pick a random frame.
-    received_items_notification: jingle/nothing/message - Sets the received_items_notification.
-    default_player_name: player_name/custom/random/vanilla - Sets the default player name. with player_name, tries to use the AP player name.
-    default_rival_name: random/custom/player_name/vanilla - Sets the default rival name. with random, picks from one of the players in the AP.
-    default_gender: vanilla/male/female/random - Sets the default gender.
-
-    The text_speed, sound, battle_scene, battle_style, button_mode, text_frame, and received_items_notification
-    options can additionally be modifier in the in-game options menu.
-
-    for the player and rival names, the maximum length is 7 characters, and
-    the following characters are accepted:
-    all alphanumeric characters (A-Z, a-z, 0-9),
-    and the following symbols: , . ' - : ; ! ? " ( ) ~ @ # % + * / =,
-    and as spaces.
-    as well, there are some special sequences.
-      {"} is an opening double-quotation mark
-      {'} is an opening single-quotation mark
-      {.} is a centred dot (centred vertically)
-      {Z} are two superimposed Zs (as in sleep)
-      ^ is an upwards arrow
-      {v} is a downwards arrow
-      {MALE} is the male sign
-      {FEMALE} is the female sign
-      {...} are ellipsis
-      {O.} is a circle with a dot inside it. {.O} also works
-      {CIRCLE} is a circle
-      {SQUARE} is a square
-      {TRIANGLE} is a triangle
-      {DIAMOND} is a diamond (hollow)
-      {SPADE} is a spade
-      {CLUB} is a club
-      {HEART} is a heart
-      {SUIT DIAMOND} is a diamond (filled)
-      {STAR} is a star
-      {NOTE} is a music note (1/8)
-      {SUN} is a sun
-      {CLOUD} is a cloud
-      {UMBRELLA} is an umbrella
-      {SILHOUETTE} is a really bad looking silhouette
-      {SMILE} is a smiling face
-      {LAUGH} is a laughing face
-      {UPSET} is an upset face
-      {FROWN} is a frowning face
-
-    If the player or rival names do not satisfy these constraints, the game will use its original
-    behaviour, where the player or rival names are entered during the starting cutscene.
-    """
-    display_name = "Game Options"
-    default = {
-        "text_speed": "mid",
-        "sound": "stereo",
-        "battle_scene": "on",
-        "battle_style": "shift",
-        "button_mode": "normal",
-        "text_frame": 1,
-        "received_items_notification": "jingle",
-        "default_player_name": "player_name",
-        "default_rival_name": "random",
-        "default_gender": "vanilla",
-    }
-
-    def __getattr__(self, name: str) -> Any:
-        if name in GameOptions.default:
-            return self.get(name, GameOptions.default[name])
-        else:
-            raise AttributeError(name, self)
-
-
-# Replaces RequireParcelCouponsCheckRoute203
-class RequireMysteryEgg(DefaultOnToggle):
-    """
-    Whether the player must deliver the Mystery Egg to Elm 
-    before leaving Violet City (Route 31).
-    """
-    display_name = "Require Mystery Egg Delivery"
-
-class ShowUnrandomizedProgressionItems(DefaultOnToggle):
-    """
-    Whether unrandomized progression items should be sent to the server and
-    displayed in the chat. This also means that trackers will consider it a location
-    to be checked. If this is off, trackers may assume that it is obtained when
-    accessible.
-    """
-    display_name = "Show Unrandomized Progression Items"
-
-class RemoteItems(Toggle):
-    """
-    Whether local items should be given in-game, or sent by the server.
-    This overrides the show randomized progression items option: all items are shown.
-    It is highly recommended to use nothing for received items notification, otherwise
-    you will be notified twice for each item.
-    """
-    display_name = "Remote Items"
-
-class FPS60(Toggle):
-    """
-    Whether the 60 FPS patch should be applied.
-
-    This option can also be modified in the in-game options menu.
-    """
-    display_name = "60 FPS"
+    display_name = "Add Pass"
 
 class AddSSTicket(Toggle):
     """
     Add the S.S. Ticket to the item pool.
-    The S.S. Ticket is required to board the S.S. Aqua."""
+    The S.S. Ticket can be used to travel between Olivine City (Johto) and Vermilion City (Kanto).
+    """
     display_name = "Add S.S. Ticket"
 
-class NationalDexNumMons(Range):
-    """
-    Number of seen regional Pokémon required to complete the Regional
-    Pokédex. (This is when you can receive the National Dex from Oak)
-    """
-    display_name = "National Dex Num Mons"
-    range_start = 1
-    # range end will be expanded as more encounters are added.
-    range_end = 80
-    default = 60
+#class NationalDexNumMons(Range):
+#    """
+#    Number of seen regional Pokémon required to complete the Regional
+#    Pokédex. (This is when you can receive the National Dex from Oak)
+#    """
+#    display_name = "National Dex Num Mons"
+#    range_start = 1
+#    # range end will be expanded as more encounters are added.
+#    range_end = 80
+#    default = 6060
 
+#class AddSecretPotion(Toggle):
+#    """
+#    Add the Secret Potion item to the item pool. This allows you heal the sick Ampharos in the Lighthouse in Olivine City.
+#    """
+#    display_name = "Add Secret Potion"
 
-class SunyshoreEarly(Toggle):
-    """
-    With this option enabled, access to Sunyshore City via Valor Lakefront is no longer blocked
-    until the Distortion World has been cleared.
-    """
-    display_name = "Early Sunyshore"
+#class AddBag(Toggle):
+#    """
+#    Add the bag to the item pool. Before obtaining it, the bag cannot be opened in the menu.
+#    """
+#    display_name = "Add Bag"
 
+#class HMCutIns(Toggle):
+#    """
+#    Whether HM Cut-Ins should be played.
+#
+#    This option can also be modified in the in-game options menu.
+#    """
+#    display_name = "HM Cut-Ins"
 
-class AddSecretPotion(Toggle):
-    """
-    Add the Secret Potion item to the item pool. This allows you heal the sick Ampharos in the Lighthouse in Olivine City.
-    """
-    display_name = "Add Secret Potion"
+class InstantText(Toggle):
+    """Whether to apply near-instant text speed."""
+    display_name = "Instant Text Speed"
 
-class AddBag(Toggle):
-    """
-    Add the bag to the item pool. Before obtaining it, the bag cannot be opened in the menu.
-    """
-    display_name = "Add Bag"
-
-class PastoriaBarriers(Toggle):
-    """
-    Add barriers in Route 212 and Route 214, blocking the path to Pastoria City
-    until the player has surf.
-    """
-    display_name = "Pastoria Barriers"
-
-class HMCutIns(Toggle):
-    """
-    Whether HM Cut-Ins should be played.
-
-    This option can also be modified in the in-game options menu.
-    """
-    display_name = "HM Cut-Ins"
-
-class BuckPos(Toggle):
-    """
-    Whether Buck should be moved to the end of Stark Mountain.
-
-    This option can also be modified in the in-game options menu.
-    """
-    display_name = "Buck Position"
-
-class HBSpeed(Range):
-    """
-    The speed multiplier of the health bar.
-
-    This option can also be modified in the in-game options menu.
-    """
+class HBSpeed(Choice):
+    """The speed multiplier of the health bar (and exp bar)."""
     display_name = "Healthbar Speed"
-    range_start = 1
-    range_end = 16
     default = 1
+    option_vanilla = 1
+    option_double = 2
+    option_quadruple = 4
+    option_octuple = 8
+
+class ReusableTms(Toggle):
+    """TMs are reusable, this also means pokemon can't hold tms."""
+    display_name = "Reusable TMs"
 
 @dataclass
 class PokemonHGSSOptions(PerGameCommonOptions):
     hms: RandomizeHms
     badges: RandomizeBadges
     overworlds: RandomizeOverworlds
-    # hiddens: RandomizeHiddenItems
+    hiddens: RandomizeHiddenItems
     npc_gifts: RandomizeNpcGifts
+#    apricorn_trees: RandomizeApricornTrees
     key_items: RandomizeKeyItems
     rods: RandomizeRods
     running_shoes: RandomizeRunningShoes
     bicycle: RandomizeBicycle
     pokedex: RandomizePokedex
-    pokegear_cards: RanodomizePokegearCards
+    pokegear_cards: RandomizePokegearCards
 
-    hm_badge_requirement: HmBadgeRequirements
-    remove_badge_requirements: RemoveBadgeRequirement
+#    hm_badge_requirement: HmBadgeRequirements
+#    remove_badge_requirements: RemoveBadgeRequirement
     visibility_hm_logic: VisibilityHmLogic
     dowsing_machine_logic: DowsingMachineLogic
-    require_mystery_egg: RequireMysteryEgg
-    regional_dex_goal: NationalDexNumMons
-    early_sunyshore: SunyshoreEarly
-    pastoria_barriers: PastoriaBarriers
+#    regional_dex_goal: NationalDexNumMons
 
-    game_options: GameOptions
-    blind_trainers: BlindTrainers
-    hm_cut_ins: HMCutIns
-    fps60: FPS60
-    buck_pos: BuckPos
+#    game_options: GameOptions
+#    blind_trainers: BlindTrainers
+#    hm_cut_ins: HMCutIns
+#    fps60: FPS60
+    instant_text: InstantText
     hb_speed: HBSpeed
+    reusable_tms: ReusableTms
 
-    master_repel: AddMasterRepel
-    s_s_ticket: AddSSTicket
+#    skip_tutorial: SkipTutorial
+#    master_repel: AddMasterRepel
+    train_pass: AddPass
+    ss_ticket: AddSSTicket
     exp_multiplier: ExpMultiplier
-    secret_potion: AddSecretPotion
-    bag: AddBag
-
-    show_unrandomized_progression_items: ShowUnrandomizedProgressionItems
-    remote_items: RemoteItems
+#    bag: AddBag
 
     goal: Goal
 
