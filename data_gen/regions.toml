@@ -648,7 +648,6 @@ exits = [
     "viridian_trainer_house_1f",
     "viridian_pokemart",
     "viridian_pokecenter_1f",
-    "viridian_route_1_gatehouse",
 ]
 locs = [
     "viridian_tm85",
@@ -1482,7 +1481,7 @@ locs = []
 header = "ruins_of_alph_south"
 exits = [
     "ruins_of_alph_east",
-    "union_cave_b2f",
+    "union_cave_b1f",
     "ruins_of_alph_southwest_entrance_first_room",
 ]
 locs = [
@@ -1493,7 +1492,7 @@ locs = [
 [ruins_of_alph_west]
 header = "ruins_of_alph_west"
 exits = [
-    "union_cave_b2f",
+    "union_cave_b1f",
     "ruins_of_alph_northwest_entrance_first_room",
 ]
 locs = []
@@ -1772,7 +1771,7 @@ locs = [
 header = "dark_cave_route_45_side_southeast"
 exits = [
     "dark_cave_route_45_side_northeast",
-    "dark_cave_route_45_side_northeast",
+    "dark_cave_route_45_side_northwest",
     "dark_cave_route_45_side_southwest",
 ]
 locs = [
@@ -2195,7 +2194,7 @@ exits = [
 ]
 locs = [
     "route_32_pokecenter_1f_old_rod",
-    "route_32_pokecenter_1f_lure_ball",
+    "route_32_pokecenter_1f_lure_ball_x2",
 ]
 
 [route_32_pokecenter_b1f]
@@ -2554,6 +2553,7 @@ locs = [
 header = "goldenrod_tunnel_b2f"
 exits = [
     "goldenrod_tunnel_1f",
+    "goldenrod_tunnel_b1f",
     "goldenrod_tunnel_warehouse",
 ]
 locs = [
@@ -2850,7 +2850,7 @@ locs = [
 [ice_path_b2f_west_center]
 header = "ice_path_b2f_west_center"
 exits = [
-    "ice_path_b2f_west_center",
+    "ice_path_b2f_west",
     "ice_path_b3f",
 ]
 locs = [
@@ -2900,6 +2900,7 @@ header = "whirl_islands_b1f_northwest"
 exits = [
     "whirl_islands_b1f_southwest",
     "whirl_islands_1f_northwest",
+    "whirl_islands_1f_northeast",
     "whirl_islands_b2f",
 ]
 locs = [
@@ -2914,6 +2915,7 @@ locs = [
 header = "whirl_islands_b1f_northeast"
 exits = [
     "whirl_islands_b1f_southwest",
+    "whirl_islands_1f_northeast",
     "whirl_islands_b2f",
 ]
 locs = [
@@ -3648,6 +3650,7 @@ locs = [
 [ss_aqua_b1f]
 header = "ss_aqua_b1f"
 exits = [
+    "ss_aqua_1f",
     "ss_aqua_captain_room",
 ]
 locs = []
@@ -4191,12 +4194,12 @@ locs = [
 header = "saffron_pokecenter_1f"
 exits = [
     "saffron_city",
-    "saffron_pokecenter_2f",
+    "saffron_pokecenter_b1f",
 ]
 locs = []
 
-[saffron_pokecenter_2f]
-header = "saffron_pokecenter_2f"
+[saffron_pokecenter_b1f]
+header = "saffron_pokecenter_b1f"
 exits = [
     "saffron_pokecenter_1f",
 ]
@@ -4323,6 +4326,7 @@ locs = []
 [route_18_gatehouse]
 header = "route_18_gatehouse"
 exits = [
+    "route_17",
     "route_18",
 ]
 locs = []
@@ -4693,6 +4697,7 @@ header = "mount_silver_cave_upper_mountainside_north"
 exits = [
     "mount_silver_cave_2f_west",
     "mount_silver_cave_2f_east",
+    "mount_silver_cave_upper_mountainside_east",
 ]
 locs = [
     "mount_silver_cave_upper_mountainside_max_ether",
@@ -4942,6 +4947,7 @@ locs = [
 [route_10_power_plant]
 header = "route_10_power_plant"
 exits = [
+    "route_10_center",
     "route_10_north",
 ]
 locs = [
@@ -5255,7 +5261,7 @@ exits = [
     "goldenrod_city",
 ]
 locs = [
-    "game_corner_coin_case",
+    "goldenrod_game_corner_coin_case",
 ]
 
 [celadon_game_corner]
@@ -5264,7 +5270,7 @@ exits = [
     "celadon_city",
 ]
 locs = [
-    "game_corner_coin_case",
+    "celadon_game_corner_coin_case",
 ]
 
 [pokemon_league_entrance_wifi_room]

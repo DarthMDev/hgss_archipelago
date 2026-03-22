@@ -48,7 +48,6 @@ pre_evolution = "charmander"
 [charizard]
 hms = [
     "cut",
-    "defog",
     "rock_smash",
     "fly",
     "strength",
@@ -92,7 +91,6 @@ pre_evolution = "caterpie"
 [butterfree]
 hms = [
     "flash",
-    "defog",
 ]
 pre_evolution = "metapod"
 
@@ -108,27 +106,23 @@ hms = [
     "cut",
     "rock_smash",
     "flash",
-    "defog",
 ]
 pre_evolution = "kakuna"
 
 [pidgey]
 hms = [
     "fly",
-    "defog",
 ]
 
 [pidgeotto]
 hms = [
     "fly",
-    "defog",
 ]
 pre_evolution = "pidgey"
 
 [pidgeot]
 hms = [
     "fly",
-    "defog",
 ]
 pre_evolution = "pidgeotto"
 
@@ -149,13 +143,11 @@ pre_evolution = "rattata"
 [spearow]
 hms = [
     "fly",
-    "defog",
 ]
 
 [fearow]
 hms = [
     "fly",
-    "defog",
 ]
 pre_evolution = "spearow"
 
@@ -291,14 +283,12 @@ hms = [
 [zubat]
 hms = [
     "fly",
-    "defog",
 ]
 regional = true
 
 [golbat]
 hms = [
     "fly",
-    "defog",
 ]
 pre_evolution = "zubat"
 regional = true
@@ -345,7 +335,6 @@ hms = [
 [venomoth]
 hms = [
     "flash",
-    "defog",
 ]
 pre_evolution = "venonat"
 
@@ -598,7 +587,6 @@ regional = true
 
 [farfetchd]
 hms = [
-    "defog",
     "cut",
     "fly",
 ]
@@ -877,7 +865,6 @@ regional = true
 hms = [
     "rock_smash",
     "cut",
-    "defog",
 ]
 regional = true
 
@@ -1019,7 +1006,6 @@ hms = [
     "strength",
     "fly",
     "rock_smash",
-    "defog",
 ]
 
 [snorlax]
@@ -1036,12 +1022,10 @@ regional = true
 hms = [
     "rock_smash",
     "fly",
-    "defog",
 ]
 
 [zapdos]
 hms = [
-    "defog",
     "rock_smash",
     "flash",
     "fly",
@@ -1051,7 +1035,6 @@ hms = [
 hms = [
     "rock_smash",
     "fly",
-    "defog",
 ]
 
 [dratini]
@@ -1071,7 +1054,6 @@ pre_evolution = "dratini"
 hms = [
     "surf",
     "cut",
-    "defog",
     "waterfall",
     "rock_smash",
     "fly",
@@ -1092,7 +1074,6 @@ hms = [
     "surf",
     "flash",
     "cut",
-    "defog",
     "waterfall",
     "rock_climb",
     "rock_smash",
@@ -1193,14 +1174,12 @@ pre_evolution = "sentret"
 [hoothoot]
 hms = [
     "fly",
-    "defog",
 ]
 regional = true
 
 [noctowl]
 hms = [
     "fly",
-    "defog",
 ]
 pre_evolution = "hoothoot"
 regional = true
@@ -1232,7 +1211,6 @@ pre_evolution = "spinarak"
 [crobat]
 hms = [
     "fly",
-    "defog",
 ]
 pre_evolution = "golbat"
 regional = true
@@ -1278,7 +1256,6 @@ regional = true
 
 [togetic]
 hms = [
-    "defog",
     "rock_smash",
     "flash",
     "fly",
@@ -1293,7 +1270,6 @@ hms = [
 
 [xatu]
 hms = [
-    "defog",
     "flash",
     "fly",
 ]
@@ -1402,7 +1378,6 @@ hms = [
 [yanma]
 hms = [
     "flash",
-    "defog",
 ]
 regional = true
 
@@ -1445,7 +1420,6 @@ regional = true
 [murkrow]
 hms = [
     "fly",
-    "defog",
 ]
 regional = true
 
@@ -1503,7 +1477,6 @@ hms = [
     "strength",
     "cut",
     "rock_smash",
-    "defog",
 ]
 regional = true
 
@@ -1541,7 +1514,6 @@ hms = [
     "strength",
     "cut",
     "rock_smash",
-    "defog",
 ]
 regional = true
 
@@ -1637,14 +1609,12 @@ regional = true
 [delibird]
 hms = [
     "fly",
-    "defog",
 ]
 
 [mantine]
 hms = [
     "surf",
     "waterfall",
-    "defog",
 ]
 regional = true
 
@@ -1652,7 +1622,6 @@ regional = true
 hms = [
     "flash",
     "cut",
-    "defog",
     "rock_smash",
     "fly",
 ]
@@ -1804,7 +1773,6 @@ pre_evolution = "pupitar"
 hms = [
     "surf",
     "flash",
-    "defog",
     "waterfall",
     "rock_smash",
     "fly",
@@ -1814,7 +1782,6 @@ hms = [
 [ho_oh]
 hms = [
     "flash",
-    "defog",
     "rock_smash",
     "fly",
     "strength",
@@ -1943,7 +1910,6 @@ regional = true
 [beautifly]
 hms = [
     "flash",
-    "defog",
 ]
 pre_evolution = "silcoon"
 regional = true
@@ -1955,7 +1921,6 @@ regional = true
 [dustox]
 hms = [
     "flash",
-    "defog",
 ]
 pre_evolution = "cascoon"
 regional = true
@@ -2005,7 +1970,6 @@ pre_evolution = "seedot"
 hms = [
     "flash",
     "cut",
-    "defog",
     "rock_smash",
     "strength",
 ]
@@ -2013,20 +1977,17 @@ hms = [
 [taillow]
 hms = [
     "fly",
-    "defog",
 ]
 
 [swellow]
 hms = [
     "fly",
-    "defog",
 ]
 pre_evolution = "taillow"
 
 [wingull]
 hms = [
     "fly",
-    "defog",
 ]
 regional = true
 
@@ -2034,7 +1995,6 @@ regional = true
 hms = [
     "surf",
     "fly",
-    "defog",
 ]
 pre_evolution = "wingull"
 regional = true
@@ -2067,7 +2027,6 @@ hms = [
 [masquerain]
 hms = [
     "flash",
-    "defog",
 ]
 pre_evolution = "surskit"
 
@@ -2120,7 +2079,6 @@ hms = [
 hms = [
     "cut",
     "flash",
-    "defog",
 ]
 
 [shedinja]
@@ -2380,7 +2338,6 @@ hms = [
     "strength",
     "fly",
     "rock_smash",
-    "defog",
 ]
 pre_evolution = "trapinch"
 
@@ -2389,7 +2346,6 @@ hms = [
     "strength",
     "fly",
     "rock_smash",
-    "defog",
 ]
 pre_evolution = "vibrava"
 
@@ -2577,7 +2533,6 @@ regional = true
 hms = [
     "flash",
     "cut",
-    "defog",
     "rock_smash",
     "fly",
     "strength",
@@ -2691,7 +2646,6 @@ pre_evolution = "bagon"
 [salamence]
 hms = [
     "cut",
-    "defog",
     "rock_smash",
     "fly",
     "strength",
@@ -2745,7 +2699,6 @@ hms = [
     "surf",
     "flash",
     "cut",
-    "defog",
     "waterfall",
     "fly",
 ]
@@ -2755,7 +2708,6 @@ hms = [
     "surf",
     "flash",
     "cut",
-    "defog",
     "waterfall",
     "fly",
 ]
@@ -2864,7 +2816,6 @@ hms = [
     "surf",
     "cut",
     "waterfall",
-    "defog",
 ]
 regional = true
 
@@ -2872,7 +2823,6 @@ regional = true
 hms = [
     "surf",
     "cut",
-    "defog",
     "waterfall",
     "rock_smash",
     "strength",
@@ -2884,7 +2834,6 @@ regional = true
 hms = [
     "surf",
     "cut",
-    "defog",
     "waterfall",
     "rock_climb",
     "rock_smash",
@@ -2896,14 +2845,12 @@ regional = true
 [starly]
 hms = [
     "fly",
-    "defog",
 ]
 regional = true
 
 [staravia]
 hms = [
     "fly",
-    "defog",
 ]
 pre_evolution = "starly"
 regional = true
@@ -2911,7 +2858,6 @@ regional = true
 [staraptor]
 hms = [
     "fly",
-    "defog",
 ]
 pre_evolution = "staravia"
 regional = true
@@ -3034,7 +2980,6 @@ regional = true
 [mothim]
 hms = [
     "flash",
-    "defog",
 ]
 pre_evolution = "burmy"
 regional = true
@@ -3047,7 +2992,6 @@ regional = true
 hms = [
     "cut",
     "flash",
-    "defog",
 ]
 pre_evolution = "combee"
 regional = true
@@ -3120,14 +3064,12 @@ regional = true
 hms = [
     "cut",
     "flash",
-    "defog",
 ]
 regional = true
 
 [drifblim]
 hms = [
     "cut",
-    "defog",
     "flash",
     "fly",
 ]
@@ -3159,7 +3101,6 @@ regional = true
 [honchkrow]
 hms = [
     "fly",
-    "defog",
 ]
 regional = true
 
@@ -3188,7 +3129,6 @@ regional = true
 hms = [
     "rock_smash",
     "cut",
-    "defog",
 ]
 regional = true
 
@@ -3197,7 +3137,6 @@ hms = [
     "strength",
     "cut",
     "rock_smash",
-    "defog",
 ]
 pre_evolution = "stunky"
 regional = true
@@ -3236,7 +3175,6 @@ regional = true
 [chatot]
 hms = [
     "fly",
-    "defog",
 ]
 regional = true
 
@@ -3366,7 +3304,6 @@ hms = [
     "surf",
     "flash",
     "waterfall",
-    "defog",
 ]
 regional = true
 
@@ -3375,7 +3312,6 @@ hms = [
     "surf",
     "flash",
     "waterfall",
-    "defog",
 ]
 pre_evolution = "finneon"
 regional = true
@@ -3470,7 +3406,6 @@ regional = true
 
 [togekiss]
 hms = [
-    "defog",
     "rock_smash",
     "flash",
     "fly",
@@ -3480,7 +3415,6 @@ regional = true
 [yanmega]
 hms = [
     "flash",
-    "defog",
 ]
 regional = true
 
@@ -3504,7 +3438,6 @@ hms = [
     "strength",
     "cut",
     "rock_smash",
-    "defog",
 ]
 regional = true
 
@@ -3615,7 +3548,6 @@ hms = [
 [giratina]
 hms = [
     "cut",
-    "defog",
     "rock_climb",
     "rock_smash",
     "fly",
@@ -3661,7 +3593,6 @@ hms = [
     "surf",
     "flash",
     "cut",
-    "defog",
     "waterfall",
     "rock_climb",
     "rock_smash",

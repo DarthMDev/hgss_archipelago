@@ -7,6 +7,7 @@ loc_table.base = 0
 loc_table.overworld = 1
 loc_table.hidden = 2
 loc_table.once = 3
+loc_table.apricorn_tree = 4
 
 item_clas.bagitem = 0
 item_clas.multibagitem0 = 1
@@ -15,6 +16,7 @@ item_clas.multibagitem2 = 3
 item_clas.specialbagitem = 4
 item_clas.badge = 6
 item_clas.accessory = 7
+item_clas.apricorn = 8
 item_clas.special = 0xE
 
 # HM MAPPING (HGSS)
@@ -37,7 +39,7 @@ hm_badge.whirlpool = "glacier_badge" # Whirlpool requires Glacier Badge
 hm_badge.rock_smash = "zephyr_badge" # Rock Smash requires Zephy Badge
 hm_badge.waterfall = "rising_badge"  # Waterfall requires Rising Badge
 hm_badge.rock_climb = "earth_badge"  # Rock Climb requires Earth Badge (Kanto)
-req_items = ["dowsingmachine"]
+req_items = ["dowsing_mchn"]
 
 item_group.items = "Items"
 item_group.key_items = "Key Items"

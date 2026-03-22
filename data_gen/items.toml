@@ -2670,7 +2670,7 @@ classification="useful"
 [ragecandybar]
 label = "Rage Candy Bar"
 id = 504
-class = "bagitem"
+clas = "bagitem"
 group = "key_items"
 
 [red_scale]
@@ -2927,6 +2927,13 @@ id = 287
 clas = "special"
 group = "pokegear"
 
+[potion_x5]
+label = "Potion x5"
+id = 17
+clas = "bagitem"
+group = "medicine"
+count = 5
+
 [poke_ball_x5]
 label = "Poké Ball x5"
 id = 4
@@ -2934,12 +2941,12 @@ clas = "bagitem"
 group = "balls"
 count = 5
 
-[potion_x5]
-label = "Potion x5"
-id = 17
+[lure_ball_x2]
+label = "Lure Ball x2"
+id = 494
 clas = "bagitem"
-group = "medicine"
-count = 5
+group = "balls"
+count = 2
 
 [white_fluff]
 label = "White Fluff"

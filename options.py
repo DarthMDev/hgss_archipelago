@@ -7,6 +7,13 @@ from dataclasses import dataclass
 from typing import Any
 from Options import Choice, DefaultOnToggle, OptionDict, OptionError, OptionSet, PerGameCommonOptions, Range, Toggle
 
+class GameVersion(Choice):
+    """Select HeartGold or SoulSilver version"""
+    display_name = "Game Version"
+    option_heartgold = 0
+    option_soulsilver = 1
+    default = "random"
+
 class RandomizeHms(DefaultOnToggle):
     """Adds the HMs to the pool."""
     display_name = "Randomize HMs"
@@ -34,10 +41,10 @@ class RandomizeNpcGifts(DefaultOnToggle):
 class RandomizeKeyItems(Choice):
     """Adds key items to the pool."""
     display_name = "Randomize Key Items"
-    default = 1
     option_vanilla = 0
     option_most = 1
     option_all = 2
+    default = 1
 
     def are_most_randomized(self) -> bool:
         return self.value >= self.option_most
@@ -86,8 +93,8 @@ class DowsingMachineLogic(DefaultOnToggle):
 class Goal(Choice):
     """The goal of the randomizer. Currently, this only supports defeating the champion and entering the hall of fame."""
     display_name = "Goal"
-    default = 0
     option_champion = 0
+    default = 0
 
 #class AddMasterRepel(Toggle):
 #    """
@@ -289,11 +296,12 @@ class HBSpeed(Choice):
     option_octuple = 8
 
 class ReusableTms(Toggle):
-    """TMs are reusable, this also means pokemon can't hold tms."""
+    """Makes TMs reusable, this also means pokemon can't hold TMs."""
     display_name = "Reusable TMs"
 
 @dataclass
 class PokemonHGSSOptions(PerGameCommonOptions):
+    game_version: GameVersion
     hms: RandomizeHms
     badges: RandomizeBadges
     overworlds: RandomizeOverworlds
@@ -330,17 +338,12 @@ class PokemonHGSSOptions(PerGameCommonOptions):
 
     goal: Goal
 
-    def requires_badge(self, hm: str) -> bool:
-        return self.hm_badge_requirement.value == 1 or hm in self.remove_badge_requirements
+    # def requires_badge(self, hm: str) -> bool:
+    #     return self.hm_badge_requirement.value == 1 or hm in self.remove_badge_requirements
 
     def validate(self) -> None:
-        if self.pastoria_barriers:
-            if not self.badges and self.requires_badge("SURF"):
-                raise OptionError(f"cannot enable Pastoria barriers if Surf requires the Fen Badge and badges are not randomized.")
-            if not (self.hms or self.key_items.are_most_randomized()):
-                raise OptionError(f"cannot enable Pastoria barriers if both HMs and Key Items are not randomized.")
         if not (self.overworlds or self.hiddens or self.npc_gifts or self.key_items.value > 0):
-            raise OptionError(f"at least one of overworlds, hiddens, npc_gifts, or key_items  must be enabled")
-        if self.bag and self.dowsing_machine_logic and not (self.overworlds or self.npc_gifts or self.rods or self.running_shoes or self.pokedex or self.key_items.value > 0):
-            raise OptionError(f"if the bag is enabled, then at least one of overworlds, npc_gifts, rods, running_shoes, pokedex, or key_items must be enabled")
+            raise OptionError(f"at least one of overworlds, hiddens, npc_gifts, or key_items must be enabled")
+        # if self.bag and self.dowsing_machine_logic and not (self.overworlds or self.npc_gifts or self.rods or self.running_shoes or self.pokedex or self.key_items.value > 0):
+        #     raise OptionError(f"if the bag is enabled, then at least one of overworlds, npc_gifts, rods, running_shoes, pokedex, or key_items must be enabled")
 
