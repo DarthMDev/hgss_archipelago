@@ -25,12 +25,12 @@ def is_location_present(label: str, world: "PokemonHGSSWorld") -> bool:
 
 def set_rules(world: "PokemonHGSSWorld") -> None:
     common_rules = {}
-    for hm in Hm:
-        if world.options.requires_badge(hm.name):
-            rule = ruledata.create_hm_badge_rule(hm, world.player)
-        else:
-            rule = always_true
-        common_rules[f"{hm.name.lower()}_badge"] = rule
+    #for hm in Hm:
+    #    if world.options.requires_badge(hm.name):
+    #        rule = ruledata.create_hm_badge_rule(hm, world.player)
+    #    else:
+    #        rule = always_true
+    #    common_rules[f"{hm.name.lower()}_badge"] = rule
     rules = ruledata.Rules(world.player, common_rules, world.options)
 
     rules.fill_rules()
@@ -56,7 +56,7 @@ def set_rules(world: "PokemonHGSSWorld") -> None:
 
     match world.options.goal.value:
         case 0:
-            goal_event = "event_beat_cynthia"
+            goal_event = "event_beat_lance"
         case _:
             raise ValueError(f"invalid goal {world.options.goal}")
     world.multiworld.completion_condition[world.player] = lambda state : state.has(goal_event, world.player)

@@ -34,9 +34,9 @@ class RandomizeNpcGifts(DefaultOnToggle):
     """Adds NPC gifts to the pool."""
     display_name = "Randomize NPC Gifts"
 
-#class RandomizeApricornTrees(Toggle):
-#    """Adds apricorn trees to the pool."""
-#    display_name = "Randomize Apricorn Trees"
+class RandomizeApricornTrees(Toggle):
+    """Adds apricorn trees to the pool."""
+    display_name = "Randomize Apricorn Trees"
 
 class RandomizeKeyItems(Choice):
     """Adds key items to the pool."""
@@ -65,7 +65,7 @@ class RandomizePokedex(Toggle):
     """Add the Pokedex to the pool. Note: this also adds the national dex to the pool."""
     display_name = "Randomize Pokedex"
 
-class RanodomizePokegearCards(DefaultOnToggle):
+class RandomizePokegearCards(Toggle):
     """Adds the Pokégear Map card and Radio cards to the pool."""
     display_name = "Randomize Pokegear Cards"
 
@@ -211,31 +211,23 @@ class ExpMultiplier(Range):
 #    """
 #    display_name = "Skip Tutorial"
 
-#class ShowUnrandomizedProgressionItems(Toggle):
-#    """
-#    Whether unrandomized progression items should be sent to the server and
-#    displayed in the chat. This also means that trackers will consider it a location
-#    to be checked. If this is off, some trackers may assume that it is obtained when
-#    accessible.
-#    """
-#    display_name = "Show Unrandomized Progression Items"
+class ShowUnrandomizedProgressionItems(Toggle):
+    """
+    Whether unrandomized progression items should be sent to the server and
+    displayed in the chat. This also means that trackers will consider it a location
+    to be checked. If this is off, some trackers may assume that it is obtained when
+    accessible.
+    """
+    display_name = "Show Unrandomized Progression Items"
 
-#class RemoteItems(Toggle):
-#    """
-#    Whether local items should be given in-game, or sent by the server.
-#    This overrides the show randomized progression items option: all items are shown.
-#    It is highly recommended to use nothing for received items notification, otherwise
-#    you will be notified twice for each item.
-#    """
-#    display_name = "Remote Items"
-
-#class FPS60(Toggle):
-#    """
-#    Whether the 60 FPS patch should be applied.
-#
-#    This option can also be modified in the in-game options menu.
-#    """
-#    display_name = "60 FPS"
+class RemoteItems(Toggle):
+    """
+    Whether local items should be given in-game, or sent by the server.
+    This overrides the show randomized progression items option: all items are shown.
+    It is highly recommended to use nothing for received items notification, otherwise
+    you will be notified twice for each item.
+    """
+    display_name = "Remote Items"
 
 class AddPass(Toggle):
     """
@@ -274,26 +266,21 @@ class AddSSTicket(Toggle):
 #    """
 #    display_name = "Add Bag"
 
-#class HMCutIns(Toggle):
-#    """
-#    Whether HM Cut-Ins should be played.
-#
-#    This option can also be modified in the in-game options menu.
-#    """
-#    display_name = "HM Cut-Ins"
+class HMCutIns(DefaultOnToggle):
+    """Whether HM Cut-Ins should be played."""
+    display_name = "HM Cut-Ins"
+
+class FPS60(Toggle):
+    """Whether the 60 FPS patch should be applied."""
+    display_name = "60 FPS"
 
 class InstantText(Toggle):
     """Whether to apply near-instant text speed."""
     display_name = "Instant Text Speed"
 
-class HBSpeed(Choice):
-    """The speed multiplier of the health bar (and exp bar)."""
-    display_name = "Healthbar Speed"
-    default = 1
-    option_vanilla = 1
-    option_double = 2
-    option_quadruple = 4
-    option_octuple = 8
+class FastHBSpeed(Toggle):
+    """Whether to apply fast Health and Exp bars."""
+    display_name = "Fast Healthbar"
 
 class ReusableTms(Toggle):
     """Makes TMs reusable, this also means pokemon can't hold TMs."""
@@ -307,7 +294,7 @@ class PokemonHGSSOptions(PerGameCommonOptions):
     overworlds: RandomizeOverworlds
     hiddens: RandomizeHiddenItems
     npc_gifts: RandomizeNpcGifts
-#    apricorn_trees: RandomizeApricornTrees
+    apricorn_trees: RandomizeApricornTrees
     key_items: RandomizeKeyItems
     rods: RandomizeRods
     running_shoes: RandomizeRunningShoes
@@ -323,14 +310,16 @@ class PokemonHGSSOptions(PerGameCommonOptions):
 
 #    game_options: GameOptions
 #    blind_trainers: BlindTrainers
-#    hm_cut_ins: HMCutIns
-#    fps60: FPS60
+    hm_cut_ins: HMCutIns
+    fps60: FPS60
     instant_text: InstantText
-    hb_speed: HBSpeed
+    fast_hb_speed: FastHBSpeed
     reusable_tms: ReusableTms
 
 #    skip_tutorial: SkipTutorial
 #    master_repel: AddMasterRepel
+    show_unrandomized_progression_items: ShowUnrandomizedProgressionItems
+    remote_items: RemoteItems
     train_pass: AddPass
     ss_ticket: AddSSTicket
     exp_multiplier: ExpMultiplier

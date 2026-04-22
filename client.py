@@ -12,7 +12,7 @@ import Utils
 
 from .data.locations import FlagCheck, LocationCheck, locations, VarCheck, OnceCheck
 from .locations import raw_id_to_const_name
-from .options import Goal, RemoteItems
+from .options import Goal #, RemoteItems
 
 import worlds._bizhawk as bizhawk
 from worlds._bizhawk.client import BizHawkClient
@@ -111,7 +111,7 @@ class VarsFlags:
             return int.from_bytes(self.vars[2 * var_id:2 * (var_id + 1)], byteorder='little')
 
 class PokemonHGSSClient(BizHawkClient):
-    game = "Pokemon HeartGold/SoulSilver"
+    game = "Pokemon HeartGold and SoulSilver"
     system = "NDS"
     patch_suffix = ".aphgss"
     ap_struct_address: int = 0
@@ -185,12 +185,12 @@ class PokemonHGSSClient(BizHawkClient):
         if ctx.slot_data["goal"] == Goal.option_champion:
             self.goal_flag = FlagCheck(id=version_data.champion_flag)
 
-        if ctx.slot_data["remote_items"] == RemoteItems.option_true and not ctx.items_handling & 0b010: # type: ignore
-            ctx.items_handling = 0b011
-            Utils.async_start(ctx.send_msgs([{
-                "cmd": "ConnectUpdate",
-                "items_handling": ctx.items_handling
-            }]))
+        #if ctx.slot_data["remote_items"] == RemoteItems.option_true and not ctx.items_handling & 0b010: # type: ignore
+        #    ctx.items_handling = 0b011
+        #    Utils.async_start(ctx.send_msgs([{
+        #        "cmd": "ConnectUpdate",
+        #        "items_handling": ctx.items_handling
+        #    }]))
 
         try:
             ap_struct_guard = (self.ap_struct_address, self.expected_header, "ARM9 System Bus")

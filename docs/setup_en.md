@@ -1,4 +1,4 @@
-# Pokémon HeartGold / SoulSilver Setup Guide
+# Pokémon HeartGold and SoulSilver Setup Guide
 
 ## Required Software
 
@@ -45,14 +45,14 @@ below using BizHawk as your emulator.
 By default, opening a patch file will do steps 1-5 below for you automatically. Even so, keep them in your memory just
 in case you have to close and reopen a window mid-game for some reason.
 
-1. Pokémon HeartGold/SoulSilver uses Archipelago's BizHawk Client. If the client isn't still open from when you patched your game,
+1. Pokémon HeartGold and SoulSilver uses Archipelago's BizHawk Client. If the client isn't still open from when you patched your game,
    you can re-open it from the launcher.
 2. Ensure EmuHawk is running the patched ROM.
 3. In EmuHawk, go to `Tools > Lua Console`. This window must stay open while playing.
 4. In the Lua Console window, go to `Script > Open Script…`.
 5. Navigate to your Archipelago install folder and open `data/lua/connector_bizhawk_generic.lua`.
 6. The emulator and client will eventually connect to each other. The BizHawk Client window should indicate that it
-   connected and recognized Pokémon HeartGold/SoulSilver.
+   connected and recognized Pokémon HeartGold and SoulSilver.
 7. To connect the client to the server, enter your room's address and port (e.g. `archipelago.gg:38281`) into the
    top text field of the client and click Connect.
 

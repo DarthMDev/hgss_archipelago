@@ -1,0 +1,8 @@
+{
+  "game": "Pokemon HeartGold and SoulSilver",
+  "world_version": "0.0.1",
+  "authors": ["DarthMDev","Murfu0"],
+  "minimum_ap_version": "0.6.3",
+  "compatible_version": 7,
+  "version": 7
+}

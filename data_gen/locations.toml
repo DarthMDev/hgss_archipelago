@@ -2312,6 +2312,14 @@ check = 242
 label = "New Bark Elms Lab 1F - Gift from Professor Elm for Becoming Champion"
 id = 257
 
+[new_bark_elms_lab_1f_master_ball]
+original_item = "master_ball"
+type = "npc_gift"
+table = "base"
+check = 0
+label = "New Bark Elms Lab 1F - Gift from Professor Elm for getting all Johto Badges"
+id = 386
+
 [new_bark_elms_lab_1f_everstone]
 original_item = "everstone"
 type = "npc_gift"
@@ -2668,7 +2676,7 @@ id = 333
 original_item = "mystery_egg"
 type = "key_item"
 table = "base"
-check = 108
+check = 107
 label = "Route 30 Mr Pokemon House - Gift from Mr Pokemon"
 id = 261
 
@@ -2791,6 +2799,14 @@ table = "base"
 check = 145
 label = "Goldenrod Radio Tower 4F - Gift from Mary"
 id = 302
+
+[goldenrod_radio_tower_5f_basement_key]
+original_item = "basement_key"
+type = "npc_gift"
+table = "base"
+check = 567
+label = "Goldenrod Radio Tower 5F - Gift for Defeating Executive Petrel"
+id = 387
 
 [goldenrod_radio_tower_observation_deck_rainbow_wing]
 original_item = "rainbow_wing"
@@ -3079,6 +3095,14 @@ table = "base"
 check = 384
 label = "Cerulean Gym - Gift from Misty"
 id = 347
+
+[cerulean_gym_machine_part]
+original_item = "machine_part"
+type = "npc_gift"
+table = "base"
+check = 599
+label = "Cerulean Gym - Item hidden by Rocket Grunt in North Lifebuoy Pile"
+id = 388
 
 [seafoam_islands_cinnabar_gym_volcano_badge]
 original_item = "volcano_badge"

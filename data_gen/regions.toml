@@ -381,7 +381,9 @@ exits = [
     "route_32_ruins_of_alph_gatehouse",
     "route_32_south",
 ]
-locs = []
+locs = [
+    "route_32_miracle_seed",
+]
 
 [route_32_south]
 header = "route_32_south"
@@ -848,6 +850,7 @@ exits = [
 locs = [
     "new_bark_elms_lab_1f_potion_x5",
     "new_bark_elms_lab_1f_ss_ticket",
+    "new_bark_elms_lab_1f_master_ball",
     "new_bark_elms_lab_1f_everstone",
 ]
 
@@ -975,6 +978,9 @@ locs = [
     "violet_hyper_potion",
     "violet_poke_ball",
     "violet_apricorn_tree",
+]
+events = [
+    "event_got_egg_in_violet",
 ]
 
 [azalea_town]
@@ -2439,7 +2445,9 @@ exits = [
     "goldenrod_radio_tower_4f",
     "goldenrod_radio_tower_observation_deck",
 ]
-locs = []
+locs = [
+    "goldenrod_radio_tower_5f_basement_key",
+]
 
 [goldenrod_radio_tower_observation_deck]
 header = "goldenrod_radio_tower_observation_deck"
@@ -3483,6 +3491,9 @@ locs = []
 header = "pokemon_league_hall_of_fame"
 exits = []
 locs = []
+events = [
+    "event_beat_lance",
+]
 
 [ss_aqua_1f]
 header = "ss_aqua_1f"
@@ -4362,6 +4373,7 @@ exits = [
 locs = [
     "cerulean_gym_cascade_badge",
     "cerulean_gym_tm03",
+    "cerulean_gym_machine_part",
 ]
 
 [cerulean_pokecenter_1f]
@@ -5137,28 +5149,6 @@ locs = [
 header = "mount_moon_square_shop"
 exits = [
     "mount_moon_square",
-]
-locs = []
-
-[sinjoh_ruins_exterior]
-header = "sinjoh_ruins_exterior"
-exits = [
-    "sinjoh_ruins_cabin",
-    "sinjoh_ruins_mystri_stage",
-]
-locs = []
-
-[sinjoh_ruins_mystri_stage]
-header = "sinjoh_ruins_mystri_stage"
-exits = [
-    "sinjoh_ruins_exterior",
-]
-locs = []
-
-[sinjoh_ruins_cabin]
-header = "sinjoh_ruins_cabin"
-exits = [
-    "sinjoh_ruins_exterior",
 ]
 locs = []
 
