@@ -90,15 +90,15 @@ class Rules:
                 else:
                     mons.add(f"mon_{spec.pre_evolution.species}")
                 spec = new_spec
-        bag = items.items["bag"].label
+        #bag = items.items["bag"].label
         def hm_rule(state: CollectionState) -> bool:
-            if not (state.has_all([hm, bag], player) and self.common_rules[f"{hm.name.lower()}_badge"](state)):
-                return False
-            if state.has_any(mons, player):
-                return True
-            for item_evol in item_evols:
-                if state.has_all(item_evol, player):
-                    return True
+        #    if not (state.has_all([hm, bag], player) and self.common_rules[f"{hm.name.lower()}_badge"](state)):
+        #        return False
+        #    if state.has_any(mons, player):
+        #        return True
+        #    for item_evol in item_evols:
+        #        if state.has_all(item_evol, player):
+        #            return True
             return False
 
         return hm_rule

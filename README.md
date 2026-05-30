@@ -1,4 +1,4 @@
-# Pokémon HeartGold/SoulSilver Archipelago (AP)
+# Pokémon HeartGold and SoulSilver Archipelago (AP)
 
 The setup guide is [here](docs/setup_en.md).
 

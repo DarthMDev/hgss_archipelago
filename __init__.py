@@ -15,25 +15,31 @@ from .data import items as itemdata
 from .data.locations import RequiredLocations
 from .items import create_item_label_to_code_map, get_item_classification, PokemonHGSSItem, get_item_groups
 from .locations import PokemonHGSSLocation, create_location_label_to_code_map, create_locations
-from .options import PokemonHGSSOptions, UnownsOption
+from .options import PokemonHGSSOptions #, UnownsOption
 from .regions import create_regions
 from .rom import generate_output, PokemonHGSSPatch
 from .rules import set_rules
 
 class PokemonHGSSSettings(settings.Group):
-    class RomFile(settings.UserFilePath):
-        description = "Pokemon HeartGold / SoulSilver US ROM File"
-        copy_to = "pokehgss.nds"
-        md5s = PokemonHGSSPatch.hashes
+    class HGRomFile(settings.UserFilePath):
+        """File names of the Pokemon HeartGold and SoulSilver roms"""
+        description = "Pokemon HeartGold (US) ROM File"
+        copy_to = "pokeheartgold.nds"
+        md5s = PokemonHGSSPatch.hashes[0]
+    class SSRomFile(settings.UserFilePath):
+        description = "Pokemon SoulSilver (US) ROM File"
+        copy_to = "pokesoulsilver.nds"
+        md5s = PokemonHGSSPatch.hashes[1]
 
-    rom_file: RomFile = RomFile(RomFile.copy_to)
+    hg_rom_file: HGRomFile = HGRomFile(HGRomFile.copy_to)
+    ss_rom_file: SSRomFile = SSRomFile(SSRomFile.copy_to)
 
 class PokemonHGSSWebWorld(WebWorld):
     theme = 'ocean'
 
     setup_en = Tutorial(
         'Multiworld Setup Guide',
-        'A guide to playing Pokémon HeartGold / SoulSilver with Archipelago',
+        'A guide to playing Pokémon HeartGold and SoulSilver with Archipelago',
         'English',
         'setup_en.md',
         'setup/en',
@@ -43,7 +49,7 @@ class PokemonHGSSWebWorld(WebWorld):
     tutorials = [setup_en]
 
 class PokemonHGSSWorld(World):
-    game = "Pokemon HeartGold/SoulSilver"
+    game = "Pokemon HeartGold and SoulSilver"
     web = PokemonHGSSWebWorld()
     topology_present = True
 
@@ -80,13 +86,13 @@ class PokemonHGSSWorld(World):
             locations)
 
         add_items: list[str] = []
-        for item in ["master_repel", "s_s_ticket", "marsh_pass", "storage_key"]:
-            if getattr(self.options, item).value == 1:
-                add_items.append(item)
-        if self.options.bag.value == 1:
-            add_items.append("bag")
-        else:
-            self.multiworld.push_precollected(self.create_item(itemdata.items["bag"].label))
+        #for item in ["master_repel", "s_s_ticket", "marsh_pass", "storage_key"]:
+        #    if getattr(self.options, item).value == 1:
+        #        add_items.append(item)
+        #if self.options.bag.value == 1:
+        #    add_items.append("bag")
+        #else:
+        #    self.multiworld.push_precollected(self.create_item(itemdata.items["bag"].label))
 
         itempool = []
         for loc in item_locations:
@@ -117,7 +123,7 @@ class PokemonHGSSWorld(World):
 
     def generate_output(self, output_directory: str) -> None:
         patch = PokemonHGSSPatch(player=self.player, player_name=self.player_name)
-        base_patches = ["us_rev0", "us_rev1"]
+        base_patches = ["us_hg", "us_ss"]
         for name in base_patches:
             name = "base_patch_" + name
             patch.write_file(f"{name}.bsdiff4", pkgutil.get_data(__name__, f"patches/{name}.bsdiff4")) # type: ignore

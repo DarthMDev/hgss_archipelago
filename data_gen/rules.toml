@@ -2,71 +2,586 @@
 
 # LOGIC HELPERS
 loc_types.hidden = "dowsingmachine_if_opt"
-loc_types.uunown = "dowsingmachine_if_opt"
+#loc_types.uunown = "dowsingmachine_if_opt"
+loc_types.apricorn_tree = "apricorn_box"
 
 enc_types.surf = "surf"
-enc_types.good_rod = "good_rod & bag" 
-enc_types.super_rod = "super_rod & bag"
-enc_types.old_rod = "old_rod & bag"
+enc_types.good_rod = "good_rod" # & bag"
+enc_types.super_rod = "super_rod" # & bag"
+enc_types.old_rod = "old_rod" # & bag"
 
 # COMMON MACROS (Shortcuts for complex logic)
 common.national_dex = "pokedex * 2" # Logic for when National Dex is active
-common.dowsingmachine_if_opt = "dowsingmachine if dowsing_machine_logic"
+common.dowsingmachine_if_opt = "dowsing_mchn if dowsing_machine_logic"
 common.flash_if_opt = "flash if visibility_hm_logic"
+common.pokeflute = "pokegear & radio_card & expn_card"
 
 # HM Logic (Item + Badge Requirement)
-# These match the HGSS Badge order: 
+# These match the HGSS Badge order:
 # Zephyr(Rock Smash), Hive(Cut), Plain(Strength), Fog(Surf), Storm(Fly), Mineral, Glacier(Whirlpool), Rising(Waterfall)
-# Note: Verify specific badge checks with  ROM data. 
-common.cut_req = "hm01 & hive_badge" 
-common.fly_req = "hm02 & storm_badge"
-common.surf_req = "hm03 & surf_badge"
-common.strength_req = "hm04 & plain_badge"
-common.whirlpool_req = "hm05 & glacier_badge"
-common.rock_smash_req = "hm06 & zephyr_badge"
-common.waterfall_req = "hm07 & waterfall_badge"
-common.rock_climb_req = "hm08 & earth_badge"
-common.flash_req = "tm70 & boulder_badge"
+# Note: Verify specific badge checks with ROM data.
+common.cut = "hm01 & hive_badge"
+common.fly = "hm02 & storm_badge"
+common.surf = "hm03 & fog_badge"
+common.strength = "hm04 & plain_badge"
+common.whirlpool = "hm05 & glacier_badge"
+common.rock_smash = "hm06 & zephyr_badge"
+common.waterfall = "hm07 & rising_badge"
+common.rock_climb = "hm08 & earth_badge"
+common.flash = "tm70" # & boulder_badge"
+common.johto_badges = "zephyr_badge & hive_badge & plain_badge & fog_badge & storm_badge & mineral_badge & glacier_badge & rising_badge"
+common.kanto_badges = "boulder_badge & cascade_badge & thunder_badge & rainbow_badge & marsh_badge & soul_badge & volcano_badge & earth_badge"
+common.all_badges = "johto_badges & kanto_badges"
 
-# NEW BARK TOWN
-exits.new_bark_town_players_house_2f.new_bark_town_players_house_1f = "true"
-exits.new_bark_town_players_house_1f.new_bark_town = "true"
-exits.new_bark_town_elms_lab.new_bark_town = "true"
+# Bell Tower
+exits.ecruteak_bell_tower_barrier_station.ecruteak_bell_tower_barrier_station_corridor = "rainbow_wing"
+exits.ecruteak_bell_tower_barrier_station_corridor.ecruteak_bell_tower_barrier_station = "rainbow_wing"
 
-# Route 29 is connected to New Bark
-exits.new_bark_town.route_29 = "true" 
-exits.new_bark_town.route_27 = "surf_req" # Need Surf to go East to Kanto
+# Burned Tower
+locs.burned_tower_1f_hp_up = "rock_smash"
 
-# ROUTE 29
-exits.route_29.new_bark_town = "true"
-exits.route_29.cherrygrove_city = "true"
-exits.route_29.route_46 = "true" # Can walk into the bottom of Route 46 freely
+# Route 1
 
-# CHERRYGROVE CITY
-exits.cherrygrove_city.route_29 = "true"
-exits.cherrygrove_city.route_30 = "true"
-exits.cherrygrove_city.route_31 = "surf_req" # Shortcut via water
+# Route 2
+exits.route_2_south.route_2_east = "cut"
+exits.route_2_north.route_2_east = "cut"
+exits.route_2_east.route_2_south = "cut"
+exits.route_2_east.route_2_north = "cut"
 
-# ROUTE 30 (The Mr. Pokemon Split)
-# Assume route_30_south is the Cherrygrove side, route_30_north is the Violet side
-exits.route_30.violet_city = "true" # If cut tree is removed or logic allows
+# Route 3
+locs.route_3_hyper_potion = "rock_smash"
 
-# NEW BARK TOWN
-locs.new_bark_town_elms_lab_master_ball = "true" # Free gift
-locs.new_bark_town_neighbor_house_map = "true"
+# Route 4
 
-# CHERRYGROVE CITY
-locs.cherrygrove_city_mystic_water = "surf_req" # Need surf to reach the guy on the island?
+# Route 5
 
-# VIOLET CITY
-locs.violet_city_earl_academy_item = "true"
+# Route 6
 
-Sudowoodo blocking Route 36
-events.event_sudowoodo_cleared = "squirtbottle"
+# Route 7
 
-#  the event open a path
-exits.route_36.route_37 = "event_sudowoodo_cleared"
+# Route 8
 
-exits.route_45.route_46 = "true" # Jumping down is free
-exits.route_46.route_29 = "true" # Walking out is free
-# Do NOT put exits.route_29.route_46 unless there is a path (like through Dark Cave)
+# Route 9
+locs.route_9_tm91 = "cut"
+locs.route_9_light_clay = "cut"
+
+# Route 10
+exits.route_10_north.rock_tunnel_1f = "flash_if_opt"
+exits.route_10_north.route_10_center = "surf"
+exits.route_10_center.route_10_north = "surf"
+exits.route_10_south.rock_tunnel_1f = "flash_if_opt"
+locs.route_10_tm69 = "strength"
+
+# Route 11
+exits.route_11.vermilion_city = "pokeflute"
+exits.route_11.diglett_cave = "pokeflute"
+exits.route_11_route_12_gatehouse.route_12 = "pokeflute"
+
+# Route 12
+exits.route_12.route_11_route_12_gatehouse = "pokeflute"
+locs.route_12_calcium = "cut"
+locs.route_12_yellow_flute = "cut & surf"
+locs.route_12_elixir = "surf"
+
+# Route 13
+
+# Route 14
+locs.route_14_lucky_punch = "cut"
+
+# Route 15
+
+# Route 17
+exits.route_16_gatehouse.route_17 = "bicycle"
+exits.route_18_gatehouse.route_17 = "bicycle"
+
+# Route 18
+
+# Route 22
+
+# Route 24
+
+# Route 25
+locs.route_25_protein = "cut"
+
+# Route 26
+exits.route_26.pokemon_league_reception_gate = "johto_badges"
+
+# Route 27
+exits.route_27_west.new_bark_town = "surf"
+exits.route_27_west.tohjo_falls = "surf & waterfall"
+exits.route_27_center.tohjo_falls = "surf"
+exits.route_27_center.route_27_east = "surf"
+exits.route_27_east.route_27_center = "surf"
+exits.tohjo_falls.route_27_west = "surf & waterfall"
+exits.tohjo_falls.route_27_center = "surf"
+locs.route_27_rare_candy = "surf"
+locs.route_27_tm02 = "surf & whirlpool"
+locs.route_27_nugget = "surf"
+
+# Route 28
+exits.route_28.route_28_house = "cut"
+exits.pokemon_league_reception_gate.route_28 = "kanto_badges"
+locs.route_28_tm35 = "cut"
+locs.route_28_rare_candy = "cut"
+
+# Route 29
+
+# Route 30
+exits.route_30_east.route_30_west = "mystery_egg | cut"
+exits.route_30_west.route_30_east = "mystery_egg | cut"
+
+# Route 31
+exits.route_31.dark_cave_route_31_side_west = "flash_if_opt"
+
+# Route 32
+exits.route_32_north.route_32_south = "zephyr_badge"
+locs.route_32_miracle_seed = "zephyr_badge"
+locs.route_32_tm05 = "cut"
+locs.route_32_shell_bell = "rock_smash"
+locs.route_32_heart_scale = "surf"
+locs.route_32_super_potion = "cut"
+
+# Route 33
+
+# Route 34
+locs.route_34_nugget = "surf"
+locs.route_34_power_herb = "surf"
+locs.route_34_rare_candy = "surf"
+
+# Route 35
+exits.route_35.route_36_west = "cut"
+locs.route_35_apricorn_tree = "surf"
+locs.route_35_nugget = "surf"
+
+# Route 36
+exits.route_36_east.route_36_west = "squirtbottle"
+exits.route_36_east.route_36_north = "squirtbottle"
+exits.route_36_west.route_36_east = "squirtbottle"
+exits.route_36_west.route_36_north = "squirtbottle"
+exits.route_36_north.route_36_east = "squirtbottle"
+exits.route_36_north.route_36_west = "squirtbottle"
+locs.route_36_berry_pots = "squirtbottle"
+locs.route_36_oran_berry_x3 = "squirtbottle"
+locs.route_36_pecha_berry_x3 = "squirtbottle"
+
+# Route 37
+
+# Route 38
+locs.route_38_lax_incense = "rock_climb"
+locs.route_38_hp_up = "rock_climb"
+
+# Route 39
+
+# Route 42
+exits.route_42_west.route_42_south = "surf"
+exits.route_42_south.route_42_west = "surf"
+exits.route_42_south.route_42_east = "surf"
+exits.route_42_east.route_42_south = "surf"
+locs.route_42_apricorn_tree_w = "cut"
+locs.route_42_apricorn_tree_c = "cut"
+locs.route_42_apricorn_tree_e = "cut"
+
+# Route 43
+locs.route_43_apricorn_tree = "surf & cut"
+
+# Route 44
+locs.route_44_max_revive = "surf"
+
+# Route 45
+exits.route_45.dark_cave_route_45_side_northeast = "flash_if_opt"
+locs.route_45_pp_max = "rock_climb"
+
+# Route 46
+exits.route_46.dark_cave_route_31_side_east = "flash_if_opt & rock_smash"
+
+# Pallet Town
+exits.pallet_town.route_21 = "surf"
+
+# Viridian City
+locs.viridian_tm85 = "cut | surf"
+
+# Pewter City
+locs.pewter_wise_glasses = "rock_smash"
+
+# Cerulean City
+exits.cerulean_city.cerulean_cave_1f_southeast = "surf"
+locs.cerulean_nugget = "surf"
+
+# Lavender Town
+
+# Vermilion City
+exits.vermilion_city.vermilion_gym = "cut | surf"
+exits.vermilion_gym.vermilion_city = "cut | surf"
+exits.ss_aqua_vermilion_port_interior.ss_aqua_vermilion_port_exterior = "ss_ticket"
+locs.vermilion_luck_incense = "surf"
+locs.vermilion_sticky_barb = "pokeflute"
+locs.vermilion_pp_max = "kanto_badges"
+locs.vermilion_full_heal = "rock_smash"
+locs.vermilion_heart_scale = "surf"
+locs.vermilion_big_pearl = "pokeflute & surf"
+locs.vermilion_pearl = "pokeflute & surf"
+locs.vermilion_pearl_0 = "pokeflute & surf"
+
+# Celadon City
+exits.celadon_city.celadon_gym = "cut"
+exits.celadon_gym.celadon_city = "cut"
+locs.celadon_condominiums_3f_gb_sounds = "kanto_badges"
+
+# Fuchsia City
+locs.fuchsia_persim_berry = "red_shard"
+locs.fuchsia_razz_berry = "red_shard"
+locs.fuchsia_pomeg_berry = "red_shard"
+locs.fuchsia_bluk_berry = "blue_shard"
+locs.fuchsia_kelpsy_berry = "blue_shard"
+locs.fuchsia_cornn_berry = "blue_shard"
+locs.fuchsia_pinap_berry = "yellow_shard"
+locs.fuchsia_grepa_berry = "yellow_shard"
+locs.fuchsia_nomel_berry = "yellow_shard"
+locs.fuchsia_wepear_berry = "green_shard"
+locs.fuchsia_hondew_berry = "green_shard"
+locs.fuchsia_durin_berry = "green_shard"
+locs.fuchsia_apricorn_tree = "cut"
+
+# Cinnabar Island
+exits.cinnabar_island.route_20_west = "surf"
+exits.cinnabar_island.route_21 = "surf"
+locs.cinnabar_island_magmarizer = "rock_climb"
+locs.cinnabar_rare_candy = "rock_climb"
+locs.cinnabar_iron = "rock_climb"
+locs.cinnabar_star_piece = "rock_climb"
+
+# Indigo Plateau
+
+# Saffron City
+exits.saffron_magnet_train_station.goldenrod_magnet_train_station = "pass"
+locs.saffron_copycat_house_2f_pass = "lost_item"
+
+# New Bark Town
+exits.new_bark_town.route_27_west = "surf"
+
+# Cherrygrove City
+locs.cherrygrove_mystic_water = "surf"
+locs.cherrygrove_nugget = "surf"
+locs.cherrygrove_nugget_0 = "surf & rock_climb"
+
+# Violet City
+locs.violet_rare_candy = "surf"
+locs.violet_pp_up = "surf"
+locs.violet_cheri_berry = "red_shard"
+locs.violet_pecha_berry = "red_shard"
+locs.violet_leppa_berry = "red_shard"
+locs.violet_oran_berry = "blue_shard"
+locs.violet_chesto_berry = "blue_shard"
+locs.violet_wiki_berry = "blue_shard"
+locs.violet_aspear_berry = "yellow_shard"
+locs.violet_sitrus_berry = "yellow_shard"
+locs.violet_iapapa_berry = "yellow_shard"
+locs.violet_rawst_berry = "green_shard"
+locs.violet_lum_berry = "green_shard"
+locs.violet_aguav_berry = "green_shard"
+locs.violet_hyper_potion = "rock_smash"
+
+# Azalea Town
+
+# Cianwood City
+exits.cianwood_city.route_41 = "surf"
+locs.cianwood_revive = "rock_smash"
+locs.cliff_edge_gate_big_pearl = "rock_climb & surf"
+
+# Goldenrod City
+exits.goldenrod_magnet_train_station.saffron_magnet_train_station = "pass"
+
+# Olivine City
+exits.ss_aqua_olivine_port_interior.ss_aqua_olivine_port_exterior = "ss_ticket"
+locs.olivine_tm57 = "surf"
+locs.olivine_full_heal = "rock_climb"
+
+# Ecruteak City
+
+# Mahogany Town
+
+# Lake of Rage
+locs.lake_of_rage_max_revive = "cut"
+locs.lake_of_rage_full_restore = "cut"
+locs.lake_of_rage_full_heal = "surf"
+locs.lake_of_rage_tm43 = "surf"
+locs.lake_of_rage_red_flute = "surf"
+locs.lake_of_rage_choice_specs = "surf"
+locs.lake_of_rage_black_belt = "cut"
+locs.lake_of_rage_red_scale = "surf"
+locs.lake_of_rage_max_potion = "surf"
+
+# Blackthorn City
+exits.blackthorn_city.dragons_den_entrance = "surf"
+
+# Mount Silver
+locs.mount_silver_reaper_cloth = "surf"
+
+# Route 19
+exits.route_19.route_20_east = "surf"
+locs.route_19_tm55 = "surf"
+locs.route_19_big_pearl = "surf"
+locs.route_19_revive = "rock_smash"
+
+# Route 20
+exits.route_20_east.route_19 = "surf"
+exits.route_20_east.seafoam_islands_1f_west = "surf"
+exits.route_20_west.cinnabar_island = "surf"
+exits.route_20_west.seafoam_islands_1f_east = "surf"
+locs.route_20_stardust = "surf"
+locs.route_20_deepseascale = "surf"
+locs.route_20_deepseatooth = "surf"
+
+# Route 21
+exits.route_21.pallet_town = "surf"
+exits.route_21.cinnabar_island = "surf"
+locs.route_21_stardust = "surf"
+locs.route_21_stardust_0 = "surf"
+locs.route_21_stardust_1 = "surf"
+
+# Route 40
+exits.route_40.route_41 = "surf"
+locs.route_40_tm88 = "surf"
+locs.route_40_hyper_potion = "surf"
+
+# Route 41
+exits.route_41.route_40 = "surf"
+exits.route_41.whirl_islands_1f_northwest = "surf & whirlpool"
+exits.route_41.whirl_islands_1f_northeast = "surf & whirlpool"
+exits.route_41.whirl_islands_1f_southwest = "surf & whirlpool"
+exits.route_41.whirl_islands_1f_southeast = "surf & whirlpool"
+exits.route_41.cianwood_city = "surf"
+locs.route_41_max_ether = "surf & whirlpool"
+locs.route_41_stardust = "surf & whirlpool"
+locs.route_41_stardust_0 = "surf & whirlpool"
+locs.route_41_stardust_1 = "surf & whirlpool"
+locs.route_41_stardust_2 = "surf & whirlpool"
+
+# National Park
+locs.national_park_shiny_stone = "rock_climb"
+
+# Union Cave
+exits.union_cave_1f.union_cave_b2f = "surf"
+exits.union_cave_b1f.ruins_of_alph_west = "surf"
+exits.union_cave_b1f.ruins_of_alph_south = "surf"
+exits.union_cave_b2f.union_cave_1f = "surf"
+locs.union_cave_1f_big_pearl = "surf"
+locs.union_cave_b1f_revive = "surf"
+locs.union_cave_b2f_elixir = "surf"
+locs.union_cave_b2f_hyper_potion = "surf"
+locs.union_cave_b2f_ultra_ball = "surf"
+locs.union_cave_b2f_calcium = "surf"
+
+# Diglett Cave
+exits.diglett_cave.route_11 = "pokeflute"
+locs.diglett_cave_pp_max = "rock_climb"
+locs.diglett_cave_rock_incense = "rock_climb"
+locs.diglett_cave_calcium = "rock_climb"
+
+# Mount Moon
+
+# Rock Tunnel
+exits.rock_tunnel_1f.route_10_north = "flash_if_opt"
+exits.rock_tunnel_1f.route_10_south = "flash_if_opt"
+exits.rock_tunnel_1f.rock_tunnel_b1f = "flash_if_opt"
+exits.rock_tunnel_b1f.rock_tunnel_1f = "flash_if_opt"
+locs.rock_tunnel_b1f_iron = "rock_climb"
+locs.rock_tunnel_b1f_oval_stone = "rock_climb"
+locs.rock_tunnel_b1f_max_potion = "rock_smash"
+locs.rock_tunnel_b1f_hp_up = "rock_climb"
+
+# Sprout Tower
+
+# Goldenrod Radio Tower
+
+# Ruins of Alph
+exits.ruins_of_alph_north.ruins_of_alph_east = "surf"
+exits.ruins_of_alph_east.ruins_of_alph_north = "surf"
+locs.ruins_of_alph_hyper_potion = "rock_smash | surf"
+locs.ruins_of_alph_rare_candy = "rock_smash"
+
+# Slowpoke Well
+exits.slowpoke_well_b1f.slowpoke_well_b2f = "surf"
+exits.slowpoke_well_b2f.slowpoke_well_b1f = "surf"
+locs.slowpoke_well_b2f_tm18 = "surf"
+locs.slowpoke_well_b2f_kings_rock = "surf"
+locs.slowpoke_well_b1f_full_heal = "surf"
+
+# Olivine Lighthouse
+
+# Ilex Forest
+exits.ilex_forest_south.ilex_forest_north = "cut"
+exits.ilex_forest_north.ilex_forest_south = "cut"
+
+# Mount Mortar
+exits.mount_mortar_1f_entrance_south.mount_mortar_1f_entrance_north = "surf & waterfall"
+exits.mount_mortar_1f_entrance_north.mount_mortar_1f_entrance_south = "surf & waterfall"
+exits.mount_mortar_1f_entrance_southeast_lower.mount_mortar_1f_entrance_southeast_upper = "rock_climb"
+exits.mount_mortar_1f_entrance_southeast_upper.mount_mortar_1f_entrance_southeast_lower = "rock_climb"
+exits.mount_mortar_1f_back_south.mount_mortar_1f_back_center = "strength"
+exits.mount_mortar_1f_back_southeast.mount_mortar_1f_back_center = "rock_climb"
+exits.mount_mortar_1f_back_center.mount_mortar_1f_back_southeast = "rock_climb"
+exits.mount_mortar_2f_south.mount_mortar_2f_southeast = "surf"
+exits.mount_mortar_2f_south.mount_mortar_2f_east = "surf"
+exits.mount_mortar_2f_south.mount_mortar_2f_northeast = "surf"
+exits.mount_mortar_2f_southeast.mount_mortar_2f_south = "surf"
+exits.mount_mortar_2f_southeast.mount_mortar_2f_east = "surf"
+exits.mount_mortar_2f_east.mount_mortar_2f_northeast = "surf"
+exits.mount_mortar_2f_northeast.mount_mortar_2f_north = "surf"
+exits.mount_mortar_2f_northeast.mount_mortar_2f_east = "surf"
+exits.mount_mortar_2f_northeast.mount_mortar_2f_center = "surf"
+exits.mount_mortar_2f_northeast.mount_mortar_2f_south = "surf"
+exits.mount_mortar_2f_north.mount_mortar_2f_south = "surf"
+exits.mount_mortar_2f_north.mount_mortar_2f_southeast = "surf"
+exits.mount_mortar_2f_north.mount_mortar_1f_back_north = "surf"
+exits.mount_mortar_2f_center.mount_mortar_2f_northeast = "surf"
+exits.mount_mortar_2f_center.mount_mortar_2f_east = "surf"
+exits.mount_mortar_b1f_south.mount_mortar_b1f_north = "strength & surf"
+exits.mount_mortar_b1f_north.mount_mortar_b1f_south = "strength & surf"
+locs.mount_mortar_1f_back_protector = "rock_climb"
+locs.mount_mortar_1f_back_rare_candy = "rock_climb"
+locs.mount_mortar_2f_rare_candy = "surf"
+locs.mount_mortar_2f_full_restore = "surf"
+locs.mount_mortar_b1f_carbos = "surf"
+locs.mount_mortar_b1f_pp_up = "surf"
+locs.mount_mortar_b1f_full_restore = "surf"
+locs.mount_mortar_b1f_max_ether = "surf"
+locs.mount_mortar_b1f_hyper_potion = "surf"
+locs.mount_mortar_b1f_ultra_ball = "surf"
+
+# Ice Path
+exits.ice_path_b2f_west.ice_path_b2f_west_center = "strength"
+locs.ice_path_b1f_iron = "strength"
+locs.ice_path_b2f_max_potion = "strength"
+
+# Whirl Islands
+exits.whirl_islands_1f_southwest.whirl_islands_b1f_southeast = "surf"
+exits.whirl_islands_b1f_southeast.whirl_islands_1f_southwest = "surf"
+exits.whirl_islands_b1f_southeast.whirl_islands_b1f_southwest = "strength"
+locs.whirl_islands_b1f_escape_rope = "surf"
+
+# Mount Silver Cave
+exits.mount_silver_cave_1f_south.mount_silver_cave_expert_belt_chamber = "surf & waterfall"
+exits.mount_silver_cave_1f_south.mount_silver_cave_1f_west = "surf & waterfall & rock_climb"
+exits.mount_silver_cave_1f_south.mount_silver_cave_1f_east = "rock_climb"
+exits.mount_silver_cave_expert_belt_chamber.mount_silver_cave_1f_south = "surf & waterfall"
+exits.mount_silver_cave_expert_belt_chamber.mount_silver_cave_1f_west = "surf & rock_climb"
+exits.mount_silver_cave_1f_west.mount_silver_cave_1f_south = "surf & waterfall & rock_climb"
+exits.mount_silver_cave_1f_west.mount_silver_cave_expert_belt_chamber = "surf & rock_climb"
+exits.mount_silver_cave_1f_west.mount_silver_cave_moltres_chamber = "surf & waterfall & rock_climb"
+exits.mount_silver_cave_moltres_chamber.mount_silver_cave_1f_west = "surf & waterfall & rock_climb"
+exits.mount_silver_cave_1f_east.mount_silver_cave_1f_south = "rock_climb"
+exits.mount_silver_cave_upper_mountainside_south.mount_silver_cave_3f = "rock_climb"
+exits.mount_silver_cave_3f.mount_silver_cave_upper_mountainside_south = "rock_climb"
+locs.mount_silver_cave_upper_mountainside_pure_incense = "rock_climb"
+locs.mount_silver_cave_upper_mountainside_rare_candy = "rock_climb"
+locs.mount_silver_cave_upper_mountainside_dawn_stone = "rock_climb"
+locs.mount_silver_cave_upper_mountainside_hyper_potion = "rock_climb"
+
+# Dark Cave
+exits.dark_cave_route_31_side_west.route_31 = "flash_if_opt"
+exits.dark_cave_route_31_side_west.dark_cave_route_31_side_east = "(surf | rock_smash) & strength"
+exits.dark_cave_route_31_side_west.dark_cave_route_45_side_southwest = "surf | rock_smash"
+exits.dark_cave_route_31_side_east.dark_cave_route_31_side_west = "(surf | rock_smash) & strength"
+exits.dark_cave_route_31_side_east.dark_cave_route_45_side_southwest = "strength & surf"
+exits.dark_cave_route_45_side_northeast.dark_cave_route_45_side_southeast = "surf"
+exits.dark_cave_route_45_side_northeast.dark_cave_route_45_side_northwest = "surf"
+exits.dark_cave_route_45_side_southeast.dark_cave_route_45_side_northeast = "surf"
+exits.dark_cave_route_45_side_southeast.dark_cave_route_45_side_northwest = "surf"
+exits.dark_cave_route_45_side_northwest.dark_cave_route_45_side_northeast = "surf"
+exits.dark_cave_route_45_side_northwest.dark_cave_route_45_side_southeast = "surf"
+exits.dark_cave_route_45_side_southwest.dark_cave_route_31_side_west = "surf"
+exits.dark_cave_route_45_side_southwest.dark_cave_route_31_side_east = "surf & strength"
+locs.dark_cave_route_31_side_black_flute = "surf"
+locs.dark_cave_route_31_side_hyper_potion = "rock_smash"
+
+# Victory Road
+exits.victory_road_1f.pokemon_league_reception_gate = "strength"
+exits.victory_road_2f_southeast.victory_road_2f_northeast = "strength"
+exits.victory_road_2f_northeast.victory_road_2f_southeast = "strength"
+exits.victory_road_2f_north.victory_road_2f_west = "strength"
+locs.victory_road_1f_max_revive = "strength"
+locs.victory_road_3f_zinc = "rock_smash"
+locs.victory_road_3f_tm79 = "rock_smash"
+
+# Dragons Den
+exits.dragons_den_entrance.blackthorn_city = "surf"
+exits.dragons_den.dragons_den_shrine = "surf & whirlpool"
+exits.dragons_den_shrine.dragons_den = "surf & whirlpool"
+locs.dragons_den_dragon_fang = "surf & whirlpool"
+locs.dragons_den_max_elixir = "surf"
+locs.dragons_den_max_elixir_0 = "surf"
+locs.dragons_den_max_potion = "surf"
+
+# Cerulean Cave
+exits.cerulean_cave_1f_southeast.cerulean_city = "surf"
+exits.cerulean_cave_1f_southeast.cerulean_cave_2f_northeast = "surf"
+exits.cerulean_cave_1f_southeast.cerulean_cave_1f_center = "surf"
+exits.cerulean_cave_2f_northeast.cerulean_cave_1f_southeast = "surf"
+exits.cerulean_cave_2f_northeast.cerulean_cave_1f_center = "surf"
+exits.cerulean_cave_1f_center.cerulean_cave_2f_northeast = "surf"
+exits.cerulean_cave_b1f_west.cerulean_cave_b1f_northeast = "surf"
+exits.cerulean_cave_b1f_northeast.cerulean_cave_b1f_west = "surf"
+exits.cerulean_cave_b1f_northeast.cerulean_cave_b1f_east = "surf"
+exits.cerulean_cave_b1f_northeast.cerulean_cave_b1f_southeast = "surf"
+exits.cerulean_cave_b1f_east.cerulean_cave_b1f_northeast = "surf"
+exits.cerulean_cave_b1f_east.cerulean_cave_b1f_southeast = "surf"
+exits.cerulean_cave_b1f_east.cerulean_cave_1f_southeast = "surf"
+exits.cerulean_cave_b1f_east.cerulean_cave_1f_center = "surf"
+exits.cerulean_cave_b1f_southeast.cerulean_cave_b1f_northeast = "surf"
+exits.cerulean_cave_b1f_southeast.cerulean_cave_b1f_east = "surf"
+locs.cerulean_cave_1f_hyper_potion = "rock_smash"
+locs.cerulean_cave_2f_tm24 = "rock_smash"
+locs.cerulean_cave_2f_pp_up = "rock_smash"
+locs.cerulean_cave_2f_odd_incense = "rock_smash"
+locs.cerulean_cave_b1f_ultra_ball = "rock_climb"
+locs.cerulean_cave_b1f_dusk_stone = "rock_climb"
+locs.cerulean_cave_b1f_electirizer = "rock_climb"
+locs.cerulean_cave_b1f_max_revive_0 = "rock_smash"
+locs.cerulean_cave_b1f_ultra_ball_0 = "rock_smash"
+locs.cerulean_cave_b1f_nugget = "rock_smash"
+
+# Seafoam Islands
+exits.seafoam_islands_1f_west.seafoam_islands_b1f_south = "strength"
+exits.seafoam_islands_1f_east.seafoam_islands_b1f_north = "strength"
+exits.seafoam_islands_1f_east.seafoam_islands_b1f_south = "strength"
+exits.seafoam_islands_b1f_north.seafoam_islands_1f_east = "strength"
+exits.seafoam_islands_b1f_north.seafoam_islands_b1f_south = "strength"
+exits.seafoam_islands_b1f_south.seafoam_islands_1f_west = "strength"
+exits.seafoam_islands_b1f_south.seafoam_islands_1f_east = "strength"
+exits.seafoam_islands_b1f_south.seafoam_islands_b1f_north = "strength"
+exits.seafoam_islands_b3f_east.seafoam_islands_b4f_north = "strength"
+exits.seafoam_islands_b3f_east.seafoam_islands_b2f_east = "surf"
+exits.seafoam_islands_b2f_east.seafoam_islands_b3f_east = "surf"
+exits.seafoam_islands_b2f_east.seafoam_islands_b4f_south = "surf"
+exits.seafoam_islands_b2f_east.seafoam_islands_b3f_west = "surf"
+exits.seafoam_islands_b4f_south.seafoam_islands_b2f_east = "surf"
+exits.seafoam_islands_b4f_south.seafoam_islands_b3f_west = "surf"
+exits.seafoam_islands_b3f_west.seafoam_islands_b2f_east = "surf"
+exits.seafoam_islands_b3f_west.seafoam_islands_b4f_south = "surf"
+exits.seafoam_islands_b3f_west.seafoam_islands_1f_west = "strength"
+exits.seafoam_islands_b3f_west.seafoam_islands_b1f_south = "strength"
+
+# Route 47
+exits.route_47.embedded_tower_groudon_room = "surf & rock_climb"
+exits.route_47.embedded_tower_kyogre_room = "surf & rock_climb"
+exits.route_47.embedded_tower_rayquaza_room = "surf & rock_climb"
+exits.embedded_tower_groudon_room.route_47 = "surf & rock_climb"
+exits.embedded_tower_kyogre_room.route_47 = "surf & rock_climb"
+exits.embedded_tower_rayquaza_room.route_47 = "surf & rock_climb"
+locs.route_47_wave_incense = "surf & rock_climb"
+locs.route_47_white_flute = "surf & waterfall"
+locs.route_47_stardust = "surf & rock_climb"
+locs.route_47_revive_0 = "surf"
+
+# Route 48
+
+# Safari Zone Gate
+
+# Team Rocket HQ
+
+# Pokeathlon Dome
+
+# SS Aqua
+
+# Frontier Access

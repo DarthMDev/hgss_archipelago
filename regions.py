@@ -103,6 +103,6 @@ def create_regions(world: "PokemonHGSSWorld") -> Mapping[str, Region]:
         regions[source].connect(regions[dest], name)
 
     regions["Menu"] = Region("Menu", world.player, world.multiworld)
-    regions["Menu"].connect(regions["twinleaf_town_player_house_2f"], "Start Game")
+    regions["Menu"].connect(regions["new_bark_player_house_2f"], "Start Game")
 
     return regions

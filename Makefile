@@ -3,7 +3,7 @@
 
 Q ?= @
 
-ROMS := us_rev0 us_rev1
+ROMS := us_hg us_ss
 SOURCES := __init__.py \
 	 client.py \
 	 items.py \
@@ -14,32 +14,32 @@ SOURCES := __init__.py \
 	 rules.py \
 	 LICENSE
 DOCS := docs/setup_en.md \
-        docs/en_Pokemon\ HeartGold_SoulSilver.md
+	docs/en_Pokemon\ HeartGold_SoulSilver.md
 DATA := data_gen/encounters.toml \
-       data_gen/items.toml \
-       data_gen/locations.toml \
-       data_gen/regions.toml \
-       data_gen/rom_interface.toml \
-       data_gen/rules.toml \
-       data_gen/species.toml \
-       data_gen_templates/__init__.py \
-       data_gen_templates/charmap.py \
-       data_gen_templates/encounters.py \
-       data_gen_templates/items.py \
-       data_gen_templates/locations.py \
-       data_gen_templates/regions.py \
-       data_gen_templates/rules.py \
-       data_gen_templates/species.py \
-       data_gen.py \
-       data_gen_rules.py
+	data_gen/items.toml \
+	data_gen/locations.toml \
+	data_gen/regions.toml \
+	data_gen/rom_interface.toml \
+	data_gen/rules.toml \
+	data_gen/species.toml \
+	data_gen_templates/__init__.py \
+	data_gen_templates/charmap.py \
+	data_gen_templates/encounters.py \
+	data_gen_templates/items.py \
+	data_gen_templates/locations.py \
+	data_gen_templates/regions.py \
+	data_gen_templates/rules.py \
+	data_gen_templates/species.py \
+	data_gen.py \
+	data_gen_rules.py
 DATA_GEN_OUT := data/__init__.py \
-       data/charmap.py \
-       data/encounters.py \
-       data/items.py \
-       data/locations.py \
-       data/regions.py \
-       data/rules.py \
-       data/species.py
+	data/charmap.py \
+	data/encounters.py \
+	data/items.py \
+	data/locations.py \
+	data/regions.py \
+	data/rules.py \
+	data/species.py
 
 PATCHES := $(ROMS:%=patches/base_patch_%.bsdiff4)
 
@@ -54,13 +54,12 @@ data_gen: $(DATA)
 	$Q./data_gen.py
 
 pokemon_hgss.apworld: data_gen $(SOURCES) $(PATCHES)
-       @echo MAKE APWORLD
-       $Qrm -f $@
-       $Qmkdir -p pokemon_hgss/docs pokemon_hgss/data pokemon_hgss/patches
-       $Qcp $(DATA_GEN_OUT) pokemon_hgss/data
-       $Qcp $(DOCS) pokemon_hgss/docs
-       $Qcp $(PATCHES) pokemon_hgss/patches
-       $Qcp $(SOURCES) pokemon_hgss/
-       $Qzip -r $@ pokemon_hgss
-       $Qrm -r pokemon_hgss
-	
+	@echo MAKE APWORLD
+	$Qrm -f $@
+	$Qmkdir -p pokemon_hgss/docs pokemon_hgss/data pokemon_hgss/patches
+	$Qcp $(DATA_GEN_OUT) pokemon_hgss/data
+	$Qcp $(DOCS) pokemon_hgss/docs
+	$Qcp $(PATCHES) pokemon_hgss/patches
+	$Qcp $(SOURCES) pokemon_hgss/
+	$Qzip -r $@ pokemon_hgss
+	$Qrm -r pokemon_hgss
