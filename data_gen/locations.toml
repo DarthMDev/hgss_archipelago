@@ -6,7 +6,7 @@ type = "overworld"
 table = "overworld"
 check = 1073
 label = "Burned Tower 1F - Item Behind Breakable Rock"
-id = 68
+id = 1073
 
 [burned_tower_1f_antidote]
 original_item = "antidote"
@@ -14,7 +14,7 @@ type = "overworld"
 table = "overworld"
 check = 1291
 label = "Burned Tower 1F - Item on Bridge"
-id = 67
+id = 1291
 
 [route_2_elixir]
 original_item = "elixir"
@@ -22,7 +22,7 @@ type = "overworld"
 table = "overworld"
 check = 1233
 label = "Route 2 - Item Behind Cut Trees"
-id = 213
+id = 1233
 
 [route_3_big_root]
 original_item = "big_root"
@@ -30,7 +30,7 @@ type = "overworld"
 table = "overworld"
 check = 1309
 label = "Route 3 - Item at End of Elevated Ledge"
-id = 219
+id = 1309
 
 [route_4_hp_up]
 original_item = "hp_up"
@@ -38,7 +38,7 @@ type = "overworld"
 table = "overworld"
 check = 1240
 label = "Route 4 - Item on Northeast Ledge"
-id = 220
+id = 1240
 
 [route_6_tm62]
 original_item = "tm62"
@@ -46,7 +46,7 @@ type = "overworld"
 table = "overworld"
 check = 1299
 label = "Route 6 - Item South of Pond"
-id = 191
+id = 1299
 
 [route_7_mental_herb]
 original_item = "mental_herb"
@@ -54,7 +54,7 @@ type = "overworld"
 table = "overworld"
 check = 1197
 label = "Route 7 - Item North Past Grass"
-id = 205
+id = 1197
 
 [route_8_tm41]
 original_item = "tm41"
@@ -62,7 +62,7 @@ type = "overworld"
 table = "overworld"
 check = 1287
 label = "Route 8 - Item Near Bikers"
-id = 192
+id = 1287
 
 [route_9_tm91]
 original_item = "tm91"
@@ -70,7 +70,7 @@ type = "overworld"
 table = "overworld"
 check = 1301
 label = "Route 9 - Item on Northeast Ledge Past Cut Tree"
-id = 200
+id = 1301
 
 [route_9_full_restore]
 original_item = "full_restore"
@@ -78,7 +78,7 @@ type = "overworld"
 table = "overworld"
 check = 1302
 label = "Route 9 - Item in Southeast Corner"
-id = 201
+id = 1302
 
 [route_9_light_clay]
 original_item = "light_clay"
@@ -86,7 +86,7 @@ type = "overworld"
 table = "overworld"
 check = 1303
 label = "Route 9 - Item on Center Ledge Past Cut Tree"
-id = 202
+id = 1303
 
 [route_9_max_potion]
 original_item = "max_potion"
@@ -94,7 +94,7 @@ type = "overworld"
 table = "overworld"
 check = 1304
 label = "Route 9 - Item in Southwest Corner"
-id = 203
+id = 1304
 
 [route_11_tm86]
 original_item = "tm86"
@@ -102,7 +102,7 @@ type = "overworld"
 table = "overworld"
 check = 1307
 label = "Route 11 - Item in Northeast Corner"
-id = 211
+id = 1307
 
 [route_12_calcium]
 original_item = "calcium"
@@ -110,7 +110,7 @@ type = "overworld"
 table = "overworld"
 check = 1228
 label = "Route 12 - Item Behind North Cut Tree"
-id = 207
+id = 1228
 
 [route_12_yellow_flute]
 original_item = "yellow_flute"
@@ -118,7 +118,7 @@ type = "overworld"
 table = "overworld"
 check = 1229
 label = "Route 12 - Item Behind South Cut Tree"
-id = 208
+id = 1229
 
 [route_15_pp_up]
 original_item = "pp_up"
@@ -126,7 +126,7 @@ type = "overworld"
 table = "overworld"
 check = 1230
 label = "Route 15 - Item on Northwest Ledge"
-id = 209
+id = 1230
 
 [route_15_rose_incense]
 original_item = "rose_incense"
@@ -134,7 +134,7 @@ type = "overworld"
 table = "overworld"
 check = 1306
 label = "Route 15 - Item on Center Ledge"
-id = 210
+id = 1306
 
 [route_25_protein]
 original_item = "protein"
@@ -142,7 +142,7 @@ type = "overworld"
 table = "overworld"
 check = 1227
 label = "Route 25 - Item Behind Cut Tree"
-id = 204
+id = 1227
 
 [route_26_max_elixir]
 original_item = "max_elixir"
@@ -150,7 +150,7 @@ type = "overworld"
 table = "overworld"
 check = 1115
 label = "Route 26 - Item on Northwest Ledges"
-id = 177
+id = 1115
 
 [route_27_rare_candy]
 original_item = "rare_candy"
@@ -158,7 +158,7 @@ type = "overworld"
 table = "overworld"
 check = 1117
 label = "Route 27 - Item West of Bird Keeper Jose"
-id = 174
+id = 1117
 
 [route_27_tm02]
 original_item = "tm02"
@@ -166,7 +166,7 @@ type = "overworld"
 table = "overworld"
 check = 1118
 label = "Route 27 - Item East of Bird Keeper Jose"
-id = 175
+id = 1118
 
 [route_27_destiny_knot]
 original_item = "destiny_knot"
@@ -174,7 +174,7 @@ type = "overworld"
 table = "overworld"
 check = 1293
 label = "Route 27 - Item on Cliffs"
-id = 176
+id = 1293
 
 [route_28_tm35]
 original_item = "tm35"
@@ -182,7 +182,7 @@ type = "overworld"
 table = "overworld"
 check = 1280
 label = "Route 28 - Item East of House"
-id = 230
+id = 1280
 
 [route_29_potion]
 original_item = "potion"
@@ -190,7 +190,7 @@ type = "overworld"
 table = "overworld"
 check = 1081
 label = "Route 29 - Item in Northeast Corner Past Grass"
-id = 0
+id = 1081
 
 [route_30_antidote]
 original_item = "antidote"
@@ -198,7 +198,7 @@ type = "overworld"
 table = "overworld"
 check = 1056
 label = "Route 30 - Item North of Apricorn House"
-id = 1
+id = 1056
 
 [route_30_potion]
 original_item = "potion"
@@ -206,7 +206,7 @@ type = "overworld"
 table = "overworld"
 check = 1088
 label = "Route 30 - Item Between Ponds"
-id = 2
+id = 1088
 
 [route_31_potion]
 original_item = "potion"
@@ -214,7 +214,7 @@ type = "overworld"
 table = "overworld"
 check = 1057
 label = "Route 31 - Item Near Dark Cave"
-id = 3
+id = 1057
 
 [route_31_poke_ball]
 original_item = "poke_ball"
@@ -222,7 +222,7 @@ type = "overworld"
 table = "overworld"
 check = 1058
 label = "Route 31 - Item Near Bug Catcher Wade"
-id = 4
+id = 1058
 
 [route_32_repel]
 original_item = "repel"
@@ -230,7 +230,7 @@ type = "overworld"
 table = "overworld"
 check = 1065
 label = "Route 32 - Item in Grass Near Picnicker Liz"
-id = 29
+id = 1065
 
 [route_32_great_ball]
 original_item = "great_ball"
@@ -238,7 +238,7 @@ type = "overworld"
 table = "overworld"
 check = 1066
 label = "Route 32 - Item in Grass Overlooking Water"
-id = 30
+id = 1066
 
 [route_32_tm09]
 original_item = "tm09"
@@ -246,7 +246,7 @@ type = "overworld"
 table = "overworld"
 check = 1273
 label = "Route 32 - Item on Cliff Past Grass"
-id = 31
+id = 1273
 
 [route_32_shell_bell]
 original_item = "shell_bell"
@@ -254,7 +254,7 @@ type = "overworld"
 table = "overworld"
 check = 1239
 label = "Route 32 - Item Past Breakable Rock"
-id = 32
+id = 1239
 
 [route_34_nugget]
 original_item = "nugget"
@@ -262,7 +262,7 @@ type = "overworld"
 table = "overworld"
 check = 1087
 label = "Route 34 - Item Behind Fence"
-id = 47
+id = 1087
 
 [route_34_tm63]
 original_item = "tm63"
@@ -270,7 +270,7 @@ type = "overworld"
 table = "overworld"
 check = 1274
 label = "Route 34 - Item in Grass Near Goldenrod"
-id = 48
+id = 1274
 
 [route_35_tm66]
 original_item = "tm66"
@@ -278,7 +278,7 @@ type = "overworld"
 table = "overworld"
 check = 1097
 label = "Route 35 - Item South of Grass"
-id = 61
+id = 1097
 
 [route_35_parlyz_heal]
 original_item = "parlyz_heal"
@@ -286,7 +286,7 @@ type = "overworld"
 table = "overworld"
 check = 1275
 label = "Route 35 - Item in Trees Behind Fence"
-id = 62
+id = 1275
 
 [route_36_hyper_potion]
 original_item = "hyper_potion"
@@ -294,7 +294,7 @@ type = "overworld"
 table = "overworld"
 check = 1276
 label = "Route 36 - Item Northwest of Sudowoodo"
-id = 66
+id = 1276
 
 [route_38_max_potion]
 original_item = "max_potion"
@@ -302,7 +302,7 @@ type = "overworld"
 table = "overworld"
 check = 1277
 label = "Route 38 - Item South Path"
-id = 82
+id = 1277
 
 [route_38_lax_incense]
 original_item = "lax_incense"
@@ -310,7 +310,7 @@ type = "overworld"
 table = "overworld"
 check = 1278
 label = "Route 38 - Item Behind Fence"
-id = 83
+id = 1278
 
 [route_39_tm60]
 original_item = "tm60"
@@ -318,7 +318,7 @@ type = "overworld"
 table = "overworld"
 check = 1279
 label = "Route 39 - Item Behind Silo"
-id = 84
+id = 1279
 
 [route_42_super_potion]
 original_item = "super_potion"
@@ -326,7 +326,7 @@ type = "overworld"
 table = "overworld"
 check = 1172
 label = "Route 42 - Item East of Center Entrace to Mount Mortar"
-id = 108
+id = 1172
 
 [route_42_dubious_disc]
 original_item = "dubious_disc"
@@ -334,7 +334,7 @@ type = "overworld"
 table = "overworld"
 check = 1193
 label = "Route 42 - Item East of Upper Entrance to Mount Mortar"
-id = 109
+id = 1193
 
 [route_42_tm65]
 original_item = "tm65"
@@ -342,7 +342,7 @@ type = "overworld"
 table = "overworld"
 check = 1285
 label = "Route 42 - Item West of West Entrace to Mount Mortar"
-id = 110
+id = 1285
 
 [route_43_max_ether]
 original_item = "max_ether"
@@ -350,7 +350,7 @@ type = "overworld"
 table = "overworld"
 check = 1198
 label = "Route 43 - Item West of Gatehouse"
-id = 142
+id = 1198
 
 [route_44_max_repel]
 original_item = "max_repel"
@@ -358,7 +358,7 @@ type = "overworld"
 table = "overworld"
 check = 1201
 label = "Route 44 - Item Near Mahogany Town"
-id = 146
+id = 1201
 
 [route_44_max_revive]
 original_item = "max_revive"
@@ -366,7 +366,7 @@ type = "overworld"
 table = "overworld"
 check = 1202
 label = "Route 44 - Item in Grass"
-id = 147
+id = 1202
 
 [route_44_ultra_ball]
 original_item = "ultra_ball"
@@ -374,7 +374,7 @@ type = "overworld"
 table = "overworld"
 check = 1203
 label = "Route 44 - Item in Northeast Corner"
-id = 148
+id = 1203
 
 [route_45_elixir]
 original_item = "elixir"
@@ -382,7 +382,7 @@ type = "overworld"
 table = "overworld"
 check = 1212
 label = "Route 45 - Item West Side South of North Grass"
-id = 160
+id = 1212
 
 [route_45_max_potion]
 original_item = "max_potion"
@@ -390,7 +390,7 @@ type = "overworld"
 table = "overworld"
 check = 1213
 label = "Route 45 - Item East Side Between Ledges"
-id = 161
+id = 1213
 
 [route_45_full_heal]
 original_item = "full_heal"
@@ -398,7 +398,7 @@ type = "overworld"
 table = "overworld"
 check = 1214
 label = "Route 45 - Item West Side in Second Grass Patch from the North"
-id = 162
+id = 1214
 
 [route_45_nugget]
 original_item = "nugget"
@@ -406,7 +406,7 @@ type = "overworld"
 table = "overworld"
 check = 1215
 label = "Route 45 - Item West Side Between Ledges"
-id = 163
+id = 1215
 
 [route_45_revive]
 original_item = "revive"
@@ -414,7 +414,7 @@ type = "overworld"
 table = "overworld"
 check = 1216
 label = "Route 45 - Item West Side in South Grass"
-id = 164
+id = 1216
 
 [route_46_x_speed]
 original_item = "x_speed"
@@ -422,7 +422,7 @@ type = "overworld"
 table = "overworld"
 check = 1217
 label = "Route 46 - Item in Flowers West of Camper Ted"
-id = 165
+id = 1217
 
 [pewter_wise_glasses]
 original_item = "wise_glasses"
@@ -430,7 +430,7 @@ type = "overworld"
 table = "overworld"
 check = 1308
 label = "Pewter City - Item Past Breakable Rock West of Museum"
-id = 218
+id = 1308
 
 [vermilion_luck_incense]
 original_item = "luck_incense"
@@ -438,7 +438,7 @@ type = "overworld"
 table = "overworld"
 check = 1294
 label = "Vermilion City - Item on North Sandbar"
-id = 187
+id = 1294
 
 [vermilion_sticky_barb]
 original_item = "sticky_barb"
@@ -446,7 +446,7 @@ type = "overworld"
 table = "overworld"
 check = 1295
 label = "Vermilion City - Item East of Walkway"
-id = 188
+id = 1295
 
 [celadon_tm67]
 original_item = "tm67"
@@ -454,7 +454,7 @@ type = "overworld"
 table = "overworld"
 check = 1305
 label = "Celadon City - Item End of Northwest Tree Path"
-id = 206
+id = 1305
 
 [cinnabar_island_magmarizer]
 original_item = "magmarizer"
@@ -462,7 +462,7 @@ type = "overworld"
 table = "overworld"
 check = 1236
 label = "Cinnabar Island - Item on Ledge Between Rocks"
-id = 221
+id = 1236
 
 [violet_rare_candy]
 original_item = "rare_candy"
@@ -470,7 +470,7 @@ type = "overworld"
 table = "overworld"
 check = 1059
 label = "Violet City - Item on Land Southeast of Sprout Tower"
-id = 5
+id = 1059
 
 [violet_pp_up]
 original_item = "pp_up"
@@ -478,7 +478,7 @@ type = "overworld"
 table = "overworld"
 check = 1060
 label = "Violet City - Item on Land West of Sprout Tower"
-id = 6
+id = 1060
 
 [olivine_tm57]
 original_item = "tm57"
@@ -486,7 +486,7 @@ type = "overworld"
 table = "overworld"
 check = 1310
 label = "Olivine City - Item on Beach Northeast of Lighthouse"
-id = 85
+id = 1310
 
 [lake_of_rage_max_revive]
 original_item = "max_revive"
@@ -518,7 +518,7 @@ type = "overworld"
 table = "overworld"
 check = 1288
 label = "Lake Of Rage Flooded - Item on Northwest Shore"
-id = 143
+id = 1288
 
 [lake_of_rage_red_flute]
 original_item = "red_flute"
@@ -526,7 +526,7 @@ type = "overworld"
 table = "overworld"
 check = 1290
 label = "Lake Of Rage Flooded - Item on Southwest Shore"
-id = 145
+id = 1290
 
 [lake_of_rage_choice_specs]
 original_item = "choice_specs"
@@ -534,7 +534,7 @@ type = "overworld"
 table = "overworld"
 check = 1289
 label = "Lake Of Rage Flooded - Item on Northeast Shore"
-id = 144
+id = 1289
 
 [mount_silver_reaper_cloth]
 original_item = "reaper_cloth"
@@ -542,7 +542,7 @@ type = "overworld"
 table = "overworld"
 check = 1231
 label = "Mount Silver - Item on Southwest Ledge"
-id = 231
+id = 1231
 
 [route_19_tm55]
 original_item = "tm55"
@@ -550,7 +550,7 @@ type = "overworld"
 table = "overworld"
 check = 1199
 label = "Route 19 - Item on Island"
-id = 229
+id = 1199
 
 [route_40_tm88]
 original_item = "tm88"
@@ -558,7 +558,7 @@ type = "overworld"
 table = "overworld"
 check = 1266
 label = "Route 40 - Item on Island"
-id = 91
+id = 1266
 
 [national_park_tm28]
 original_item = "tm28"
@@ -566,7 +566,7 @@ type = "overworld"
 table = "overworld"
 check = 1145
 label = "National Park - Item Southwest Behind Fence"
-id = 64
+id = 1145
 
 [national_park_soothe_bell]
 original_item = "soothe_bell"
@@ -574,7 +574,7 @@ type = "overworld"
 table = "overworld"
 check = 1144
 label = "National Park - Item Near East Building Behind Fence"
-id = 63
+id = 1144
 
 [national_park_shiny_stone]
 original_item = "shiny_stone"
@@ -582,7 +582,7 @@ type = "overworld"
 table = "overworld"
 check = 1286
 label = "National Park - Item on Cliff Behind Fence"
-id = 65
+id = 1286
 
 [union_cave_1f_x_attack]
 original_item = "x_attack"
@@ -590,7 +590,7 @@ type = "overworld"
 table = "overworld"
 check = 1067
 label = "Union Cave 1F - Item in Northwest Corner"
-id = 33
+id = 1067
 
 [union_cave_1f_great_ball]
 original_item = "great_ball"
@@ -598,7 +598,7 @@ type = "overworld"
 table = "overworld"
 check = 1068
 label = "Union Cave 1F - Item Southeast of Firebreather Bill"
-id = 34
+id = 1068
 
 [union_cave_1f_potion]
 original_item = "potion"
@@ -606,7 +606,7 @@ type = "overworld"
 table = "overworld"
 check = 1069
 label = "Union Cave 1F - Item West of Firebreather Bill"
-id = 35
+id = 1069
 
 [union_cave_1f_awakening]
 original_item = "awakening"
@@ -614,7 +614,7 @@ type = "overworld"
 table = "overworld"
 check = 1070
 label = "Union Cave 1F - Item Near South Entrance"
-id = 36
+id = 1070
 
 [diglett_cave_pp_max]
 original_item = "pp_max"
@@ -622,7 +622,7 @@ type = "overworld"
 table = "overworld"
 check = 1297
 label = "Diglett Cave - Item on Small Cliff South of Horizontal Bridges"
-id = 189
+id = 1297
 
 [diglett_cave_rock_incense]
 original_item = "rock_incense"
@@ -630,7 +630,7 @@ type = "overworld"
 table = "overworld"
 check = 1298
 label = "Diglett Cave - Item South of Vertical Bridge"
-id = 190
+id = 1298
 
 [rock_tunnel_1f_elixir]
 original_item = "elixir"
@@ -638,7 +638,7 @@ type = "overworld"
 table = "overworld"
 check = 1222
 label = "Rock Tunnel 1F - Item North of Southwest Ladder"
-id = 194
+id = 1222
 
 [rock_tunnel_1f_tm56]
 original_item = "tm56"
@@ -646,7 +646,7 @@ type = "overworld"
 table = "overworld"
 check = 1223
 label = "Rock Tunnel 1F - Item North of South Entrance"
-id = 195
+id = 1223
 
 [sprout_tower_1f_parlyz_heal]
 original_item = "parlyz_heal"
@@ -654,7 +654,7 @@ type = "overworld"
 table = "overworld"
 check = 1061
 label = "Sprout Tower 1F - Item South of Northeast Ladder"
-id = 7
+id = 1061
 
 [ruins_of_alph_potion]
 original_item = "potion"
@@ -662,7 +662,7 @@ type = "overworld"
 table = "overworld"
 check = 1146
 label = "Ruins Of Alph - Item in Building Northwest of Researcher House"
-id = 11
+id = 1146
 
 [ruins_of_alph_hyper_potion]
 original_item = "hyper_potion"
@@ -670,7 +670,7 @@ type = "overworld"
 table = "overworld"
 check = 1147
 label = "Ruins Of Alph - Item Between Breakable Rocks and North Pond"
-id = 12
+id = 1147
 
 [ilex_forest_revive]
 original_item = "revive"
@@ -678,7 +678,7 @@ type = "overworld"
 table = "overworld"
 check = 1077
 label = "Ilex Forest - Item Southeast Corner"
-id = 43
+id = 1077
 
 [ilex_forest_x_attack]
 original_item = "x_attack"
@@ -686,7 +686,7 @@ type = "overworld"
 table = "overworld"
 check = 1084
 label = "Ilex Forest - Item Northeast of Shrine"
-id = 44
+id = 1084
 
 [ilex_forest_antidote]
 original_item = "antidote"
@@ -694,7 +694,7 @@ type = "overworld"
 table = "overworld"
 check = 1085
 label = "Ilex Forest - Item Near Pond"
-id = 45
+id = 1085
 
 [ilex_forest_ether]
 original_item = "ether"
@@ -702,7 +702,7 @@ type = "overworld"
 table = "overworld"
 check = 1086
 label = "Ilex Forest - Item in Northeast Corner"
-id = 46
+id = 1086
 
 [mount_mortar_1f_entrance_ether]
 original_item = "ether"
@@ -710,7 +710,7 @@ type = "overworld"
 table = "overworld"
 check = 1173
 label = "Mount Mortar 1F Entrance - Southeast of Northwest Ladder"
-id = 111
+id = 1173
 
 [mount_mortar_1f_entrance_revive]
 original_item = "revive"
@@ -718,7 +718,7 @@ type = "overworld"
 table = "overworld"
 check = 1174
 label = "Mount Mortar 1F Entrance - South of Northeast Ladder"
-id = 112
+id = 1174
 
 [ice_path_1f_hm07]
 original_item = "hm07"
@@ -726,7 +726,7 @@ type = "hm"
 table = "overworld"
 check = 1111
 label = "Ice Path 1F - Item Past Northeast Ice Patch"
-id = 149
+id = 1111
 
 [ice_path_1f_protein]
 original_item = "protein"
@@ -734,7 +734,7 @@ type = "overworld"
 table = "overworld"
 check = 1204
 label = "Ice Path 1F - Item North of East Ladder"
-id = 150
+id = 1204
 
 [ice_path_1f_pp_up]
 original_item = "pp_up"
@@ -742,7 +742,7 @@ type = "overworld"
 table = "overworld"
 check = 1205
 label = "Ice Path 1F - Item Near South Entrance"
-id = 151
+id = 1205
 
 [whirl_islands_1f_ultra_ball]
 original_item = "ultra_ball"
@@ -750,7 +750,7 @@ type = "overworld"
 table = "overworld"
 check = 1162
 label = "Whirl Islands 1F Southwest - Item Near East Ladder"
-id = 93
+id = 1162
 
 [whirl_islands_1f_ultra_ball_0]
 original_item = "ultra_ball"
@@ -758,7 +758,7 @@ type = "overworld"
 table = "overworld"
 check = 1161
 label = "Whirl Islands 1F Northeast - Item Near South Ladder"
-id = 92
+id = 1161
 
 [mount_silver_cave_1f_full_restore]
 original_item = "full_restore"
@@ -766,7 +766,7 @@ type = "overworld"
 table = "overworld"
 check = 1241
 label = "Mount Silver Cave 1F - Item North of Northeast Entrance"
-id = 232
+id = 1241
 
 [dark_cave_route_45_side_tm54]
 original_item = "tm54"
@@ -774,7 +774,7 @@ type = "overworld"
 table = "overworld"
 check = 1113
 label = "Dark Cave North - Item on Ledge Near South Entrance"
-id = 166
+id = 1113
 
 [dark_cave_route_45_side_revive]
 original_item = "revive"
@@ -782,7 +782,7 @@ type = "overworld"
 table = "overworld"
 check = 1114
 label = "Dark Cave North - Item in Southeast Corner"
-id = 167
+id = 1114
 
 [victory_road_1f_max_revive]
 original_item = "max_revive"
@@ -790,7 +790,7 @@ type = "overworld"
 table = "overworld"
 check = 1119
 label = "Victory Road 1F - Northeast Corner Past Strength Boulders"
-id = 178
+id = 1119
 
 [victory_road_1f_full_heal]
 original_item = "full_heal"
@@ -798,7 +798,7 @@ type = "overworld"
 table = "overworld"
 check = 1120
 label = "Victory Road 1F - Item Below Bridge"
-id = 179
+id = 1120
 
 [victory_road_1f_potion]
 original_item = "potion"
@@ -806,7 +806,7 @@ type = "overworld"
 table = "overworld"
 check = 1121
 label = "Victory Road 1F - Item Southeast of Bridge"
-id = 180
+id = 1121
 
 [tohjo_falls_moon_stone]
 original_item = "moon_stone"
@@ -814,7 +814,7 @@ type = "overworld"
 table = "overworld"
 check = 1116
 label = "Tohjo Falls - Item Below West Waterfall"
-id = 173
+id = 1116
 
 [cerulean_cave_1f_max_elixir]
 original_item = "max_elixir"
@@ -822,7 +822,7 @@ type = "overworld"
 table = "overworld"
 check = 1257
 label = "Cerulean Cave 1F - Item East of Bridges"
-id = 242
+id = 1257
 
 [cerulean_cave_1f_nugget]
 original_item = "nugget"
@@ -830,7 +830,7 @@ type = "overworld"
 table = "overworld"
 check = 1260
 label = "Cerulean Cave 1F - Item West Near Ladders"
-id = 244
+id = 1260
 
 [cerulean_cave_1f_full_restore]
 original_item = "full_restore"
@@ -838,7 +838,7 @@ type = "overworld"
 table = "overworld"
 check = 1259
 label = "Cerulean Cave 1F - Item South Near Crystals"
-id = 243
+id = 1259
 
 [cerulean_cave_1f_sea_incense]
 original_item = "sea_incense"
@@ -846,7 +846,7 @@ type = "overworld"
 table = "overworld"
 check = 1261
 label = "Cerulean Cave 1F - Item North of Bridges"
-id = 245
+id = 1261
 
 [viridian_forest_dire_hit]
 original_item = "dire_hit"
@@ -854,7 +854,7 @@ type = "overworld"
 table = "overworld"
 check = 1234
 label = "Viridian Forest - Item East of North Entrance"
-id = 214
+id = 1234
 
 [viridian_forest_blue_flute]
 original_item = "blue_flute"
@@ -862,7 +862,7 @@ type = "overworld"
 table = "overworld"
 check = 1235
 label = "Viridian Forest - Item Northeast on Path"
-id = 215
+id = 1235
 
 [viridian_forest_leaf_stone]
 original_item = "leaf_stone"
@@ -870,7 +870,7 @@ type = "overworld"
 table = "overworld"
 check = 1237
 label = "Viridian Forest - Item on Southwest Looping Path"
-id = 216
+id = 1237
 
 [viridian_forest_tm77]
 original_item = "tm77"
@@ -878,7 +878,7 @@ type = "overworld"
 table = "overworld"
 check = 1238
 label = "Viridian Forest - Item Southeast Corner"
-id = 217
+id = 1238
 
 [route_47_revive]
 original_item = "revive"
@@ -886,7 +886,7 @@ type = "overworld"
 table = "overworld"
 check = 1267
 label = "Route 47 - Item South of Camper Grant"
-id = 103
+id = 1267
 
 [route_47_lagging_tail]
 original_item = "lagging_tail"
@@ -894,7 +894,7 @@ type = "overworld"
 table = "overworld"
 check = 1281
 label = "Route 47 - Item South of Young Couple Duff & Eda"
-id = 104
+id = 1281
 
 [route_47_wave_incense]
 original_item = "wave_incense"
@@ -902,7 +902,7 @@ type = "overworld"
 table = "overworld"
 check = 1282
 label = "Route 47 - Item on Beach Southwest of Embedded Tower"
-id = 105
+id = 1282
 
 [route_47_white_flute]
 original_item = "white_flute"
@@ -910,7 +910,7 @@ type = "overworld"
 table = "overworld"
 check = 1283
 label = "Route 47 - Item West of Young Couple Duff & Eda"
-id = 106
+id = 1283
 
 [route_48_nugget]
 original_item = "nugget"
@@ -918,7 +918,7 @@ type = "overworld"
 table = "overworld"
 check = 1284
 label = "Route 48 - Item West Past Grass"
-id = 107
+id = 1284
 
 [union_cave_b1f_tm39]
 original_item = "tm39"
@@ -926,7 +926,7 @@ type = "overworld"
 table = "overworld"
 check = 1072
 label = "Union Cave B1F - Item West of Southeast Stairs"
-id = 38
+id = 1072
 
 [union_cave_b1f_x_defense]
 original_item = "x_defense"
@@ -934,7 +934,7 @@ type = "overworld"
 table = "overworld"
 check = 1071
 label = "Union Cave B1F - Item North of Southeast Stairs"
-id = 37
+id = 1071
 
 [union_cave_b2f_elixir]
 original_item = "elixir"
@@ -942,7 +942,7 @@ type = "overworld"
 table = "overworld"
 check = 1082
 label = "Union Cave B2F - Item Northeast Corner"
-id = 39
+id = 1082
 
 [union_cave_b2f_hyper_potion]
 original_item = "hyper_potion"
@@ -950,7 +950,7 @@ type = "overworld"
 table = "overworld"
 check = 1083
 label = "Union Cave B2F - Item Northwest of Ace Trainer Nick"
-id = 40
+id = 1083
 
 [sprout_tower_2f_x_accuracy]
 original_item = "x_accuracy"
@@ -958,7 +958,7 @@ type = "overworld"
 table = "overworld"
 check = 1062
 label = "Sprout Tower 2F - Item North of West Ladder"
-id = 8
+id = 1062
 
 [sprout_tower_3f_potion]
 original_item = "potion"
@@ -966,7 +966,7 @@ type = "overworld"
 table = "overworld"
 check = 1063
 label = "Sprout Tower 3F - Item West of Ladder"
-id = 9
+id = 1063
 
 [sprout_tower_3f_escape_rope]
 original_item = "escape_rope"
@@ -974,7 +974,7 @@ type = "overworld"
 table = "overworld"
 check = 1064
 label = "Sprout Tower 3F - Item East of Elder Li"
-id = 10
+id = 1064
 
 [dark_cave_route_31_side_potion]
 original_item = "potion"
@@ -982,7 +982,7 @@ type = "overworld"
 table = "overworld"
 check = 1218
 label = "Dark Cave South - Item Between Slopes"
-id = 168
+id = 1218
 
 [dark_cave_route_31_side_hyper_potion]
 original_item = "hyper_potion"
@@ -990,7 +990,7 @@ type = "overworld"
 table = "overworld"
 check = 1219
 label = "Dark Cave South - Item Northeast Loop"
-id = 169
+id = 1219
 
 [dark_cave_route_31_side_full_heal]
 original_item = "full_heal"
@@ -998,7 +998,7 @@ type = "overworld"
 table = "overworld"
 check = 1220
 label = "Dark Cave South - Item North of Route 46 Entrance"
-id = 170
+id = 1220
 
 [dark_cave_route_31_side_dire_hit]
 original_item = "dire_hit"
@@ -1006,7 +1006,7 @@ type = "overworld"
 table = "overworld"
 check = 1221
 label = "Dark Cave South - Item on Ledge Northwest of Route 46 Entrance"
-id = 171
+id = 1221
 
 [dark_cave_route_31_side_black_flute]
 original_item = "black_flute"
@@ -1014,7 +1014,7 @@ type = "overworld"
 table = "overworld"
 check = 1292
 label = "Dark Cave South - Item East of Route 31 Entrance"
-id = 172
+id = 1292
 
 [slowpoke_well_b1f_super_potion]
 original_item = "super_potion"
@@ -1022,7 +1022,7 @@ type = "overworld"
 table = "overworld"
 check = 1075
 label = "Slowpoke Well B1F - Item Northeast Corner"
-id = 41
+id = 1075
 
 [victory_road_2f_tm26]
 original_item = "tm26"
@@ -1030,7 +1030,7 @@ type = "overworld"
 table = "overworld"
 check = 1122
 label = "Victory Road 2F - Item Near Northwest Ladder"
-id = 181
+id = 1122
 
 [victory_road_2f_hp_up]
 original_item = "hp_up"
@@ -1038,7 +1038,7 @@ type = "overworld"
 table = "overworld"
 check = 1123
 label = "Victory Road 2F - Item on Ledge Near South Ladder"
-id = 182
+id = 1123
 
 [victory_road_2f_full_restore]
 original_item = "full_restore"
@@ -1046,7 +1046,7 @@ type = "overworld"
 table = "overworld"
 check = 1124
 label = "Victory Road 2F - Item Near Northeast Ladder"
-id = 183
+id = 1124
 
 [victory_road_3f_ultra_ball]
 original_item = "ultra_ball"
@@ -1054,7 +1054,7 @@ type = "overworld"
 table = "overworld"
 check = 1125
 label = "Victory Road 3F - Item Southeast of North Entrance"
-id = 184
+id = 1125
 
 [victory_road_3f_tm79]
 original_item = "tm79"
@@ -1062,7 +1062,7 @@ type = "overworld"
 table = "overworld"
 check = 1126
 label = "Victory Road 3F - Item Behind Breakable Rocks"
-id = 185
+id = 1126
 
 [victory_road_3f_rare_candy]
 original_item = "rare_candy"
@@ -1070,7 +1070,7 @@ type = "overworld"
 table = "overworld"
 check = 1127
 label = "Victory Road 3F - Item West of North Entrance"
-id = 186
+id = 1127
 
 [slowpoke_well_b2f_tm18]
 original_item = "tm18"
@@ -1078,7 +1078,7 @@ type = "overworld"
 table = "overworld"
 check = 1076
 label = "Slowpoke Well B2F - Item Northeast of Ladder"
-id = 42
+id = 1076
 
 [goldenrod_radio_tower_4f_ultra_ball]
 original_item = "ultra_ball"
@@ -1086,7 +1086,7 @@ type = "overworld"
 table = "overworld"
 check = 1089
 label = "Goldenrod Radio Tower 4F - Item Near East Stairs"
-id = 60
+id = 1089
 
 [goldenrod_department_store_basement_amulet_coin]
 original_item = "amulet_coin"
@@ -1094,7 +1094,7 @@ type = "overworld"
 table = "overworld"
 check = 1091
 label = "Goldenrod Department Store Basement - Item Near Northeast Stairs"
-id = 53
+id = 1091
 
 [goldenrod_department_store_basement_burn_heal]
 original_item = "burn_heal"
@@ -1102,7 +1102,7 @@ type = "overworld"
 table = "overworld"
 check = 1090
 label = "Goldenrod Department Store Basement - Item Behind North Crate"
-id = 52
+id = 1090
 
 [goldenrod_department_store_basement_ether]
 original_item = "ether"
@@ -1110,7 +1110,7 @@ type = "overworld"
 table = "overworld"
 check = 1092
 label = "Goldenrod Department Store Basement - Item South"
-id = 54
+id = 1092
 
 [goldenrod_department_store_basement_ultra_ball]
 original_item = "ultra_ball"
@@ -1118,7 +1118,7 @@ type = "overworld"
 table = "overworld"
 check = 1093
 label = "Goldenrod Department Store Basement - Item Next to Southeast Crate"
-id = 55
+id = 1093
 
 [goldenrod_tunnel_b2f_full_heal]
 original_item = "full_heal"
@@ -1126,7 +1126,7 @@ type = "overworld"
 table = "overworld"
 check = 1095
 label = "Goldenrod Tunnel B2F - Item North"
-id = 56
+id = 1095
 
 [goldenrod_tunnel_b2f_smoke_ball]
 original_item = "smoke_ball"
@@ -1134,7 +1134,7 @@ type = "overworld"
 table = "overworld"
 check = 1096
 label = "Goldenrod Tunnel B2F - Item Southwest"
-id = 57
+id = 1096
 
 [goldenrod_tunnel_warehouse_tm82]
 original_item = "tm82"
@@ -1142,7 +1142,7 @@ type = "overworld"
 table = "overworld"
 check = 1078
 label = "Goldenrod Tunnel Warehouse - Item Center Room"
-id = 49
+id = 1078
 
 [goldenrod_tunnel_warehouse_max_ether]
 original_item = "max_ether"
@@ -1150,7 +1150,7 @@ type = "overworld"
 table = "overworld"
 check = 1079
 label = "Goldenrod Tunnel Warehouse - Item Southeast Corner"
-id = 50
+id = 1079
 
 [goldenrod_tunnel_warehouse_ultra_ball]
 original_item = "ultra_ball"
@@ -1158,7 +1158,7 @@ type = "overworld"
 table = "overworld"
 check = 1094
 label = "Goldenrod Tunnel Warehouse - Item Northwest"
-id = 51
+id = 1094
 
 [burned_tower_b1f_tm12]
 original_item = "tm12"
@@ -1166,7 +1166,7 @@ type = "overworld"
 table = "overworld"
 check = 1074
 label = "Burned Tower B1F - Item Behind Northwest Pillar"
-id = 69
+id = 1074
 
 [olivine_lighthouse_exterior_rare_candy]
 original_item = "rare_candy"
@@ -1174,7 +1174,7 @@ type = "overworld"
 table = "overworld"
 check = 1160
 label = "Lighthouse Exterior - Item in Northwest Corner"
-id = 86
+id = 1160
 
 [olivine_lighthouse_3f_ether]
 original_item = "ether"
@@ -1182,7 +1182,7 @@ type = "overworld"
 table = "overworld"
 check = 1098
 label = "Lighthouse 3F - Item in Southeast Quadrant"
-id = 87
+id = 1098
 
 [olivine_lighthouse_4f_tm87]
 original_item = "tm87"
@@ -1190,7 +1190,7 @@ type = "overworld"
 table = "overworld"
 check = 1099
 label = "Lighthouse 4F - Item in Southwest Quadrant"
-id = 88
+id = 1099
 
 [olivine_lighthouse_5f_super_repel]
 original_item = "super_repel"
@@ -1198,7 +1198,7 @@ type = "overworld"
 table = "overworld"
 check = 1100
 label = "Lighthouse 5F - Item in Northeast Quadrant"
-id = 89
+id = 1100
 
 [olivine_lighthouse_light_room_super_potion]
 original_item = "super_potion"
@@ -1206,7 +1206,7 @@ type = "overworld"
 table = "overworld"
 check = 1101
 label = "Lighthouse Light Room - Item on East Side"
-id = 90
+id = 1101
 
 [ice_path_b1f_iron]
 original_item = "iron"
@@ -1214,7 +1214,7 @@ type = "overworld"
 table = "overworld"
 check = 1209
 label = "Ice Path B1F South - Item South of Ice Patch"
-id = 156
+id = 1209
 
 [ice_path_b2f_tm72]
 original_item = "tm72"
@@ -1222,7 +1222,7 @@ type = "overworld"
 table = "overworld"
 check = 1110
 label = "Ice Path B2F East - Item Southeast Corner"
-id = 155
+id = 1110
 
 [ice_path_b2f_full_heal]
 original_item = "full_heal"
@@ -1230,7 +1230,7 @@ type = "overworld"
 table = "overworld"
 check = 1206
 label = "Ice Path B2F West - Item Center of Room"
-id = 152
+id = 1206
 
 [ice_path_b2f_max_potion]
 original_item = "max_potion"
@@ -1238,7 +1238,7 @@ type = "overworld"
 table = "overworld"
 check = 1207
 label = "Ice Path B2F West - Item West Side"
-id = 153
+id = 1207
 
 [ice_path_b3f_nevermeltice]
 original_item = "nevermeltice"
@@ -1246,7 +1246,7 @@ type = "overworld"
 table = "overworld"
 check = 1208
 label = "Ice Path B3F - Item Near Breakable Rock"
-id = 154
+id = 1208
 
 [whirl_islands_b1f_escape_rope]
 original_item = "escape_rope"
@@ -1254,7 +1254,7 @@ type = "overworld"
 table = "overworld"
 check = 1163
 label = "Whirl Islands B1F - Item West of Strength Boulder"
-id = 94
+id = 1163
 
 [whirl_islands_b1f_carbos]
 original_item = "carbos"
@@ -1262,7 +1262,7 @@ type = "overworld"
 table = "overworld"
 check = 1164
 label = "Whirl Islands B1F - Item Southwest of Northwest Ladder"
-id = 95
+id = 1164
 
 [whirl_islands_b1f_full_restore]
 original_item = "full_restore"
@@ -1270,7 +1270,7 @@ type = "overworld"
 table = "overworld"
 check = 1165
 label = "Whirl Islands B1F - Item Southeast of Northwest Ladder"
-id = 96
+id = 1165
 
 [whirl_islands_b1f_nugget]
 original_item = "nugget"
@@ -1278,7 +1278,7 @@ type = "overworld"
 table = "overworld"
 check = 1166
 label = "Whirl Islands B1F - Item East of Northwest Ladder"
-id = 97
+id = 1166
 
 [whirl_islands_b1f_calcium]
 original_item = "calcium"
@@ -1286,7 +1286,7 @@ type = "overworld"
 table = "overworld"
 check = 1167
 label = "Whirl Islands B1F - Item North of Southeast Ladder"
-id = 98
+id = 1167
 
 [whirl_islands_b2f_max_revive]
 original_item = "max_revive"
@@ -1294,7 +1294,7 @@ type = "overworld"
 table = "overworld"
 check = 1168
 label = "Whirl Islands B2F - Item West of Northeast Ladder"
-id = 99
+id = 1168
 
 [whirl_islands_b2f_full_restore]
 original_item = "full_restore"
@@ -1302,7 +1302,7 @@ type = "overworld"
 table = "overworld"
 check = 1169
 label = "Whirl Islands B2F - Item Northeast of Southwest Ladder"
-id = 100
+id = 1169
 
 [whirl_islands_b2f_max_elixir]
 original_item = "max_elixir"
@@ -1310,7 +1310,7 @@ type = "overworld"
 table = "overworld"
 check = 1170
 label = "Whirl Islands B2F - Item Southeast of Southeast Ladder"
-id = 101
+id = 1170
 
 [team_rocket_headquarters_b1f_hyper_potion]
 original_item = "hyper_potion"
@@ -1318,7 +1318,7 @@ type = "overworld"
 table = "overworld"
 check = 1102
 label = "Team Rocket HQ B1F - Item South of Northeast Stairs"
-id = 133
+id = 1102
 
 [team_rocket_headquarters_b1f_guard_spec]
 original_item = "guard_spec"
@@ -1326,7 +1326,7 @@ type = "overworld"
 table = "overworld"
 check = 1103
 label = "Team Rocket HQ B1F - Item at End of Center Path"
-id = 134
+id = 1103
 
 [team_rocket_headquarters_b1f_nugget]
 original_item = "nugget"
@@ -1334,7 +1334,7 @@ type = "overworld"
 table = "overworld"
 check = 1104
 label = "Team Rocket HQ B1F - Item East of Southwest Stairs"
-id = 135
+id = 1104
 
 [team_rocket_headquarters_b2f_tm46]
 original_item = "tm46"
@@ -1342,7 +1342,7 @@ type = "overworld"
 table = "overworld"
 check = 1105
 label = "Team Rocket HQ B2F - Item Near Center West Stairs"
-id = 136
+id = 1105
 
 [team_rocket_headquarters_b3f_protein]
 original_item = "protein"
@@ -1350,7 +1350,7 @@ type = "overworld"
 table = "overworld"
 check = 1108
 label = "Team Rocket HQ B3F - Item Southwest Corner Left"
-id = 139
+id = 1108
 
 [team_rocket_headquarters_b3f_x_special]
 original_item = "x_special"
@@ -1358,7 +1358,7 @@ type = "overworld"
 table = "overworld"
 check = 1109
 label = "Team Rocket HQ B3F - Item Southwest Corner Right"
-id = 140
+id = 1109
 
 [team_rocket_headquarters_b3f_tm49]
 original_item = "tm49"
@@ -1366,7 +1366,7 @@ type = "overworld"
 table = "overworld"
 check = 1106
 label = "Team Rocket HQ B3F - Item West of Northeast Stairs"
-id = 137
+id = 1106
 
 [team_rocket_headquarters_b3f_full_heal]
 original_item = "full_heal"
@@ -1374,7 +1374,7 @@ type = "overworld"
 table = "overworld"
 check = 1107
 label = "Team Rocket HQ B3F - Item South of Northeast Stairs"
-id = 138
+id = 1107
 
 [team_rocket_headquarters_b3f_ultra_ball]
 original_item = "ultra_ball"
@@ -1382,7 +1382,7 @@ type = "overworld"
 table = "overworld"
 check = 1196
 label = "Team Rocket HQ B3F - Item Southeast of Locked Doors"
-id = 141
+id = 1196
 
 [mount_mortar_1f_back_escape_rope]
 original_item = "escape_rope"
@@ -1390,7 +1390,7 @@ type = "overworld"
 table = "overworld"
 check = 1175
 label = "Mount Mortar 1F Back - Item East Side in Center Area"
-id = 113
+id = 1175
 
 [mount_mortar_1f_back_nugget]
 original_item = "nugget"
@@ -1398,7 +1398,7 @@ type = "overworld"
 table = "overworld"
 check = 1176
 label = "Mount Mortar 1F Back - Item Northeast Near Ledge"
-id = 114
+id = 1176
 
 [mount_mortar_1f_back_iron_ball]
 original_item = "iron_ball"
@@ -1406,7 +1406,7 @@ type = "overworld"
 table = "overworld"
 check = 1177
 label = "Mount Mortar 1F Back - Item North on Raised Area"
-id = 115
+id = 1177
 
 [mount_mortar_1f_back_max_potion]
 original_item = "max_potion"
@@ -1414,7 +1414,7 @@ type = "overworld"
 table = "overworld"
 check = 1178
 label = "Mount Mortar 1F Back - Item North in Center Area"
-id = 116
+id = 1178
 
 [mount_mortar_1f_back_iron]
 original_item = "iron"
@@ -1422,7 +1422,7 @@ type = "overworld"
 table = "overworld"
 check = 1179
 label = "Mount Mortar 1F Back - South of Northwest Ladder"
-id = 117
+id = 1179
 
 [mount_mortar_1f_back_max_revive]
 original_item = "max_revive"
@@ -1430,7 +1430,7 @@ type = "overworld"
 table = "overworld"
 check = 1180
 label = "Mount Mortar 1F Back - Item West Side"
-id = 118
+id = 1180
 
 [mount_mortar_1f_back_ultra_ball]
 original_item = "ultra_ball"
@@ -1438,7 +1438,7 @@ type = "overworld"
 table = "overworld"
 check = 1181
 label = "Mount Mortar 1F Back - Item West of Center Area"
-id = 119
+id = 1181
 
 [mount_mortar_1f_back_full_incense]
 original_item = "full_incense"
@@ -1446,7 +1446,7 @@ type = "overworld"
 table = "overworld"
 check = 1194
 label = "Mount Mortar 1F Back - Item East of Center Area"
-id = 120
+id = 1194
 
 [mount_mortar_1f_back_protector]
 original_item = "protector"
@@ -1454,7 +1454,7 @@ type = "overworld"
 table = "overworld"
 check = 1195
 label = "Mount Mortar 1F Back - Item North of West Entrance"
-id = 121
+id = 1195
 
 [mount_mortar_2f_rare_candy]
 original_item = "rare_candy"
@@ -1462,7 +1462,7 @@ type = "overworld"
 table = "overworld"
 check = 1182
 label = "Mount Mortar 2F - Item Southwest Corner"
-id = 122
+id = 1182
 
 [mount_mortar_2f_max_potion]
 original_item = "max_potion"
@@ -1470,7 +1470,7 @@ type = "overworld"
 table = "overworld"
 check = 1183
 label = "Mount Mortar 2F - Item East Side"
-id = 123
+id = 1183
 
 [mount_mortar_2f_tm40]
 original_item = "tm40"
@@ -1478,7 +1478,7 @@ type = "overworld"
 table = "overworld"
 check = 1184
 label = "Mount Mortar 2F - Item Northeast of Super Nerd Hugh"
-id = 124
+id = 1184
 
 [mount_mortar_2f_elixir]
 original_item = "elixir"
@@ -1486,7 +1486,7 @@ type = "overworld"
 table = "overworld"
 check = 1185
 label = "Mount Mortar 2F - Item Southeast of Northwest Ladder"
-id = 125
+id = 1185
 
 [mount_mortar_2f_dragon_scale]
 original_item = "dragon_scale"
@@ -1494,7 +1494,7 @@ type = "overworld"
 table = "overworld"
 check = 1186
 label = "Mount Mortar 2F - Item East of Northwest Ladder"
-id = 126
+id = 1186
 
 [mount_mortar_2f_escape_rope]
 original_item = "escape_rope"
@@ -1502,7 +1502,7 @@ type = "overworld"
 table = "overworld"
 check = 1187
 label = "Mount Mortar 2F - Item Northeast Corner"
-id = 127
+id = 1187
 
 [mount_mortar_b1f_carbos]
 original_item = "carbos"
@@ -1510,7 +1510,7 @@ type = "overworld"
 table = "overworld"
 check = 1188
 label = "Mount Mortar B1F - Item Southwest Corner"
-id = 128
+id = 1188
 
 [mount_mortar_b1f_pp_up]
 original_item = "pp_up"
@@ -1518,7 +1518,7 @@ type = "overworld"
 table = "overworld"
 check = 1189
 label = "Mount Mortar B1F - Item Northeast of South Ladder"
-id = 129
+id = 1189
 
 [mount_mortar_b1f_full_restore]
 original_item = "full_restore"
@@ -1526,7 +1526,7 @@ type = "overworld"
 table = "overworld"
 check = 1190
 label = "Mount Mortar B1F - Item Southeast Corner"
-id = 130
+id = 1190
 
 [mount_mortar_b1f_max_ether]
 original_item = "max_ether"
@@ -1534,7 +1534,7 @@ type = "overworld"
 table = "overworld"
 check = 1191
 label = "Mount Mortar B1F - Item East Side"
-id = 131
+id = 1191
 
 [mount_mortar_b1f_hyper_potion]
 original_item = "hyper_potion"
@@ -1542,7 +1542,7 @@ type = "overworld"
 table = "overworld"
 check = 1192
 label = "Mount Mortar B1F - Item East Side Among Stalagmites"
-id = 132
+id = 1192
 
 [dragons_den_dragon_fang]
 original_item = "dragon_fang"
@@ -1550,7 +1550,7 @@ type = "overworld"
 table = "overworld"
 check = 1112
 label = "Dragons Den - Item on East Side"
-id = 159
+id = 1112
 
 [dragons_den_calcium]
 original_item = "calcium"
@@ -1558,7 +1558,7 @@ type = "overworld"
 table = "overworld"
 check = 1210
 label = "Dragons Den - Item in Northeast Corner"
-id = 157
+id = 1210
 
 [dragons_den_max_elixir]
 original_item = "max_elixir"
@@ -1566,7 +1566,7 @@ type = "overworld"
 table = "overworld"
 check = 1211
 label = "Dragons Den - Item on West Side"
-id = 158
+id = 1211
 
 [ruins_of_alph_northeast_entrance_second_room_heal_powder]
 original_item = "heal_powder"
@@ -1574,7 +1574,7 @@ type = "overworld"
 table = "overworld"
 check = 1128
 label = "Ruins Of Alph Northeast Entrance Second Room - Northwest Item"
-id = 13
+id = 1128
 
 [ruins_of_alph_northeast_entrance_second_room_energypowder]
 original_item = "energypowder"
@@ -1582,7 +1582,7 @@ type = "overworld"
 table = "overworld"
 check = 1129
 label = "Ruins Of Alph Northeast Entrance Second Room - Northeast Item"
-id = 14
+id = 1129
 
 [ruins_of_alph_northeast_entrance_second_room_oran_berry]
 original_item = "oran_berry"
@@ -1590,7 +1590,7 @@ type = "overworld"
 table = "overworld"
 check = 1130
 label = "Ruins Of Alph Northeast Entrance Second Room - Southwest Item"
-id = 15
+id = 1130
 
 [ruins_of_alph_northeast_entrance_second_room_pecha_berry]
 original_item = "pecha_berry"
@@ -1598,7 +1598,7 @@ type = "overworld"
 table = "overworld"
 check = 1131
 label = "Ruins Of Alph Northeast Entrance Second Room - Southeast Item"
-id = 16
+id = 1131
 
 [ruins_of_alph_southeast_entrance_second_room_heal_powder]
 original_item = "heal_powder"
@@ -1606,7 +1606,7 @@ type = "overworld"
 table = "overworld"
 check = 1132
 label = "Ruins Of Alph Southeast Entrance Second Room - Northwest Item"
-id = 17
+id = 1132
 
 [ruins_of_alph_southeast_entrance_second_room_energy_root]
 original_item = "energy_root"
@@ -1614,7 +1614,7 @@ type = "overworld"
 table = "overworld"
 check = 1133
 label = "Ruins Of Alph Southeast Entrance Second Room - Northeast Item"
-id = 18
+id = 1133
 
 [ruins_of_alph_southeast_entrance_second_room_sitrus_berry]
 original_item = "sitrus_berry"
@@ -1622,7 +1622,7 @@ type = "overworld"
 table = "overworld"
 check = 1134
 label = "Ruins Of Alph Southeast Entrance Second Room - Southwest Item"
-id = 19
+id = 1134
 
 [ruins_of_alph_southeast_entrance_second_room_moon_stone]
 original_item = "moon_stone"
@@ -1630,7 +1630,7 @@ type = "overworld"
 table = "overworld"
 check = 1135
 label = "Ruins Of Alph Southeast Entrance Second Room - Southeast Item"
-id = 20
+id = 1135
 
 [ruins_of_alph_northwest_entrance_second_room_revival_herb]
 original_item = "revival_herb"
@@ -1638,7 +1638,7 @@ type = "overworld"
 table = "overworld"
 check = 1140
 label = "Ruins Of Alph Northwest Entrance Second Room - Northwest Item"
-id = 25
+id = 1140
 
 [ruins_of_alph_northwest_entrance_second_room_charcoal]
 original_item = "charcoal"
@@ -1646,7 +1646,7 @@ type = "overworld"
 table = "overworld"
 check = 1141
 label = "Ruins Of Alph Northwest Entrance Second Room - Northeast Item"
-id = 26
+id = 1141
 
 [ruins_of_alph_northwest_entrance_second_room_life_orb]
 original_item = "life_orb"
@@ -1654,7 +1654,7 @@ type = "overworld"
 table = "overworld"
 check = 1142
 label = "Ruins Of Alph Northwest Entrance Second Room - Southwest Item"
-id = 27
+id = 1142
 
 [ruins_of_alph_northwest_entrance_second_room_leppa_berry]
 original_item = "leppa_berry"
@@ -1662,7 +1662,7 @@ type = "overworld"
 table = "overworld"
 check = 1143
 label = "Ruins Of Alph Northwest Entrance Second Room - Southeast Item"
-id = 28
+id = 1143
 
 [ruins_of_alph_southwest_entrance_second_room_stardust]
 original_item = "stardust"
@@ -1670,7 +1670,7 @@ type = "overworld"
 table = "overworld"
 check = 1136
 label = "Ruins Of Alph Southwest Entrance Second Room - Northwest Item"
-id = 21
+id = 1136
 
 [ruins_of_alph_southwest_entrance_second_room_star_piece]
 original_item = "star_piece"
@@ -1678,7 +1678,7 @@ type = "overworld"
 table = "overworld"
 check = 1137
 label = "Ruins Of Alph Southwest Entrance Second Room - Northeast Item"
-id = 22
+id = 1137
 
 [ruins_of_alph_southwest_entrance_second_room_leppa_berry]
 original_item = "leppa_berry"
@@ -1686,7 +1686,7 @@ type = "overworld"
 table = "overworld"
 check = 1138
 label = "Ruins Of Alph Southwest Entrance Second Room - Southwest Item"
-id = 23
+id = 1138
 
 [ruins_of_alph_southwest_entrance_second_room_mystic_water]
 original_item = "mystic_water"
@@ -1694,7 +1694,7 @@ type = "overworld"
 table = "overworld"
 check = 1139
 label = "Ruins Of Alph Southwest Entrance Second Room - Southeast Item"
-id = 24
+id = 1139
 
 [bell_tower_3f_full_heal]
 original_item = "full_heal"
@@ -1702,7 +1702,7 @@ type = "overworld"
 table = "overworld"
 check = 1148
 label = "Bell Tower 3F - Southwest Item"
-id = 70
+id = 1148
 
 [bell_tower_4f_escape_rope]
 original_item = "escape_rope"
@@ -1710,7 +1710,7 @@ type = "overworld"
 table = "overworld"
 check = 1149
 label = "Bell Tower 4F - Item Near Southwest Ladder"
-id = 71
+id = 1149
 
 [bell_tower_4f_ultra_ball]
 original_item = "ultra_ball"
@@ -1718,7 +1718,7 @@ type = "overworld"
 table = "overworld"
 check = 1150
 label = "Bell Tower 4F - Item in Puzzle Area"
-id = 72
+id = 1150
 
 [bell_tower_4f_pp_up]
 original_item = "pp_up"
@@ -1726,7 +1726,7 @@ type = "overworld"
 table = "overworld"
 check = 1151
 label = "Bell Tower 4F - Item Near Southeast Ladder"
-id = 73
+id = 1151
 
 [bell_tower_5f_rare_candy]
 original_item = "rare_candy"
@@ -1734,7 +1734,7 @@ type = "overworld"
 table = "overworld"
 check = 1152
 label = "Bell Tower 5F - Item Near Center Pillar"
-id = 74
+id = 1152
 
 [bell_tower_6f_max_potion]
 original_item = "max_potion"
@@ -1742,7 +1742,7 @@ type = "overworld"
 table = "overworld"
 check = 1153
 label = "Bell Tower 6F - Item Near Center Pillar"
-id = 75
+id = 1153
 
 [bell_tower_6f_full_heal]
 original_item = "full_heal"
@@ -1750,7 +1750,7 @@ type = "overworld"
 table = "overworld"
 check = 1154
 label = "Bell Tower 6F - Northwest Item"
-id = 76
+id = 1154
 
 [bell_tower_7f_max_revive]
 original_item = "max_revive"
@@ -1758,7 +1758,7 @@ type = "overworld"
 table = "overworld"
 check = 1155
 label = "Bell Tower 7F - Northeast Item"
-id = 77
+id = 1155
 
 [bell_tower_8f_full_restore]
 original_item = "full_restore"
@@ -1766,7 +1766,7 @@ type = "overworld"
 table = "overworld"
 check = 1156
 label = "Bell Tower 8F - Northwest Item"
-id = 78
+id = 1156
 
 [bell_tower_8f_max_elixir]
 original_item = "max_elixir"
@@ -1774,7 +1774,7 @@ type = "overworld"
 table = "overworld"
 check = 1157
 label = "Bell Tower 8F - Item Near Center Pillar"
-id = 79
+id = 1157
 
 [bell_tower_8f_nugget]
 original_item = "nugget"
@@ -1782,7 +1782,7 @@ type = "overworld"
 table = "overworld"
 check = 1158
 label = "Bell Tower 8F - Item Near Southeast Bridge"
-id = 80
+id = 1158
 
 [bell_tower_9f_hp_up]
 original_item = "hp_up"
@@ -1790,7 +1790,7 @@ type = "overworld"
 table = "overworld"
 check = 1159
 label = "Bell Tower 9F - North Item"
-id = 81
+id = 1159
 
 [route_10_tm69]
 original_item = "tm69"
@@ -1798,7 +1798,7 @@ type = "overworld"
 table = "overworld"
 check = 1300
 label = "Route 10 South - Item Past Strength Boulder"
-id = 193
+id = 1300
 
 [route_2_carbos]
 original_item = "carbos"
@@ -1806,7 +1806,7 @@ type = "overworld"
 table = "overworld"
 check = 1232
 label = "Route 2 - Item North of Diglett Cave"
-id = 212
+id = 1232
 
 [cerulean_cave_2f_pp_up]
 original_item = "pp_up"
@@ -1814,7 +1814,7 @@ type = "overworld"
 table = "overworld"
 check = 1262
 label = "Cerulean Cave 2F - Item North of West Ladder"
-id = 246
+id = 1262
 
 [cerulean_cave_2f_tm24]
 original_item = "tm24"
@@ -1822,7 +1822,7 @@ type = "overworld"
 table = "overworld"
 check = 1264
 label = "Cerulean Cave 2F - Item South of Northeast Ladder"
-id = 248
+id = 1264
 
 [cerulean_cave_2f_ultra_ball]
 original_item = "ultra_ball"
@@ -1830,7 +1830,7 @@ type = "overworld"
 table = "overworld"
 check = 1263
 label = "Cerulean Cave 2F - Item Southeast of North Ladder"
-id = 247
+id = 1263
 
 [cerulean_cave_2f_odd_incense]
 original_item = "odd_incense"
@@ -1838,7 +1838,7 @@ type = "overworld"
 table = "overworld"
 check = 1265
 label = "Cerulean Cave 2F - Item East of South Ladder"
-id = 249
+id = 1265
 
 [cerulean_cave_b1f_max_revive]
 original_item = "max_revive"
@@ -1846,7 +1846,7 @@ type = "overworld"
 table = "overworld"
 check = 1268
 label = "Cerulean Cave B1F - North Item"
-id = 250
+id = 1268
 
 [cerulean_cave_b1f_ultra_ball]
 original_item = "ultra_ball"
@@ -1854,7 +1854,7 @@ type = "overworld"
 table = "overworld"
 check = 1269
 label = "Cerulean Cave B1F - Southwest Item"
-id = 251
+id = 1269
 
 [cerulean_cave_b1f_dusk_stone]
 original_item = "dusk_stone"
@@ -1862,7 +1862,7 @@ type = "overworld"
 table = "overworld"
 check = 1270
 label = "Cerulean Cave B1F - Center Item"
-id = 252
+id = 1270
 
 [cerulean_cave_b1f_electirizer]
 original_item = "electirizer"
@@ -1870,7 +1870,7 @@ type = "overworld"
 table = "overworld"
 check = 1271
 label = "Cerulean Cave B1F - Northeast Item"
-id = 253
+id = 1271
 
 [cerulean_cave_b1f_black_sludge]
 original_item = "black_sludge"
@@ -1878,7 +1878,7 @@ type = "overworld"
 table = "overworld"
 check = 1272
 label = "Cerulean Cave B1F - Southeast Item"
-id = 254
+id = 1272
 
 [rock_tunnel_b1f_iron]
 original_item = "iron"
@@ -1886,7 +1886,7 @@ type = "overworld"
 table = "overworld"
 check = 1224
 label = "Rock Tunnel B1F - Southeast Item"
-id = 196
+id = 1224
 
 [rock_tunnel_b1f_pp_up]
 original_item = "pp_up"
@@ -1894,7 +1894,7 @@ type = "overworld"
 table = "overworld"
 check = 1225
 label = "Rock Tunnel B1F - Item West of Northeast Ladder"
-id = 197
+id = 1225
 
 [rock_tunnel_b1f_revive]
 original_item = "revive"
@@ -1902,7 +1902,7 @@ type = "overworld"
 table = "overworld"
 check = 1226
 label = "Rock Tunnel B1F - North Item"
-id = 198
+id = 1226
 
 [rock_tunnel_b1f_oval_stone]
 original_item = "oval_stone"
@@ -1910,7 +1910,7 @@ type = "overworld"
 table = "overworld"
 check = 1296
 label = "Rock Tunnel B1F - Item Northeast of Southwest Ladder"
-id = 199
+id = 1296
 
 [seafoam_islands_b1f_grip_claw]
 original_item = "grip_claw"
@@ -1918,7 +1918,7 @@ type = "overworld"
 table = "overworld"
 check = 1256
 label = "Seafoam Islands B1F - North Item"
-id = 223
+id = 1256
 
 [seafoam_islands_b1f_ice_heal]
 original_item = "ice_heal"
@@ -1926,7 +1926,7 @@ type = "overworld"
 table = "overworld"
 check = 1251
 label = "Seafoam Islands B1F - Item East of North Ladder"
-id = 222
+id = 1251
 
 [seafoam_islands_b2f_water_stone]
 original_item = "water_stone"
@@ -1934,7 +1934,7 @@ type = "overworld"
 table = "overworld"
 check = 1252
 label = "Seafoam Islands B2F - Item Southwest of Bridge"
-id = 224
+id = 1252
 
 [seafoam_islands_b3f_revive]
 original_item = "revive"
@@ -1942,7 +1942,7 @@ type = "overworld"
 table = "overworld"
 check = 1253
 label = "Seafoam Islands B3F - South Item"
-id = 225
+id = 1253
 
 [seafoam_islands_b3f_big_pearl]
 original_item = "big_pearl"
@@ -1950,7 +1950,7 @@ type = "overworld"
 table = "overworld"
 check = 1254
 label = "Seafoam Islands B3F - North Item"
-id = 226
+id = 1254
 
 [seafoam_islands_b4f_ultra_ball]
 original_item = "ultra_ball"
@@ -1958,7 +1958,7 @@ type = "overworld"
 table = "overworld"
 check = 1255
 label = "Seafoam Islands B4F - North Item"
-id = 227
+id = 1255
 
 [seafoam_islands_b4f_tm13]
 original_item = "tm13"
@@ -1966,7 +1966,7 @@ type = "overworld"
 table = "overworld"
 check = 1258
 label = "Seafoam Islands B4F - Northeast Item"
-id = 228
+id = 1258
 
 [mount_silver_cave_upper_mountainside_pure_incense]
 original_item = "pure_incense"
@@ -1974,7 +1974,7 @@ type = "overworld"
 table = "overworld"
 check = 1242
 label = "Mount Silver Cave Upper Mountainside - Item East of Upper Entrance"
-id = 233
+id = 1242
 
 [mount_silver_cave_upper_mountainside_dawn_stone]
 original_item = "dawn_stone"
@@ -1982,7 +1982,7 @@ type = "overworld"
 table = "overworld"
 check = 1243
 label = "Mount Silver Cave Upper Mountainside - Item West of Upper Entrance"
-id = 234
+id = 1243
 
 [mount_silver_cave_lower_mountainside_escape_rope]
 original_item = "escape_rope"
@@ -1990,7 +1990,7 @@ type = "overworld"
 table = "overworld"
 check = 1244
 label = "Mount Silver Cave Lower Mountainside - Item South of Lower Entrance"
-id = 235
+id = 1244
 
 [mount_silver_cave_lower_mountainside_tm76]
 original_item = "tm76"
@@ -1998,7 +1998,7 @@ type = "overworld"
 table = "overworld"
 check = 1245
 label = "Mount Silver Cave Lower Mountainside - Item Southwest of Entrances"
-id = 236
+id = 1245
 
 [mount_silver_cave_expert_belt_chamber_expert_belt]
 original_item = "expert_belt"
@@ -2006,7 +2006,7 @@ type = "overworld"
 table = "overworld"
 check = 1246
 label = "Mount Silver Cave Expert Belt Chamber - Item"
-id = 237
+id = 1246
 
 [mount_silver_cave_2f_max_elixir]
 original_item = "max_elixir"
@@ -2014,7 +2014,7 @@ type = "overworld"
 table = "overworld"
 check = 1247
 label = "Mount Silver Cave 2F - Item Southwest of North Entrance"
-id = 238
+id = 1247
 
 [mount_silver_cave_2f_calcium]
 original_item = "calcium"
@@ -2022,7 +2022,7 @@ type = "overworld"
 table = "overworld"
 check = 1248
 label = "Mount Silver Cave 2F - Item Near South Entrance"
-id = 239
+id = 1248
 
 [mount_silver_cave_2f_protein]
 original_item = "protein"
@@ -2030,7 +2030,7 @@ type = "overworld"
 table = "overworld"
 check = 1249
 label = "Mount Silver Cave 2F - Item Near East Entrance"
-id = 240
+id = 1249
 
 [mount_silver_cave_2f_max_revive]
 original_item = "max_revive"
@@ -2038,7 +2038,7 @@ type = "overworld"
 table = "overworld"
 check = 1250
 label = "Mount Silver Cave 2F - Item Southeast of North Entrance"
-id = 241
+id = 1250
 
 [whirl_islands_b3f_rare_candy]
 original_item = "rare_candy"
@@ -2046,15 +2046,15 @@ type = "overworld"
 table = "overworld"
 check = 1171
 label = "Whirl Islands B3F - Item Near Entrance"
-id = 102
+id = 1171
 
 [mount_moon_square_moon_stone]
 original_item = "moon_stone"
 type = "overworld"
 table = "overworld"
-check = 0
+check = 5000
 label = "Mount Moon Square - Item Dropped by Clefairy on Monday Night"
-id = 346
+id = 1
 
 [route_14_lucky_punch]
 original_item = "lucky_punch"
@@ -2062,7 +2062,7 @@ type = "npc_gift"
 table = "base"
 check = 348
 label = "Route 14 - Gift from Lady in Grass for Showing Chansey"
-id = 356
+id = 348
 
 [route_25_nugget]
 original_item = "nugget"
@@ -2070,7 +2070,7 @@ type = "npc_gift"
 table = "base"
 check = 290
 label = "Route 25 - Gift from Ace Trainer Before Battling"
-id = 348
+id = 290
 
 [route_29_twistedspoon]
 original_item = "twistedspoon"
@@ -2078,23 +2078,27 @@ type = "npc_gift"
 table = "base"
 check = 216
 label = "Route 29 - Gift from Tuscany on Tuesday"
-id = 259
+id = 216
 
 [route_29_poke_ball_x5]
 original_item = "poke_ball_x5"
 type = "npc_gift"
 table = "base"
-check = 420
+check = 154
 label = "Route 29 - Gift from Lyra/Ethan"
-id = 258
+id = 154
 
 [route_31_tm44]
 original_item = "tm44"
 type = "npc_gift"
 table = "base"
-check = 5001
 label = "Route 31 - Gift from Man Near Pond for Spearow Delivery"
-id = 265
+id = 2
+
+[route_31_tm44.check]
+id = 16660
+value = 3
+op = "ge"
 
 [route_32_poison_barb]
 original_item = "poison_barb"
@@ -2102,15 +2106,15 @@ type = "npc_gift"
 table = "base"
 check = 217
 label = "Route 32 - Gift from Frieda on Friday"
-id = 288
+id = 217
 
 [route_32_miracle_seed]
 original_item = "miracle_seed"
 type = "npc_gift"
 table = "base"
-check = 110
+check = 116
 label = "Route 32 - Gift from Man near Violet after defeating Falkner"
-id = 286
+id = 116
 
 [route_32_tm05]
 original_item = "tm05"
@@ -2118,15 +2122,19 @@ type = "npc_gift"
 table = "base"
 check = 110
 label = "Route 32 - Gift from Man on Ledge Past Cut Tree"
-id = 287
+id = 110
 
 [route_34_power_herb]
 original_item = "power_herb"
 type = "npc_gift"
 table = "base"
-check = 5002
 label = "Route 34 - Gift for Defeating Ace Trainer Kate"
-id = 296
+id = 3
+
+[route_34_power_herb.check]
+id = 16535
+value = 3
+op = "ge"
 
 [route_36_berry_pots]
 original_item = "berry_pots"
@@ -2134,7 +2142,7 @@ type = "key_item"
 table = "base"
 check = 463
 label = "Route 36 - 1st Gift from Floria for Clearing Sudowoodo"
-id = 283
+id = 463
 
 [route_36_oran_berry_x3]
 original_item = "oran_berry"
@@ -2142,7 +2150,7 @@ type = "npc_gift"
 table = "base"
 check = 463
 label = "Route 36 - 2nd Gift from Floria for Clearing Sudowoodo"
-id = 284
+id = 4
 
 [route_36_pecha_berry_x3]
 original_item = "pecha_berry"
@@ -2150,7 +2158,7 @@ type = "npc_gift"
 table = "base"
 check = 463
 label = "Route 36 - 3rd Gift from Floria for Clearing Sudowoodo"
-id = 285
+id = 5
 
 [route_36_hard_stone]
 original_item = "hard_stone"
@@ -2158,15 +2166,15 @@ type = "npc_gift"
 table = "base"
 check = 177
 label = "Route 36 - Gift from Arthur on Thursday"
-id = 282
+id = 177
 
 [route_36_hm06]
 original_item = "hm06"
 type = "hm"
 table = "base"
-check = 450
+check = 5001
 label = "Route 36 - Gift from Man North of Ruins of Alph"
-id = 281
+id = 6
 
 [route_37_magnet]
 original_item = "magnet"
@@ -2174,15 +2182,19 @@ type = "npc_gift"
 table = "base"
 check = 165
 label = "Route 37 - Gift from Sunny on Sunday"
-id = 308
+id = 165
 
 [route_42_hm04]
 original_item = "hm04"
 type = "hm"
 table = "base"
-check = 669
 label = "Route 42 - Gift from Hiker Running out of Mt. Mortar"
-id = 323
+id = 7
+
+[route_42_hm04.check]
+id = 16529
+value = 1
+op = "ge"
 
 [viridian_tm85]
 original_item = "tm85"
@@ -2190,7 +2202,23 @@ type = "npc_gift"
 table = "base"
 check = 302
 label = "Viridian City - Gift from Man Behind Cut Tree"
-id = 342
+id = 302
+
+[pewter_city_silver_wing]
+original_item = "silver_wing"
+type = "heartgold"
+table = "base"
+check = 148
+label = "Pewter City - Gift from Old Man near Route 3 HG"
+id = 8
+
+[pewter_city_rainbow_wing]
+original_item = "rainbow_wing"
+type = "soulsilver"
+table = "base"
+check = 147
+label = "Pewter City - Gift from Old Man near Route 3 SS"
+id = 9
 
 [vermilion_pp_max]
 original_item = "pp_max"
@@ -2198,135 +2226,139 @@ type = "npc_gift"
 table = "base"
 check = 247
 label = "Vermilion City - Gift from Man South of Construction Site"
-id = 350
+id = 247
 
 [fuchsia_persim_berry]
 original_item = "persim_berry"
 type = "npc_gift"
 table = "base"
-check = 5003
+check = 5002
 label = "Fuchsia City - Gift 1 from Juggler in Exchange for a Red Shard"
-id = 357
+id = 10
 
 [fuchsia_razz_berry]
 original_item = "razz_berry"
 type = "npc_gift"
 table = "base"
-check = 5004
+check = 5002
 label = "Fuchsia City - Gift 2 from Juggler in Exchange for a Red Shard"
-id = 358
+id = 11
 
 [fuchsia_pomeg_berry]
 original_item = "pomeg_berry"
 type = "npc_gift"
 table = "base"
-check = 5005
+check = 5002
 label = "Fuchsia City - Gift 3 from Juggler in Exchange for a Red Shard"
-id = 359
+id = 12
 
 [fuchsia_bluk_berry]
 original_item = "bluk_berry"
 type = "npc_gift"
 table = "base"
-check = 5006
+check = 5003
 label = "Fuchsia City - Gift 1 from Juggler in Exchange for a Blue Shard"
-id = 360
+id = 13
 
 [fuchsia_kelpsy_berry]
 original_item = "kelpsy_berry"
 type = "npc_gift"
 table = "base"
-check = 5007
+check = 5003
 label = "Fuchsia City - Gift 2 from Juggler in Exchange for a Blue Shard"
-id = 361
+id = 14
 
 [fuchsia_cornn_berry]
 original_item = "cornn_berry"
 type = "npc_gift"
 table = "base"
-check = 5008
+check = 5003
 label = "Fuchsia City - Gift 3 from Juggler in Exchange for a Blue Shard"
-id = 362
+id = 15
 
 [fuchsia_pinap_berry]
 original_item = "pinap_berry"
 type = "npc_gift"
 table = "base"
-check = 5009
+check = 5004
 label = "Fuchsia City - Gift 1 from Juggler in Exchange for a Yellow Shard"
-id = 363
+id = 16
 
 [fuchsia_grepa_berry]
 original_item = "grepa_berry"
 type = "npc_gift"
 table = "base"
-check = 5010
+check = 5004
 label = "Fuchsia City - Gift 2 from Juggler in Exchange for a Yellow Shard"
-id = 364
+id = 17
 
 [fuchsia_nomel_berry]
 original_item = "nomel_berry"
 type = "npc_gift"
 table = "base"
-check = 5011
+check = 5004
 label = "Fuchsia City - Gift 3 from Juggler in Exchange for a Yellow Shard"
-id = 365
+id = 18
 
 [fuchsia_wepear_berry]
 original_item = "wepear_berry"
 type = "npc_gift"
 table = "base"
-check = 5012
+check = 5005
 label = "Fuchsia City - Gift 1 from Juggler in Exchange for a Green Shard"
-id = 366
+id = 19
 
 [fuchsia_hondew_berry]
 original_item = "hondew_berry"
 type = "npc_gift"
 table = "base"
-check = 5013
+check = 5005
 label = "Fuchsia City - Gift 2 from Juggler in Exchange for a Green Shard"
-id = 367
+id = 20
 
 [fuchsia_durin_berry]
 original_item = "durin_berry"
 type = "npc_gift"
 table = "base"
-check = 5014
+check = 5005
 label = "Fuchsia City - Gift 3 from Juggler in Exchange for a Green Shard"
-id = 368
+id = 21
 
 [new_bark_elms_lab_1f_potion_x5]
 original_item = "potion_x5"
 type = "npc_gift"
 table = "base"
-check = 0
 label = "New Bark Elms Lab 1F - Gift from Lab Assitant"
-id = 255
+id = 22
+
+[new_bark_elms_lab_1f_potion_x5.check]
+id = 16648
+value = 2
+op = "ge"
 
 [new_bark_elms_lab_1f_ss_ticket]
 original_item = "ss_ticket"
-type = "npc_gift"
+type = "ss_ticket"
 table = "base"
 check = 242
 label = "New Bark Elms Lab 1F - Gift from Professor Elm for Becoming Champion"
-id = 257
+id = 242
 
 [new_bark_elms_lab_1f_master_ball]
 original_item = "master_ball"
 type = "npc_gift"
 table = "base"
-check = 0
+check = 571
 label = "New Bark Elms Lab 1F - Gift from Professor Elm for getting all Johto Badges"
-id = 386
+id = 571
 
 [new_bark_elms_lab_1f_everstone]
 original_item = "everstone"
 type = "npc_gift"
 table = "base"
-check = 114
+check = 282
 label = "New Bark Elms Lab 1F - Gift from Professor Elm for Showing Togepi"
-id = 256
+id = 282
 
 [cherrygrove_mystic_water]
 original_item = "mystic_water"
@@ -2334,103 +2366,103 @@ type = "npc_gift"
 table = "base"
 check = 243
 label = "Cherrygrove City - Gift from Man on Island"
-id = 380
+id = 243
 
 [violet_cheri_berry]
 original_item = "cheri_berry"
 type = "npc_gift"
 table = "base"
-check = 5015
+check = 5006
 label = "Violet City - Gift 1 from Juggler in Exchange for a Red Shard"
-id = 267
+id = 23
 
 [violet_pecha_berry]
 original_item = "pecha_berry"
 type = "npc_gift"
 table = "base"
-check = 5016
+check = 5006
 label = "Violet City - Gift 2 from Juggler in Exchange for a Red Shard"
-id = 268
+id = 24
 
 [violet_leppa_berry]
 original_item = "leppa_berry"
 type = "npc_gift"
 table = "base"
-check = 5017
+check = 5006
 label = "Violet City - Gift 3 from Juggler in Exchange for a Red Shard"
-id = 269
+id = 25
 
 [violet_oran_berry]
 original_item = "oran_berry"
 type = "npc_gift"
 table = "base"
-check = 5018
+check = 5007
 label = "Violet City - Gift 1 from Juggler in Exchange for a Blue Shard"
-id = 270
+id = 26
 
 [violet_chesto_berry]
 original_item = "chesto_berry"
 type = "npc_gift"
 table = "base"
-check = 5019
+check = 5007
 label = "Violet City - Gift 2 from Juggler in Exchange for a Blue Shard"
-id = 271
+id = 27
 
 [violet_wiki_berry]
 original_item = "wiki_berry"
 type = "npc_gift"
 table = "base"
-check = 5020
+check = 5007
 label = "Violet City - Gift 3 from Juggler in Exchange for a Blue Shard"
-id = 272
+id = 28
 
 [violet_aspear_berry]
 original_item = "aspear_berry"
 type = "npc_gift"
 table = "base"
-check = 5021
+check = 5008
 label = "Violet City - Gift 1 from Juggler in Exchange for a Yellow Shard"
-id = 273
+id = 29
 
 [violet_sitrus_berry]
 original_item = "sitrus_berry"
 type = "npc_gift"
 table = "base"
-check = 5022
+check = 5008
 label = "Violet City - Gift 2 from Juggler in Exchange for a Yellow Shard"
-id = 274
+id = 30
 
 [violet_iapapa_berry]
 original_item = "iapapa_berry"
 type = "npc_gift"
 table = "base"
-check = 5023
+check = 5008
 label = "Violet City - Gift 3 from Juggler in Exchange for a Yellow Shard"
-id = 275
+id = 31
 
 [violet_rawst_berry]
 original_item = "rawst_berry"
 type = "npc_gift"
 table = "base"
-check = 5024
+check = 5009
 label = "Violet City - Gift 1 from Juggler in Exchange for a Green Shard"
-id = 276
+id = 32
 
 [violet_lum_berry]
 original_item = "lum_berry"
 type = "npc_gift"
 table = "base"
-check = 5025
+check = 5009
 label = "Violet City - Gift 2 from Juggler in Exchange for a Green Shard"
-id = 277
+id = 33
 
 [violet_aguav_berry]
 original_item = "aguav_berry"
 type = "npc_gift"
 table = "base"
-check = 5026
+check = 5009
 label = "Violet City - Gift 3 from Juggler in Exchange for a Green Shard"
-id = 278
+id = 34
 
 [cianwood_hm02]
 original_item = "hm02"
@@ -2438,15 +2470,15 @@ type = "hm"
 table = "base"
 check = 187
 label = "Cianwood - Gift from Chucks Wife After Defeating Chuck"
-id = 322
+id = 187
 
 [ecruteak_gym_fog_badge]
 original_item = "fog_badge"
 type = "badge"
 table = "base"
-check = 5027
+check = 166
 label = "Ecruteak Gym - Fog Badge"
-id = 403
+id = 166
 
 [ecruteak_gym_tm30]
 original_item = "tm30"
@@ -2454,7 +2486,7 @@ type = "npc_gift"
 table = "base"
 check = 166
 label = "Ecruteak Gym - Gift from Morty"
-id = 313
+id = 35
 
 [ecruteak_dowsing_machine_house_dowsing_mchn]
 original_item = "dowsing_mchn"
@@ -2462,7 +2494,7 @@ type = "key_item"
 table = "base"
 check = 163
 label = "Ecruteak Dowsing Machine House - Gift from Ace Trainer"
-id = 309
+id = 163
 
 [ecruteak_dance_theater_hm03]
 original_item = "hm03"
@@ -2470,23 +2502,23 @@ type = "hm"
 table = "base"
 check = 162
 label = "Ecruteak Dance Theater - Gift from Old Man for Defeating the Team Rocket Grunt"
-id = 310
+id = 162
 
 [ecruteak_dance_theater_clear_bell]
 original_item = "clear_bell"
-type = "key_item"
+type = "heartgold"
 table = "base"
 check = 259
 label = "Ecruteak Dance Theater - Gift from Kimono Girls after Defeating them HG"
-id = 311
+id = 259
 
 [ecruteak_dance_theater_tidal_bell]
 original_item = "tidal_bell"
-type = "key_item"
+type = "soulsilver"
 table = "base"
 check = 260
 label = "Ecruteak Dance Theater - Gift from Kimono Girls after Defeating them SS"
-id = 312
+id = 260
 
 [mahogany_ragecandybar]
 original_item = "ragecandybar"
@@ -2494,7 +2526,7 @@ type = "key_item"
 table = "base"
 check = 355
 label = "Mahogany Town - Purchased from Man Blocking Route 44"
-id = 324
+id = 355
 
 [lake_of_rage_black_belt]
 original_item = "black_belt"
@@ -2502,7 +2534,7 @@ type = "npc_gift"
 table = "base"
 check = 213
 label = "Lake Of Rage Drained - Gift from Wesley on Wednesday"
-id = 337
+id = 213
 
 [lake_of_rage_red_scale]
 original_item = "red_scale"
@@ -2510,7 +2542,7 @@ type = "key_item"
 table = "base"
 check = 201
 label = "Lake Of Rage Flooded - Found After Battling the Red Gyarados"
-id = 336
+id = 201
 
 [blackthorn_soft_sand]
 original_item = "soft_sand"
@@ -2518,7 +2550,7 @@ type = "npc_gift"
 table = "base"
 check = 212
 label = "Blackthorn City - Gift from Santos on Saturday"
-id = 332
+id = 212
 
 [route_40_sharp_beak]
 original_item = "sharp_beak"
@@ -2526,7 +2558,7 @@ type = "npc_gift"
 table = "base"
 check = 215
 label = "Route 40 - Gift from Monica on Monday"
-id = 319
+id = 215
 
 [national_park_quick_claw]
 original_item = "quick_claw"
@@ -2534,23 +2566,31 @@ type = "npc_gift"
 table = "base"
 check = 270
 label = "National Park - Gift from Lady with Persian"
-id = 331
+id = 270
 
 [route_31_violet_gatehouse_vs_recorder]
 original_item = "vs_recorder"
 type = "key_item"
 table = "base"
-check = 5028
 label = "Route 31 Violet Gatehouse - Gift from Lyra/Ethan"
-id = 266
+id = 36
+
+[route_31_violet_gatehouse_vs_recorder.check]
+id = 16690
+value = 1
+op = "ge"
 
 [route_35_goldenrod_gatehouse_hp_up]
 original_item = "hp_up"
 type = "npc_gift"
 table = "base"
-check = 5029
 label = "Route 35 Goldenrod Gatehouse - Gift from Guard After Delivering Kenya the Spearow"
-id = 330
+id = 37
+
+[route_35_goldenrod_gatehouse_hp_up.check]
+id = 16660
+value = 5
+op = "ge"
 
 [ilex_forest_hm01]
 original_item = "hm01"
@@ -2558,15 +2598,15 @@ type = "hm"
 table = "base"
 check = 128
 label = "Ilex Forest - Gift from Woodcutter for Herding Farfetchd"
-id = 294
+id = 128
 
 [goldenrod_tunnel_1f_fashion_case]
 original_item = "fashion_case"
 type = "key_item"
 table = "base"
-check = 712
+check = 332
 label = "Goldenrod Tunnel 1F - Gift from Lyra/Ethan"
-id = 297
+id = 332
 
 [dark_cave_route_45_side_blackglasses]
 original_item = "blackglasses"
@@ -2574,7 +2614,7 @@ type = "npc_gift"
 table = "base"
 check = 223
 label = "Dark Cave North - Gift from Man in Northwest Corner"
-id = 335
+id = 223
 
 [route_30_apricorn_house_apricorn_box]
 original_item = "apricorn_box"
@@ -2582,15 +2622,15 @@ type = "key_item"
 table = "base"
 check = 109
 label = "Route 30 Apricorn House - Gift from Apricorn Man"
-id = 260
+id = 109
 
 [violet_gym_zephyr_badge]
 original_item = "zephyr_badge"
 type = "badge"
 table = "base"
-check = 5030
+check = 115
 label = "Violet Gym - Zephyr Badge"
-id = 400
+id = 115
 
 [violet_gym_tm51]
 original_item = "tm51"
@@ -2598,15 +2638,15 @@ type = "npc_gift"
 table = "base"
 check = 115
 label = "Violet Gym - Gift from Falkner"
-id = 279
+id = 38
 
 [goldenrod_gym_plain_badge]
 original_item = "plain_badge"
 type = "badge"
 table = "base"
-check = 5031
+check = 133
 label = "Goldenrod Gym - Plain Badge"
-id = 402
+id = 133
 
 [goldenrod_gym_tm45]
 original_item = "tm45"
@@ -2614,15 +2654,15 @@ type = "npc_gift"
 table = "base"
 check = 133
 label = "Goldenrod Gym - Gift from Whitney"
-id = 307
+id = 39
 
 [olivine_gym_mineral_badge]
 original_item = "mineral_badge"
 type = "badge"
 table = "base"
-check = 5032
+check = 194
 label = "Olivine Gym - Mineral Badge"
-id = 405
+id = 194
 
 [olivine_gym_tm23]
 original_item = "tm23"
@@ -2630,15 +2670,15 @@ type = "npc_gift"
 table = "base"
 check = 194
 label = "Olivine Gym - Gift from Jasmine"
-id = 318
+id = 40
 
 [cianwood_gym_storm_badge]
 original_item = "storm_badge"
 type = "badge"
 table = "base"
-check = 5033
+check = 186
 label = "Cianwood Gym - Storm Badge"
-id = 404
+id = 186
 
 [cianwood_gym_tm01]
 original_item = "tm01"
@@ -2646,15 +2686,15 @@ type = "npc_gift"
 table = "base"
 check = 186
 label = "Cianwood Gym - Gift from Chuck"
-id = 321
+id = 41
 
 [mahogany_gym_leader_room_glacier_badge]
 original_item = "glacier_badge"
 type = "badge"
 table = "base"
-check = 5034
+check = 210
 label = "Mahogany Gym - Glacier Badge"
-id = 406
+id = 210
 
 [mahogany_gym_leader_room_tm07]
 original_item = "tm07"
@@ -2662,15 +2702,7 @@ type = "npc_gift"
 table = "base"
 check = 210
 label = "Mahogany Gym - Gift from Pryce"
-id = 325
-
-[blackthorn_gym_tm59]
-original_item = "tm59"
-type = "npc_gift"
-table = "base"
-check = 218
-label = "Blackthorn Gym - Gift from Clair"
-id = 333
+id = 42
 
 [route_30_mr_pokemon_house_mystery_egg]
 original_item = "mystery_egg"
@@ -2678,7 +2710,7 @@ type = "key_item"
 table = "base"
 check = 107
 label = "Route 30 Mr Pokemon House - Gift from Mr Pokemon"
-id = 261
+id = 107
 
 [route_30_mr_pokemon_house_exp_share]
 original_item = "exp_share"
@@ -2686,23 +2718,31 @@ type = "npc_gift"
 table = "base"
 check = 108
 label = "Route 30 Mr Pokemon House - Gift from Mr Pokemon in Exchange for the Red Scale"
-id = 262
+id = 108
 
 [route_30_mr_pokemon_house_red_orb]
 original_item = "red_orb"
-type = "key_item"
+type = "heartgold"
 table = "base"
-check = 0
 label = "Route 30 Mr Pokemon House - Gift from Mr Pokemon After Recieving a Pokemon from Professor Oak HG"
-id = 263
+id = 43
+
+[route_30_mr_pokemon_house_red_orb.check]
+id = 16633
+value = 2
+op = "ge"
 
 [route_30_mr_pokemon_house_blue_orb]
 original_item = "blue_orb"
-type = "key_item"
+type = "soulsilver"
 table = "base"
-check = 0
 label = "Route 30 Mr Pokemon House - Gift from Mr Pokemon After Recieving a Pokemon from Professor Oak SS"
-id = 264
+id = 44
+
+[route_30_mr_pokemon_house_blue_orb.check]
+id = 16633
+value = 2
+op = "ge"
 
 [sprout_tower_3f_tm70]
 original_item = "tm70"
@@ -2710,7 +2750,7 @@ type = "hm"
 table = "base"
 check = 118
 label = "Sprout Tower 3F - Gift from Elder Li"
-id = 280
+id = 118
 
 [route_32_pokecenter_1f_old_rod]
 original_item = "old_rod"
@@ -2718,7 +2758,7 @@ type = "rod"
 table = "base"
 check = 117
 label = "Route 32 Pokecenter 1F - Gift from Fisherman"
-id = 289
+id = 117
 
 [route_32_pokecenter_1f_lure_ball_x2]
 original_item = "lure_ball_x2"
@@ -2726,7 +2766,7 @@ type = "npc_gift"
 table = "base"
 check = 372
 label = "Route 32 Pokecenter 1F - Gift from Kurt Fan"
-id = 290
+id = 372
 
 [route_34_ilex_forest_gatehouse_tm12]
 original_item = "tm12"
@@ -2734,15 +2774,15 @@ type = "npc_gift"
 table = "base"
 check = 131
 label = "Route 34 Ilex Forest Gatehouse - Gift from Lady Behind Counter"
-id = 295
+id = 131
 
 [azalea_gym_hive_badge]
 original_item = "hive_badge"
 type = "badge"
 table = "base"
-check = 5035
+check = 127
 label = "Azalea Gym - Hive Badge"
-id = 401
+id = 127
 
 [azalea_gym_tm89]
 original_item = "tm89"
@@ -2750,7 +2790,7 @@ type = "npc_gift"
 table = "base"
 check = 127
 label = "Azalea Gym - Gift from Bugsy"
-id = 292
+id = 45
 
 [slowpoke_well_b2f_kings_rock]
 original_item = "kings_rock"
@@ -2758,7 +2798,7 @@ type = "npc_gift"
 table = "base"
 check = 122
 label = "Slowpoke Well B2F - Gift from Man Northwest of Ladder"
-id = 293
+id = 122
 
 [goldenrod_bike_shop_bicycle]
 original_item = "bicycle"
@@ -2766,23 +2806,23 @@ type = "bicycle"
 table = "base"
 check = 137
 label = "Goldenrod Bike Shop - Gift from Bike Shop"
-id = 298
+id = 137
 
 [goldenrod_flower_shop_squirtbottle]
 original_item = "squirtbottle"
 type = "key_item"
 table = "base"
-check = 181
+check = 5010
 label = "Goldenrod Flower Shop - Gift from Flower Shop"
-id = 299
+id = 46
 
 [goldenrod_radio_tower_2f_blue_card]
 original_item = "blue_card"
 type = "key_item"
 table = "base"
-check = 2742
+check = 5011
 label = "Goldenrod Radio Tower 2F - Gift from Buena"
-id = 300
+id = 47
 
 [goldenrod_radio_tower_3f_tm11]
 original_item = "tm11"
@@ -2790,7 +2830,7 @@ type = "npc_gift"
 table = "base"
 check = 143
 label = "Goldenrod Radio Tower 3F - Gift from Woman in Southeast Corner"
-id = 301
+id = 143
 
 [goldenrod_radio_tower_4f_brightpowder]
 original_item = "brightpowder"
@@ -2798,31 +2838,35 @@ type = "npc_gift"
 table = "base"
 check = 145
 label = "Goldenrod Radio Tower 4F - Gift from Mary"
-id = 302
+id = 145
 
 [goldenrod_radio_tower_5f_basement_key]
 original_item = "basement_key"
 type = "npc_gift"
 table = "base"
-check = 567
 label = "Goldenrod Radio Tower 5F - Gift for Defeating Executive Petrel"
-id = 387
+id = 48
+
+[goldenrod_radio_tower_5f_basement_key.check]
+id = 16615
+value = 2
+op = "ge"
 
 [goldenrod_radio_tower_observation_deck_rainbow_wing]
 original_item = "rainbow_wing"
-type = "key_item"
+type = "heartgold"
 table = "base"
 check = 147
 label = "Goldenrod Radio Tower Observation Deck - Gift from Director HG"
-id = 303
+id = 147
 
 [goldenrod_radio_tower_observation_deck_silver_wing]
 original_item = "silver_wing"
-type = "key_item"
+type = "soulsilver"
 table = "base"
 check = 148
 label = "Goldenrod Radio Tower Observation Deck - Gift from Director SS"
-id = 304
+id = 148
 
 [goldenrod_tunnel_warehouse_card_key]
 original_item = "card_key"
@@ -2830,15 +2874,15 @@ type = "key_item"
 table = "base"
 check = 449
 label = "Goldenrod Tunnel Warehouse - Gift from Radio Director"
-id = 305
+id = 449
 
 [route_39_moomoo_farm_house_moomoo_milk]
 original_item = "moomoo_milk"
 type = "npc_gift"
 table = "base"
-check = 5036
+check = 168
 label = "Route 39 Moomoo Farm House - Gift from Farmer for Healing Miltank"
-id = 315
+id = 168
 
 [route_39_moomoo_farm_house_tm83]
 original_item = "tm83"
@@ -2846,7 +2890,7 @@ type = "npc_gift"
 table = "base"
 check = 171
 label = "Route 39 Moomoo Farm House - Gift from Farmers Wife for Healing Miltank"
-id = 316
+id = 171
 
 [route_39_moomoo_farm_stable_seal_case]
 original_item = "seal_case"
@@ -2854,7 +2898,7 @@ type = "key_item"
 table = "base"
 check = 256
 label = "Route 39 Moomoo Farm Stable - Gift from Girl for Healing Miltank"
-id = 314
+id = 256
 
 [olivine_northwest_house_good_rod]
 original_item = "good_rod"
@@ -2862,7 +2906,7 @@ type = "rod"
 table = "base"
 check = 189
 label = "Olivine Northwest House - Gift from Fisherman"
-id = 317
+id = 189
 
 [cianwood_pharmacy_secretpotion]
 original_item = "secretpotion"
@@ -2870,15 +2914,15 @@ type = "key_item"
 table = "base"
 check = 185
 label = "Cianwood Pharmacy - Gift from Pharmacy"
-id = 320
+id = 185
 
 [team_rocket_headquarters_b2f_hm05]
 original_item = "hm05"
 type = "hm"
 table = "base"
-check = 485
+check = 202
 label = "Team Rocket HQ B2F - Gift from Lance After Defeating the Electrode"
-id = 329
+id = 202
 
 [dragons_den_tm59]
 original_item = "tm59"
@@ -2886,7 +2930,7 @@ type = "npc_gift"
 table = "base"
 check = 218
 label = "Dragons Den - Gift from Clair"
-id = 334
+id = 218
 
 [pokeathlon_dome_rare_candy]
 original_item = "rare_candy"
@@ -2894,7 +2938,7 @@ type = "npc_gift"
 table = "base"
 check = 340
 label = "Pokeathlon Dome - Gift from Lady with Pidgey for Dashing 1000 Times"
-id = 381
+id = 340
 
 [pokeathlon_dome_interior_1f_rare_candy]
 original_item = "rare_candy"
@@ -2902,7 +2946,7 @@ type = "npc_gift"
 table = "base"
 check = 338
 label = "Pokeathlon Dome Interior 1F - Gift from Old Man for Jumping 1000 Times"
-id = 382
+id = 338
 
 [pokeathlon_dome_interior_1f_rare_candy_0]
 original_item = "rare_candy"
@@ -2910,15 +2954,15 @@ type = "npc_gift"
 table = "base"
 check = 339
 label = "Pokeathlon Dome Interior 1F - Gift from Man for Tackling 2000 Times"
-id = 383
+id = 339
 
 [dragons_den_shrine_rising_badge]
 original_item = "rising_badge"
 type = "badge"
 table = "base"
-check = 5037
+check = 234
 label = "Dragons Den Shrine - Rising Badge"
-id = 407
+id = 234
 
 [lake_of_rage_hidden_power_house_tm10]
 original_item = "tm10"
@@ -2926,15 +2970,15 @@ type = "npc_gift"
 table = "base"
 check = 199
 label = "Lake Of Rage Hidden Power House - Gift from Man"
-id = 338
+id = 199
 
 [ruins_of_alph_underground_hall_unown_report]
 original_item = "unown_report"
 type = "key_item"
 table = "base"
-check = 565
+check = 566
 label = "Ruins Of Alph Underground Hall - Unown Report"
-id = 291
+id = 566
 
 [route_27_house_tm37]
 original_item = "tm37"
@@ -2942,15 +2986,19 @@ type = "npc_gift"
 table = "base"
 check = 233
 label = "Route 27 House - Gift from Lady for High Friendship"
-id = 339
+id = 233
 
 [ss_aqua_1f_northwest_rooms_metal_coat]
 original_item = "metal_coat"
 type = "npc_gift"
 table = "base"
-check = 554
 label = "SS Aqua 1F Northwest Room - Gift from Gentleman for Finding his Granddaughter"
-id = 384
+id = 49
+
+[ss_aqua_1f_northwest_rooms_metal_coat.check]
+id = 16587
+value = 6
+op = "ge"
 
 [vermilion_pokemon_fan_club_rare_candy]
 original_item = "rare_candy"
@@ -2958,23 +3006,27 @@ type = "npc_gift"
 table = "base"
 check = 248
 label = "Vermilion Pokemon Fan Club - Gift from Fan Club Chairman"
-id = 351
+id = 248
 
 [vermilion_pokemon_fan_club_lost_item]
 original_item = "lost_item"
 type = "key_item"
 table = "base"
-check = 765
 label = "Vermilion Pokemon Fan Club - Gift from Fan Club Member"
-id = 352
+id = 50
+
+[vermilion_pokemon_fan_club_lost_item.check]
+id = 16688
+value = 1
+op = "ge"
 
 [vermilion_gym_thunder_badge]
 original_item = "thunder_badge"
 type = "badge"
 table = "base"
-check = 5038
+check = 385
 label = "Vermilion Gym - Thunder Badge"
-id = 410
+id = 385
 
 [vermilion_gym_tm34]
 original_item = "tm34"
@@ -2982,15 +3034,15 @@ type = "npc_gift"
 table = "base"
 check = 385
 label = "Vermilion Gym - Gift from Lt Surge"
-id = 353
+id = 51
 
 [celadon_condominiums_3f_gb_sounds]
 original_item = "gb_sounds"
 type = "key_item"
 table = "base"
-check = 5039
+check = 5012
 label = "Celadon Condominiums 3F - Gift from Sound Designer"
-id = 370
+id = 52
 
 [celadon_condominiums_roof_room_spell_tag]
 original_item = "spell_tag"
@@ -2998,15 +3050,15 @@ type = "npc_gift"
 table = "base"
 check = 344
 label = "Celadon Condominiums Roof Room - Gift from Man at Night"
-id = 371
+id = 344
 
 [celadon_gym_rainbow_badge]
 original_item = "rainbow_badge"
 type = "badge"
 table = "base"
-check = 5040
+check = 292
 label = "Celadon Gym - Rainbow Badge"
-id = 411
+id = 292
 
 [celadon_gym_tm19]
 original_item = "tm19"
@@ -3014,15 +3066,15 @@ type = "npc_gift"
 table = "base"
 check = 292
 label = "Celadon Gym - Gift from Erika"
-id = 373
+id = 53
 
 [celadon_game_corner_coin_case]
 original_item = "coin_case"
 type = "key_item"
 table = "base"
-check = 5048
+check = 5013
 label = "Celadon Game Corner - Gift from Mr Game"
-id = 372
+id = 54
 
 [saffron_mr_psychic_house_tm29]
 original_item = "tm29"
@@ -3030,7 +3082,7 @@ type = "npc_gift"
 table = "base"
 check = 303
 label = "Saffron Mr Psychic House - Gift from Mr Psychic"
-id = 374
+id = 303
 
 [saffron_silph_co_hq_upgrade]
 original_item = "upgrade"
@@ -3038,23 +3090,23 @@ type = "npc_gift"
 table = "base"
 check = 304
 label = "Saffron Silph Co HQ - Gift from Security Guard"
-id = 375
+id = 304
 
 [saffron_copycat_house_2f_pass]
 original_item = "pass"
-type = "key_item"
+type = "train_pass"
 table = "base"
 check = 135
 label = "Saffron Copycat House 2F - Gift from Copycat for Returning her Clafairy Doll"
-id = 376
+id = 135
 
 [saffron_gym_marsh_badge]
 original_item = "marsh_badge"
 type = "badge"
 table = "base"
-check = 5041
+check = 386
 label = "Saffron Gym - Marsh Badge"
-id = 412
+id = 386
 
 [saffron_gym_tm48]
 original_item = "tm48"
@@ -3062,7 +3114,7 @@ type = "npc_gift"
 table = "base"
 check = 386
 label = "Saffron Gym - Gift from Sabrina"
-id = 377
+id = 55
 
 [route_2_house_nugget]
 original_item = "nugget"
@@ -3070,7 +3122,7 @@ type = "npc_gift"
 table = "base"
 check = 308
 label = "Route 2 House - Gift from Man"
-id = 343
+id = 308
 
 [route_2_southeast_gatehouse_sacred_ash]
 original_item = "sacred_ash"
@@ -3078,15 +3130,15 @@ type = "npc_gift"
 table = "base"
 check = 309
 label = "Route 2 Southeast Gatehouse - Gift from Research Assitant"
-id = 344
+id = 309
 
 [cerulean_gym_cascade_badge]
 original_item = "cascade_badge"
 type = "badge"
 table = "base"
-check = 5042
+check = 384
 label = "Cerulean Gym - Cascade Badge"
-id = 409
+id = 384
 
 [cerulean_gym_tm03]
 original_item = "tm03"
@@ -3094,23 +3146,27 @@ type = "npc_gift"
 table = "base"
 check = 384
 label = "Cerulean Gym - Gift from Misty"
-id = 347
+id = 56
 
 [cerulean_gym_machine_part]
 original_item = "machine_part"
 type = "npc_gift"
 table = "base"
-check = 599
 label = "Cerulean Gym - Item hidden by Rocket Grunt in North Lifebuoy Pile"
-id = 388
+id = 57
+
+[cerulean_gym_machine_part.check]
+id = 16519
+value = 4
+op = "ge"
 
 [seafoam_islands_cinnabar_gym_volcano_badge]
 original_item = "volcano_badge"
 type = "badge"
 table = "base"
-check = 5043
+check = 381
 label = "Seafoam Islands Cinnabar Gym - Volcano Badge"
-id = 414
+id = 381
 
 [seafoam_islands_cinnabar_gym_tm50]
 original_item = "tm50"
@@ -3118,15 +3174,15 @@ type = "npc_gift"
 table = "base"
 check = 381
 label = "Seafoam Islands Cinnabar Gym - Gift from Blaine"
-id = 378
+id = 58
 
 [pewter_gym_boulder_badge]
 original_item = "boulder_badge"
 type = "badge"
 table = "base"
-check = 5044
+check = 383
 label = "Pewter Gym - Boulder Badge"
-id = 408
+id = 383
 
 [pewter_gym_tm80]
 original_item = "tm80"
@@ -3134,15 +3190,15 @@ type = "npc_gift"
 table = "base"
 check = 383
 label = "Pewter Gym - Gift from Brock"
-id = 345
+id = 59
 
 [fuchsia_gym_soul_badge]
 original_item = "soul_badge"
 type = "badge"
 table = "base"
-check = 5045
+check = 301
 label = "Fuchsia Gym - Soul Badge"
-id = 413
+id = 301
 
 [fuchsia_gym_tm84]
 original_item = "tm84"
@@ -3150,23 +3206,23 @@ type = "npc_gift"
 table = "base"
 check = 301
 label = "Fuchsia Gym - Gift from Janine"
-id = 369
+id = 60
 
 [route_10_power_plant_tm57]
 original_item = "tm57"
 type = "npc_gift"
 table = "base"
-check = 600
+check = 280
 label = "Route 10 Power Plant - Gift from the Manager for Returning the Machine Part"
-id = 354
+id = 280
 
 [viridian_gym_earth_badge]
 original_item = "earth_badge"
 type = "badge"
 table = "base"
-check = 5046
+check = 382
 label = "Viridian Gym - Earth Badge"
-id = 415
+id = 382
 
 [viridian_gym_tm92]
 original_item = "tm92"
@@ -3174,7 +3230,7 @@ type = "npc_gift"
 table = "base"
 check = 382
 label = "Viridian Gym - Gift from Blue"
-id = 379
+id = 61
 
 [pallet_town_oaks_lab_hm08]
 original_item = "hm08"
@@ -3182,15 +3238,19 @@ type = "hm"
 table = "base"
 check = 299
 label = "Pallet Town Oaks Lab - Gift from Professor Oak for Having all the Gym Badges"
-id = 340
+id = 299
 
 [pallet_town_oaks_lab_jade_orb]
 original_item = "jade_orb"
 type = "key_item"
 table = "base"
-check = 188
 label = "Pallet Town Oaks Lab - Gift from Professor Oak for Showing Groudon and Kyogre"
-id = 341
+id = 62
+
+[pallet_town_oaks_lab_jade_orb.check]
+id = 16633
+value = 5
+op = "ge"
 
 [route_28_house_tm47]
 original_item = "tm47"
@@ -3198,7 +3258,7 @@ type = "npc_gift"
 table = "base"
 check = 311
 label = "Route 28 House - Gift from Celebrity"
-id = 385
+id = 311
 
 [route_5_house_cleanse_tag]
 original_item = "cleanse_tag"
@@ -3206,23 +3266,23 @@ type = "npc_gift"
 table = "base"
 check = 305
 label = "Route 5 House - Gift from Old Lady"
-id = 349
+id = 305
 
 [route_12_fishing_brother_house_super_rod]
 original_item = "super_rod"
 type = "rod"
 table = "base"
-check = 5047
+check = 5014
 label = "Route 12 House - Gift from Fisherman"
-id = 355
+id = 63
 
 [goldenrod_game_corner_coin_case]
 original_item = "coin_case"
 type = "key_item"
 table = "base"
-check = 5048
+check = 5015
 label = "Goldenrod Game Corner - Gift from Mr Game"
-id = 306
+id = 64
 
 [goldenrod_radio_tower_1f_radio_card]
 original_item = "radio_card"
@@ -3230,7 +3290,7 @@ type = "pokegear_card"
 table = "base"
 check = 138
 label = "Goldenrod Radio Tower 1F - Gift for Completing the Quiz"
-id = 419
+id = 138
 
 [lavender_radio_station_expn_card]
 original_item = "expn_card"
@@ -3238,23 +3298,31 @@ type = "pokegear_card"
 table = "base"
 check = 287
 label = "Lavender Radio Station - Gift from Director for Restoring Power"
-id = 420
+id = 287
 
 [cherrygrove_running_shoes]
 original_item = "running_shoes"
 type = "running_shoes"
 table = "base"
-check = 8001
 label = "Cherrygrove City - Gift 1 from Guide Gent"
-id = 416
+id = 65
+
+[cherrygrove_running_shoes.check]
+id = 16499
+value = 1
+op = "ge"
 
 [cherrygrove_map_card]
 original_item = "map_card"
 type = "pokegear_card"
 table = "base"
-check = 0
 label = "Cherrygrove City - Gift 2 from Guide Gent"
-id = 417
+id = 66
+
+[cherrygrove_map_card.check]
+id = 16499
+value = 2
+op = "ge"
 
 [route_30_mr_pokemon_house_pokedex]
 original_item = "pokedex"
@@ -3262,15 +3330,15 @@ type = "pokedex"
 table = "base"
 check = 107
 label = "Route 30 Mr Pokemon House - Gift from Professor Oak"
-id = 418
+id = 67
 
 [ss_aqua_olivine_port_interior_national_pokedex]
 original_item = "pokedex"
 type = "pokedex"
 table = "base"
-check = 8005
+check = 5016
 label = "SS Aqua Olivine Port Interior - Gift from Professor Oak"
-id = 421
+id = 68
 
 [bellchime_trail_tinymushroom]
 original_item = "tinymushroom"
@@ -5124,246 +5192,246 @@ id = 858
 original_item = "blk_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5017
 label = "Route 1 - Apricorn Tree"
-id = 730
+id = 69
 
 [route_2_apricorn_tree]
 original_item = "pnk_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5018
 label = "Route 2 - Apricorn Tree"
-id = 729
+id = 70
 
 [route_8_apricorn_tree]
 original_item = "ylw_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5019
 label = "Route 8 - Apricorn Tree"
-id = 724
+id = 71
 
 [route_11_apricorn_tree]
 original_item = "grn_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5020
 label = "Route 11 - Apricorn Tree"
-id = 725
+id = 72
 
 [route_26_apricorn_tree]
 original_item = "blu_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5021
 label = "Route 26 - Apricorn Tree"
-id = 723
+id = 73
 
 [route_29_apricorn_tree]
 original_item = "grn_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5022
 label = "Route 29 - Apricorn Tree"
-id = 700
+id = 74
 
 [route_30_apricorn_tree_s]
 original_item = "grn_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5023
 label = "Route 30 - Apricorn Tree Near Apricorn House"
-id = 701
+id = 75
 
 [route_30_apricorn_tree_n]
 original_item = "pnk_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5024
 label = "Route 30 - Apricorn Tree Near Mr. Pokemons House"
-id = 702
+id = 76
 
 [route_31_apricorn_tree]
 original_item = "blk_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5025
 label = "Route 31 - Apricorn Tree"
-id = 703
+id = 77
 
 [route_33_apricorn_tree_w]
 original_item = "pnk_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5026
 label = "Route 33 - Apricorn Tree West"
-id = 705
+id = 78
 
 [route_33_apricorn_tree_e]
 original_item = "blk_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5027
 label = "Route 33 - Apricorn Tree East"
-id = 706
+id = 79
 
 [route_35_apricorn_tree]
 original_item = "grn_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5028
 label = "Route 35 - Apricorn Tree"
-id = 708
+id = 80
 
 [route_36_apricorn_tree]
 original_item = "blu_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5029
 label = "Route 36 - Apricorn Tree"
-id = 709
+id = 81
 
 [route_37_apricorn_tree_nw]
 original_item = "red_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5030
 label = "Route 37 - Apricorn Tree Northwest"
-id = 710
+id = 82
 
 [route_37_apricorn_tree_ne]
 original_item = "blu_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5031
 label = "Route 37 - Apricorn Tree Northeast"
-id = 711
+id = 83
 
 [route_37_apricorn_tree_s]
 original_item = "blk_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5032
 label = "Route 37 - Apricorn Tree South"
-id = 712
+id = 84
 
 [route_38_apricorn_tree]
 original_item = "wht_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5033
 label = "Route 38 - Apricorn Tree"
-id = 713
+id = 85
 
 [route_39_apricorn_tree]
 original_item = "grn_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5034
 label = "Route 39 - Apricorn Tree"
-id = 714
+id = 86
 
 [route_42_apricorn_tree_w]
 original_item = "pnk_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5035
 label = "Route 42 - Apricorn Tree West"
-id = 715
+id = 87
 
 [route_42_apricorn_tree_c]
 original_item = "grn_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5036
 label = "Route 42 - Apricorn Tree Center"
-id = 716
+id = 88
 
 [route_42_apricorn_tree_e]
 original_item = "ylw_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5037
 label = "Route 42 - Apricorn Tree East"
-id = 717
+id = 89
 
 [route_43_apricorn_tree]
 original_item = "blk_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5038
 label = "Route 43 - Apricorn Tree"
-id = 718
+id = 90
 
 [route_44_apricorn_tree]
 original_item = "red_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5039
 label = "Route 44 - Apricorn Tree"
-id = 719
+id = 91
 
 [route_45_apricorn_tree]
 original_item = "grn_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5040
 label = "Route 45 - Apricorn Tree"
-id = 720
+id = 92
 
 [route_46_apricorn_tree_ne]
 original_item = "grn_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5041
 label = "Route 46 - Apricorn Tree Northeast"
-id = 721
+id = 93
 
 [route_46_apricorn_tree_sw]
 original_item = "ylw_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5042
 label = "Route 46 - Apricorn Tree Southwest"
-id = 722
+id = 94
 
 [pewter_apricorn_tree_w]
 original_item = "blu_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5043
 label = "Pewter City - Apricorn Tree West"
-id = 727
+id = 95
 
 [pewter_apricorn_tree_e]
 original_item = "wht_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5044
 label = "Pewter City - Apricorn Tree East"
-id = 728
+id = 96
 
 [fuchsia_apricorn_tree]
 original_item = "red_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5045
 label = "Fuchsia City - Apricorn Tree"
-id = 726
+id = 97
 
 [violet_apricorn_tree]
 original_item = "ylw_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5046
 label = "Violet City - Apricorn Tree"
-id = 704
+id = 98
 
 [azalea_apricorn_tree]
 original_item = "wht_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 0
+check = 5047
 label = "Azalea Town - Apricorn Tree"
-id = 707
+id = 99

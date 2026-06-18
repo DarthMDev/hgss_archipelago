@@ -11,6 +11,7 @@ from typing import Any, Dict, TYPE_CHECKING
 from settings import get_settings
 from worlds.Files import APAutoPatchInterface
 import zipfile
+import json
 
 # from worlds.pokemon_hgss.options import GameOptions
 
@@ -18,50 +19,119 @@ from .data.charmap import charmap
 from .data.locations import locations, LocationTable
 from .data.items import items
 
+from .apnds.lz import decompress_code
+from .apnds.rom import HeaderField, Rom, Overlay
+from .apnds.narc import Narc
+
 if TYPE_CHECKING:
     from . import PokemonHGSSWorld
 
 HEARTGOLD_HASH = "258cea3a62ac0d6eb04b5a0fd764d788"
 SOULSILVER_HASH = "8a6c8888bed9e1dce952f840351b73f2"
 
-class PokemonHGSSPatch(APAutoPatchInterface):
+class PokemonHeartGoldPatch(APAutoPatchInterface):
     game = "Pokemon HeartGold and SoulSilver"
-    patch_file_ending = ".aphgss"
-    hashes: list[str | bytes] = [HEARTGOLD_HASH, SOULSILVER_HASH]
+    patch_file_ending = ".apheartgold"
+    hashes: list[str | bytes] = [HEARTGOLD_HASH]
     source_data: bytes
     files: Dict[str, bytes]
     result_file_ending = ".nds"
 
     @staticmethod
     def get_source_data() -> bytes:
-        with open(get_settings().pokemon_hgss_settings.rom_file, "rb") as infile:
+        with open(get_settings().pokemon_hgss_settings.hg_rom_file, "rb") as infile:
             base_rom_bytes = bytes(infile.read())
         return base_rom_bytes
 
     @staticmethod
     def get_source_data_with_cache() -> bytes:
-        if not hasattr(PokemonHGSSPatch, "source_data"):
-            PokemonHGSSPatch.source_data = PokemonHGSSPatch.get_source_data()
-        return PokemonHGSSPatch.source_data
+        if not hasattr(PokemonHeartGoldPatch, "source_data"):
+            PokemonHeartGoldPatch.source_data = PokemonHeartGoldPatch.get_source_data()
+        return PokemonHeartGoldPatch.source_data
 
     def patch(self, target: str) -> None:
         self.read()
-        data = PokemonHGSSPatch.get_source_data_with_cache()
-        
-        print("SKIPPING BINARY PATCH: No HGSS ASM patch available yet.")
-        print("Generating AP Data File (ap.bin) separately for Lua...")
-        
-        # We will write the randomizer data (ap.bin) to a separate file
-        # so  Lua script can read it, instead of injecting it into the ROM.
-        ap_bin = self.get_file("ap.bin")
-        
-        # Save ap.bin next to the ROM for debugging/Lua usage
-        with open(target + ".apdata", 'wb') as f:
-            f.write(ap_bin)
+        data = PokemonHeartGoldPatch.get_source_data_with_cache()
+        rom = Rom.from_bytes(data)
 
-        # Just copy the vanilla ROM as the "output" for now so the generator doesn't crash
+        # change rom name
+        rom.header[HeaderField.TITLE] = b'HGAP 0\x00\x00\x00\x00\x00\x00'
+
+        # decompress arm9 and any overlays we need to edit
+        arm9 = bytearray(decompress_code(rom.arm9,(len(rom.arm9) - 12))[0])
+        overlay12 = bytearray(decompress_code(rom.arm9_overlays[12].data,len(rom.arm9_overlays[12].data))[0])
+        overlay15 = bytearray(decompress_code(rom.arm9_overlays[15].data,len(rom.arm9_overlays[15].data))[0])
+        arm9[0xBB4] = 0x00
+        arm9[0xBB5] = 0x00
+        arm9[0xBB6] = 0x00
+        arm9[0xBB7] = 0x00
+        rom.arm9 = bytes(arm9)
+        rom.arm9_overlays[12].flags = 0
+        rom.arm9_overlays[15].flags = 0
+
+        options = json.loads(self.get_file("options.json"))
+        if options["reusable_tms"]:
+            arm9[0x825A7] = 0xE0
+            overlay15[0x6239] = 0xE0
+            a017 = Narc.from_bytes(rom.files["/a/0/1/7"])
+            for ndx in range(306, 398):
+                tm = bytearray(a017.files[ndx])
+                tm[0x8] = 0xBF
+                a017.files[ndx] = bytes(tm)
+            rom.files["/a/0/1/7"] = a017.to_bytes()
+        if options["exp_multiplier"] != 1:
+            arm9[0x6FADA] = 0x6C
+            arm9[0x6FADB] = 0x00
+            arm9[0x6FB2E] = options["exp_multiplier"]
+            arm9[0x6FB2F] = 0x20
+            arm9[0x6FB30] = 0x45
+            arm9[0x6FB31] = 0x43
+            arm9[0x6FB32] = 0x3A
+            arm9[0x6FB33] = 0xE0
+            arm9[0x6FB44] = 0x65
+            arm9[0x6FB45] = 0x89
+        if options["fps60"]:
+            arm9[0xE28] = 0x00
+            arm9[0xE29] = 0x00
+        if options["instant_text"]:
+            arm9[0x2346] = 0x00
+            arm9[0x2347] = 0x21
+            arm9[0x202EE] = 0x0C
+            arm9[0x202EF] = 0x1C
+            arm9[0x202F0] = 0x18
+            arm9[0x202F1] = 0x48
+            arm9[0x2031E] = 0x10
+            arm9[0x2031F] = 0xBD
+            arm9[0x20320] = 0x2D
+            arm9[0x20321] = 0x3C
+            arm9[0x20322] = 0xE5
+            arm9[0x20323] = 0xE7
+            arm9[0x2032E] = 0xDF
+            arm9[0x2032F] = 0xD0
+            arm9[0x2033A] = 0xF1
+            arm9[0x2033B] = 0xE7
+        if options["fast_hb_speed"]:
+            overlay12[0x2E17A] = 0xC0
+            overlay12[0x2E17B] = 0x02
+            overlay12[0x2E1C0] = 0x20
+            overlay12[0x2E1C1] = 0x1C
+            overlay12[0x2E1CE] = 0x20
+            overlay12[0x2E1CF] = 0x1C
+            arm9[0x81750] = 0x21
+            arm9[0x81751] = 0x1C
+        if not options["hm_cut_ins"]:
+            arm9[0x43768] = 0x0B
+            arm9[0x43769] = 0xE0
+
+        rom.arm9 = bytes(arm9)
+        rom.arm9_overlays[12].data = bytes(overlay12)
+        rom.arm9_overlays[15].data = bytes(overlay15)
+
+        ap_bin = self.get_file("ap.bin")
+        rom.files["/ap.bin"] = ap_bin
+
         with open(target, 'wb') as f:
-            f.write(data)
+            f.write(rom.to_bytes())
 
     def __init__(self, *args: Any, **kwargs: Any):
         super().__init__(*args, **kwargs)
@@ -94,6 +164,143 @@ class PokemonHGSSPatch(APAutoPatchInterface):
 
     def write_file(self, file_name: str, file: bytes) -> None:
         self.files[file_name] = file
+
+class PokemonSoulSilverPatch(APAutoPatchInterface):
+    game = "Pokemon HeartGold and SoulSilver"
+    patch_file_ending = ".apsoulsilver"
+    hashes: list[str | bytes] = [SOULSILVER_HASH]
+    source_data: bytes
+    files: Dict[str, bytes]
+    result_file_ending = ".nds"
+
+    @staticmethod
+    def get_source_data() -> bytes:
+        with open(get_settings().pokemon_hgss_settings.ss_rom_file, "rb") as infile:
+            base_rom_bytes = bytes(infile.read())
+        return base_rom_bytes
+
+    @staticmethod
+    def get_source_data_with_cache() -> bytes:
+        if not hasattr(PokemonSoulSilverPatch, "source_data"):
+            PokemonSoulSilverPatch.source_data = PokemonSoulSilverPatch.get_source_data()
+        return PokemonSoulSilverPatch.source_data
+
+    def patch(self, target: str) -> None:
+        self.read()
+        data = PokemonSoulSilverPatch.get_source_data_with_cache()
+        rom = Rom.from_bytes(data)
+
+        # change rom name
+        rom.header[HeaderField.TITLE] = b'SSAP 0\x00\x00\x00\x00\x00\x00'
+
+        # decompress arm9 and any overlays we need to edit
+        arm9 = bytearray(decompress_code(rom.arm9,(len(rom.arm9) - 12))[0])
+        overlay12 = bytearray(decompress_code(rom.arm9_overlays[12].data,len(rom.arm9_overlays[12].data))[0])
+        overlay15 = bytearray(decompress_code(rom.arm9_overlays[15].data,len(rom.arm9_overlays[15].data))[0])
+        arm9[0xBB4] = 0x00
+        arm9[0xBB5] = 0x00
+        arm9[0xBB6] = 0x00
+        arm9[0xBB7] = 0x00
+        rom.arm9_overlays[12].flags = 0
+        rom.arm9_overlays[15].flags = 0
+
+        options = json.loads(self.get_file("options.json"))
+        if options["reusable_tms"]:
+            arm9[0x825A7] = 0xE0
+            overlay15[0x6239] = 0xE0
+            a017 = Narc.from_bytes(rom.files["/a/0/1/7"])
+            for ndx in range(306, 398):
+                tm = bytearray(a017.files[ndx])
+                tm[0x8] = 0xBF
+                a017.files[ndx] = bytes(tm)
+            rom.files["/a/0/1/7"] = a017.to_bytes()
+        if options["exp_multiplier"] != 1:
+            arm9[0x6FADA] = 0x6C
+            arm9[0x6FADB] = 0x00
+            arm9[0x6FB2E] = options["exp_multiplier"]
+            arm9[0x6FB2F] = 0x20
+            arm9[0x6FB30] = 0x45
+            arm9[0x6FB31] = 0x43
+            arm9[0x6FB32] = 0x3A
+            arm9[0x6FB33] = 0xE0
+            arm9[0x6FB44] = 0x65
+            arm9[0x6FB45] = 0x89
+        if options["fps60"]:
+            arm9[0xE28] = 0x00
+            arm9[0xE29] = 0x00
+        if options["instant_text"]:
+            arm9[0x2346] = 0x00
+            arm9[0x2347] = 0x21
+            arm9[0x202EE] = 0x0C
+            arm9[0x202EF] = 0x1C
+            arm9[0x202F0] = 0x18
+            arm9[0x202F1] = 0x48
+            arm9[0x2031E] = 0x10
+            arm9[0x2031F] = 0xBD
+            arm9[0x20320] = 0x2D
+            arm9[0x20321] = 0x3C
+            arm9[0x20322] = 0xE5
+            arm9[0x20323] = 0xE7
+            arm9[0x2032E] = 0xDF
+            arm9[0x2032F] = 0xD0
+            arm9[0x2033A] = 0xF1
+            arm9[0x2033B] = 0xE7
+        if options["fast_hb_speed"]:
+            overlay12[0x2E17A] = 0xC0
+            overlay12[0x2E17B] = 0x02
+            overlay12[0x2E1C0] = 0x20
+            overlay12[0x2E1C1] = 0x1C
+            overlay12[0x2E1CE] = 0x20
+            overlay12[0x2E1CF] = 0x1C
+            arm9[0x81750] = 0x21
+            arm9[0x81751] = 0x1C
+        if not options["hm_cut_ins"]:
+            arm9[0x43768] = 0x0B
+            arm9[0x43769] = 0xE0
+
+        rom.arm9 = bytes(arm9)
+        rom.arm9_overlays[12].data = bytes(overlay12)
+        rom.arm9_overlays[15].data = bytes(overlay15)
+
+        ap_bin = self.get_file("ap.bin")
+        rom.files["/ap.bin"] = ap_bin
+
+        with open(target, 'wb') as f:
+            f.write(rom.to_bytes())
+
+    def __init__(self, *args: Any, **kwargs: Any):
+        super().__init__(*args, **kwargs)
+        self.files = {}
+
+    def get_manifest(self) -> Dict[str, Any]:
+        manifest = super().get_manifest()
+        manifest["result_file_ending"] = self.result_file_ending
+        manifest["allowed_hashes"] = self.hashes
+        return manifest
+
+    def read_contents(self, opened_zipfile: zipfile.ZipFile) -> Dict[str, Any]:
+        manifest = super().read_contents(opened_zipfile)
+        for file in opened_zipfile.namelist():
+            if file not in ["archipelago.json"]:
+                self.files[file] = opened_zipfile.read(file)
+        return manifest
+
+    def write_contents(self, opened_zipfile: zipfile.ZipFile) -> None:
+        super().write_contents(opened_zipfile)
+        for file in self.files:
+            opened_zipfile.writestr(file, self.files[file],
+                                    compress_type=zipfile.ZIP_STORED if file.endswith(".bsdiff4") else None)
+
+    def get_file(self, file: str) -> bytes:
+        if file not in self.files:
+            self.read()
+        print(self.files.keys())
+        return self.files[file]
+
+    def write_file(self, file_name: str, file: bytes) -> None:
+        self.files[file_name] = file
+
+PokemonHGSSPatch = PokemonHeartGoldPatch | PokemonSoulSilverPatch
 
 def encode_name(name: str) -> bytes | None:
     ret = bytes()
@@ -294,6 +501,14 @@ def generate_output(world: "PokemonHGSSWorld", output_directory: str, patch: Pok
     ap_bin += b''.join(entries)
 
     patch.write_file("ap.bin", ap_bin)
+    options = {}
+    options["reusable_tms"] = bool(world.options.reusable_tms)
+    options["exp_multiplier"] = int(world.options.exp_multiplier)
+    options["fps60"] = bool(world.options.fps60)
+    options["instant_text"] = bool(world.options.instant_text)
+    options["fast_hb_speed"] = bool(world.options.fast_hb_speed)
+    options["hm_cut_ins"] = bool(world.options.hm_cut_ins)
+    patch.write_file("options.json", json.dumps(options))
 
     out_file_name = world.multiworld.get_out_file_name_base(world.player)
     patch.write(os.path.join(output_directory, f"{out_file_name}{patch.patch_file_ending}"))

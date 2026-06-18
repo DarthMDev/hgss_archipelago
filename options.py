@@ -5,7 +5,7 @@
 
 from dataclasses import dataclass
 from typing import Any
-from Options import Choice, DefaultOnToggle, OptionDict, OptionError, OptionSet, PerGameCommonOptions, Range, Toggle
+from Options import Choice, Toggle, DefaultOnToggle, OptionDict, OptionError, OptionSet, PerGameCommonOptions, Range, OptionGroup
 
 class GameVersion(Choice):
     """Select HeartGold or SoulSilver version"""
@@ -14,7 +14,49 @@ class GameVersion(Choice):
     option_soulsilver = 1
     default = "random"
 
-class RandomizeHms(DefaultOnToggle):
+class Goal(Choice):
+    """
+    The goal of the randomizer.
+    
+    champion: defeat the Elite Four and Champion Lance
+    """
+    # champion_rematch: defeat the Elite Four and Chapion Lance a second time
+    # red: climb Mt. Silver and defeat Trainer Red
+    display_name = "Goal"
+    option_champion = 0
+    # option_champion_rematch = 1
+    # option_red = 2
+    default = 0
+
+class StartMode(Choice):
+    """
+    The starting mode.
+    
+    vanilla: start in New Bark Town with Route 30 blocked until you give the Mystery Egg to Professor Elm
+    """
+    # skip_tutorial: start in New Bark Town with Route 30 already open
+    display_name = "Start Mode"
+    option_vanilla = 0
+    # option_skip_tutorial = 1
+    # option_random_start = 2
+    default = 0
+
+class ReusableTMs(Toggle):
+    """Makes TMs reusable, this also means pokemon can't hold TMs."""
+    display_name = "Reusable TMs"
+
+class ExpMultiplier(Range):
+    """
+    Set an experience multiplier for all gained experience.
+
+    If you set this to 0 you will still recieve 1 exp per opponent defeated.
+    """
+    display_name = "Exp. Multiplier"
+    range_start = 0
+    range_end = 255
+    default = 1
+
+class RandomizeHMs(DefaultOnToggle):
     """Adds the HMs to the pool."""
     display_name = "Randomize HMs"
 
@@ -26,15 +68,15 @@ class RandomizeOverworlds(DefaultOnToggle):
     """Adds overworld items to the pool."""
     display_name = "Randomize Overworld Items"
 
-class RandomizeHiddenItems(Toggle):
+class RandomizeHiddens(Toggle):
     """Adds hidden items to the pool."""
     display_name = "Randomize Hidden Items"
 
-class RandomizeNpcGifts(DefaultOnToggle):
+class RandomizeNPCs(DefaultOnToggle):
     """Adds NPC gifts to the pool."""
     display_name = "Randomize NPC Gifts"
 
-class RandomizeApricornTrees(Toggle):
+class RandomizeApricorns(Toggle):
     """Adds apricorn trees to the pool."""
     display_name = "Randomize Apricorn Trees"
 
@@ -50,7 +92,7 @@ class RandomizeKeyItems(Choice):
         return self.value >= self.option_most
 
 class RandomizeRods(DefaultOnToggle):
-    """Adds rods to the pool. Currently, the Super Rod is unavailable, as it is post-game."""
+    """Adds the fishing rods to the pool."""
     display_name = "Randomize Rods"
 
 class RandomizeRunningShoes(Toggle):
@@ -69,6 +111,62 @@ class RandomizePokegearCards(Toggle):
     """Adds the Pokégear Map card and Radio cards to the pool."""
     display_name = "Randomize Pokegear Cards"
 
+class RandomizePass(Toggle):
+    """
+    Add the Pass to the item pool.
+    The Pass can be used to travel between Goldenrod City (Johto) and Saffron City (Kanto).
+    """
+    display_name = "Randomize Pass"
+
+class RandomizeSSTicket(Toggle):
+    """
+    Add the S.S. Ticket to the item pool.
+    The S.S. Ticket can be used to travel between Olivine City (Johto) and Vermilion City (Kanto).
+    """
+    display_name = "Randomize S.S. Ticket"
+
+class VisibilityHMLogic(DefaultOnToggle):
+    """Logically require Flash for traversing and finding locations in applicable regions."""
+    display_name = "Logically Require Flash for Applicable Regions"
+
+class DowsingMachineLogic(DefaultOnToggle):
+    """Logically require the Dowsing Machine to find hidden items."""
+    display_name = "Logically Require Dowsing Machine for Hidden Items"
+
+class FPS60(Toggle):
+    """Whether the 60 FPS patch should be applied."""
+    display_name = "60 FPS"
+
+class InstantText(Toggle):
+    """Whether to apply near-instant text speed."""
+    display_name = "Instant Text Speed"
+
+class FastHBSpeed(Toggle):
+    """Whether to apply fast Health and Exp bars."""
+    display_name = "Fast Healthbar"
+
+class HMCutIns(DefaultOnToggle):
+    """Whether HM Cut-Ins should be played."""
+    display_name = "HM Cut-Ins"
+
+class RemoteItems(Toggle):
+    """
+    Whether local items should be given in-game, or sent by the server.
+    This overrides the show randomized progression items option: all items are shown.
+    It is highly recommended to use nothing for received items notification, otherwise
+    you will be notified twice for each item.
+    """
+    display_name = "Remote Items"
+
+class ShowUnrandomizedProgressionItems(Toggle):
+    """
+    Whether unrandomized progression items should be sent to the server and
+    displayed in the chat. This also means that trackers will consider it a location
+    to be checked. If this is off, some trackers may assume that it is obtained when
+    accessible.
+    """
+    display_name = "Show Unrandomized Progression Items"
+
 #class HmBadgeRequirements(DefaultOnToggle):
 #    """Require the corresponding badge to use an HM outside of battle."""
 #    display_name = "Require Badges for HMs"
@@ -82,37 +180,12 @@ class RandomizePokegearCards(Toggle):
 #    display_name = "Remove Badge Requirement"
 #    valid_keys = ["CUT", "FLY", "SURF", "STRENGTH", "WHIRLPOOL" "ROCK_SMASH", "WATERFALL", "ROCK_CLIMB"]
 
-class VisibilityHmLogic(DefaultOnToggle):
-    """Logically require Flash for traversing and finding locations in applicable regions."""
-    display_name = "Logically Require Flash for Applicable Regions"
-
-class DowsingMachineLogic(DefaultOnToggle):
-    """Logically require the Dowsing Machine to find hidden items."""
-    display_name = "Logically Require Dowsing Machine for Hidden Items"
-
-class Goal(Choice):
-    """The goal of the randomizer. Currently, this only supports defeating the champion and entering the hall of fame."""
-    display_name = "Goal"
-    option_champion = 0
-    default = 0
-
 #class AddMasterRepel(Toggle):
 #    """
 #    Add a master repel item to the item pool. The master repel is a key item.
 #    It is a repel that blocks all encounters, and never runs out.
 #    """
 #    display_name = "Add Master Repel"
-
-class ExpMultiplier(Range):
-    """
-    Set an experience multiplier for all gained experience.
-
-    If you set this to 0 you will still recieve 1 exp per opponent defeated.
-    """
-    display_name = "Exp. Multiplier"
-    range_start = 0
-    range_end = 255
-    default = 1
 
 #class BlindTrainers(Toggle):
 #    """Set whether trainers will be blind."""
@@ -196,53 +269,6 @@ class ExpMultiplier(Range):
 #        else:
 #            raise AttributeError(name, self)
 
-#class RequireMysteryEgg(DefaultOnToggle):
-#    """
-#    Whether the player must deliver the Mystery Egg to Elm
-#    before leaving Violet City (Route 31).
-#    """
-#    display_name = "Require Mystery Egg Delivery"
-
-#class SkipTutorial(Toggle):
-#    """
-#    Skips retrieving the Mystery Egg from Mr. Pokémon.
-#
-#    This also removes the Mystery Egg from the pool.
-#    """
-#    display_name = "Skip Tutorial"
-
-class ShowUnrandomizedProgressionItems(Toggle):
-    """
-    Whether unrandomized progression items should be sent to the server and
-    displayed in the chat. This also means that trackers will consider it a location
-    to be checked. If this is off, some trackers may assume that it is obtained when
-    accessible.
-    """
-    display_name = "Show Unrandomized Progression Items"
-
-class RemoteItems(Toggle):
-    """
-    Whether local items should be given in-game, or sent by the server.
-    This overrides the show randomized progression items option: all items are shown.
-    It is highly recommended to use nothing for received items notification, otherwise
-    you will be notified twice for each item.
-    """
-    display_name = "Remote Items"
-
-class AddPass(Toggle):
-    """
-    Add the Pass to the item pool.
-    The Pass can be used to travel between Goldenrod City (Johto) and Saffron City (Kanto).
-    """
-    display_name = "Add Pass"
-
-class AddSSTicket(Toggle):
-    """
-    Add the S.S. Ticket to the item pool.
-    The S.S. Ticket can be used to travel between Olivine City (Johto) and Vermilion City (Kanto).
-    """
-    display_name = "Add S.S. Ticket"
-
 #class NationalDexNumMons(Range):
 #    """
 #    Number of seen regional Pokémon required to complete the Regional
@@ -254,78 +280,52 @@ class AddSSTicket(Toggle):
 #    range_end = 80
 #    default = 6060
 
-#class AddSecretPotion(Toggle):
-#    """
-#    Add the Secret Potion item to the item pool. This allows you heal the sick Ampharos in the Lighthouse in Olivine City.
-#    """
-#    display_name = "Add Secret Potion"
-
 #class AddBag(Toggle):
 #    """
 #    Add the bag to the item pool. Before obtaining it, the bag cannot be opened in the menu.
 #    """
 #    display_name = "Add Bag"
 
-class HMCutIns(DefaultOnToggle):
-    """Whether HM Cut-Ins should be played."""
-    display_name = "HM Cut-Ins"
-
-class FPS60(Toggle):
-    """Whether the 60 FPS patch should be applied."""
-    display_name = "60 FPS"
-
-class InstantText(Toggle):
-    """Whether to apply near-instant text speed."""
-    display_name = "Instant Text Speed"
-
-class FastHBSpeed(Toggle):
-    """Whether to apply fast Health and Exp bars."""
-    display_name = "Fast Healthbar"
-
-class ReusableTms(Toggle):
-    """Makes TMs reusable, this also means pokemon can't hold TMs."""
-    display_name = "Reusable TMs"
-
 @dataclass
 class PokemonHGSSOptions(PerGameCommonOptions):
-    game_version: GameVersion
-    hms: RandomizeHms
+    version: GameVersion
+    goal: Goal
+    start_mode: StartMode
+    reusable_tms: ReusableTMs
+    exp_multiplier: ExpMultiplier
+    remote_items: RemoteItems
+    show_unrandomized_progression_items: ShowUnrandomizedProgressionItems
+
+    hms: RandomizeHMs
     badges: RandomizeBadges
     overworlds: RandomizeOverworlds
-    hiddens: RandomizeHiddenItems
-    npc_gifts: RandomizeNpcGifts
-    apricorn_trees: RandomizeApricornTrees
+    hiddens: RandomizeHiddens
+    npc_gifts: RandomizeNPCs
+    apricorn_trees: RandomizeApricorns
     key_items: RandomizeKeyItems
     rods: RandomizeRods
     running_shoes: RandomizeRunningShoes
     bicycle: RandomizeBicycle
     pokedex: RandomizePokedex
     pokegear_cards: RandomizePokegearCards
+    train_pass: RandomizePass
+    ss_ticket: RandomizeSSTicket
 
-#    hm_badge_requirement: HmBadgeRequirements
-#    remove_badge_requirements: RemoveBadgeRequirement
-    visibility_hm_logic: VisibilityHmLogic
+    visibility_hm_logic: VisibilityHMLogic
     dowsing_machine_logic: DowsingMachineLogic
-#    regional_dex_goal: NationalDexNumMons
 
-#    game_options: GameOptions
-#    blind_trainers: BlindTrainers
-    hm_cut_ins: HMCutIns
     fps60: FPS60
     instant_text: InstantText
     fast_hb_speed: FastHBSpeed
-    reusable_tms: ReusableTms
+    hm_cut_ins: HMCutIns
 
-#    skip_tutorial: SkipTutorial
+#    hm_badge_requirement: HmBadgeRequirements
+#    remove_badge_requirements: RemoveBadgeRequirement
+#    game_options: GameOptions
+#    blind_trainers: BlindTrainers
+#    regional_dex_goal: NationalDexNumMons
 #    master_repel: AddMasterRepel
-    show_unrandomized_progression_items: ShowUnrandomizedProgressionItems
-    remote_items: RemoteItems
-    train_pass: AddPass
-    ss_ticket: AddSSTicket
-    exp_multiplier: ExpMultiplier
 #    bag: AddBag
-
-    goal: Goal
 
     # def requires_badge(self, hm: str) -> bool:
     #     return self.hm_badge_requirement.value == 1 or hm in self.remove_badge_requirements
@@ -336,3 +336,25 @@ class PokemonHGSSOptions(PerGameCommonOptions):
         # if self.bag and self.dowsing_machine_logic and not (self.overworlds or self.npc_gifts or self.rods or self.running_shoes or self.pokedex or self.key_items.value > 0):
         #     raise OptionError(f"if the bag is enabled, then at least one of overworlds, npc_gifts, rods, running_shoes, pokedex, or key_items must be enabled")
 
+OPTION_GROUPS = [
+#	OptionGroup(
+#		"Gameplay Options",
+#		[GameVersion, Goal, StartMode, ReusableTMs, ExpMultiplier],
+#	),
+	OptionGroup(
+		"Location/Item Randomization Options",
+		[RandomizeHMs, RandomizeBadges, RandomizeOverworlds, RandomizeHiddens, RandomizeNPCs, RandomizeApricorns, RandomizeKeyItems, RandomizeRods, RandomizeRunningShoes, RandomizeBicycle, RandomizePokedex, RandomizePokegearCards, RandomizePass, RandomizeSSTicket],
+	),
+	OptionGroup(
+		"Logic Options",
+		[VisibilityHMLogic, DowsingMachineLogic],
+	),
+	OptionGroup(
+		"Speed Up Options",
+		[FPS60, InstantText, FastHBSpeed, HMCutIns],
+	),
+	OptionGroup(
+		"Notification Options",
+		[RemoteItems, ShowUnrandomizedProgressionItems],
+	),
+]

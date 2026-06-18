@@ -2630,41 +2630,42 @@ label = "Lost Item"
 id = 479
 clas = "bagitem"
 group = "key_items"
+classification = "progression"
 
 [dowsing_mchn]
 label = "Dowsing Machine"
 id = 471
 clas = "bagitem"
 group = "key_items"
-classification = "useful"
+classification = "progression"
 
 [silver_wing]
 label = "Silver Wing"
 id = 482
 clas = "bagitem"
 group = "key_items"
-classification = "useful"
+classification = "progression"
 
 [rainbow_wing]
 label = "Rainbow Wing"
 id = 483
 clas = "bagitem"
 group = "key_items"
-classification= "useful"
+classification= "progression"
 
 [clear_bell]
 label = "Clear Bell"
 id = 474
 clas = "bagitem"
 group = "key_items"
-classification = "useful"
+classification = "progression"
 
 [tidal_bell]
 label = "Tidal Bell"
 id = 503
 clas = "bagitem"
 group = "key_items"
-classification="useful"
+classification="progression"
 
 [ragecandybar]
 label = "Rage Candy Bar"
@@ -2721,6 +2722,7 @@ label = "Pass"
 id = 480
 clas = "bagitem"
 group = "key_items"
+classification = "useful"
 
 [red_orb]
 label = "Red Orb"
