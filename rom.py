@@ -65,10 +65,21 @@ class PokemonHeartGoldPatch(APAutoPatchInterface):
         arm9[0xBB5] = 0x00
         arm9[0xBB6] = 0x00
         arm9[0xBB7] = 0x00
-        rom.arm9 = bytes(arm9)
         rom.arm9_overlays[12].flags = 0
         rom.arm9_overlays[15].flags = 0
+        rom.arm9 = bytes(arm9)
+        rom.arm9_overlays[12].data = bytes(overlay12)
+        rom.arm9_overlays[15].data = bytes(overlay15)
+        rom_decomp = rom.to_bytes()
 
+        # apply bsdiff4 file
+        rom_patched = bsdiff4.patch(rom_decomp, self.get_file("base_patch_us_hg.bsdiff4"))
+        rom = Rom.from_bytes(rom_patched)
+        arm9 = bytearray(rom.arm9)
+        overlay12 = bytearray(rom.arm9_overlays[12].data)
+        overlay15 = bytearray(rom.arm9_overlays[15].data)
+
+        # apply options
         options = json.loads(self.get_file("options.json"))
         if options["reusable_tms"]:
             arm9[0x825A7] = 0xE0
@@ -203,7 +214,19 @@ class PokemonSoulSilverPatch(APAutoPatchInterface):
         arm9[0xBB7] = 0x00
         rom.arm9_overlays[12].flags = 0
         rom.arm9_overlays[15].flags = 0
+        rom.arm9 = bytes(arm9)
+        rom.arm9_overlays[12].data = bytes(overlay12)
+        rom.arm9_overlays[15].data = bytes(overlay15)
+        rom_decomp = rom.to_bytes()
 
+        # apply bsdiff4 file
+        rom_patched = bsdiff4.patch(rom_decomp, self.get_file("base_patch_us_ss.bsdiff4"))
+        rom = Rom.from_bytes(rom_patched)
+        arm9 = bytearray(rom.arm9)
+        overlay12 = bytearray(rom.arm9_overlays[12].data)
+        overlay15 = bytearray(rom.arm9_overlays[15].data)
+
+        # apply options
         options = json.loads(self.get_file("options.json"))
         if options["reusable_tms"]:
             arm9[0x825A7] = 0xE0

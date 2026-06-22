@@ -14,7 +14,7 @@ enc_types.old_rod = "old_rod" # & bag"
 common.national_dex = "pokedex * 2" # Logic for when National Dex is active
 common.dowsingmachine_if_opt = "dowsing_mchn if dowsing_machine_logic"
 common.flash_if_opt = "tm70 if visibility_hm_logic"
-common.pokeflute = "radio_card & expn_card" # & pokegear
+common.pokeflute = "radio_card * 2" # Logic for radio expansion card
 
 # HM Logic (Item + Badge Requirement)
 # These match the HGSS Badge order:

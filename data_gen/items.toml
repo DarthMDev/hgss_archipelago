@@ -2786,147 +2786,142 @@ group = "apricorn"
 
 [zephyr_badge]
 label = "Zephyr Badge"
-id = 0
+id = 113
 clas = "badge"
 group = "badges"
 classification = "progression"
 
 [hive_badge]
 label = "Hive Badge"
-id = 1
+id = 114
 clas = "badge"
 group = "badges"
 classification = "progression"
 
 [plain_badge]
 label = "Plain Badge"
-id = 2
+id = 115
 clas = "badge"
 group = "badges"
 classification = "progression"
 
 [fog_badge]
 label = "Fog Badge"
-id = 3
+id = 116
 clas = "badge"
 group = "badges"
 classification = "progression"
 
 [storm_badge]
 label = "Storm Badge"
-id = 4
+id = 117
 clas = "badge"
 group = "badges"
 classification = "progression"
 
 [mineral_badge]
 label = "Mineral Badge"
-id = 5
+id = 118
 clas = "badge"
 group = "badges"
 classification = "progression"
 
 [glacier_badge]
 label = "Glacier Badge"
-id = 6
+id = 119
 clas = "badge"
 group = "badges"
 classification = "progression"
 
 [rising_badge]
 label = "Rising Badge"
-id = 7
+id = 120
 clas = "badge"
 group = "badges"
 classification = "progression"
 
 [boulder_badge]
 label = "Boulder Badge"
-id = 8
+id = 121
 clas = "badge"
 group = "badges"
 classification = "progression"
 
 [cascade_badge]
 label = "Cascade Badge"
-id = 9
+id = 122
 clas = "badge"
 group = "badges"
 classification = "progression"
 
 [thunder_badge]
 label = "Thunder Badge"
-id = 10
+id = 123
 clas = "badge"
 group = "badges"
 classification = "progression"
 
 [rainbow_badge]
 label = "Rainbow Badge"
-id = 11
+id = 124
 clas = "badge"
 group = "badges"
 classification = "progression"
 
 [soul_badge]
 label = "Soul Badge"
-id = 12
+id = 125
 clas = "badge"
 group = "badges"
 classification = "progression"
 
 [marsh_badge]
 label = "Marsh Badge"
-id = 13
+id = 126
 clas = "badge"
 group = "badges"
 classification = "progression"
 
 [volcano_badge]
 label = "Volcano Badge"
-id = 14
+id = 127
 clas = "badge"
 group = "badges"
 classification = "progression"
 
 [earth_badge]
 label = "Earth Badge"
-id = 15
+id = 128
 clas = "badge"
 group = "badges"
 classification = "progression"
 
 [running_shoes]
 label = "Running Shoes"
-id = 1
+id = 129
 clas = "special"
 group = "runningshoes"
 classification = "useful"
 
 [pokedex]
-label = "Upgradable Pokédex"
-id = 2
+label = "Pokédex"
+id = 130
 clas = "special"
 group = "pokedex"
-classification = "progression"
+classification = "useful"
 
 [map_card]
 label = "Map Card"
-id = 1
+id = 131
 clas = "special"
 group = "pokegear"
 
 [radio_card]
 label = "Radio Card"
-id = 2
+id = 132
 clas = "special"
 group = "pokegear"
-
-[expn_card]
-label = "Expansion Card"
-id = 287
-clas = "special"
-group = "pokegear"
+classification = "progression"
 
 [potion_x5]
 label = "Potion x5"
