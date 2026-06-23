@@ -40,6 +40,10 @@ location_types: Mapping[str, LocationType] = {
     #),
     #"accessory": LocationType(is_enabled = lambda opts : opts.accessories.value == 1),
     "apricorn_tree": LocationType(is_enabled = lambda opts : opts.apricorn_trees.value == 1),
+    "train_pass": LocationType(is_enabled = lambda opts : opts.train_pass.value == 1),
+    "ss_ticket": LocationType(is_enabled = lambda opts : opts.ss_ticket.value == 1),
+    "heartgold": LocationType(is_enabled = lambda opts : opts.version.value == 0),
+    "soulsilver": LocationType(is_enabled = lambda opts : opts.version.value == 1),
 }
 
 def get_parent_region(label: str, world: "PokemonHGSSWorld") -> str | None:

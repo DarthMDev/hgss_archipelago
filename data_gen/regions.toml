@@ -1929,9 +1929,7 @@ header = "blackthorn_gym"
 exits = [
     "blackthorn_city",
 ]
-locs = [
-    "blackthorn_gym_tm59",
-]
+locs = []
 
 [route_43_mahogany_gatehouse]
 header = "route_43_mahogany_gatehouse"

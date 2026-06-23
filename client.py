@@ -23,7 +23,7 @@ if TYPE_CHECKING:
 # HGSS US Version Base Pointer (from my Lua test)
 # Note: In the final ASM patch, we might use a different pointer for the AP Struct,
 # but for now, we map the Save Data pointer.
-AP_STRUCT_PTR_ADDRESS = 0x02111880 
+AP_STRUCT_PTR_ADDRESS = 0x02111880
 AP_SUPPORTED_VERSIONS = {0}
 AP_MAGIC = b' AP '
 
@@ -113,7 +113,7 @@ class VarsFlags:
 class PokemonHGSSClient(BizHawkClient):
     game = "Pokemon HeartGold and SoulSilver"
     system = "NDS"
-    patch_suffix = ".aphgss"
+    patch_suffix = (".apheartgold", ".apsoulsilver")
     ap_struct_address: int = 0
     rom_version: int = 0
     goal_flag: FlagCheck | None
@@ -136,7 +136,7 @@ class PokemonHGSSClient(BizHawkClient):
             
             # HGSS Game Codes are usually "IPKE" (HG) or "IPGE" (SS)
             # The internal name at offset 0x0 is usually "POKEMON HG" or "POKEMON SS"
-            if rom_name.startswith("POKEMON_HG") or rom_name.startswith("POKEMON_SS"):
+            if rom_name.startswith("POKEMON HG") or rom_name.startswith("POKEMON SS"):
                 # This is a vanilla ROM, warn user they need the AP patch
                 logger.info("ERROR: You are running an unpatched HGSS ROM. Please generate a patched ROM.")
                 return False
@@ -144,7 +144,8 @@ class PokemonHGSSClient(BizHawkClient):
             # Check for our custom Patch Header
             elif rom_name.startswith("HGAP") or rom_name.startswith("SSAP"):
                 # Logic to check version number...
-                return True
+                # return True
+                pass
             else:
                 return False
         except UnicodeDecodeError:

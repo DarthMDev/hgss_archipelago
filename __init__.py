@@ -15,24 +15,24 @@ from .data import items as itemdata
 from .data.locations import RequiredLocations
 from .items import create_item_label_to_code_map, get_item_classification, PokemonHGSSItem, get_item_groups
 from .locations import PokemonHGSSLocation, create_location_label_to_code_map, create_locations
-from .options import PokemonHGSSOptions #, UnownsOption
+from .options import PokemonHGSSOptions, OPTION_GROUPS #, UnownsOption
 from .regions import create_regions
-from .rom import generate_output, PokemonHGSSPatch
+from .rom import generate_output, PokemonHeartGoldPatch, PokemonSoulSilverPatch
 from .rules import set_rules
 
 class PokemonHGSSSettings(settings.Group):
-    class HGRomFile(settings.UserFilePath):
+    class HeartGoldRomFile(settings.UserFilePath):
         """File names of the Pokemon HeartGold and SoulSilver roms"""
         description = "Pokemon HeartGold (US) ROM File"
         copy_to = "pokeheartgold.nds"
-        md5s = PokemonHGSSPatch.hashes[0]
-    class SSRomFile(settings.UserFilePath):
+        md5s = PokemonHeartGoldPatch.hashes[0]
+    class SoulSilverRomFile(settings.UserFilePath):
         description = "Pokemon SoulSilver (US) ROM File"
         copy_to = "pokesoulsilver.nds"
-        md5s = PokemonHGSSPatch.hashes[1]
+        md5s = PokemonSoulSilverPatch.hashes[0]
 
-    hg_rom_file: HGRomFile = HGRomFile(HGRomFile.copy_to)
-    ss_rom_file: SSRomFile = SSRomFile(SSRomFile.copy_to)
+    hg_rom_file: HeartGoldRomFile = HeartGoldRomFile(HeartGoldRomFile.copy_to)
+    ss_rom_file: SoulSilverRomFile = SoulSilverRomFile(SoulSilverRomFile.copy_to)
 
 class PokemonHGSSWebWorld(WebWorld):
     theme = 'ocean'
@@ -47,6 +47,8 @@ class PokemonHGSSWebWorld(WebWorld):
     )
 
     tutorials = [setup_en]
+
+    option_groups = OPTION_GROUPS
 
 class PokemonHGSSWorld(World):
     game = "Pokemon HeartGold and SoulSilver"
@@ -122,12 +124,14 @@ class PokemonHGSSWorld(World):
         set_rules(self)
 
     def generate_output(self, output_directory: str) -> None:
-        patch = PokemonHGSSPatch(player=self.player, player_name=self.player_name)
-        base_patches = ["us_hg", "us_ss"]
-        for name in base_patches:
-            name = "base_patch_" + name
-            patch.write_file(f"{name}.bsdiff4", pkgutil.get_data(__name__, f"patches/{name}.bsdiff4")) # type: ignore
-        generate_output(self, output_directory, patch)
+        if self.options.version == "heartgold":
+            patch = PokemonHeartGoldPatch(player=self.player, player_name=self.player_name)
+            patch.write_file(f"base_patch_us_hg.bsdiff4", pkgutil.get_data(__name__, f"patches/base_patch_us_hg.bsdiff4"))
+            generate_output(self, output_directory, patch)
+        else:
+            patch = PokemonSoulSilverPatch(player=self.player, player_name=self.player_name)
+            patch.write_file(f"base_patch_us_ss.bsdiff4", pkgutil.get_data(__name__, f"patches/base_patch_us_ss.bsdiff4"))
+            generate_output(self, output_directory, patch)
 
     def create_event(self, name: str) -> PokemonHGSSItem:
         return PokemonHGSSItem(
