@@ -90,6 +90,11 @@ class PokemonHeartGoldPatch(APAutoPatchInterface):
                 tm[0x8] = 0xBF
                 a017.files[ndx] = bytes(tm)
             rom.files["/a/0/1/7"] = a017.to_bytes()
+        if options["always_catch"]:
+            overlay12[0xFCE0] = 0x00
+            overlay12[0xFCE1] = 0x00
+            overlay12[0xFCE2] = 0x00
+            overlay12[0xFCE3] = 0x00
         if options["exp_multiplier"] != 1:
             arm9[0x6FADA] = 0x6C
             arm9[0x6FADB] = 0x00
@@ -237,6 +242,11 @@ class PokemonSoulSilverPatch(APAutoPatchInterface):
                 tm[0x8] = 0xBF
                 a017.files[ndx] = bytes(tm)
             rom.files["/a/0/1/7"] = a017.to_bytes()
+        if options["always_catch"]:
+            overlay12[0xFCE0] = 0x00
+            overlay12[0xFCE1] = 0x00
+            overlay12[0xFCE2] = 0x00
+            overlay12[0xFCE3] = 0x00
         if options["exp_multiplier"] != 1:
             arm9[0x6FADA] = 0x6C
             arm9[0x6FADB] = 0x00

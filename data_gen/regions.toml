@@ -2891,7 +2891,7 @@ exits = [
     "ss_aqua_olivine_port_exterior",
 ]
 locs = [
-    "ss_aqua_olivine_port_interior_national_pokedex",
+    "ss_aqua_olivine_port_interior_pokedex",
 ]
 
 [cianwood_pokecenter_b1f]
@@ -4459,7 +4459,7 @@ exits = [
     "lavender_town",
 ]
 locs = [
-    "lavender_radio_station_expn_card",
+    "lavender_radio_station_radio_card",
 ]
 
 [route_25_sea_cottage]

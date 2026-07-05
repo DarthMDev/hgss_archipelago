@@ -3328,7 +3328,7 @@ op = "ge"
 original_item = "pokedex"
 type = "pokedex"
 table = "base"
-check = 107
+check = 5018
 label = "Route 30 Mr Pokemon House - Gift from Professor Oak"
 id = 67
 
@@ -3336,7 +3336,7 @@ id = 67
 original_item = "pokedex"
 type = "pokedex"
 table = "base"
-check = 5018
+check = 5019
 label = "SS Aqua Olivine Port Interior - Gift from Professor Oak"
 id = 68
 
@@ -5192,7 +5192,7 @@ id = 858
 original_item = "blk_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5019
+check = 5020
 label = "Route 1 - Apricorn Tree"
 id = 69
 
@@ -5200,7 +5200,7 @@ id = 69
 original_item = "pnk_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5020
+check = 5021
 label = "Route 2 - Apricorn Tree"
 id = 70
 
@@ -5208,7 +5208,7 @@ id = 70
 original_item = "ylw_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5021
+check = 5022
 label = "Route 8 - Apricorn Tree"
 id = 71
 
@@ -5216,7 +5216,7 @@ id = 71
 original_item = "grn_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5022
+check = 5023
 label = "Route 11 - Apricorn Tree"
 id = 72
 
@@ -5224,7 +5224,7 @@ id = 72
 original_item = "blu_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5023
+check = 5024
 label = "Route 26 - Apricorn Tree"
 id = 73
 
@@ -5232,7 +5232,7 @@ id = 73
 original_item = "grn_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5024
+check = 5025
 label = "Route 29 - Apricorn Tree"
 id = 74
 
@@ -5240,7 +5240,7 @@ id = 74
 original_item = "grn_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5025
+check = 5026
 label = "Route 30 - Apricorn Tree Near Apricorn House"
 id = 75
 
@@ -5248,7 +5248,7 @@ id = 75
 original_item = "pnk_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5026
+check = 5027
 label = "Route 30 - Apricorn Tree Near Mr. Pokemons House"
 id = 76
 
@@ -5256,7 +5256,7 @@ id = 76
 original_item = "blk_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5027
+check = 5028
 label = "Route 31 - Apricorn Tree"
 id = 77
 
@@ -5264,7 +5264,7 @@ id = 77
 original_item = "pnk_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5028
+check = 5029
 label = "Route 33 - Apricorn Tree West"
 id = 78
 
@@ -5272,7 +5272,7 @@ id = 78
 original_item = "blk_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5029
+check = 5030
 label = "Route 33 - Apricorn Tree East"
 id = 79
 
@@ -5280,7 +5280,7 @@ id = 79
 original_item = "grn_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5030
+check = 5031
 label = "Route 35 - Apricorn Tree"
 id = 80
 
@@ -5288,7 +5288,7 @@ id = 80
 original_item = "blu_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5031
+check = 5032
 label = "Route 36 - Apricorn Tree"
 id = 81
 
@@ -5296,7 +5296,7 @@ id = 81
 original_item = "red_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5032
+check = 5033
 label = "Route 37 - Apricorn Tree Northwest"
 id = 82
 
@@ -5304,7 +5304,7 @@ id = 82
 original_item = "blu_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5033
+check = 5034
 label = "Route 37 - Apricorn Tree Northeast"
 id = 83
 
@@ -5312,7 +5312,7 @@ id = 83
 original_item = "blk_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5034
+check = 5035
 label = "Route 37 - Apricorn Tree South"
 id = 84
 
@@ -5320,7 +5320,7 @@ id = 84
 original_item = "wht_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5035
+check = 5036
 label = "Route 38 - Apricorn Tree"
 id = 85
 
@@ -5328,7 +5328,7 @@ id = 85
 original_item = "grn_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5036
+check = 5037
 label = "Route 39 - Apricorn Tree"
 id = 86
 
@@ -5336,7 +5336,7 @@ id = 86
 original_item = "pnk_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5037
+check = 5038
 label = "Route 42 - Apricorn Tree West"
 id = 87
 
@@ -5344,7 +5344,7 @@ id = 87
 original_item = "grn_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5038
+check = 5039
 label = "Route 42 - Apricorn Tree Center"
 id = 88
 
@@ -5352,7 +5352,7 @@ id = 88
 original_item = "ylw_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5039
+check = 5040
 label = "Route 42 - Apricorn Tree East"
 id = 89
 
@@ -5360,7 +5360,7 @@ id = 89
 original_item = "blk_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5040
+check = 5041
 label = "Route 43 - Apricorn Tree"
 id = 90
 
@@ -5368,7 +5368,7 @@ id = 90
 original_item = "red_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5041
+check = 5042
 label = "Route 44 - Apricorn Tree"
 id = 91
 
@@ -5376,7 +5376,7 @@ id = 91
 original_item = "grn_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5042
+check = 5043
 label = "Route 45 - Apricorn Tree"
 id = 92
 
@@ -5384,7 +5384,7 @@ id = 92
 original_item = "grn_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5043
+check = 5044
 label = "Route 46 - Apricorn Tree Northeast"
 id = 93
 
@@ -5392,7 +5392,7 @@ id = 93
 original_item = "ylw_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5044
+check = 5045
 label = "Route 46 - Apricorn Tree Southwest"
 id = 94
 
@@ -5400,7 +5400,7 @@ id = 94
 original_item = "blu_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5045
+check = 5046
 label = "Pewter City - Apricorn Tree West"
 id = 95
 
@@ -5408,7 +5408,7 @@ id = 95
 original_item = "wht_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5046
+check = 5047
 label = "Pewter City - Apricorn Tree East"
 id = 96
 
@@ -5416,7 +5416,7 @@ id = 96
 original_item = "red_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5047
+check = 5048
 label = "Fuchsia City - Apricorn Tree"
 id = 97
 
@@ -5424,7 +5424,7 @@ id = 97
 original_item = "ylw_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5048
+check = 5049
 label = "Violet City - Apricorn Tree"
 id = 98
 
@@ -5432,6 +5432,6 @@ id = 98
 original_item = "wht_apricorn"
 type = "apricorn_tree"
 table = "apricorn_tree"
-check = 5049
+check = 5050
 label = "Azalea Town - Apricorn Tree"
 id = 99

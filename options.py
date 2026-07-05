@@ -45,6 +45,10 @@ class ReusableTMs(Toggle):
     """Makes TMs reusable, this also means pokemon can't hold TMs."""
     display_name = "Reusable TMs"
 
+class AlwaysCatch(Toggle):
+    """Have a 100% chance of catching any catchable encounter."""
+    display_name = "Always Catch"
+
 class ExpMultiplier(Range):
     """
     Set an experience multiplier for all gained experience.
@@ -292,6 +296,7 @@ class PokemonHGSSOptions(PerGameCommonOptions):
     goal: Goal
     start_mode: StartMode
     reusable_tms: ReusableTMs
+    always_catch: AlwaysCatch
     exp_multiplier: ExpMultiplier
     remote_items: RemoteItems
     show_unrandomized_progression_items: ShowUnrandomizedProgressionItems
@@ -339,7 +344,7 @@ class PokemonHGSSOptions(PerGameCommonOptions):
 OPTION_GROUPS = [
 #	OptionGroup(
 #		"Gameplay Options",
-#		[GameVersion, Goal, StartMode, ReusableTMs, ExpMultiplier],
+#		[GameVersion, Goal, StartMode, ReusableTMs, AlwaysCatch, ExpMultiplier],
 #	),
 	OptionGroup(
 		"Location/Item Randomization Options",
