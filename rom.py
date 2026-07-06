@@ -524,6 +524,7 @@ def generate_output(world: "PokemonHGSSWorld", output_directory: str, patch: Pok
     ap_bin += len(tables).to_bytes(length=4, byteorder='little')
     for table in sorted(tables.keys()):
         data = tables[table]
+        ap_bin += table.value.to_bytes(length=4, byteorder='little')
         ap_bin += (len(data) // 2).to_bytes(length=4, byteorder='little')
         ap_bin += data
 

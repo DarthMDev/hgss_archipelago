@@ -27,7 +27,7 @@ Once you have installed BizHawk, open `EmuHawk.exe` and change the following set
    from the Archipelago Launcher. From there, you can edit the `.yaml` in any text editor.
 3. Follow the general Archipelago instructions
    for [generating a game on your local installation](https://archipelago.gg/tutorial/Archipelago/setup/en#on-your-local-installation).
-   This will generate an output file for you. Your patch file will have the `.aphgss` file extension and will be
+   This will generate an output file for you. Your patch file will have the `.apheartgold` or `.apsoulsilver` file extension and will be
    inside the output file.
 4. Open `ArchipelagoLauncher.exe`
 5. Select "Open Patch" on the left side and select your patch file.
@@ -56,7 +56,7 @@ in case you have to close and reopen a window mid-game for some reason.
 7. To connect the client to the server, enter your room's address and port (e.g. `archipelago.gg:38281`) into the
    top text field of the client and click Connect.
 
-You should now be able to receive and send items. You'll need to do these steps every time you want to reconnect. It is
+You should now be able to send checked locations. You'll need to do these steps every time you want to reconnect. It is
 perfectly safe to make progress offline; everything will re-sync when you reconnect.
 
 ## Common Issues
