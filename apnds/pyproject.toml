@@ -1,0 +1,41 @@
+# pyproject.toml
+#
+# Copyright (C) 2026 James Petersen <m@jamespetersen.ca>.
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apnds"
+version = "0.2.4"
+authors = [
+    { name = "James Petersen", email = "m@jamespetersen.ca" },
+]
+maintainers = [
+    { name = "James Petersen", email = "m@jamespetersen.ca" },
+]
+description = "A small, MIT-licensed, pure Python 3 package for handling Nintendo DS ROMs and certain common Nintendo DS formats."
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Operating System :: OS Independent",
+    "Natural Language :: English",
+    "Topic :: File Formats",
+    "Typing :: Typed",
+]
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["ds", "nintendo", "dsi", "lz", "lz10", "narc", "nintendo ds", "nintendo dsi"]
+
+[project.urls]
+Homepage = "https://jamespetersen.ca/apnds/"
+Documentation = "https://jamespetersen.ca/apnds/docs/"
+Repository = "https://github.com/ljtpetersen/apnds"
+Issues = "https://github.com/ljtpetersen/apnds/issues"
+Changelog = "https://github.com/ljtpetersen/apnds/blob/master/CHANGELOG.md"
+

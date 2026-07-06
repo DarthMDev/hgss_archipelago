@@ -1,0 +1,6 @@
+# docs/.gitignore
+#
+# Copyright (C) 2026 James Petersen <m@jamespetersen.ca>.
+
+build/
+source/generated/
