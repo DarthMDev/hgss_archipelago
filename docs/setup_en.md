@@ -59,6 +59,37 @@ in case you have to close and reopen a window mid-game for some reason.
 You should now be able to send checked locations and receive items. You'll need to do these steps every time you want to reconnect. It is
 perfectly safe to make progress offline; everything will re-sync when you reconnect.
 
+## Playing with DeSmuME (macOS/Linux alternative — experimental)
+
+BizHawk is the recommended and best-supported emulator. If you can't use BizHawk (for example on
+an Apple Silicon Mac), you can instead connect through DeSmuME using `connector_desmume_generic.lua`
+from this repository, which speaks the same protocol as BizHawk's connector so Archipelago's
+BizHawk Client can talk to it unchanged.
+
+This path is experimental and has extra requirements:
+
+- **A DeSmuME build with Lua scripting enabled.** The stock DeSmuME macOS release generally ships
+  *without* Lua support. You need a build compiled with macOS Lua support enabled — see
+  [DarthMDev/desmume](https://github.com/DarthMDev/desmume). You must build the **debug/dev build**
+  yourself and be comfortable compiling DeSmuME on macOS (Xcode) to get the experimental macOS Lua
+  support; there is no ready-made binary.
+- **LuaSocket for Lua 5.1**, since DeSmuME's Lua has no networking built in:
+  ```
+  brew install lua@5.1 luarocks
+  luarocks --lua-version=5.1 install luasocket
+  ```
+  If `require("socket")` fails when you run the script, set `LUA_CPATH`/`LUA_PATH` to point at your
+  LuaSocket install (see the comment block at the top of `connector_desmume_generic.lua`).
+
+Once those are in place:
+
+1. Patch your ROM and open the BizHawk Client from the Archipelago Launcher as described above.
+2. Load your patched `.nds` in DeSmuME and let it run past the title screen.
+3. Open DeSmuME's Lua Script Console (`Tools > New Lua Script Window`), browse to
+   `connector_desmume_generic.lua`, and run it.
+4. The BizHawk Client will connect to DeSmuME automatically and recognize Pokémon HeartGold and
+   SoulSilver. Connect to your room's address as in step 7 above.
+
 ## Common Issues
 
 1. **Problem**: "No handler was found for this game." in the client. **Solution**: Update to at least BizHawk version 2.10.

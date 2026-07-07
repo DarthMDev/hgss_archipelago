@@ -17,6 +17,19 @@ The latest release of [apnds](https://github.com/ljtpetersen/apnds), extracted t
 
 To make the `.apworld` file, run `make` within the root directory of the repository.
 
+## DeSmuME Connector (experimental)
+
+`connector_desmume_generic.lua` lets macOS/Linux users connect through DeSmuME instead of BizHawk.
+It implements the same TCP/JSON protocol as Archipelago's `connector_bizhawk_generic.lua`, so the
+existing BizHawk Client works unchanged. See the DeSmuME section of the
+[setup guide](docs/setup_en.md) for usage.
+
+**Warning:** this requires a DeSmuME build with the experimental macOS Lua support enabled, which is
+**not** in the stock release. Use [DarthMDev/desmume](https://github.com/DarthMDev/desmume), and note
+you must build the **debug/dev build** yourself — you need to know how to compile DeSmuME on macOS
+(Xcode) to get that Lua support. It also needs LuaSocket for Lua 5.1 (`luarocks --lua-version=5.1
+install luasocket`).
+
 ## Where Help is Needed
 
 - Better documentation! (`docs/setup_en.md` and `en_Pokemon HeartGold_SoulSilver.md`)
