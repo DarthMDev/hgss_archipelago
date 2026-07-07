@@ -45,12 +45,12 @@ mkdir -p "$STAGE/socket"
 cp "$SOCKET_LUA" "$STAGE/socket.lua"
 cp "$CORE_SO" "$STAGE/socket/core.so"
 
-echo ">> Verifying it is a dynamic_lookup module (should reference no bundled Lua):"
+echo ">> Verifying the module imports the Lua C API from the host (dynamic_lookup)..."
 if nm -u "$STAGE/socket/core.so" | grep -q "_lua_gettop"; then
-    echo "   OK: resolves Lua symbols from the host (DeSmuME) at load time."
+    echo "   OK: core.so imports Lua and will bind to DeSmuME's single Lua at load time."
 else
-    echo "   WARNING: module does not import Lua symbols; it may embed its own"
-    echo "   Lua, which can crash DeSmuME on teardown."
+    echo "   WARNING: core.so does not import the Lua C API, so it likely bundles its own"
+    echo "   copy of Lua. Two Lua 5.1 instances in one process crash DeSmuME on teardown."
 fi
 
 echo ""

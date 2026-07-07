@@ -59,12 +59,15 @@ in case you have to close and reopen a window mid-game for some reason.
 You should now be able to send checked locations and receive items. You'll need to do these steps every time you want to reconnect. It is
 perfectly safe to make progress offline; everything will re-sync when you reconnect.
 
-## Playing with DeSmuME (macOS/Linux alternative — experimental)
+## Playing with DeSmuME (macOS alternative — experimental)
 
 BizHawk is the recommended and best-supported emulator. If you can't use BizHawk (for example on
 an Apple Silicon Mac), you can instead connect through DeSmuME using `connector_desmume_generic.lua`
 from this repository, which speaks the same protocol as BizHawk's connector so Archipelago's
 BizHawk Client can talk to it unchanged.
+
+The setup below is written for macOS (the DeSmuME Cocoa frontend). The connector itself is not
+OS-specific, but the build patch and the LuaSocket helper script target the macOS build.
 
 This path is experimental and has two one-time requirements. Both exist because DeSmuME embeds
 **Lua 5.1** with no networking, and everything must run through a **single** Lua instance (mixing two
@@ -98,3 +101,9 @@ Once those are in place:
 ## Common Issues
 
 1. **Problem**: "No handler was found for this game." in the client. **Solution**: Update to at least BizHawk version 2.10.
+2. **Problem (DeSmuME)**: the connector prints `module 'socket' not found`. **Solution**: run
+   `./tools/desmume_luasocket_setup.sh` so `~/.desmume-ap-lua/socket/core.so` exists.
+3. **Problem (DeSmuME)**: `require("socket")` fails even though `~/.desmume-ap-lua` exists, or DeSmuME
+   crashes when you stop the script. **Solution**: your DeSmuME build isn't exporting its Lua symbols.
+   Build the [DarthMDev/desmume](https://github.com/DarthMDev/desmume) fork (which exports them);
+   a stock/Lua-hidden build cannot load an external LuaSocket safely.

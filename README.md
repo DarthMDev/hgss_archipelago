@@ -19,7 +19,7 @@ To make the `.apworld` file, run `make` within the root directory of the reposit
 
 ## DeSmuME Connector (experimental)
 
-`connector_desmume_generic.lua` lets macOS/Linux users connect through DeSmuME instead of BizHawk.
+`connector_desmume_generic.lua` lets macOS users connect through DeSmuME instead of BizHawk.
 It implements the same TCP/JSON protocol as Archipelago's `connector_bizhawk_generic.lua`, so the
 existing BizHawk Client works unchanged. See the DeSmuME section of the
 [setup guide](docs/setup_en.md) for usage.
