@@ -25,11 +25,11 @@ class PokemonHGSSSettings(settings.Group):
         """File names of the Pokemon HeartGold and SoulSilver roms"""
         description = "Pokemon HeartGold (US) ROM File"
         copy_to = "pokeheartgold.nds"
-        md5s = PokemonHeartGoldPatch.hashes[0]
+        md5s = PokemonHeartGoldPatch.hashes
     class SoulSilverRomFile(settings.UserFilePath):
         description = "Pokemon SoulSilver (US) ROM File"
         copy_to = "pokesoulsilver.nds"
-        md5s = PokemonSoulSilverPatch.hashes[0]
+        md5s = PokemonSoulSilverPatch.hashes
 
     hg_rom_file: HeartGoldRomFile = HeartGoldRomFile(HeartGoldRomFile.copy_to)
     ss_rom_file: SoulSilverRomFile = SoulSilverRomFile(SoulSilverRomFile.copy_to)
