@@ -66,20 +66,25 @@ an Apple Silicon Mac), you can instead connect through DeSmuME using `connector_
 from this repository, which speaks the same protocol as BizHawk's connector so Archipelago's
 BizHawk Client can talk to it unchanged.
 
-This path is experimental and has extra requirements:
+This path is experimental and has two one-time requirements. Both exist because DeSmuME embeds
+**Lua 5.1** with no networking, and everything must run through a **single** Lua instance (mixing two
+copies of Lua 5.1 in one process crashes on teardown).
 
-- **A DeSmuME build with Lua scripting enabled.** The stock DeSmuME macOS release generally ships
-  *without* Lua support. You need a build compiled with macOS Lua support enabled — see
-  [DarthMDev/desmume](https://github.com/DarthMDev/desmume). You must build the **debug/dev build**
-  yourself and be comfortable compiling DeSmuME on macOS (Xcode) to get the experimental macOS Lua
-  support; there is no ready-made binary.
-- **LuaSocket for Lua 5.1**, since DeSmuME's Lua has no networking built in:
+- **A DeSmuME build with Lua enabled *and* its Lua symbols exported.** The stock macOS release
+  generally ships without Lua at all, and even Lua-enabled builds hide the Lua C API
+  (`-fvisibility=hidden`), which prevents an external LuaSocket from binding to DeSmuME's Lua. Use
+  [DarthMDev/desmume](https://github.com/DarthMDev/desmume), which patches `lua/luaconf.h` to export
+  the Lua API. You must build the **debug/dev build** yourself and be comfortable compiling DeSmuME on
+  macOS (Xcode); there is no ready-made binary.
+
+- **LuaSocket built for Lua 5.1**, staged where the connector looks for it (`~/.desmume-ap-lua`). Run
+  the helper script from this repo, which builds a private Lua 5.1 + LuaSocket (via `hererocks`, so
+  you don't need a system Lua 5.1) and stages it:
   ```
-  brew install lua@5.1 luarocks
-  luarocks --lua-version=5.1 install luasocket
+  ./tools/desmume_luasocket_setup.sh
   ```
-  If `require("socket")` fails when you run the script, set `LUA_CPATH`/`LUA_PATH` to point at your
-  LuaSocket install (see the comment block at the top of `connector_desmume_generic.lua`).
+  This produces `~/.desmume-ap-lua/socket.lua` and `~/.desmume-ap-lua/socket/core.so`. (Set
+  `DESMUME_LUASOCKET_DIR` to stage it elsewhere.)
 
 Once those are in place:
 

@@ -24,11 +24,13 @@ It implements the same TCP/JSON protocol as Archipelago's `connector_bizhawk_gen
 existing BizHawk Client works unchanged. See the DeSmuME section of the
 [setup guide](docs/setup_en.md) for usage.
 
-**Warning:** this requires a DeSmuME build with the experimental macOS Lua support enabled, which is
-**not** in the stock release. Use [DarthMDev/desmume](https://github.com/DarthMDev/desmume), and note
-you must build the **debug/dev build** yourself — you need to know how to compile DeSmuME on macOS
-(Xcode) to get that Lua support. It also needs LuaSocket for Lua 5.1 (`luarocks --lua-version=5.1
-install luasocket`).
+**Warning:** this requires a DeSmuME build with the experimental macOS Lua support enabled *and* its
+Lua symbols exported, which is **not** in the stock release. Use
+[DarthMDev/desmume](https://github.com/DarthMDev/desmume) (it patches `lua/luaconf.h` to export the
+Lua API), and note you must build the **debug/dev build** yourself — you need to know how to compile
+DeSmuME on macOS (Xcode). It also needs a LuaSocket built for Lua 5.1, staged in `~/.desmume-ap-lua`;
+run [`tools/desmume_luasocket_setup.sh`](tools/desmume_luasocket_setup.sh) to build and stage it. See
+the [setup guide](docs/setup_en.md) for the full procedure.
 
 ## Where Help is Needed
 

@@ -8,23 +8,28 @@ can talk to DeSmuME without any changes on the client side. It gives
 macOS/Linux users an alternative to BizHawk.
 
 --------------------------------------------------------------------------
-REQUIREMENTS
+REQUIREMENTS (one-time setup)
 --------------------------------------------------------------------------
-DeSmuME's Lua runtime (Lua 5.1) does not bundle LuaSocket, and this
-protocol needs a TCP server, so you must have LuaSocket available to
-DeSmuME's interpreter. The Lua 5.1 C ABI is stable, so a system LuaSocket
-built for 5.1 works.
+DeSmuME's Lua runtime is Lua 5.1 and has no networking, so this connector
+needs LuaSocket. Two things are required, and both come down to using a
+SINGLE Lua instance (mixing two copies of Lua 5.1 in one process crashes
+on teardown):
 
-macOS:
-    brew install lua@5.1 luarocks
-    luarocks --lua-version=5.1 install luasocket
-    # then note where socket/core.so and mime/core.so were installed, e.g.
-    #   ~/.luarocks/lib/lua/5.1/  or  /opt/homebrew/lib/lua/5.1/
+1. A DeSmuME built to EXPORT its Lua symbols. Stock builds compile with
+   -fvisibility=hidden, which hides the Lua C API, so an external
+   LuaSocket cannot bind to DeSmuME's Lua. The fork at
+   https://github.com/DarthMDev/desmume patches lua/luaconf.h to export
+   LUA_API with default visibility. You must build that (dev/debug) build
+   yourself.
 
-If `require("socket")` fails, set these environment variables before
-launching DeSmuME (adjust the paths to your install):
-    export LUA_CPATH="/opt/homebrew/lib/lua/5.1/?.so;;"
-    export LUA_PATH="/opt/homebrew/share/lua/5.1/?.lua;;"
+2. A LuaSocket for Lua 5.1 linked with `-undefined dynamic_lookup` (so it
+   resolves the Lua C API from DeSmuME at load time instead of embedding
+   its own Lua), staged in ~/.desmume-ap-lua as:
+       ~/.desmume-ap-lua/socket.lua
+       ~/.desmume-ap-lua/socket/core.so
+   The helper script `tools/desmume_luasocket_setup.sh` in this repo
+   builds and stages exactly that. Override the location with the
+   DESMUME_LUASOCKET_DIR environment variable if you prefer.
 
 --------------------------------------------------------------------------
 USAGE
@@ -61,17 +66,31 @@ local DEBUG = false
 -- LuaSocket
 --------------------------------------------------------------------------
 
+-- Look for LuaSocket in a fixed per-user directory first, so DeSmuME
+-- launched from Finder (which does not inherit shell env vars) can still
+-- find it. Override with the DESMUME_LUASOCKET_DIR environment variable.
+local function luasocket_dir()
+    local override = os.getenv("DESMUME_LUASOCKET_DIR")
+    if override and #override > 0 then return override end
+    local home = os.getenv("HOME") or ""
+    return home .. "/.desmume-ap-lua"
+end
+
+do
+    local dir = luasocket_dir()
+    package.path = dir .. "/?.lua;" .. dir .. "/?/init.lua;" .. package.path
+    package.cpath = dir .. "/?.so;" .. package.cpath
+end
+
 local ok_socket, socket = pcall(require, "socket")
 if not ok_socket then
     print("ERROR: could not load LuaSocket (require(\"socket\") failed).")
     print(tostring(socket))
     print("")
-    print("DeSmuME's Lua needs LuaSocket (Lua 5.1) for this connector.")
-    print("Install it and point LUA_CPATH/LUA_PATH at it, e.g. on macOS:")
-    print("  brew install lua@5.1 luarocks")
-    print("  luarocks --lua-version=5.1 install luasocket")
-    print("  export LUA_CPATH=\"/opt/homebrew/lib/lua/5.1/?.so;;\"")
-    print("See the comment block at the top of this script for details.")
+    print("This connector needs a LuaSocket built for Lua 5.1 (DeSmuME's")
+    print("embedded Lua), staged in " .. luasocket_dir() .. ", AND a DeSmuME")
+    print("built to export its Lua symbols. See the comment block at the top")
+    print("of this script and docs/setup_en.md for the one-time setup.")
     return
 end
 
