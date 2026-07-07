@@ -29,6 +29,33 @@ AP_STRUCT_SCAN_CHUNK_SIZE = 0x4000
 AP_SUPPORTED_VERSIONS = {0}
 AP_MAGIC = b' AP '
 
+# Archipelago's BizHawk/DeSmuME connector replies to each read batch on a
+# single line, and the client reads it with asyncio's default StreamReader
+# limit (64 KiB). A base64-encoded READ response is ~4/3 the raw byte count,
+# so a batch reading more than ~48 KiB overruns that limit
+# (LimitOverrunError). Split large reads into batches that stay well under
+# it. 0x8000 raw bytes -> ~44 KiB of base64, comfortably below 64 KiB.
+READ_BATCH_SIZE = 0x8000
+
+
+async def guarded_read_chunked(ctx: "BizHawkClientContext", read_requests, guard_values):
+    """guarded_read that splits large reads across batches so no single
+    connector response line exceeds the client's readline limit. Returns a
+    list of bytes matching read_requests, or None if a guard failed."""
+    results = [bytearray() for _ in read_requests]
+    for idx, (address, size, domain) in enumerate(read_requests):
+        offset = 0
+        while offset < size:
+            n = min(READ_BATCH_SIZE, size - offset)
+            read = await bizhawk.guarded_read(
+                ctx.bizhawk_ctx, [(address + offset, n, domain)], guard_values
+            )
+            if read is None:
+                return None
+            results[idx].extend(read[0])
+            offset += n
+    return [bytes(chunk) for chunk in results]
+
 @dataclass(frozen=True)
 class VersionData:
     savedata_ptr_offset: int
@@ -301,7 +328,7 @@ class PokemonHGSSClient(BizHawkClient):
             if version_data.once_loc_flags_count > 0:
                 read_requests.append((savedata_ptr + version_data.ap_save_offset + version_data.once_loc_flags_offset_in_ap_save, version_data.once_loc_flags_count // 8, "ARM9 System Bus"))
 
-            read_result = await bizhawk.guarded_read(ctx.bizhawk_ctx, read_requests, guard_values)
+            read_result = await guarded_read_chunked(ctx, read_requests, guard_values)
             if read_result is None:
                 return
             vars_flags_bytes = read_result[0]

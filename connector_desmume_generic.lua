@@ -523,6 +523,28 @@ local function initialize_server()
     print("Too many instances of the connector already running. Exiting.")
 end
 
+-- Send an entire string, looping over LuaSocket partial sends. On a
+-- non-blocking socket send() may write only part of a large buffer and
+-- return "timeout" with the index of the last byte written; if we don't
+-- resend the remainder the response is truncated (no trailing newline)
+-- and the client's readline never terminates. Returns true, or false+err.
+local function send_all(data)
+    local total = #data
+    local sent = 0
+    while sent < total do
+        local i, err, j = client_socket:send(data, sent + 1)
+        if i then
+            sent = i
+        elseif err == "timeout" then
+            sent = j or sent
+            socket.select(nil, { client_socket }, 2) -- wait until writable
+        else
+            return false, err
+        end
+    end
+    return true
+end
+
 -- Pull one complete '\n'-terminated line from the socket, buffering
 -- partial reads across frames. Returns line, err.
 local function receive_line()
@@ -568,7 +590,7 @@ local function send_receive()
     end
 
     if message == "VERSION" then
-        client_socket:send(tostring(SCRIPT_VERSION) .. "\n")
+        send_all(tostring(SCRIPT_VERSION) .. "\n")
         return
     end
 
@@ -592,7 +614,7 @@ local function send_receive()
         end
     end
 
-    client_socket:send(json_encode(res) .. "\n")
+    send_all(json_encode(res) .. "\n")
 end
 
 --------------------------------------------------------------------------
