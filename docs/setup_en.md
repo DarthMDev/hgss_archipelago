@@ -59,7 +59,7 @@ in case you have to close and reopen a window mid-game for some reason.
 You should now be able to send checked locations and receive items. You'll need to do these steps every time you want to reconnect. It is
 perfectly safe to make progress offline; everything will re-sync when you reconnect.
 
-## Playing with DeSmuME (macOS alternative — experimental)
+## Playing with DeSmuME (macOS alternative - experimental)
 
 BizHawk is the recommended and best-supported emulator. If you can't use BizHawk (for example on
 an Apple Silicon Mac), you can instead connect through DeSmuME using `connector_desmume_generic.lua`
@@ -76,7 +76,7 @@ copies of Lua 5.1 in one process crashes on teardown).
 - **A DeSmuME build with Lua enabled *and* its Lua symbols exported.** The stock macOS release
   generally ships without Lua at all, and even Lua-enabled builds hide the Lua C API
   (`-fvisibility=hidden`), which prevents an external LuaSocket from binding to DeSmuME's Lua. Use
-  [DarthMDev/desmume](https://github.com/DarthMDev/desmume), which patches `lua/luaconf.h` to export
+  [DarthMDev/desmume](https://github.com/DarthMDev/desmume/tree/cocoa-lua-export-symbols), which patches `lua/luaconf.h` to export
   the Lua API. You must build the **debug/dev build** yourself and be comfortable compiling DeSmuME on
   macOS (Xcode); there is no ready-made binary.
 
@@ -105,5 +105,5 @@ Once those are in place:
    `./tools/desmume_luasocket_setup.sh` so `~/.desmume-ap-lua/socket/core.so` exists.
 3. **Problem (DeSmuME)**: `require("socket")` fails even though `~/.desmume-ap-lua` exists, or DeSmuME
    crashes when you stop the script. **Solution**: your DeSmuME build isn't exporting its Lua symbols.
-   Build the [DarthMDev/desmume](https://github.com/DarthMDev/desmume) fork (which exports them);
+   Build the [DarthMDev/desmume](https://github.com/DarthMDev/desmume/tree/cocoa-lua-export-symbols) fork (which exports them);
    a stock/Lua-hidden build cannot load an external LuaSocket safely.

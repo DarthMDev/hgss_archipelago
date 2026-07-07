@@ -18,7 +18,7 @@ on teardown):
 1. A DeSmuME built to EXPORT its Lua symbols. Stock builds compile with
    -fvisibility=hidden, which hides the Lua C API, so an external
    LuaSocket cannot bind to DeSmuME's Lua. The fork at
-   https://github.com/DarthMDev/desmume patches lua/luaconf.h to export
+   https://github.com/DarthMDev/desmume/tree/cocoa-lua-export-symbols patches lua/luaconf.h to export
    LUA_API with default visibility. You must build that (dev/debug) build
    yourself.
 

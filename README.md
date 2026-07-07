@@ -26,8 +26,8 @@ existing BizHawk Client works unchanged. See the DeSmuME section of the
 
 **Warning:** this requires a DeSmuME build with the experimental macOS Lua support enabled *and* its
 Lua symbols exported, which is **not** in the stock release. Use
-[DarthMDev/desmume](https://github.com/DarthMDev/desmume) (it patches `lua/luaconf.h` to export the
-Lua API), and note you must build the **debug/dev build** yourself — you need to know how to compile
+[DarthMDev/desmume](https://github.com/DarthMDev/desmume/tree/cocoa-lua-export-symbols) (it patches `lua/luaconf.h` to export the
+Lua API), and note you must build the **debug/dev build** yourself; you need to know how to compile
 DeSmuME on macOS (Xcode). It also needs a LuaSocket built for Lua 5.1, staged in `~/.desmume-ap-lua`;
 run [`tools/desmume_luasocket_setup.sh`](tools/desmume_luasocket_setup.sh) to build and stage it. See
 the [setup guide](docs/setup_en.md) for the full procedure.
