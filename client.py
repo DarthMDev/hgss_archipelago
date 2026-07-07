@@ -297,6 +297,14 @@ class PokemonHGSSClient(BizHawkClient):
             guard_values.append(guards["SAVEDATA PTR"])
             savedata_ptr = int.from_bytes(guards["SAVEDATA PTR"][1], byteorder='little')
 
+            # The AP struct exists in RAM before a save is loaded, but the ROM
+            # leaves savedata_ptr NULL (0) until the player is actually in-game
+            # with a save. Reading flags from an invalid pointer reads
+            # code/garbage (e.g. the ARM9 vectors at 0x0) and reports bogus
+            # location checks, so do nothing until it points into main RAM.
+            if not (0x02000000 <= savedata_ptr < AP_STRUCT_SCAN_END):
+                return
+
             if self.has_ap_struct and version_data.supports_received_items:
                 guards["READY TO RECV"] = (self.ap_struct_address + version_data.recv_item_id_offset, b'\xFF\xFF', "ARM9 System Bus")
                 read_result = await bizhawk.guarded_read(
