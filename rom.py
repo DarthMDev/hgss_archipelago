@@ -13,8 +13,6 @@ from worlds.Files import APAutoPatchInterface
 import zipfile
 import json
 
-# from worlds.pokemon_hgss.options import GameOptions
-
 from .data.charmap import charmap
 from .data.locations import locations, LocationTable
 from .data.items import items
@@ -370,7 +368,18 @@ def encode_name(name: str) -> bytes | None:
             return None
     return ret + b'\xFF' * (16 - len(ret))
 
-def process_name(name: str, world: "PokemonHGSSWorld") -> bytes:
+def encode_name_relaxed(name: str) -> bytes:
+    ret = bytes()
+    for c in name[:7]:
+        ret += charmap.get(c, charmap["?"]).to_bytes(length=2, byteorder='little')
+    return ret + b'\xFF' * (16 - len(ret))
+
+def encode_option_name(name: str, strictness: str) -> bytes | None:
+    if strictness == "strict":
+        return encode_name(name)
+    return encode_name_relaxed(name)
+
+def process_name(name: str, world: "PokemonHGSSWorld", strictness: str) -> bytes:
     if name == "vanilla":
         return b'\xFF' * 16
     if name == "random":
@@ -378,81 +387,50 @@ def process_name(name: str, world: "PokemonHGSSWorld") -> bytes:
         world.random.shuffle(other_players)
         # if no player name matches, then return vanilla
         for name in other_players:
-            ret = encode_name(name)
+            ret = encode_option_name(name, strictness)
             if ret:
                 return ret
         return b'\xFF' * 16
     if name == "player_name":
-        ret = encode_name(world.multiworld.get_file_safe_player_name(world.player))
+        ret = encode_option_name(world.multiworld.get_file_safe_player_name(world.player), strictness)
     else:
-        ret = encode_name(name)
+        ret = encode_option_name(name, strictness)
     if ret is not None:
         return ret
     else:
         return b'\xFF' * 16
 
 def generate_output(world: "PokemonHGSSWorld", output_directory: str, patch: PokemonHGSSPatch) -> None:
-    #game_opts = world.options.game_options
+    game_opts = world.options.game_options
     ap_bin = bytes()
-    #ap_bin += process_name(game_opts.default_player_name, world)
-    #ap_bin += process_name(game_opts.default_rival_name, world)
-    #match game_opts.default_gender:
-    #    case "male":
-    #        ap_bin += b'\x00'
-    #    case "female":
-    #        ap_bin += b'\x01'
-    #    case "random":
-    #        ap_bin += world.random.choice([b'\x00', b'\x01'])
-    #    case "vanilla":
-    #        ap_bin += b'\x02'
-    #    case _:
-    #        raise ValueError(f"invalid default gender: \"{game_opts.default_gender}\"")
-    #match game_opts.text_speed:
-    #    case "fast":
-    #        ap_bin += b'\x02'
-    #    case "slow":
-    #        ap_bin += b'\x00'
-    #    case "mid":
-    #        ap_bin += b'\x01'
-    #    case _:
-    #        raise ValueError(f"invalid text speed: \"{game_opts.text_speed}\"")
-    #match game_opts.sound:
-    #    case "mono":
-    #        ap_bin += b'\x01'
-    #    case "stereo":
-    #        ap_bin += b'\x00'
-    #    case _:
-    #        raise ValueError(f"invalid sound: \"{game_opts.sound}\"")
-    #match game_opts.battle_scene:
-    #    case "off":
-    #        ap_bin += b'\x01'
-    #    case "on":
-    #        ap_bin += b'\x00'
-    #    case _:
-    #        raise ValueError(f"invalid battle scene: \"{game_opts.battle_scene}\"")
-    #match game_opts.battle_style:
-    #    case "set":
-    #        ap_bin += b'\x01'
-    #    case "shift":
-    #        ap_bin += b'\x00'
-    #    case _:
-    #        raise ValueError(f"invalid battle style: \"{game_opts.battle_style}\"")
-    #match game_opts.button_mode:
-    #    case "start=x":
-    #        ap_bin += b'\x01'
-    #    case "l=a":
-    #        ap_bin += b'\x02'
-    #    case "normal":
-    #        ap_bin += b'\x00'
-    #    case _:
-    #        raise ValueError(f"invalid button mode: \"{game_opts.button_mode}\"")
-    #text_frame = game_opts.text_frame
-    #if isinstance(text_frame, int) and 1 <= text_frame and text_frame <= 20:
-    #    ap_bin += (text_frame - 1).to_bytes(length=1, byteorder='little')
-    #elif text_frame == "random":
-    #    ap_bin += world.random.randint(0, 19).to_bytes(length=1, byteorder='little')
-    #else:
-    #    raise ValueError(f"invalid text frame: \"{text_frame}\"")
+    ap_bin += process_name(game_opts.default_player_name, world, game_opts.name_strictness)
+    ap_bin += process_name(game_opts.default_rival_name, world, game_opts.name_strictness)
+
+    match game_opts.default_gender:
+        case "male":
+            ap_bin += b'\x00'
+        case "female":
+            ap_bin += b'\x01'
+        case "random":
+            ap_bin += world.random.choice([b'\x00', b'\x01'])
+        case "vanilla":
+            ap_bin += b'\x02'
+        case _:
+            raise ValueError(f"invalid default gender: \"{game_opts.default_gender}\"")
+
+    ap_bin += {"slow": 0, "mid": 1, "fast": 2}[game_opts.text_speed].to_bytes(length=1, byteorder='little')
+    ap_bin += {"stereo": 0, "mono": 1}[game_opts.sound].to_bytes(length=1, byteorder='little')
+    ap_bin += {"on": 0, "off": 1}[game_opts.battle_scene].to_bytes(length=1, byteorder='little')
+    ap_bin += {"shift": 0, "set": 1}[game_opts.battle_style].to_bytes(length=1, byteorder='little')
+    ap_bin += {"normal": 0, "start=x": 1, "l=a": 2}[game_opts.button_mode].to_bytes(length=1, byteorder='little')
+
+    text_frame = game_opts.text_frame
+    if isinstance(text_frame, int) and 1 <= text_frame <= 20:
+        ap_bin += (text_frame - 1).to_bytes(length=1, byteorder='little')
+    elif text_frame == "random":
+        ap_bin += world.random.randint(0, 19).to_bytes(length=1, byteorder='little')
+    else:
+        raise ValueError(f"invalid text frame: \"{text_frame}\"")
 
     #if world.options.hm_badge_requirement.value == 1:
     #    hm_accum = 0
@@ -472,15 +450,15 @@ def generate_output(world: "PokemonHGSSWorld", output_directory: str, patch: Pok
     #add_opt_byte("regional_dex_goal")
     #add_opt_byte("remote_items")
 
-    #match game_opts.received_items_notification:
-    #    case "nothing":
-    #        ap_bin += b'\x00'
-    #    case "message":
-    #        ap_bin += b'\x03'
-    #    case "jingle":
-    #        ap_bin += b'\x04'
-    #    case _:
-    #        raise ValueError(f"invalid received items notification: \"{game_opts.received_items_notification}\"")
+    match game_opts.received_items_notification:
+        case "nothing":
+            ap_bin += b'\x00'
+        case "message":
+            ap_bin += b'\x03'
+        case "jingle":
+            ap_bin += b'\x04'
+        case _:
+            raise ValueError(f"invalid received items notification: \"{game_opts.received_items_notification}\"")
     #add_opt_byte("blind_trainers")
     add_opt_byte("fps60")
     add_opt_byte("hm_cut_ins")
@@ -537,11 +515,13 @@ def generate_output(world: "PokemonHGSSWorld", output_directory: str, patch: Pok
     patch.write_file("ap.bin", ap_bin)
     options = {}
     options["reusable_tms"] = bool(world.options.reusable_tms)
+    options["always_catch"] = bool(world.options.always_catch)
     options["exp_multiplier"] = int(world.options.exp_multiplier)
     options["fps60"] = bool(world.options.fps60)
     options["instant_text"] = bool(world.options.instant_text)
     options["fast_hb_speed"] = bool(world.options.fast_hb_speed)
     options["hm_cut_ins"] = bool(world.options.hm_cut_ins)
+    options["game_options"] = dict(world.options.game_options.value)
     patch.write_file("options.json", json.dumps(options))
 
     out_file_name = world.multiworld.get_out_file_name_base(world.player)

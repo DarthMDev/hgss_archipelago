@@ -5,6 +5,7 @@
 
 from dataclasses import dataclass
 from typing import Any
+from schema import And, Optional, Or, Schema
 from Options import Choice, Toggle, DefaultOnToggle, OptionDict, OptionError, OptionSet, PerGameCommonOptions, Range, OptionGroup
 
 class GameVersion(Choice):
@@ -195,83 +196,60 @@ class ShowUnrandomizedProgressionItems(Toggle):
 #    """Set whether trainers will be blind."""
 #    display_name = "Blind Trainers"
 
-#class GameOptions(OptionDict):
-#    """
-#    Presets in-game options.
-#
-#    Allowed options and values, with default first:
-#
-#    text_speed: mid/slow/fast - Sets the text speed
-#    sound: stereo/mono - Sets the shound mode
-#    battle_scene: on/off - Sets whether the battle animations are shown
-#    battle_style: shift/set - Sets whether pokemon can be changed when the opponent's pokemon faints
-#    button_mode: normal/start=x/l=a - Sets the button mode
-#    text_frame: 1-20 - Sets the textbox frame. "random" will pick a random frame.
-#    received_items_notification: jingle/nothing/message - Sets the received_items_notification.
-#    default_player_name: player_name/custom/random/vanilla - Sets the default player name. with player_name, tries to use the AP player name.
-#    default_rival_name: random/custom/player_name/vanilla - Sets the default rival name. with random, picks from one of the players in the AP.
-#    default_gender: vanilla/male/female/random - Sets the default gender.
-#
-#    The text_speed, sound, battle_scene, battle_style, button_mode, text_frame, and received_items_notification
-#    options can additionally be modifier in the in-game options menu.
-#
-#    for the player and rival names, the maximum length is 7 characters, and
-#    the following characters are accepted:
-#    all alphanumeric characters (A-Z, a-z, 0-9),
-#    and the following symbols: , . ' - : ; ! ? " ( ) ~ @ # % + * / =,
-#    and as spaces.
-#    as well, there are some special sequences.
-#      {"} is an opening double-quotation mark
-#      {'} is an opening single-quotation mark
-#      {.} is a centred dot (centred vertically)
-#      {Z} are two superimposed Zs (as in sleep)
-#      ^ is an upwards arrow
-#      {v} is a downwards arrow
-#      {MALE} is the male sign
-#      {FEMALE} is the female sign
-#      {...} are ellipsis
-#      {O.} is a circle with a dot inside it. {.O} also works
-#      {CIRCLE} is a circle
-#      {SQUARE} is a square
-#      {TRIANGLE} is a triangle
-#      {DIAMOND} is a diamond (hollow)
-#      {SPADE} is a spade
-#      {CLUB} is a club
-#      {HEART} is a heart
-#      {SUIT DIAMOND} is a diamond (filled)
-#      {STAR} is a star
-#      {NOTE} is a music note (1/8)
-#      {SUN} is a sun
-#      {CLOUD} is a cloud
-#      {UMBRELLA} is an umbrella
-#      {SILHOUETTE} is a really bad looking silhouette
-#      {SMILE} is a smiling face
-#      {LAUGH} is a laughing face
-#      {UPSET} is an upset face
-#      {FROWN} is a frowning face
-#
-#    If the player or rival names do not satisfy these constraints, the game will use its original
-#    behaviour, where the player or rival names are entered during the starting cutscene.
-#    """
-#    display_name = "Game Options"
-#    default = {
-#        "text_speed": "mid",
-#        "sound": "stereo",
-#        "battle_scene": "on",
-#        "battle_style": "shift",
-#        "button_mode": "normal",
-#        "text_frame": 1,
-#        "received_items_notification": "jingle",
-#        "default_player_name": "player_name",
-#        "default_rival_name": "random",
-#        "default_gender": "vanilla",
-#    }
-#
-#    def __getattr__(self, name: str) -> Any:
-#        if name in GameOptions.default:
-#            return self.get(name, GameOptions.default[name])
-#        else:
-#            raise AttributeError(name, self)
+class GameOptions(OptionDict):
+    """
+    Presets in-game options.
+
+    Allowed options and values, with default first:
+
+    text_speed: mid/slow/fast - Sets the text speed
+    sound: stereo/mono - Sets the sound mode
+    battle_scene: on/off - Sets whether the battle animations are shown
+    battle_style: shift/set - Sets whether pokemon can be changed when the opponent's pokemon faints
+    button_mode: normal/start=x/l=a - Sets the button mode
+    text_frame: 1-20 - Sets the textbox frame. "random" will pick a random frame.
+    received_items_notification: jingle/nothing/message - Sets the received_items_notification.
+    default_player_name: player_name/custom/random/vanilla - Sets the default player name. with player_name, tries to use the AP player name.
+    default_rival_name: random/custom/player_name/vanilla - Sets the default rival name. with random, picks from one of the players in the AP.
+    name_strictness: relaxed/strict - How strict setting the default player/rival name is.
+    default_gender: vanilla/male/female/random - Sets the default gender.
+
+    The text_speed, sound, battle_scene, battle_style, button_mode, text_frame, and received_items_notification
+    options can additionally be modified in the in-game options menu.
+    """
+    display_name = "Game Options"
+    default = {
+        "text_speed": "mid",
+        "sound": "stereo",
+        "battle_scene": "on",
+        "battle_style": "shift",
+        "button_mode": "normal",
+        "text_frame": 1,
+        "received_items_notification": "jingle",
+        "default_player_name": "player_name",
+        "default_rival_name": "random",
+        "name_strictness": "relaxed",
+        "default_gender": "vanilla",
+    }
+    schema = Schema({
+        Optional("text_speed"): Or("mid", "slow", "fast"),
+        Optional("sound"): Or("stereo", "mono"),
+        Optional("battle_scene"): Or("on", "off"),
+        Optional("battle_style"): Or("shift", "set"),
+        Optional("button_mode"): Or("normal", "start=x", "l=a"),
+        Optional("text_frame"): Or("random", And(int, lambda value: 1 <= value <= 20)),
+        Optional("received_items_notification"): Or("jingle", "nothing", "message"),
+        Optional("default_player_name"): str,
+        Optional("default_rival_name"): str,
+        Optional("name_strictness"): Or("relaxed", "strict"),
+        Optional("default_gender"): Or("vanilla", "male", "female", "random"),
+    })
+
+    def __getattr__(self, name: str) -> Any:
+        if name in GameOptions.default:
+            return self.value.get(name, GameOptions.default[name])
+        else:
+            raise AttributeError(name, self)
 
 #class NationalDexNumMons(Range):
 #    """
@@ -300,6 +278,7 @@ class PokemonHGSSOptions(PerGameCommonOptions):
     exp_multiplier: ExpMultiplier
     remote_items: RemoteItems
     show_unrandomized_progression_items: ShowUnrandomizedProgressionItems
+    game_options: GameOptions
 
     hms: RandomizeHMs
     badges: RandomizeBadges
@@ -326,7 +305,6 @@ class PokemonHGSSOptions(PerGameCommonOptions):
 
 #    hm_badge_requirement: HmBadgeRequirements
 #    remove_badge_requirements: RemoveBadgeRequirement
-#    game_options: GameOptions
 #    blind_trainers: BlindTrainers
 #    regional_dex_goal: NationalDexNumMons
 #    master_repel: AddMasterRepel
@@ -361,5 +339,9 @@ OPTION_GROUPS = [
 	OptionGroup(
 		"Notification Options",
 		[RemoteItems, ShowUnrandomizedProgressionItems],
+	),
+	OptionGroup(
+		"Game Options",
+		[GameOptions],
 	),
 ]

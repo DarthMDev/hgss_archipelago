@@ -56,7 +56,7 @@ in case you have to close and reopen a window mid-game for some reason.
 7. To connect the client to the server, enter your room's address and port (e.g. `archipelago.gg:38281`) into the
    top text field of the client and click Connect.
 
-You should now be able to send checked locations. You'll need to do these steps every time you want to reconnect. It is
+You should now be able to send checked locations and receive items. You'll need to do these steps every time you want to reconnect. It is
 perfectly safe to make progress offline; everything will re-sync when you reconnect.
 
 ## Common Issues

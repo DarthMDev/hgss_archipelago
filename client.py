@@ -20,10 +20,12 @@ from worlds._bizhawk.client import BizHawkClient
 if TYPE_CHECKING:
     from worlds._bizhawk.context import BizHawkClientContext
 
-# HGSS US Version Base Pointer (from my Lua test)
-# Note: In the final ASM patch, we might use a different pointer for the AP Struct,
-# but for now, we map the Save Data pointer.
+# HGSS US Version legacy Save Data pointer (from the original Lua test).
+# Patched ROMs expose a small AP struct in RAM, which the client scans for.
 AP_STRUCT_PTR_ADDRESS = 0x02111880
+AP_STRUCT_SCAN_START = 0x02000000
+AP_STRUCT_SCAN_END = 0x02400000
+AP_STRUCT_SCAN_CHUNK_SIZE = 0x4000
 AP_SUPPORTED_VERSIONS = {0}
 AP_MAGIC = b' AP '
 
@@ -44,17 +46,15 @@ class VersionData:
 
 AP_VERSION_DATA: Mapping[int, VersionData] = {
     0: VersionData(
-        savedata_ptr_offset=0,  # Pointer at 0x02111880 points directly to save
+        savedata_ptr_offset=16,
         
         # Calculated ID for S.S. Ticket (0x10F2 Bit 2)
         # This flag persists forever after the League
         champion_flag=34706, 
         
-        # These are used for receiving items via memory (ASM). 
-        # Since we use Lua, we can leave them or set placeholders.
-        recv_item_id_offset=0,
+        recv_item_id_offset=20,
         ap_save_offset=0,
-        recv_item_count_offset_in_ap_save=0,
+        recv_item_count_offset_in_ap_save=24,
         
         # EVENT FLAGS READING
         # Based on your RA file, flags seem to start around 0x1000
@@ -71,7 +71,7 @@ AP_VERSION_DATA: Mapping[int, VersionData] = {
         
         once_loc_flags_offset_in_ap_save=0,
         once_loc_flags_count=0,
-        supports_received_items=False,
+        supports_received_items=True,
     ),
 }
 
@@ -170,6 +170,8 @@ class PokemonHGSSClient(BizHawkClient):
         return True
 
     async def get_savedata_addr(self, ctx: "BizHawkClientContext") -> None:
+        pointer_savedata_addr = 0
+
         try:
             addr = int.from_bytes((await bizhawk.read(ctx.bizhawk_ctx, [(AP_STRUCT_PTR_ADDRESS, 4, "ARM9 System Bus")]))[0], byteorder='little')
             if 0x2000000 < addr and addr < AP_STRUCT_PTR_ADDRESS:
@@ -178,12 +180,42 @@ class PokemonHGSSClient(BizHawkClient):
                     self.ap_struct_address = addr
                     self.has_ap_struct = True
                     print(f"found ap struct at addr {addr:X}")
+                    return
                 else:
-                    self.savedata_address = addr
-                    self.has_ap_struct = False
-                    print(f"found save data at addr {addr:X}")
+                    pointer_savedata_addr = addr
         except bizhawk.RequestFailedError:
             pass
+
+        if await self.scan_ap_struct(ctx):
+            return
+
+        if pointer_savedata_addr != 0:
+            self.savedata_address = pointer_savedata_addr
+            self.has_ap_struct = False
+            print(f"found save data at addr {pointer_savedata_addr:X}")
+
+    async def scan_ap_struct(self, ctx: "BizHawkClientContext") -> bool:
+        previous = b""
+
+        for addr in range(AP_STRUCT_SCAN_START, AP_STRUCT_SCAN_END, AP_STRUCT_SCAN_CHUNK_SIZE):
+            size = min(AP_STRUCT_SCAN_CHUNK_SIZE, AP_STRUCT_SCAN_END - addr)
+            try:
+                chunk = (await bizhawk.read(ctx.bizhawk_ctx, [(addr, size, "ARM9 System Bus")]))[0]
+            except bizhawk.RequestFailedError:
+                previous = b""
+                continue
+
+            buffer = previous + chunk
+            offset = buffer.find(self.expected_header)
+            if offset != -1:
+                self.ap_struct_address = addr - len(previous) + offset
+                self.has_ap_struct = True
+                print(f"found ap struct at addr {self.ap_struct_address:X}")
+                return True
+
+            previous = buffer[-(len(self.expected_header) - 1):]
+
+        return False
 
     async def game_watcher(self, ctx: "BizHawkClientContext") -> None:
         if ctx.server is None or ctx.server.socket.closed or ctx.slot_data is None:
@@ -243,10 +275,10 @@ class PokemonHGSSClient(BizHawkClient):
                 read_result = await bizhawk.guarded_read(
                     ctx.bizhawk_ctx,
                     [
-                        (savedata_ptr + version_data.ap_save_offset + version_data.recv_item_count_offset_in_ap_save, 4, "ARM9 System Bus"),
+                        (self.ap_struct_address + version_data.recv_item_count_offset_in_ap_save, 4, "ARM9 System Bus"),
                         (self.ap_struct_address + version_data.recv_item_id_offset, 2, "ARM9 System Bus"),
                     ],
-                    guard_values
+                    guard_values + [guards["READY TO RECV"]]
                 )
 
                 if read_result is None:
